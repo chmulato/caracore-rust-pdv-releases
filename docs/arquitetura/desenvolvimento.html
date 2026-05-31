@@ -1,0 +1,254 @@
+﻿<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="Como o CaraCore PDV funciona — rápido, seguro e offline, em linguagem para lojistas." />
+  <title>Como funciona — CaraCore PDV v3</title>
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="../assets/css/tokens.css" />
+  <link rel="stylesheet" href="../assets/css/layout.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/pages.css" />
+</head>
+<body data-portal-page="desenvolvimento" data-nav-root="../">
+  <header class="portal-header">
+    <div class="portal-header-inner">
+      <a class="portal-brand" href="../index.html">
+        <img src="../assets/img/logo-mark.svg" width="32" height="32" alt="" />
+        <span class="portal-brand-text">CaraCore PDV</span>
+      </a>
+      <div class="portal-header-content">
+        <span class="portal-header-badge">Como funciona · v3</span>
+        <h1>Por que o sistema é rápido e seguro</h1>
+        <p class="portal-header-lead">Tudo importante roda no computador da loja: a tela guia o operador, as regras do negócio são aplicadas localmente e os dados ficam guardados aí — sem depender de nuvem para faturar.</p>
+        <p class="portal-header-meta"><a href="../index.html">Loja</a> · Diagramas: <a href="mapa-dominio-pdv.html#diagramas">manual do produto</a></p>
+      </div>
+    </div>
+  </header>
+
+  <nav class="portal-nav" aria-label="Navegação principal da loja">
+    <div class="portal-nav-inner">
+      <a href="../index.html">Início</a>
+      <a href="../produto.html">Produto</a>
+      <a href="desenvolvimento.html">Como funciona</a>
+      <a href="../performance.html">Velocidade</a>
+      <a href="../excelencia.html">Diferenciais</a>
+      <a href="../mercado.html">Para sua loja</a>
+      <a href="../identidade.html">Aparência</a>
+      <a href="../situacao-atual.html">Situação atual</a>
+      <a href="../comprovacoes.html">Comprovações</a>
+      <a href="../download.html">Download</a>
+      <a href="../governanca.html">Qualidade</a>
+    </div>
+  </nav>
+
+  <nav class="portal-nav portal-nav--local" aria-label="Navegação nesta página">
+    <div class="portal-nav-inner">
+      <a href="#camadas">Camadas</a>
+      <a href="#banco-dados">Banco de dados</a>
+      <a href="#ddd">Organização DDD</a>
+      <a href="#bunker">Modo bunker</a>
+    </div>
+  </nav>
+
+  <main class="portal-main">
+    <section class="card">
+      <h2>O que fica na sua loja</h2>
+      <p class="section-subtitle">Quatro peças que trabalham juntas — todas instaladas no Windows do caixa.</p>
+      <div class="stack-grid">
+        <div class="stack-item"><strong>Tela da loja</strong><span>Interface para venda, caixa e relatórios — só apresenta e pede ação ao operador.</span></div>
+        <div class="stack-item"><strong>Regras do PDV</strong><span>Calcula preço, estoque, turno, fiscal e auditoria — uma única fonte de verdade.</span></div>
+        <div class="stack-item"><strong>Dados na máquina</strong><span>Produtos, vendas e movimentos ficam no computador da loja — backup e controle seus.</span></div>
+        <div class="stack-item"><strong>Serviços em segundo plano</strong><span>Fila de notas e impressão seguem mesmo se a internet oscilar.</span></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Tela leve, regras centralizadas</h2>
+      <p class="diagram-caption"><strong>Para você:</strong> o operador não “decide” imposto ou estoque na tela — o sistema valida tudo antes de gravar. Isso evita divergência entre computadores e facilita suporte.</p>
+      <table class="trace">
+        <thead>
+          <tr><th>Parte</th><th>O que faz</th><th>Exemplo na loja</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Tela</td><td>Atalhos, leitor, mensagens claras</td><td>Venda, fechamento, conciliação</td></tr>
+          <tr><td>Ponte segura</td><td>Liga tela às regras do PDV com registro de lentidão; gateway unificado escolhe SQLite ou PostgreSQL com as mesmas regras</td><td>Qualquer ação do menu</td></tr>
+          <tr><td>Regras do negócio</td><td>Validações de caixa, fiscal e estoque</td><td>Abrir turno, registrar venda, estornar</td></tr>
+          <tr><td>Armazenamento</td><td>Guarda histórico e filas</td><td>Notas pendentes, fila de impressão</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card" id="camadas">
+      <h2>Camadas da aplicação</h2>
+      <p class="diagram-caption"><strong>Por que importa:</strong> camadas separadas permitem evoluir o PDV sem quebrar quem já opera — mudança na tela não reescreve regra de caixa. A mesma lógica de negócio vale independentemente do banco escolhido.</p>
+      <div class="er-wrap"><svg class="er-diagram" viewBox="0 0 1320 620" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Organização em camadas da aplicação">
+          <defs>
+            <marker id="lya" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#4f647a" /></marker>
+          </defs>
+          <rect class="ly1" x="80" y="30" width="1160" height="70" rx="12" />
+          <text class="ly-title" x="102" y="58">Interface — tela da loja</text>
+          <text class="ly-text" x="102" y="78">Menus, atalhos, leitor e alertas ao operador</text>
+          <rect class="ly2" x="80" y="120" width="1160" height="70" rx="12" />
+          <text class="ly-title" x="102" y="148">Ponte segura (IPC + gateway de persistência)</text>
+          <text class="ly-text" x="102" y="168">Comandos Tauri · roteamento SQLite|PostgreSQL · mesmas regras de negócio</text>
+          <rect class="ly2" x="80" y="210" width="1160" height="70" rx="12" />
+          <text class="ly-title" x="102" y="238">Casos de uso — coordena cada ação</text>
+          <text class="ly-text" x="102" y="258">Abrir turno, vender, devolver, auditar, LGPD</text>
+          <rect class="ly2" x="80" y="300" width="1160" height="70" rx="12" />
+          <text class="ly-title" x="102" y="328">Serviços de domínio — regras de negócio</text>
+          <text class="ly-text" x="102" y="348">Validações de caixa, estoque, fiscal e pagamentos</text>
+          <rect class="ly2" x="80" y="390" width="1160" height="70" rx="12" />
+          <text class="ly-title" x="102" y="418">Contratos de repositório — o que gravar e ler</text>
+          <text class="ly-text" x="102" y="438">Interfaces sem SQL — mesma regra para qualquer banco</text>
+          <rect class="ly3" x="80" y="480" width="560" height="110" rx="12" />
+          <text class="ly-title" x="102" y="512">Adaptador SQLite (padrão)</text>
+          <text class="ly-text" x="102" y="532">Arquivo local no computador da loja</text>
+          <text class="ly-text" x="102" y="550">Zero configuração — pronto para operar</text>
+          <rect class="ly3" x="680" y="480" width="560" height="110" rx="12" />
+          <text class="ly-title" x="702" y="512">Adaptador PostgreSQL (opcional)</text>
+          <text class="ly-text" x="702" y="532">Docker, desenvolvimento e CI</text>
+          <text class="ly-text" x="702" y="550">Preparado para cenários multi-estação no futuro</text>
+          <line class="ly-arrow" x1="660" y1="100" x2="660" y2="120" />
+          <line class="ly-arrow" x1="660" y1="190" x2="660" y2="210" />
+          <line class="ly-arrow" x1="660" y1="280" x2="660" y2="300" />
+          <line class="ly-arrow" x1="660" y1="370" x2="660" y2="390" />
+          <line class="ly-arrow" x1="660" y1="460" x2="660" y2="480" />
+        </svg></div>
+    </section>
+
+    <section class="card" id="banco-dados">
+      <h2>Opções de banco de dados</h2>
+      <p class="diagram-caption"><strong>Para você:</strong> na loja, o PDV usa um arquivo de banco no próprio computador — rápido, offline e sem servidor. Para desenvolvimento, testes automatizados ou cenários com vários caixas no futuro, o mesmo sistema pode apontar para PostgreSQL. As regras de venda, caixa e fiscal são idênticas nos dois modos.</p>
+      <table class="trace">
+        <thead>
+          <tr><th>Modo</th><th>Quando usar</th><th>O que muda na prática</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>SQLite</strong> (padrão)</td>
+            <td>Loja real, balcão único, operação offline</td>
+            <td>Arquivo local; nenhuma instalação extra; ~80 testes de integração validados</td>
+          </tr>
+          <tr>
+            <td><strong>PostgreSQL</strong> (opcional)</td>
+            <td>Desenvolvimento com Docker, CI e evolução multi-estação</td>
+            <td>Servidor de banco separado; mesma lógica de negócio; suite de testes em crescimento</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="diagram-caption section-spaced"><strong>Como escolher:</strong> na loja, use <strong>Preferências → Banco</strong> (ou o assistente na primeira execução em <em>/setup</em>): SQLite (arquivo local, padrão) ou PostgreSQL (URL do servidor). Também é possível definir via variáveis de ambiente <code>PDV_DB_BACKEND=sqlite</code> (padrão desktop) ou <code>postgres</code>, com <code>PDV_DATABASE_URL</code> quando aplicável. Massa de demonstração opcional via <code>PDV_DEMO_SEED</code>; teste de conexão e reinício do app disponíveis na tela.</p>
+      <div class="er-wrap"><svg class="er-diagram" viewBox="0 0 1320 480" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Escolha de backend de banco de dados">
+          <defs>
+            <marker id="c4arr" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#4f647a" /></marker>
+          </defs>
+          <rect class="c4core" x="480" y="40" width="360" height="120" rx="12" />
+          <text class="c4title" x="498" y="72">Regras do PDV (núcleo)</text>
+          <text class="c4meta" x="498" y="94">Mesmas validações de caixa, venda e fiscal</text>
+          <text class="c4meta" x="498" y="112">Independente do banco escolhido</text>
+          <rect class="c4box" x="520" y="200" width="280" height="70" rx="12" />
+          <text class="c4title" x="538" y="228">Preferências → Banco / setup</text>
+          <text class="c4meta" x="538" y="248">SQLite · postgres · demo seed</text>
+          <rect class="c4box" x="80" y="320" width="340" height="130" rx="12" />
+          <text class="c4title" x="98" y="352">SQLite — padrão loja</text>
+          <text class="c4meta" x="98" y="374">Arquivo no computador da loja</text>
+          <text class="c4meta" x="98" y="392">Zero config · offline nativo</text>
+          <text class="c4meta" x="98" y="410">Produção validada em testes</text>
+          <rect class="c4box" x="490" y="320" width="340" height="130" rx="12" />
+          <text class="c4title" x="508" y="352">PostgreSQL — dev/CI</text>
+          <text class="c4meta" x="508" y="374">Docker: localhost:5432</text>
+          <text class="c4meta" x="508" y="392">PDV_DATABASE_URL</text>
+          <text class="c4meta" x="508" y="410">Multi-estação (futuro)</text>
+          <rect class="c4box" x="900" y="320" width="340" height="130" rx="12" />
+          <text class="c4title" x="918" y="352">Migrations compartilhadas</text>
+          <text class="c4meta" x="918" y="374">Mesmo esquema de dados</text>
+          <text class="c4meta" x="918" y="392">Evolução sincronizada</text>
+          <text class="c4meta" x="918" y="410">Demo seed opcional</text>
+          <path class="c4line" d="M660 160 L660 200" marker-end="url(#c4arr)" />
+          <path class="c4line" d="M580 270 L250 320" marker-end="url(#c4arr)" />
+          <text class="c4label" x="380" y="298">sqlite</text>
+          <path class="c4line" d="M660 270 L660 320" marker-end="url(#c4arr)" />
+          <text class="c4label" x="668" y="298">postgres</text>
+          <path class="c4line" d="M740 270 L1070 320" marker-end="url(#c4arr)" />
+          <text class="c4label" x="880" y="298">ambos</text>
+        </svg></div>
+    </section>
+
+    <section class="card" id="ddd">
+      <h2>Organização DDD — áreas de negócio</h2>
+      <p class="diagram-caption"><strong>Em linguagem simples:</strong> o PDV divide responsabilidades em “contextos” — cada um cuida de um pedaço do dia a dia da loja, com regras próprias e conversa controlada com os demais. Isso evita que uma mudança em caixa quebre venda ou fiscal.</p>
+      <div class="er-wrap"><svg class="er-diagram" viewBox="0 0 1320 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Contextos delimitados do PDV">
+          <rect class="c4core" x="480" y="160" width="360" height="100" rx="12" />
+          <text class="c4title" x="498" y="192">Núcleo do PDV</text>
+          <text class="c4meta" x="498" y="214">Regras compartilhadas · auditoria transversal</text>
+          <rect class="c4box" x="60" y="40" width="220" height="100" rx="12" />
+          <text class="c4title" x="78" y="72">Vendas</text>
+          <text class="c4meta" x="78" y="94">Registrar, cancelar, devolver</text>
+          <text class="c4meta" x="78" y="112">Trocas e estoque na venda</text>
+          <rect class="c4box" x="320" y="40" width="220" height="100" rx="12" />
+          <text class="c4title" x="338" y="72">Caixa</text>
+          <text class="c4meta" x="338" y="94">Turno, sangria, suprimento</text>
+          <text class="c4meta" x="338" y="112">Fechamento e relatórios</text>
+          <rect class="c4box" x="780" y="40" width="220" height="100" rx="12" />
+          <text class="c4title" x="798" y="72">Segurança</text>
+          <text class="c4meta" x="798" y="94">Login, sessão, permissões</text>
+          <text class="c4meta" x="798" y="112">Quem pode fazer o quê</text>
+          <rect class="c4box" x="1040" y="40" width="220" height="100" rx="12" />
+          <text class="c4title" x="1058" y="72">Auditoria</text>
+          <text class="c4meta" x="1058" y="94">Trilha de ações sensíveis</text>
+          <text class="c4meta" x="1058" y="112">Consultas e painel do turno</text>
+          <rect class="c4box" x="180" y="300" width="220" height="100" rx="12" />
+          <text class="c4title" x="198" y="332">LGPD</text>
+          <text class="c4meta" x="198" y="354">Consentimento do cliente</text>
+          <text class="c4meta" x="198" y="372">Solicitações e anonimização</text>
+          <rect class="c4box" x="920" y="300" width="220" height="100" rx="12" />
+          <text class="c4title" x="938" y="332">Fiscal</text>
+          <text class="c4meta" x="938" y="354">Outbox e fila de reenvio</text>
+          <text class="c4meta" x="938" y="372">Workers em segundo plano</text>
+          <path class="c4line" d="M280 140 L520 180" />
+          <path class="c4line" d="M430 140 L560 160" />
+          <path class="c4line" d="M890 140 L760 180" />
+          <path class="c4line" d="M1040 140 L820 180" />
+          <path class="c4line" d="M290 300 L560 260" />
+          <path class="c4line" d="M920 300 L740 260" />
+        </svg></div>
+      <p class="diagram-caption section-spaced">Detalhes técnicos com nomes de módulos e crates: <a href="mapa-dominio-pdv.html#diagrama-ddd">diagrama DDD no manual</a>.</p>
+    </section>
+
+    <section class="card" id="bunker">
+      <h2>Modo bunker — dados no seu PC</h2>
+      <p class="diagram-caption"><strong>Soberania:</strong> se a internet ou a SEFAZ falham, vendas e caixa continuam; notas entram na fila e saem quando o ambiente volta.</p>
+      <div class="er-wrap"><svg class="er-diagram" viewBox="0 0 1360 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Instalação local">
+          <rect class="dp-host" x="30" y="30" width="1300" height="360" rx="14" />
+          <text class="dp-title" x="52" y="58">COMPUTADOR DA LOJA — MODO LOCAL</text>
+          <rect class="dp-node" x="70" y="90" width="300" height="120" rx="10" />
+          <text class="dp-title" x="88" y="116">Aplicativo PDV</text>
+          <text class="dp-text" x="88" y="138">Tela e regras integradas</text>
+          <text class="dp-text" x="88" y="156">Acompanhamento de lentidão</text>
+          <rect class="dp-node" x="420" y="90" width="380" height="140" rx="10" />
+          <text class="dp-title" x="438" y="116">Dados locais da loja</text>
+          <text class="dp-text" x="438" y="138">Vendas · produtos · filas</text>
+          <text class="dp-text" x="438" y="156">Logs para suporte</text>
+          <rect class="dp-node" x="70" y="240" width="300" height="120" rx="10" />
+          <text class="dp-title" x="88" y="266">Tarefas em segundo plano</text>
+          <text class="dp-text" x="88" y="288">Fila fiscal · impressão</text>
+          <rect class="dp-node" x="850" y="90" width="420" height="120" rx="10" />
+          <text class="dp-title" x="868" y="116">Serviços externos (opcionais)</text>
+          <text class="dp-text" x="868" y="138">SEFAZ · cartão — falha não para a venda</text>
+          <line class="dp-line" x1="370" y1="150" x2="420" y2="150" />
+          <line class="dp-line" x1="220" y1="210" x2="220" y2="240" />
+        </svg></div>
+      <div class="cta-box">
+        <p>Sequência de venda, mapa de telas e visão comercial no manual completo.</p>
+        <a class="btn-primary" href="mapa-dominio-pdv.html#diagramas">Ver diagramas no manual →</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="portal-footer">
+    CaraCore PDV v3 — Como funciona · Atualizado em 27/05/2026 · <a href="../index.html">Loja</a> · <a href="mapa-dominio-pdv.html">Manual do produto</a>
+  </footer>
+  <script src="../assets/js/portal.js"></script>
+</body>
+</html>

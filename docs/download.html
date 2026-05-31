@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="Baixe o CaraCore PDV v3 Rust para Windows — pacote piloto com instalador, SQLite local e operação offline." />
+  <link rel="canonical" href="https://chmulato.github.io/caracore-rust-pdv-releases/download.html" />
+  <title>Download — CaraCore PDV v3 Rust</title>
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/css/tokens.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+</head>
+<body data-portal-page="download" data-nav-root="">
+  <header class="portal-header">
+    <div class="portal-header-inner">
+      <a class="portal-brand" href="index.html">
+        <img src="assets/img/logo-mark.svg" width="32" height="32" alt="" />
+        <span class="portal-brand-text">CaraCore PDV</span>
+      </a>
+      <div class="portal-header-content">
+        <span class="portal-header-badge">Download · v3 Rust</span>
+        <h1>Teste real no Windows — sem depender de nuvem</h1>
+        <p class="portal-header-lead">Pacote piloto com executável Tauri, SQLite local e operação offline. Ideal para validar balcão, caixa e gestão antes de ampliar escopo comercial.</p>
+        <p class="portal-header-meta">Cara Core Informática · Atualizado em 31/05/2026 · <a href="index.html">Voltar à loja</a></p>
+      </div>
+    </div>
+  </header>
+
+  <nav class="portal-nav" aria-label="Navegação principal da loja">
+    <div class="portal-nav-inner">
+      <a href="index.html">Início</a>
+      <a href="produto.html">Produto</a>
+      <a href="arquitetura/desenvolvimento.html">Como funciona</a>
+      <a href="performance.html">Velocidade</a>
+      <a href="excelencia.html">Diferenciais</a>
+      <a href="mercado.html">Para sua loja</a>
+      <a href="identidade.html">Aparência</a>
+      <a href="situacao-atual.html">Situação atual</a>
+      <a href="roadmap.html">Roadmap</a>
+      <a href="comprovacoes.html">Comprovações</a>
+      <a href="download.html">Download</a>
+      <a href="governanca.html">Qualidade</a>
+    </div>
+  </nav>
+
+  <main class="portal-main">
+    <section class="card exec-summary">
+      <h2>Release publicada</h2>
+      <p class="section-subtitle">O botão abaixo busca automaticamente a última release deste repositório no GitHub.</p>
+      <div class="exec-kpi-grid">
+        <div class="exec-kpi">
+          <strong id="release-tag" class="slo-warn">Carregando…</strong>
+          <span id="release-summary">Consultando GitHub Releases…</span>
+        </div>
+        <div class="exec-kpi">
+          <strong>Plataforma</strong>
+          <span>Windows 10/11 x64 · WebView2 Runtime (Edge)</span>
+        </div>
+        <div class="exec-kpi">
+          <strong>Stack</strong>
+          <span>Rust + Tauri 2 · SQLite local · sem Java no cliente</span>
+        </div>
+      </div>
+      <p class="cta-box" style="margin-top: 1rem;">
+        <a id="download-btn" class="btn-primary" href="https://github.com/chmulato/caracore-rust-pdv-releases/releases" rel="noopener">Ver releases no GitHub →</a>
+        <span id="download-hint" class="section-subtitle" style="display:block;margin-top:0.75rem;"></span>
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Conteúdo do pacote piloto</h2>
+      <table class="trace">
+        <thead><tr><th>Arquivo</th><th>Função</th></tr></thead>
+        <tbody>
+          <tr><td><code>caracore_pdv_desktop.exe</code></td><td>Aplicativo principal (Tauri)</td></tr>
+          <tr><td><code>instalar-atalho.bat</code></td><td>Cria atalho na Área de Trabalho</td></tr>
+          <tr><td><code>SHA256SUMS.txt</code></td><td>Hash do executável para conferência</td></tr>
+          <tr><td><code>LEIA-ME-INSTALACAO.txt</code></td><td>Passo a passo dentro do ZIP</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2>Instalação em 4 passos</h2>
+      <ol>
+        <li>Extraia o ZIP em uma pasta fixa, por exemplo <code>C:\Programas\CaraCore-PDV\</code>.</li>
+        <li>Execute <code>instalar-atalho.bat</code> (como administrador somente se a pasta estiver em Program Files).</li>
+        <li>Abra o atalho <strong>CaraCore PDV</strong> na Área de Trabalho.</li>
+        <li>Na primeira execução, conclua o assistente em <em>/setup</em> ou entre em <em>/login</em> com usuário e senha.</li>
+      </ol>
+      <p class="section-subtitle">Detalhes completos: <a href="primeiros-passos.html">Primeiros passos</a> · Manual: <a href="arquitetura/mapa-dominio-pdv.html">Produto completo</a></p>
+    </section>
+
+    <section class="card">
+      <h2>Requisitos e avisos</h2>
+      <ul>
+        <li><strong>Windows 10/11 (64 bits)</strong> com <a class="ext-link" href="https://go.microsoft.com/fwlink/p/?LinkId=2124703">WebView2 Runtime</a> (presente na maioria dos PCs atualizados).</li>
+        <li><strong>SmartScreen:</strong> sem certificado de code signing, clique em “Mais informações” → “Executar assim mesmo” — esperado na fase piloto.</li>
+        <li><strong>Dados locais:</strong> banco em <code>%APPDATA%\caracore-pdv\data\pdv.db</code> · logs em <code>%APPDATA%\caracore-pdv\logs\</code>.</li>
+        <li><strong>Linha Java:</strong> a edição comercial multiplataforma permanece em <a class="ext-link" href="https://pdv.caracore.com.br/download.html">pdv.caracore.com.br</a>.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="portal-footer">
+    CaraCore PDV v3 Rust — Loja pública · Cara Core Informática · <a href="index.html">Início</a> · <a href="https://github.com/chmulato/caracore-rust-pdv-releases/releases">Releases</a>
+  </footer>
+  <script src="assets/js/portal.js"></script>
+  <script>
+    (function () {
+      "use strict";
+      var OWNER = "chmulato";
+      var REPO = "caracore-rust-pdv-releases";
+      var tagEl = document.getElementById("release-tag");
+      var summaryEl = document.getElementById("release-summary");
+      var btn = document.getElementById("download-btn");
+      var hint = document.getElementById("download-hint");
+
+      function pickAsset(assets) {
+        if (!assets || !assets.length) return null;
+        var zip = assets.find(function (a) {
+          return /\.zip$/i.test(a.name) && /windows|win|x64|desktop|pdv/i.test(a.name);
+        });
+        return zip || assets.find(function (a) { return /\.zip$/i.test(a.name); }) || assets[0];
+      }
+
+      fetch("https://api.github.com/repos/" + OWNER + "/" + REPO + "/releases/latest", {
+        headers: { Accept: "application/vnd.github+json" }
+      })
+        .then(function (res) {
+          if (!res.ok) throw new Error("no_release");
+          return res.json();
+        })
+        .then(function (data) {
+          var asset = pickAsset(data.assets);
+          tagEl.textContent = data.tag_name || "Release";
+          tagEl.className = "slo-ok";
+          summaryEl.textContent = data.name || data.body || "Release publicada no GitHub.";
+          if (asset) {
+            btn.href = asset.browser_download_url;
+            btn.textContent = "Baixar " + asset.name + " →";
+            hint.textContent = "Publicado em " + (data.published_at || "").slice(0, 10) + " · SHA256 no SHA256SUMS.txt da release.";
+          } else {
+            hint.textContent = "Release encontrada, mas sem artefato ZIP anexado ainda.";
+          }
+        })
+        .catch(function () {
+          tagEl.textContent = "Em preparação";
+          tagEl.className = "slo-warn";
+          summaryEl.textContent = "Nenhuma release publicada ainda. Acompanhe este repositório ou fale com suporte@caracore.com.br para piloto assistido.";
+          btn.href = "https://github.com/" + OWNER + "/" + REPO + "/releases";
+          btn.textContent = "Acompanhar releases →";
+          hint.textContent = "A loja já está pronta; o pacote Windows será publicado aqui quando a pipeline de release for acionada na oficina.";
+        });
+    })();
+  </script>
+</body>
+</html>

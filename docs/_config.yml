@@ -1,0 +1,10 @@
+# GitHub Pages — loja pública CaraCore PDV v3 Rust (pasta /docs no branch main).
+title: CaraCore PDV v3 Rust
+description: Loja pública, download e documentação comercial do PDV Rust/Tauri para lojistas.
+lang: pt-BR
+encoding: utf-8
+url: "https://chmulato.github.io/caracore-rust-pdv-releases"
+baseurl: ""
+theme: null
+plugins: []
+markdown: kramdown

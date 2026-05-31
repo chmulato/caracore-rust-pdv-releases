@@ -1,0 +1,127 @@
+﻿<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="Situação atual do CaraCore PDV — o que está pronto, em validação ou bloqueado." />
+  <title>Situação atual — CaraCore PDV v3</title>
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/css/tokens.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+</head>
+<body data-portal-page="situacao-atual" data-nav-root="">
+  <header class="portal-header">
+    <div class="portal-header-inner">
+      <a class="portal-brand" href="index.html">
+        <img src="assets/img/logo-mark.svg" width="32" height="32" alt="" />
+        <span class="portal-brand-text">CaraCore PDV</span>
+      </a>
+      <div class="portal-header-content">
+        <span class="portal-header-badge">Situação atual · v3</span>
+        <h1>Onde estamos — sem surpresas</h1>
+        <p class="portal-header-lead">Resumo honesto para gestor e lojista: o sistema está maduro para uso assistido; o que falta é confirmação de marco, homologação fiscal externa e inventário futuro.</p>
+        <p class="portal-header-meta"><a href="index.html">Loja</a> · Pausa documental · Atualizado em 31/05/2026</p>
+      </div>
+    </div>
+  </header>
+
+  <nav class="portal-nav" aria-label="Navegação principal da loja">
+    <div class="portal-nav-inner">
+      <a href="index.html">Início</a>
+      <a href="produto.html">Produto</a>
+      <a href="arquitetura/desenvolvimento.html">Como funciona</a>
+      <a href="performance.html">Velocidade</a>
+      <a href="excelencia.html">Diferenciais</a>
+      <a href="mercado.html">Para sua loja</a>
+      <a href="identidade.html">Aparência</a>
+      <a href="situacao-atual.html">Situação atual</a>
+      <a href="roadmap.html">Roadmap</a>
+      <a href="comprovacoes.html">Comprovações</a>
+      <a href="download.html">Download</a>
+      <a href="governanca.html">Qualidade</a>
+    </div>
+  </nav>
+
+  <main class="portal-main">
+    <section class="card exec-summary">
+      <h2>Saúde geral</h2>
+      <div class="exec-kpi-grid">
+        <div class="exec-kpi"><strong class="slo-ok">Fases 1–2</strong><span>Balcão V2 (<em>/vendas-v2</em>) e gestão PME (<em>/gestao</em>) concluídos</span></div>
+        <div class="exec-kpi"><strong class="slo-ok">UI responsivo</strong><span>Tablet, mobile, caixa turno/relatório, clientes e CaixaPage legado — ciclo encerrado</span></div>
+        <div class="exec-kpi"><strong class="slo-ok">Velocidade OK</strong><span>Painel do turno dentro da meta medida</span></div>
+        <div class="exec-kpi"><strong class="slo-ok">Arquitetura DDD</strong><span>Núcleo operacional maduro; gestão como read-model com testes L7; vendas simétricas (registrar/cancelar/devolver)</span></div>
+        <div class="exec-kpi"><strong class="slo-warn">Polish / Fase 3</strong><span>PDF · impressora real · accordion LGPD · MC-002 · homolog SEFAZ · inventário</span></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Leitura para a loja</h2>
+      <ul>
+        <li><strong>Operação:</strong> balcão V2 com carrinho, pagamento misto, desconto, scanner, pós-venda e cadastro rápido; gestão comercial em <em>/gestao</em> (dashboard, vendas, CSV, kardex, estoque mínimo, cupom não fiscal).</li>
+        <li><strong>Responsivo:</strong> layout adaptado para tablet (768–1023) e mobile (≤767); caixa por etapas, clientes LGPD e CaixaPage legado (<em>/caixa</em>) validados.</li>
+        <li><strong>Integração:</strong> telas e regras de negócio alinhadas; login clássico em <em>/login</em> (usuário, senha, código do caixa); logout retorna à tela de entrada. LGPD no balcão e na gestão de clientes.</li>
+        <li><strong>Configuração e backup:</strong> primeira execução em <em>/setup</em> (formulário simplificado); banco configurável em Preferências → Banco; console de backup em Suporte → Backup.</li>
+        <li><strong>Velocidade:</strong> risco de lentidão no painel do dia resolvido na última otimização.</li>
+        <li><strong>Transparência:</strong> pendências listadas abaixo — nada escondido.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Principais frentes</h2>
+      <table class="trace">
+        <thead><tr><th>Área</th><th>Resumo</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td>Interface de balcão (Fase 1)</td><td><em>/vendas-v2</em> — checkout completo; V1 legado no menu para devolução/troca</td><td><span class="status-chip status-concluido">CONCLUIDO</span></td></tr>
+          <tr><td>Gestão PME (Fase 2)</td><td><em>/gestao</em> — 8 IPCs, SQL em repositórios pdv-core (read-model), cupom MOCK</td><td><span class="status-chip status-concluido">CONCLUIDO</span></td></tr>
+          <tr><td>Qualidade backend (DDD)</td><td>Caixa/auditoria/LGPD maduros; gestão L7; vendas Application + fronteira 8/8</td><td><span class="status-chip status-concluido">CONCLUIDO</span></td></tr>
+          <tr><td>UI responsivo</td><td>Tablet + mobile + caixa/clientes + CaixaPage legado; CSS <code>responsive-tablet</code> / <code>responsive-mobile</code></td><td><span class="status-chip status-concluido">CONCLUIDO</span></td></tr>
+          <tr><td>Instalador release</td><td>Executável validado com testes automáticos de boot e operação</td><td><span class="status-chip status-concluido">CONCLUIDO</span></td></tr>
+          <tr><td>Operação e caixa</td><td>Fluxos do dia a dia; abertura, fechamento e DRE em telas dedicadas</td><td><span class="status-chip status-concluido">CONCLUIDO</span></td></tr>
+          <tr><td>Configuração e backup</td><td>Setup inicial, Preferências → Banco e Suporte → Backup</td><td><span class="status-chip status-concluido">CONCLUIDO</span></td></tr>
+          <tr><td>Fiscal</td><td>Local pronto; teste real SEFAZ aguarda credenciais</td><td><span class="status-chip status-validacao">VALIDACAO</span></td></tr>
+          <tr><td>Velocidade</td><td>Metas do balcão atendidas</td><td><span class="status-chip status-concluido">CONCLUIDO</span></td></tr>
+          <tr><td>Privacidade (LGPD)</td><td>Checkout com aviso e opt-in de marketing; gestão de titular e colaborador em Clientes</td><td><span class="status-chip status-concluido">CONCLUIDO</span></td></tr>
+          <tr><td>Segurança e acesso</td><td>Login clássico <em>/login</em>, perfis RBAC, trilha de auditoria; smoke entrar-navegar-sair 7/7</td><td><span class="status-chip status-concluido">CONCLUIDO</span></td></tr>
+          <tr><td>Diferenciais</td><td>Busca rápida, conciliação ampliada, reenvio fiscal e atalhos</td><td><span class="status-chip status-concluido">CONCLUIDO</span></td></tr>
+          <tr><td>Aparência Bunker</td><td>Tema opcional + monitoramento pós-corte</td><td><span class="status-chip status-validacao">VALIDACAO</span></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2>Próximos passos recomendados</h2>
+      <p><strong>Pausa documental (31/05/2026):</strong> ciclo encerrado para retomada posterior. Detalhes técnicos em <code>status_atual.txt</code> §113 (repositório — não publicado no portal).</p>
+      <ol>
+        <li><strong>Polish pós-responsivo</strong> — relatórios PDF, porta impressora real no cupom, accordion LGPD mobile (diferido).</li>
+        <li><strong>Fase 3 opcional</strong> — SEFAZ homolog real, multi-loja, inventário cíclico (OP-004) — sob demanda comercial.</li>
+        <li><strong>30/05/2026</strong> — confirmar estabilidade pós-corte (MC-002).</li>
+        <li><strong>Homologação SEFAZ real</strong> — quando credenciais oficiais estiverem disponíveis (<span class="status-chip status-bloqueado">BLOQUEADA</span> hoje).</li>
+        <li><strong>Manter rotina diária</strong> de testes de qualidade e velocidade (~22 rotas no app).</li>
+      </ol>
+    </section>
+
+    <section class="card">
+      <h2>Documentação recente</h2>
+      <ul>
+        <li>Login/logout clássico, UX shell e tipografia — backup/banco padronizados (31/05/2026).</li>
+        <li>Refactor DDD gestão → pdv-core + CancelarVendaApplicationService + testes L7 gestão (30/05/2026).</li>
+        <li>UI responsivo encerrado — tablet, mobile, caixa turno/relatório, clientes e CaixaPage legado (30/05/2026).</li>
+        <li>Fase 2 gestão PME — <em>/gestao</em>, 8 IPCs, V35 estoque mínimo (29/05/2026).</li>
+        <li>Fase 1 balcão V2 concluída — checkout operacional em <em>/vendas-v2</em> (29/05/2026).</li>
+        <li>RBAC V36 + CI SQLite/Postgres + portal sincronizado §102–113 (31/05/2026).</li>
+      </ul>
+      <div class="cta-box">
+        <p>Detalhes das validações e medições de velocidade estão nas páginas do portal.</p>
+        <a class="btn-primary" href="comprovacoes.html">Ver comprovações →</a>
+        <a class="btn-secondary" href="performance.html">Velocidade →</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="portal-footer">
+    CaraCore PDV v3 — Situação atual · Pausa documental 31/05/2026 · <a href="index.html">Início</a>
+  </footer>
+  <script src="assets/js/portal.js"></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+﻿<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="Qualidade e atualização da documentação CaraCore PDV." />
+  <title>Qualidade — CaraCore PDV v3</title>
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/css/tokens.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+</head>
+<body data-portal-page="governanca" data-nav-root="">
+  <header class="portal-header">
+    <div class="portal-header-inner">
+      <a class="portal-brand" href="index.html">
+        <img src="assets/img/logo-mark.svg" width="32" height="32" alt="" />
+        <span class="portal-brand-text">CaraCore PDV</span>
+      </a>
+      <div class="portal-header-content">
+        <span class="portal-header-badge">Qualidade · v3</span>
+        <h1>Documentação que acompanha o produto</h1>
+        <p class="portal-header-lead">Este portal reúne, em linguagem objetiva, o que o lojista e o gestor precisam saber sobre o PDV — sempre alinhado às validações e ao estado real do sistema.</p>
+        <p class="portal-header-meta"><a href="index.html">Início</a></p>
+      </div>
+    </div>
+  </header>
+
+  <nav class="portal-nav" aria-label="Navegação principal da loja">
+    <div class="portal-nav-inner">
+      <a href="index.html">Início</a>
+      <a href="produto.html">Produto</a>
+      <a href="arquitetura/desenvolvimento.html">Como funciona</a>
+      <a href="performance.html">Velocidade</a>
+      <a href="excelencia.html">Diferenciais</a>
+      <a href="mercado.html">Para sua loja</a>
+      <a href="identidade.html">Aparência</a>
+      <a href="situacao-atual.html">Situação atual</a>
+      <a href="roadmap.html">Roadmap</a>
+      <a href="comprovacoes.html">Comprovações</a>
+      <a href="download.html">Download</a>
+      <a href="governanca.html">Qualidade</a>
+    </div>
+  </nav>
+
+  <main class="portal-main">
+    <section class="card">
+      <h2>Como o portal está organizado</h2>
+      <table class="trace">
+        <thead><tr><th>Página</th><th>Conteúdo</th><th>Para quem</th></tr></thead>
+        <tbody>
+          <tr><td><a class="ext-link" href="produto.html">Produto</a></td><td>Manual por área do PDV e rotina da loja</td><td>Operador e gestor</td></tr>
+          <tr><td><a class="ext-link" href="performance.html">Velocidade</a></td><td>Resposta no balcão e rotinas de verificação</td><td>Gestor de loja</td></tr>
+          <tr><td><a class="ext-link" href="comprovacoes.html">Comprovações</a></td><td>Resumo das validações concluídas</td><td>Quem exige rastreabilidade</td></tr>
+          <tr><td><a class="ext-link" href="situacao-atual.html">Situação atual</a></td><td>O que está pronto, em validação ou pendente</td><td>Decisão de operação</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2>Significado dos status</h2>
+      <p class="section-subtitle">Rótulos únicos em todo o portal — sem ambiguidade entre “parcial” e “implementado”.</p>
+      <div class="pillars-grid">
+        <div class="pillar"><span class="status-chip status-concluido">CONCLUIDO</span><p>Pronto para usar com confiança neste recorte.</p></div>
+        <div class="pillar"><span class="status-chip status-em-andamento">EM_ANDAMENTO</span><p>Parte entregue; evolução visível.</p></div>
+        <div class="pillar"><span class="status-chip status-validacao">VALIDACAO</span><p>Funciona; aguarda data de confirmação ou credencial externa.</p></div>
+        <div class="pillar"><span class="status-chip status-nao-iniciado">NAO_INICIADO</span><p>Planejado; não bloqueia operação básica.</p></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Publicação da loja</h2>
+      <p class="section-subtitle">Site público mantido pela Cara Core — conteúdo pensado para lojista e gestor, sem arquivos técnicos expostos.</p>
+      <ul>
+        <li>Endereço: <a class="ext-link" href="https://chmulato.github.io/caracore-rust-pdv-releases/">chmulato.github.io/caracore-rust-pdv-releases</a></li>
+        <li>Conteúdo em português (UTF-8), pensado para lojista e gestor de loja.</li>
+        <li>Comprovações e status aparecem resumidos na loja — sem arquivos técnicos expostos ao visitante.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Honestidade loja × aplicativo</h2>
+      <p class="section-subtitle">Revisão cruzada entre o que a loja diz e o que o PDV entrega na operação.</p>
+      <ul>
+        <li><strong>31/05/2026</strong> — portal sincronizado com login clássico (<em>/login</em>), UX shell, tipografia, backup/banco e smoke entrar-navegar-sair (§113).</li>
+        <li><strong>30/05/2026</strong> — Fases 1–2 concluídas, UI responsivo encerrado (§105–106), ~22 rotas e CSS responsivo tablet/mobile.</li>
+        <li><strong>27/05/2026</strong> — auditoria concluída; portal alinhado a backup, config banco e caixa por etapas.</li>
+        <li>Seis áreas do menu conferidas com o aplicativo (Operação, Caixa, Financeiro, Fiscal/Governança, Suporte, Preferências).</li>
+        <li>Pendências MC-002, homolog SEFAZ e inventário cíclico mantidas visíveis — sem prometer o que depende de credencial externa.</li>
+        <li>Revisões periódicas quando mudar rotina de balcão, caixa ou fiscal.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Compromisso de atualização</h2>
+      <ul>
+        <li>Revisão do portal sempre que mudar rotina de balcão, caixa ou fiscal.</li>
+        <li>Comprovações refletem a última rodada de testes aprovada.</li>
+        <li>Pendências externas (homologação SEFAZ, inventário cíclico) declaradas com clareza em <a class="ext-link" href="situacao-atual.html">Situação atual</a>.</li>
+      </ul>
+      <p class="section-subtitle">Portal em português (UTF-8), pensado para abrir localmente no navegador da loja ou da diretoria.</p>
+    </section>
+  </main>
+
+  <footer class="portal-footer">
+    CaraCore PDV v3 — Qualidade · Cara Core Informática · <a href="index.html">Início</a>
+  </footer>
+  <script src="assets/js/portal.js"></script>
+</body>
+</html>

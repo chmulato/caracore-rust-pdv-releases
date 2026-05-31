@@ -15,13 +15,26 @@ body {
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
+  padding-left: max(var(--shell-margin), env(safe-area-inset-left, 0px));
+  padding-right: max(var(--shell-margin), env(safe-area-inset-right, 0px));
+}
+
+/* Padding lateral interno em header, nav, conteúdo e rodapé */
+.portal-header,
+.portal-nav,
+.portal-main,
+.portal-footer {
+  padding-left: var(--page-gutter);
+  padding-right: var(--page-gutter);
+  box-sizing: border-box;
 }
 
 .portal-header {
-  padding: var(--header-pad-y) var(--header-pad-x) calc(var(--header-pad-y) - 6px);
   padding-top: max(var(--header-pad-y), env(safe-area-inset-top, 0px));
+  padding-bottom: calc(var(--header-pad-y) - 6px);
   background: linear-gradient(135deg, var(--brand) 0%, var(--brand-2) 55%, #1a6bb5 100%);
   color: #fff;
+  border-radius: 0 0 clamp(12px, 2vw, 16px) clamp(12px, 2vw, 16px);
 }
 .portal-header-inner {
   max-width: var(--content-max);
@@ -88,11 +101,12 @@ body {
   -webkit-backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--line);
   box-shadow: 0 4px 16px rgba(11, 58, 102, 0.06);
+  border-radius: clamp(10px, 2vw, 14px);
 }
 .portal-nav-inner {
   max-width: var(--content-max);
   margin: 0 auto;
-  padding: 10px var(--space-page);
+  padding: 10px 0;
   display: flex;
   gap: 6px;
   flex-wrap: wrap;
@@ -155,8 +169,8 @@ body {
   flex: 1;
   max-width: var(--content-max);
   margin: 0 auto;
-  padding: var(--space-page);
-  padding-bottom: max(var(--space-page), env(safe-area-inset-bottom, 0px));
+  padding-top: var(--page-gutter);
+  padding-bottom: max(var(--page-gutter), env(safe-area-inset-bottom, 0px));
   width: 100%;
   display: grid;
   gap: clamp(12px, 2vw, 16px);
@@ -165,7 +179,8 @@ body {
 .portal-footer {
   max-width: var(--content-max);
   margin: 0 auto max(20px, env(safe-area-inset-bottom, 0px));
-  padding: 16px var(--space-page) 0;
+  padding-top: 16px;
+  padding-bottom: 0;
   font-size: 12px;
   color: var(--muted);
   text-align: center;
@@ -196,8 +211,8 @@ body {
 
   .portal-nav-toggle {
     display: block;
-    margin: 8px var(--space-page) 0;
-    width: calc(100% - var(--space-page) * 2);
+    margin: 8px 0 0;
+    width: 100%;
     align-self: center;
   }
 
@@ -230,8 +245,6 @@ body {
 }
 
 @media (max-width: 639px) {
-  .portal-nav-inner { padding-left: var(--space-page-xs); padding-right: var(--space-page-xs); }
-  .portal-nav-toggle { margin-left: var(--space-page-xs); margin-right: var(--space-page-xs); width: calc(100% - var(--space-page-xs) * 2); }
   .portal-footer { font-size: 11px; }
 }
 

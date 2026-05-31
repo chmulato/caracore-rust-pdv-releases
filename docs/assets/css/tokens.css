@@ -11,12 +11,14 @@
   --warn: #fff6e5;
   --danger: #fdecea;
 
+  /* Margens laterais: respiro entre conteúdo e borda da tela */
+  --page-gutter: clamp(1rem, 4vw, 1.75rem);
+  --shell-margin: clamp(0.75rem, 3vw, 1.5rem);
+
   --content-max: 1280px;
-  --space-page: 20px;
-  --space-page-sm: 14px;
-  --space-page-xs: 12px;
+  --space-page: var(--page-gutter);
   --header-pad-y: 28px;
-  --header-pad-x: 24px;
+  --header-pad-x: var(--page-gutter);
   --nav-link-min-h: 44px;
   --radius-card: 14px;
   --shadow-card: 0 8px 20px rgba(11, 58, 102, 0.06);
@@ -27,16 +29,13 @@
 
 @media (max-width: 639px) {
   :root {
-    --space-page: var(--space-page-xs);
     --header-pad-y: 20px;
-    --header-pad-x: 16px;
     --radius-card: 12px;
   }
 }
 
 @media (min-width: 640px) and (max-width: 1023px) {
   :root {
-    --space-page: var(--space-page-sm);
     --header-pad-y: 24px;
   }
 }

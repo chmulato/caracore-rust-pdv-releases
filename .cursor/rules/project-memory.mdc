@@ -1,5 +1,5 @@
 ---
-description: Memória da loja PDV Desktop Rust — caracore-pdv-rust-releases; GitHub Pages SEED; release v0.1.0; coexistência com pdv.caracore.com.br
+description: Memória da loja PDV Desktop Rust — rust-pdv.caracore.com.br; release v0.1.0; vitrine canónica (sem delivery matriz)
 alwaysApply: true
 ---
 
@@ -7,37 +7,26 @@ alwaysApply: true
 
 ## Repositório e papel
 - **caracore-pdv-rust-releases:** loja (vitrine e releases) do **Cara Core PDV Desktop (Rust + Tauri 2)**.
-- **URL atual (SEED):** https://chmulato.github.io/caracore-rust-pdv-releases/
-- **Subdomínio planejado:** pdv-rust.caracore.com.br (ainda não ativo)
-- **Publicação:** GitHub Pages a partir de **docs/**.
-- **Oficina:** caracore-pdv-rust (GitHub: caracore-rust-pdv)
-- **Matriz:** caracore-site/delivery/pdv-rust/ · portfólio `#caracore-pdv-rust`
+- **URL canónica:** https://rust-pdv.caracore.com.br/ — **vitrine principal** do produto Rust (sem canal delivery/pdv-rust na matriz).
+- **CNAME:** `docs/CNAME` → `rust-pdv.caracore.com.br`
+- **Oficina:** caracore-pdv-rust
+- **Referência institucional:** caracore.com.br/portfolio.html#caracore-pdv-rust (não delivery/pdv-rust)
 
-## Linha Java (coexistência — não substituição)
-- **PDV Desktop (Java · JavaFX):** https://pdv.caracore.com.br/ — canal **v3.1.2-free**, oferta madura multi-plataforma.
-- Dois **PDVs Desktop** do mesmo CaraCore PDV; esta loja trata só da linha Rust.
+## Linha Java (coexistência)
+- **PDV Desktop Java:** https://pdv.caracore.com.br/ — canal v3.1.2-free
 
-## Mensagem de produto (fixa)
-- **Cara Core PDV Desktop (Rust + Tauri 2)** — aplicativo **desktop** instalado no Windows da loja.
-- Release piloto: **v0.1.0** · instaladores NSIS / MSI pt-BR / ZIP · SQLite local.
-- Qualidades de stack: Rust (memória, performance) + Tauri 2 (shell enxuto).
-- **Evitar:** "PDV v3", "nova geração", "substitui Java", "reescrito".
+## Discurso comercial (loja)
+- Centralizar valor da **stack desktop**: Rust (memória, performance) + Tauri 2 (shell enxuto, MSI/NSIS pt-BR) + SQLite local.
+- **Sem SEED** — removidos banner/badge/roadmap injetados (portal.js limpo).
+- Produto ainda em release piloto v0.1.0 — detalhes em transparencia.html.
 
-## Fase SEED (vitrine)
-- Badge/banner injetados por `docs/assets/js/portal.js` + `docs/assets/css/evolution-status.css`.
-- Downloads **somente** via releases oficiais GitHub (SHA256SUMS.txt).
-- Transparência: `docs/transparencia.html` — seção "Loja SEED".
+## Estrutura (docs/)
+- index · produto · mercado · download · primeiros-passos · transparencia · wiki/
+- **portal.js** — nav e links externos apenas (sem evolution-status)
 
-## Estrutura do site (docs/)
-- **index.html** · **produto.html** · **mercado.html** · **download.html** · **primeiros-passos.html** · **transparencia.html**
-- **wiki/index.html** · **wiki/projeto-pdv.html**
-- **assets/js/portal.js** — nav, banner SEED, roadmap footer
-
-## Releases
-- Tag **v0.1.0** publicada (NSIS, MSI pt-BR, ZIP, RELEASE_MANIFEST.json, SHA256SUMS.txt).
-- Build e gates na oficina caracore-pdv-rust (`tools/tauri_bundle_windows.py`, workflow release).
+## Redirect legado matriz
+- caracore-site/_redirects: `/delivery/pdv-rust/*` → https://rust-pdv.caracore.com.br/:splat
 
 ## Convenções
-- Nomenclatura canônica: **PDV Desktop (Rust + Tauri)** — sempre incluir "Desktop".
-- Alinhar textos com matriz (delivery/pdv-rust), wiki institucional (projeto-pdv-rust.html) e loja Java (banner coexistência).
-- Documentos de ecossistema: caracore-site/ECOSYSTEM_CARA_CORE.txt, ECOSYSTEM_LOJAS.txt.
+- Links públicos sempre **rust-pdv.caracore.com.br**
+- Não recriar delivery/pdv-rust na matriz

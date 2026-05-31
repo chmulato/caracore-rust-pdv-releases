@@ -16,7 +16,7 @@ A loja comunica o produto em linguagem comercial. Documentação técnica, evid�
 | Publicação | 05/2026 |
 | Stack da oficina | Rust + Tauri 2 + React + SQLite local |
 | Release | https://github.com/chmulato/caracore-rust-pdv-releases/releases/tag/v0.1.0 |
-| Loja | https://chmulato.github.io/caracore-rust-pdv-releases/ |
+| Loja | https://rust-pdv.caracore.com.br/ |
 
 ### Artefatos v0.1.0
 
@@ -34,7 +34,7 @@ A loja comunica o produto em linguagem comercial. Documentação técnica, evid�
 
 | Papel | Local |
 | ----- | ----- |
-| Loja (GitHub Pages) | https://chmulato.github.io/caracore-rust-pdv-releases/ |
+| Loja oficial | https://rust-pdv.caracore.com.br/ |
 | Releases / download | https://github.com/chmulato/caracore-rust-pdv-releases/releases |
 | Oficina (código) | https://github.com/chmulato/caracore-rust-pdv |
 | Linha Java (alternativa) | https://pdv.caracore.com.br/ |

@@ -60,7 +60,7 @@ chore(store): alinha loja e download para instaladores pt-BR
 git -C D:/dev/caracore-pdv-rust-releases push origin master
 ```
 
-Validar: https://chmulato.github.io/caracore-rust-pdv-releases/download.html
+Validar: https://rust-pdv.caracore.com.br/download.html
 
 ## 5. Ecossistema
 

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="description" content="Primeiros passos com o CaraCore PDV v3 no Windows." />
+  <meta name="description" content="Primeiros passos com o CaraCore PDV v3 no Windows — instaladores em português do Brasil." />
   <title>Primeiros passos — CaraCore PDV v3</title>
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="assets/css/tokens.css" />
@@ -20,7 +20,7 @@
       <div class="portal-header-content">
         <span class="portal-header-badge">Primeiros passos</span>
         <h1>Instalar e abrir o PDV</h1>
-        <p class="portal-header-lead">Passo a passo para a primeira execução no Windows.</p>
+        <p class="portal-header-lead">Passo a passo para a primeira execução no Windows — instaladores em português do Brasil.</p>
         <p class="portal-header-meta"><a href="download.html">Download</a></p>
       </div>
     </div>
@@ -37,23 +37,44 @@
 
   <main class="portal-main">
     <section class="card">
-      <h2>1. Instalar</h2>
+      <h2>1. Baixar</h2>
+      <p>Use apenas os <a href="https://github.com/chmulato/caracore-rust-pdv-releases/releases" rel="noopener noreferrer">releases oficiais no GitHub</a> ou a página <a href="download.html">Download</a>.</p>
+      <p>Confira o SHA256 conforme <a href="transparencia.html">Transparência</a> antes de executar qualquer arquivo.</p>
+      <ul>
+        <li><strong>Instalador (NSIS)</strong> — recomendado para lojista; assistente em português.</li>
+        <li><strong>MSI pt-BR</strong> — recomendado para TI; arquivo <code>*_pt-BR.msi</code>.</li>
+        <li><strong>ZIP portátil</strong> — extração manual; inclui <code>LEIA-ME-INSTALACAO.txt</code> em português.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>2. Instalar</h2>
+      <h3>Opção A — Instalador NSIS (lojista)</h3>
       <ol>
-        <li>Baixe o ZIP apenas pelos <a href="https://github.com/chmulato/caracore-rust-pdv-releases/releases" rel="noopener noreferrer">releases oficiais no GitHub</a> ou pela página <a href="download.html">Download</a>.</li>
-        <li>Verifique o SHA256 conforme <a href="transparencia.html">Transparência</a>.</li>
-        <li>Extraia todo o conteúdo em uma pasta fixa.</li>
-        <li>Execute o script que cria o atalho na Área de Trabalho.</li>
+        <li>Execute o arquivo <code>*-setup.exe</code>.</li>
+        <li>Siga o assistente em português até concluir.</li>
+        <li>Abra <strong>CaraCore PDV</strong> pelo menu Iniciar ou atalho criado.</li>
+      </ol>
+      <h3>Opção B — MSI (TI / empresa)</h3>
+      <ol>
+        <li>Instale o pacote <code>*_pt-BR.msi</code> (duplo clique ou <code>msiexec /i "arquivo.msi"</code>).</li>
+        <li>Para instalação silenciosa: <code>msiexec /i "arquivo.msi" /qn</code>.</li>
+      </ol>
+      <h3>Opção C — ZIP portátil</h3>
+      <ol>
+        <li>Extraia todo o conteúdo em uma pasta fixa (ex.: <code>C:\Programas\CaraCore-PDV\</code>).</li>
+        <li>Execute <code>instalar-atalho.bat</code> para criar atalho na Área de Trabalho.</li>
         <li>Abra <strong>CaraCore PDV</strong> pelo atalho.</li>
       </ol>
     </section>
 
     <section class="card">
-      <h2>2. Configurar</h2>
+      <h2>3. Configurar</h2>
       <p>Na primeira abertura, o assistente orienta a preparação do banco de dados local. Depois, entre com usuário e senha fornecidos na implantação ou criados no setup.</p>
     </section>
 
     <section class="card">
-      <h2>3. Operar</h2>
+      <h2>4. Operar</h2>
       <p>Após o login, a tela de vendas fica disponível. Caixa, produtos e relatórios acessam-se pelo menu principal.</p>
     </section>
 

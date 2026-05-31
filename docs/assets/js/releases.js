@@ -5,6 +5,7 @@
   var REPO = "caracore-rust-pdv-releases";
   var RELEASES_PAGE = "https://github.com/" + OWNER + "/" + REPO + "/releases";
   var API_LATEST = "https://api.github.com/repos/" + OWNER + "/" + REPO + "/releases/latest";
+  var DEFAULT_MSI_LOCALE = "pt-BR";
 
   function pickAsset(assets, predicate) {
     if (!assets || !assets.length) return null;
@@ -24,7 +25,9 @@
   }
 
   function pickMsi(assets) {
-    return pickAsset(assets, function (a) { return /\.msi$/i.test(a.name); });
+    return pickAsset(assets, function (a) {
+      return /\.msi$/i.test(a.name) && a.name.indexOf(DEFAULT_MSI_LOCALE) !== -1;
+    }) || pickAsset(assets, function (a) { return /\.msi$/i.test(a.name); });
   }
 
   function pickSha256Sums(assets) {
@@ -47,6 +50,7 @@
     OWNER: OWNER,
     REPO: REPO,
     RELEASES_PAGE: RELEASES_PAGE,
+    DEFAULT_MSI_LOCALE: DEFAULT_MSI_LOCALE,
     fetchLatestRelease: fetchLatestRelease,
     pickZip: pickZip,
     pickNsis: pickNsis,

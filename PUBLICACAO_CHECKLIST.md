@@ -26,9 +26,9 @@ Artefatos obrigatórios por release:
 
 | Arquivo | Papel |
 | ------- | ----- |
-| `*-setup.exe` | Instalador NSIS (lojista) |
-| `*.msi` | Instalador MSI (TI) |
-| `CaraCore-PDV-v*-windows.zip` | Pacote piloto portátil |
+| `*-setup.exe` | Instalador NSIS em português do Brasil (lojista) |
+| `*_pt-BR.msi` | Instalador MSI WiX pt-BR (TI) |
+| `CaraCore-PDV-v*-windows.zip` | Pacote piloto portátil (LEIA-ME em pt-BR) |
 | `SHA256SUMS.txt` | Hashes oficiais |
 | `RELEASE_MANIFEST.json` | Manifesto técnico da loja |
 
@@ -42,7 +42,8 @@ git -C D:/dev/caracore-pdv-rust-releases status --short --branch
 
 Conferir:
 
-- [ ] `docs/download.html` lista NSIS, MSI e ZIP via API GitHub
+- [ ] `docs/download.html` lista NSIS, MSI pt-BR e ZIP via API GitHub
+- [ ] `docs/assets/js/releases.js` prioriza MSI `*_pt-BR.msi`
 - [ ] `README.md` — tabela de versão atual
 - [ ] `CHANGELOG.md` — entrada da versão
 - [ ] GitHub Pages: branch `master`, pasta `/docs`
@@ -50,7 +51,7 @@ Conferir:
 Commit sugerido:
 
 ```text
-chore(store): alinha download e documentacao da release v0.1.0
+chore(store): alinha loja e download para instaladores pt-BR
 ```
 
 ## 4. Push loja + validar Pages

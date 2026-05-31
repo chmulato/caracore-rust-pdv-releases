@@ -21,7 +21,7 @@
       <div class="portal-header-content">
         <span class="portal-header-badge">Download</span>
         <h1>Windows — instalador ou pacote piloto</h1>
-        <p class="portal-header-lead">Escolha o formato conforme o perfil: lojista (NSIS), TI (MSI) ou piloto portátil (ZIP).</p>
+        <p class="portal-header-lead">Instaladores em <strong>Português do Brasil</strong>: lojista (NSIS), TI (MSI pt-BR) ou piloto portátil (ZIP).</p>
         <p class="portal-header-meta"><a href="primeiros-passos.html">Primeiros passos</a> · <a href="transparencia.html">Transparência</a></p>
       </div>
     </div>
@@ -37,6 +37,16 @@
   </nav>
 
   <main class="portal-main">
+    <section class="card">
+      <h2>Idioma dos instaladores</h2>
+      <p>Os pacotes oficiais são gerados para o mercado brasileiro:</p>
+      <ul>
+        <li><strong>NSIS</strong> (<code>*-setup.exe</code>) — assistente em português do Brasil.</li>
+        <li><strong>MSI</strong> (<code>*_pt-BR.msi</code>) — pacote WiX localizado para TI e deploy silencioso.</li>
+        <li><strong>ZIP</strong> — aplicativo portátil; instruções em português no <code>LEIA-ME-INSTALACAO.txt</code>.</li>
+      </ul>
+    </section>
+
     <section class="card">
       <h2>Fonte oficial</h2>
       <p>Artefatos publicados <strong>exclusivamente</strong> via GitHub Releases. Esta página consulta a API pública — não hospeda cópias alternativas.</p>
@@ -54,12 +64,12 @@
       <div class="download-grid" id="download-grid" hidden>
         <div class="download-option">
           <h3>Lojista / piloto</h3>
-          <p>Instalador com assistente (NSIS).</p>
+          <p>Instalador com assistente em português (NSIS).</p>
           <a id="btn-nsis" class="btn-primary" href="#" rel="noopener noreferrer">Baixar instalador</a>
         </div>
         <div class="download-option">
           <h3>TI / empresa</h3>
-          <p>Pacote MSI para deploy silencioso.</p>
+          <p>MSI pt-BR para deploy silencioso (<code>msiexec /i ... /qn</code>).</p>
           <a id="btn-msi" class="btn-secondary" href="#" rel="noopener noreferrer">Baixar MSI</a>
         </div>
         <div class="download-option">

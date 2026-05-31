@@ -12,6 +12,7 @@ A loja comunica o produto em linguagem comercial. Documentação técnica, evid�
 | ----- | ----- |
 | Versão | `v0.1.0` |
 | Status | Piloto Windows |
+| Idioma dos instaladores | Português do Brasil (pt-BR) |
 | Publicação | 05/2026 |
 | Stack da oficina | Rust + Tauri 2 + React + SQLite local |
 | Release | https://github.com/chmulato/caracore-rust-pdv-releases/releases/tag/v0.1.0 |
@@ -22,7 +23,7 @@ A loja comunica o produto em linguagem comercial. Documentação técnica, evid�
 | Artefato | Perfil | Verificação |
 | -------- | ------ | ----------- |
 | `CaraCore PDV_0.1.0_x64-setup.exe` | Lojista / piloto (NSIS) | `SHA256SUMS.txt` |
-| `CaraCore PDV_0.1.0_x64_en-US.msi` | TI / empresa (MSI) | `SHA256SUMS.txt` |
+| `CaraCore PDV_0.1.0_x64_pt-BR.msi` | TI / empresa (MSI, pt-BR) | `SHA256SUMS.txt` |
 | `CaraCore-PDV-v0.1.0-windows.zip` | Portátil piloto | `SHA256SUMS.txt` |
 | `RELEASE_MANIFEST.json` | Manifesto técnico | JSON na release |
 | `SHA256SUMS.txt` | Fonte oficial de hashes | Anexo da release |
@@ -48,7 +49,7 @@ A loja comunica o produto em linguagem comercial. Documentação técnica, evid�
 | `CHANGELOG.md` | Histórico de releases da vitrine |
 | `PUBLICACAO_CHECKLIST.md` | Roteiro oficina → release → loja |
 | `docs/` | Portal GitHub Pages |
-| `docs/download.html` | Download NSIS / MSI / ZIP via API GitHub |
+| `docs/download.html` | Download NSIS / MSI pt-BR / ZIP via API GitHub |
 | `docs/assets/js/releases.js` | Cliente da API de releases |
 | `.github/workflows/` | Validação da loja |
 

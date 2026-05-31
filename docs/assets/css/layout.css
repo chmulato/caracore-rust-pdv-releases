@@ -1,4 +1,4 @@
-/* CaraCore PDV v3 — layout shell */
+/* Cara Core PDV Desktop (Rust + Tauri) — layout shell */
 * { box-sizing: border-box; }
 html {
   scroll-behavior: smooth;

@@ -1,6 +1,6 @@
-# CaraCore PDV v3 (Rust) — Loja e Releases
+# Cara Core PDV Desktop (Rust + Tauri) — Loja e Releases
 
-Canal público de apresentação e distribuição do **CaraCore PDV v3** na linha **Rust + Tauri** (Windows).
+Canal público de apresentação e distribuição da **iniciativa Rust + Tauri 2** do CaraCore PDV (Windows, release v0.1.0). Coexiste com o PDV Desktop Java (canal v3.1.x) em pdv.caracore.com.br.
 
 A loja comunica o produto em linguagem comercial. Documentação técnica, evidências e gates ficam na oficina (`caracore-rust-pdv`).
 

@@ -169,7 +169,7 @@
         '<p class="evo-seed-store-label">Loja SEED · fase startup</p>' +
         '<p class="evo-seed-store-text">' +
         "<strong>Esta vitrine ainda não tem subdomínio próprio</strong> (ex.: pdv-rust.caracore.com.br). " +
-        "Enquanto isso, a loja oficial do PDV v3 (Rust) fica em <strong>GitHub Pages</strong>. " +
+        "Enquanto isso, a loja oficial da iniciativa <strong>Rust + Tauri</strong> fica em <strong>GitHub Pages</strong>. " +
         "Baixe somente pelos <a href=\"" +
         resolveAsset("download.html") +
         "\">releases oficiais</a> ou " +

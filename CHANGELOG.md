@@ -1,4 +1,4 @@
-# Changelog — Loja CaraCore PDV v3 (Rust)
+# Changelog — Loja Cara Core PDV Desktop (Rust + Tauri)
 
 Formato alinhado às demais lojas `*-releases` do ecossistema CaraCore.
 

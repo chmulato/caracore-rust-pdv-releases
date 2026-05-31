@@ -1,4 +1,4 @@
-# Checklist de Publicação — CaraCore PDV v3 (Rust) Loja
+# Checklist de Publicação — Cara Core PDV Desktop (Rust + Tauri) Loja
 
 Padrão do ecossistema `D:/dev/caracore-{produto}-releases`.
 

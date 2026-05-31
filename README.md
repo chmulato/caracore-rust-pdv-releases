@@ -45,7 +45,7 @@ Mensagem central: **quando a internet cai, o caixa não pode parar**. A linha Ru
 
 ## GitHub Pages
 
-Settings → Pages → Deploy from a branch → **main** → folder **/docs**.
+Settings → Pages → Deploy from a branch → **master** → folder **/docs**.
 
 URL padrão: `https://chmulato.github.io/caracore-rust-pdv-releases/`
 

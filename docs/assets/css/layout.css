@@ -173,6 +173,11 @@ body {
   line-height: 1.5;
 }
 .portal-footer a { color: var(--brand-2); word-break: break-word; }
+.portal-footer-links {
+  margin-top: 6px;
+  font-size: 12px;
+  line-height: 1.6;
+}
 
 /* Tablet: nav compacto em duas linhas */
 @media (min-width: 640px) and (max-width: 1023px) {

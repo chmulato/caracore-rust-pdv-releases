@@ -24,7 +24,8 @@ A loja comunica o produto em linguagem comercial, objetiva e sem detalhes de eng
 | `docs/index.html` | Apresentação |
 | `docs/produto.html` | Funções do sistema |
 | `docs/mercado.html` | Licenciamento e adoção |
-| `docs/download.html` | Download Windows |
+| `docs/download.html` | Download Windows (fonte oficial GitHub) |
+| `docs/transparencia.html` | Piloto, SHA256, privacidade e limites |
 | `docs/primeiros-passos.html` | Instalação inicial |
 
 GitHub Pages: branch **master**, pasta **/docs**.

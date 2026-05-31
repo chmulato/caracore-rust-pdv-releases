@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="Transparência sobre o CaraCore PDV v3 — fonte oficial de download, privacidade, status do piloto e limites do produto." />
+  <link rel="canonical" href="https://chmulato.github.io/caracore-rust-pdv-releases/transparencia.html" />
+  <title>Transparência — CaraCore PDV v3</title>
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/css/tokens.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+</head>
+<body data-portal-page="transparencia" data-nav-root="">
+  <header class="portal-header">
+    <div class="portal-header-inner">
+      <a class="portal-brand" href="index.html">
+        <img src="assets/img/logo-mark.svg" width="32" height="32" alt="" />
+        <span class="portal-brand-text">CaraCore PDV</span>
+      </a>
+      <div class="portal-header-content">
+        <span class="portal-header-badge">Transparência</span>
+        <h1>Informações claras sobre o produto</h1>
+        <p class="portal-header-lead">Quem publica o software, onde baixar com segurança, o que esperar na fase piloto e quais limites ainda existem.</p>
+        <p class="portal-header-meta"><a href="index.html">Início</a></p>
+      </div>
+    </div>
+  </header>
+
+  <nav class="portal-nav" aria-label="Navegação principal">
+    <div class="portal-nav-inner">
+      <a href="index.html">Início</a>
+      <a href="produto.html">Produto</a>
+      <a href="mercado.html">Para sua loja</a>
+      <a href="download.html">Download</a>
+    </div>
+  </nav>
+
+  <main class="portal-main">
+    <section class="card">
+      <h2>Quem somos</h2>
+      <p>O CaraCore PDV v3 é desenvolvido e distribuído pela <strong>Cara Core Informática</strong>, CNPJ <strong>23.969.028/0001-37</strong>.</p>
+      <p>Site institucional: <a class="ext-link" href="https://www.caracore.com.br/" rel="noopener noreferrer">caracore.com.br</a>. Contato comercial e suporte: <a href="mailto:suporte@caracore.com.br">suporte@caracore.com.br</a>.</p>
+    </section>
+
+    <section class="card">
+      <h2>Status do produto</h2>
+      <div class="notice notice-info">
+        <strong>Fase piloto (Windows)</strong>
+        A linha v3 em Rust está em avaliação com lojas selecionadas. Funções de caixa e gestão local evoluem com acompanhamento da Cara Core. Não confunda com a linha Java madura em <a class="ext-link" href="https://pdv.caracore.com.br/" rel="noopener noreferrer">pdv.caracore.com.br</a>.
+      </div>
+      <p>Esta loja (<code>caracore-rust-pdv-releases</code>) é apenas a vitrine e o canal de download da linha v3 Windows. O código-fonte e a documentação técnica ficam no repositório de desenvolvimento, separado desta página.</p>
+    </section>
+
+    <section class="card">
+      <h2>Fonte oficial de download</h2>
+      <p>Baixe o pacote <strong>somente</strong> pelos releases publicados no GitHub:</p>
+      <p><a class="ext-link" href="https://github.com/chmulato/caracore-rust-pdv-releases/releases" rel="noopener noreferrer">github.com/chmulato/caracore-rust-pdv-releases/releases</a></p>
+      <ul>
+        <li>Esta página de download apenas <em>aponta</em> para o mesmo endereço — não hospeda arquivos em outro domínio.</li>
+        <li>Desconfie de links enviados por terceiros, espelhos ou pastas compartilhadas sem confirmação com a Cara Core.</li>
+        <li>Se ainda não houver release publicado, o botão de download mostrará “Acompanhar releases” em vez de um arquivo inexistente.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Verificação do arquivo (SHA256)</h2>
+      <p>Cada release inclui um arquivo de somas (<code>SHA256SUMS.txt</code> ou equivalente) junto ao ZIP. Depois de baixar:</p>
+      <ol>
+        <li>Abra o PowerShell na pasta do download.</li>
+        <li>Execute: <code>Get-FileHash .\nome-do-arquivo.zip -Algorithm SHA256</code></li>
+        <li>Compare o valor com o listado no arquivo de somas do release.</li>
+      </ol>
+      <p>Se os valores não coincidirem, não execute o programa e avise <a href="mailto:suporte@caracore.com.br">suporte@caracore.com.br</a>.</p>
+    </section>
+
+    <section class="card">
+      <h2>Assinatura digital e SmartScreen</h2>
+      <div class="notice notice-warn">
+        <strong>Sem certificado de editor (por enquanto)</strong>
+        O instalador piloto ainda não possui assinatura digital de código. O Windows SmartScreen pode exibir aviso na primeira execução. Isso é esperado nesta fase — não significa que o arquivo veio de outra fonte, desde que baixado do release oficial e verificado pelo SHA256.
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Dados e privacidade</h2>
+      <ul>
+        <li>Produtos, vendas e caixa ficam no computador da loja (pasta em <code>%APPDATA%\caracore-pdv\</code>).</li>
+        <li>O fluxo normal de operação local não envia o faturamento diário para servidores CaraCore.</li>
+        <li>Emissão fiscal eletrônica, quando configurada, comunica-se apenas com os serviços exigidos pela legislação (SEFAZ, conforme credenciais da loja).</li>
+        <li>Backups são responsabilidade da loja; o sistema oferece ferramenta local de cópia e restauração.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Escopo fiscal e funcional</h2>
+      <p>O PDV inclui fila e rotinas fiscais em desenvolvimento. A homologação em ambiente real da sua loja depende de credenciais, certificado digital e orientação do contador. Recursos avançados (multi-loja, integrações específicas) seguem roadmap e contrato — não estão implícitos no pacote de teste.</p>
+      <p>Consulte <a href="produto.html">Produto</a> para a lista de áreas disponíveis hoje.</p>
+    </section>
+
+    <section class="card">
+      <h2>Links externos</h2>
+      <p>Links para sites de terceiros (Microsoft WebView2, GitHub, site CaraCore) abrem com <code>rel="noopener noreferrer"</code> quando saem deste domínio, para reduzir riscos de redirecionamento indevido.</p>
+      <p>Repositórios relacionados:</p>
+      <ul>
+        <li><a class="ext-link" href="https://github.com/chmulato/caracore-rust-pdv-releases" rel="noopener noreferrer">Releases (esta loja)</a></li>
+        <li><a class="ext-link" href="https://github.com/chmulato/caracore-rust-pdv" rel="noopener noreferrer">Desenvolvimento (oficina técnica)</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="portal-footer">
+    <p>CaraCore PDV v3 · Cara Core Informática · CNPJ 23.969.028/0001-37</p>
+    <p class="portal-footer-links">
+      <a href="transparencia.html">Transparência</a> ·
+      <a href="https://github.com/chmulato/caracore-rust-pdv-releases/releases" rel="noopener noreferrer">Releases oficiais (GitHub)</a> ·
+      <a href="https://www.caracore.com.br/" rel="noopener noreferrer">caracore.com.br</a> ·
+      <a href="mailto:suporte@caracore.com.br">suporte@caracore.com.br</a>
+    </p>
+  </footer>
+  <script src="assets/js/portal.js"></script>
+</body>
+</html>

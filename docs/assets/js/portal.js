@@ -10,7 +10,8 @@
     "produto.html": "produto.html",
     "mercado.html": "mercado.html",
     "download.html": "download.html",
-    "primeiros-passos.html": "download.html"
+    "primeiros-passos.html": "download.html",
+    "transparencia.html": "transparencia.html"
   };
 
   function currentFile() {
@@ -132,7 +133,17 @@
     nav.insertBefore(btn, inner);
   }
 
+  function enhanceExternalLinks() {
+    document.querySelectorAll('a[href^="http://"], a[href^="https://"]').forEach(function (link) {
+      var rel = (link.getAttribute("rel") || "").split(/\s+/).filter(Boolean);
+      if (rel.indexOf("noopener") === -1) rel.push("noopener");
+      if (rel.indexOf("noreferrer") === -1) rel.push("noreferrer");
+      link.setAttribute("rel", rel.join(" "));
+    });
+  }
+
   enhanceNavLinks();
+  enhanceExternalLinks();
   setActiveNav();
   initSmoothScroll();
   initMobileNavToggle();

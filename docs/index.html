@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="description" content="Loja CaraCore PDV v3 Rust — vitrine, download e documentação para lojistas, operadores e gestores de loja." />
+  <meta name="description" content="CaraCore PDV v3 — ponto de venda local para pequenas lojas. Vendas, caixa e gestão no seu computador." />
   <link rel="canonical" href="https://chmulato.github.io/caracore-rust-pdv-releases/" />
-  <title>Início — CaraCore PDV v3</title>
+  <title>CaraCore PDV v3</title>
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="assets/css/tokens.css" />
   <link rel="stylesheet" href="assets/css/layout.css" />
@@ -19,142 +19,66 @@
         <span class="portal-brand-text">CaraCore PDV</span>
       </a>
       <div class="portal-header-content">
-        <span class="portal-header-badge">Loja · v3 Rust</span>
-        <h1>Seu PDV, sua loja, seu controle</h1>
-        <p class="portal-header-lead">Informação clara para quem vende no balcão, fecha o caixa e cuida do negócio — o que já funciona, o que está em validação e o que vem a seguir.</p>
-        <p class="portal-header-meta">Cara Core Informática · Atualizado em 31/05/2026 · <a href="https://chmulato.github.io/caracore-rust-pdv-releases/">Loja pública</a></p>
+        <span class="portal-header-badge">CaraCore PDV v3</span>
+        <h1>Ponto de venda para a sua loja</h1>
+        <p class="portal-header-lead">Software de caixa instalado no computador da loja. Você vende, fecha o turno e consulta o dia — mesmo quando a internet oscila.</p>
+        <p class="portal-header-meta">Cara Core Informática · <a href="download.html">Baixar para Windows</a></p>
       </div>
     </div>
   </header>
 
-  <nav class="portal-nav" aria-label="Navegação principal da loja">
+  <nav class="portal-nav" aria-label="Navegação principal">
     <div class="portal-nav-inner">
       <a href="index.html">Início</a>
       <a href="produto.html">Produto</a>
-      <a href="arquitetura/desenvolvimento.html">Como funciona</a>
-      <a href="performance.html">Velocidade</a>
-      <a href="excelencia.html">Diferenciais</a>
       <a href="mercado.html">Para sua loja</a>
-      <a href="identidade.html">Aparência</a>
-      <a href="situacao-atual.html">Situação atual</a>
-      <a href="roadmap.html">Roadmap</a>
-      <a href="comprovacoes.html">Comprovações</a>
       <a href="download.html">Download</a>
-      <a href="governanca.html">Qualidade</a>
     </div>
   </nav>
 
   <main class="portal-main">
-    <section class="card exec-summary">
-      <h2>Leitura rápida</h2>
-      <p class="section-subtitle">Resumo para o dia a dia da loja — detalhes completos nas páginas do menu.</p>
-      <div class="exec-kpi-grid">
-        <div class="exec-kpi">
-          <strong class="slo-ok">Fases 1 e 2 concluídas</strong>
-          <span>Balcão V2 em <em>/vendas-v2</em> e gestão PME em <em>/gestao</em> — dashboard, CSV, kardex, estoque mínimo (V35).</span>
-        </div>
-        <div class="exec-kpi">
-          <strong class="slo-ok">Velocidade validada</strong>
-          <span>Resposta rápida no caixa e na consulta de produtos — conferido em testes repetidos.</span>
-        </div>
-        <div class="exec-kpi">
-          <strong class="slo-ok">Entrada clara no PDV</strong>
-          <span>Tela dedicada de login (<em>/login</em>) com usuário, senha e código do caixa; sair volta à entrada — validado em teste automático 7/7.</span>
-        </div>
-        <div class="exec-kpi">
-          <strong class="slo-warn">Pendências conhecidas</strong>
-          <span>Homologação fiscal real aguarda credenciais · inventário cíclico planejado · polish PDF/impressora real.</span>
-        </div>
-        <div class="exec-kpi">
-          <strong>Pausa documental</strong>
-          <span>Ciclo encerrado 31/05/2026 — retomada: <a href="situacao-atual.html">Situação atual</a> · polish ou <a href="roadmap.html">Roadmap</a> Fase 3 opcional.</span>
-        </div>
-        <div class="exec-kpi">
-          <strong class="slo-ok">Download piloto</strong>
-          <span>Pacote Windows Rust/Tauri — <a href="download.html">baixar ou acompanhar releases</a> · <a href="primeiros-passos.html">primeiros passos</a>.</span>
-        </div>
-      </div>
-      <p class="cta-box" style="margin-top: 1rem;">
-        <a class="btn-primary" href="download.html">Baixar PDV v3 Rust →</a>
-      </p>
+    <section class="card">
+      <h2>O que é</h2>
+      <p>O CaraCore PDV reúne venda no balcão, controle de caixa, cadastro de produtos e relatórios do dia. Os dados ficam na máquina da loja. Não é necessário manter o caixa dependente de nuvem para registrar vendas.</p>
     </section>
 
     <section class="card">
-      <h2>Explorar o portal</h2>
-      <p class="section-subtitle">Cada página responde uma pergunta prática — sem jargão de engenharia.</p>
+      <h2>Para quem</h2>
+      <ul>
+        <li>Pequenas lojas de bairro, mercados e varejo local.</li>
+        <li>Quem prefere operar com software licenciado e dados sob controle próprio.</li>
+        <li>Quem quer testar o fluxo de caixa antes de ampliar licenças ou integrações.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Conheça melhor</h2>
       <div class="hub-grid">
         <a class="hub-card" href="produto.html">
           <h3>Produto</h3>
-          <p>O que o PDV faz na sua loja: áreas do sistema e manual completo.</p>
-          <span class="hub-tag">Lojista · Gestor</span>
-        </a>
-        <a class="hub-card" href="arquitetura/desenvolvimento.html">
-          <h3>Como funciona</h3>
-          <p>Camadas DDD, SQLite ou PostgreSQL com as mesmas regras — rápido, seguro e offline.</p>
-          <span class="hub-tag">Transparência</span>
-        </a>
-        <a class="hub-card" href="performance.html">
-          <h3>Velocidade</h3>
-          <p>Tempo de resposta no balcão e na busca de produtos — o que isso significa para você.</p>
-          <span class="hub-tag">Caixa ágil</span>
-        </a>
-        <a class="hub-card" href="excelencia.html">
-          <h3>Diferenciais</h3>
-          <p>Busca instantânea, conciliação, plano B fiscal e atalhos que aceleram o expediente.</p>
-          <span class="hub-tag">Vantagem</span>
+          <p>Funções principais: vendas, caixa, estoque e relatórios.</p>
         </a>
         <a class="hub-card" href="mercado.html">
           <h3>Para sua loja</h3>
-          <p>Para quem é o PDV, licenciamento e por que dados ficam no seu computador.</p>
-          <span class="hub-tag">PME</span>
-        </a>
-        <a class="hub-card" href="identidade.html">
-          <h3>Aparência</h3>
-          <p>Temas visuais pensados para turnos longos sem atrapalhar a velocidade do operador.</p>
-          <span class="hub-tag">Balcão</span>
-        </a>
-        <a class="hub-card" href="roadmap.html">
-          <h3>Roadmap</h3>
-          <p>Fases de evolução: balcão PME, gestão comercial e trilha fiscal longa.</p>
-          <span class="hub-tag">Gestor · Produto</span>
-        </a>
-        <a class="hub-card" href="situacao-atual.html">
-          <h3>Situação atual</h3>
-          <p>O que está pronto, em validação ou bloqueado — sem surpresas.</p>
-          <span class="hub-tag">Honestidade</span>
-        </a>
-        <a class="hub-card" href="comprovacoes.html">
-          <h3>Comprovações</h3>
-          <p>Registros de testes e validações — para quem quer conferir o fundamento.</p>
-          <span class="hub-tag">Rastreio</span>
+          <p>Licenciamento, operação local e edições disponíveis.</p>
         </a>
         <a class="hub-card" href="download.html">
           <h3>Download</h3>
-          <p>Pacote Windows piloto, requisitos WebView2 e link para releases oficiais.</p>
-          <span class="hub-tag">Instalar</span>
-        </a>
-        <a class="hub-card" href="governanca.html">
-          <h3>Qualidade</h3>
-          <p>Como mantemos a documentação atualizada e o que significa cada status.</p>
-          <span class="hub-tag">Processo</span>
+          <p>Pacote para Windows e guia de instalação.</p>
         </a>
       </div>
     </section>
 
     <section class="card">
-      <h2>Como usar esta loja</h2>
-      <p class="section-subtitle">Feito para lojista e gestor de loja — instalação em <a href="primeiros-passos.html">Primeiros passos</a> e <a href="download.html">Download</a>.</p>
-      <ul>
-        <li><strong>Antes de operar:</strong> na primeira execução use o assistente <em>/setup</em> (banco); depois entre em <em>/login</em> com usuário e senha. Configuração contínua em Preferências → Banco.</li>
-        <li><strong>No balcão:</strong> após login, a tela padrão é vendas (<em>/vendas-v2</em>). Consulte <a href="excelencia.html">Diferenciais</a> e <a href="identidade.html">Aparência</a>.</li>
-        <li><strong>Para decidir investimento:</strong> veja <a href="mercado.html">Para sua loja</a> e o <a href="arquitetura/mapa-dominio-pdv.html">manual completo do produto</a>.</li>
-        <li><strong>Abrir localmente:</strong> abra a página inicial desta loja no navegador — todos os links funcionam offline.</li>
-      </ul>
+      <p class="cta-box">
+        <a class="btn-primary" href="download.html">Baixar para Windows</a>
+      </p>
+      <p class="section-subtitle">Dúvidas comerciais: <a href="mailto:suporte@caracore.com.br">suporte@caracore.com.br</a></p>
     </section>
   </main>
 
   <footer class="portal-footer">
-    CaraCore PDV v3 — Loja pública · PDV v3 Rust · Cara Core Informática · Última revisão: 31/05/2026 · <a href="index.html">Início</a>
+    CaraCore PDV v3 · Cara Core Informática · <a href="index.html">Início</a>
   </footer>
   <script src="assets/js/portal.js"></script>
 </body>

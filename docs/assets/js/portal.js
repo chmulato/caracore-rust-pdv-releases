@@ -8,18 +8,9 @@
   var PAGE_TO_NAV = {
     "index.html": "index.html",
     "produto.html": "produto.html",
-    "mapa-dominio-pdv.html": "produto.html",
-    "desenvolvimento.html": "desenvolvimento.html",
-    "performance.html": "performance.html",
-    "excelencia.html": "excelencia.html",
     "mercado.html": "mercado.html",
-    "identidade.html": "identidade.html",
-    "comprovacoes.html": "comprovacoes.html",
-    "situacao-atual.html": "situacao-atual.html",
-    "roadmap.html": "roadmap.html",
     "download.html": "download.html",
-    "primeiros-passos.html": "download.html",
-    "governanca.html": "governanca.html"
+    "primeiros-passos.html": "download.html"
   };
 
   function currentFile() {
@@ -38,11 +29,6 @@
     if (!navRoot || href.indexOf("..") === 0 || href.indexOf("/") !== -1) {
       return href;
     }
-    var sameDir = ["desenvolvimento.html", "mapa-dominio-pdv.html"];
-    var file = href.split("#")[0];
-    if (sameDir.indexOf(file) !== -1) {
-      return href;
-    }
     return navRoot + href;
   }
 
@@ -51,7 +37,7 @@
     var activeHref = PAGE_TO_NAV[file];
     if (!activeHref) return;
 
-    document.querySelectorAll(".portal-nav:not(.portal-nav--local) a[href]").forEach(function (link) {
+    document.querySelectorAll(".portal-nav a[href]").forEach(function (link) {
       var href = link.getAttribute("href");
       if (!href || href.charAt(0) === "#") return;
       var name = href.split("/").pop().split("#")[0];
@@ -105,7 +91,7 @@
   }
 
   function initMobileNavToggle() {
-    var nav = document.querySelector(".portal-nav:not(.portal-nav--local)");
+    var nav = document.querySelector(".portal-nav");
     if (!nav || nav.querySelector(".portal-nav-toggle")) return;
 
     var inner = nav.querySelector(".portal-nav-inner");

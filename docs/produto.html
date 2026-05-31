@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="description" content="Visão do CaraCore PDV v3 — áreas do produto para lojistas e gestores." />
+  <meta name="description" content="Funções do CaraCore PDV v3 — vendas, caixa, estoque e relatórios para lojas locais." />
   <title>Produto — CaraCore PDV v3</title>
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="assets/css/tokens.css" />
@@ -18,81 +18,61 @@
         <span class="portal-brand-text">CaraCore PDV</span>
       </a>
       <div class="portal-header-content">
-        <span class="portal-header-badge">Produto · v3</span>
-        <h1>O PDV que acompanha o dia da loja</h1>
-        <p class="portal-header-lead">Venda no balcão, controle de caixa e obrigações fiscais no mesmo sistema — funciona sem internet e mantém seus dados no computador da loja.</p>
-        <p class="portal-header-meta"><a href="index.html">Loja</a> · Manual completo: <a href="arquitetura/mapa-dominio-pdv.html">mapa do produto</a></p>
+        <span class="portal-header-badge">Produto</span>
+        <h1>O que o sistema faz</h1>
+        <p class="portal-header-lead">Recursos pensados para o dia a dia do balcão e do gestor, sem exigir conhecimento técnico para operar.</p>
+        <p class="portal-header-meta"><a href="index.html">Início</a></p>
       </div>
     </div>
   </header>
 
-  <nav class="portal-nav" aria-label="Navegação principal da loja">
+  <nav class="portal-nav" aria-label="Navegação principal">
     <div class="portal-nav-inner">
       <a href="index.html">Início</a>
       <a href="produto.html">Produto</a>
-      <a href="arquitetura/desenvolvimento.html">Como funciona</a>
-      <a href="performance.html">Velocidade</a>
-      <a href="excelencia.html">Diferenciais</a>
       <a href="mercado.html">Para sua loja</a>
-      <a href="identidade.html">Aparência</a>
-      <a href="situacao-atual.html">Situação atual</a>
-      <a href="roadmap.html">Roadmap</a>
-      <a href="comprovacoes.html">Comprovações</a>
       <a href="download.html">Download</a>
-      <a href="governanca.html">Qualidade</a>
     </div>
   </nav>
 
   <main class="portal-main">
-    <section class="card exec-summary">
-      <h2>Visão em 2 minutos</h2>
-      <p class="section-subtitle">O essencial antes de operar ou apresentar o sistema na loja.</p>
-      <div class="exec-kpi-grid">
-        <div class="exec-kpi"><strong>~22 rotas</strong><span>Login (<em>/login</em>), operação (<em>/vendas-v2</em>), gestão, caixa, suporte (backup) e preferências — menu unificado após autenticação.</span></div>
-        <div class="exec-kpi"><strong>Sem nuvem obrigatória</strong><span>Vendas e caixa no seu PC; nota fiscal entra na fila e segue quando a SEFAZ responde.</span></div>
-        <div class="exec-kpi"><strong>4 temas</strong><span>Claro, escuro, Cara Core e Bunker Modern — escolha do operador sem travar o balcão.</span></div>
-        <div class="exec-kpi"><strong>Responsivo</strong><span>Tablet (768–1023) e mobile (≤767) — caixa por etapas, clientes LGPD e CaixaPage legado validados.</span></div>
-      </div>
-    </section>
-
     <section class="card">
-      <h2>Manual por área (resumo)</h2>
-      <p class="section-subtitle">Detalhes, diagramas e oferta comercial no manual completo.</p>
+      <h2>Áreas do sistema</h2>
       <table class="trace">
         <thead>
-          <tr><th>Área</th><th>Valor para a loja</th><th>Status</th></tr>
+          <tr><th>Área</th><th>Uso na loja</th></tr>
         </thead>
         <tbody>
-          <tr><td>Operação</td><td>Balcão V2 (<em>/vendas-v2</em>): carrinho, pagamento misto, desconto, scanner, pós-venda e cadastro rápido</td><td><span class="status-chip status-concluido">CONCLUIDO</span></td></tr>
-          <tr><td>Gestão</td><td>Dashboard comercial, consulta de vendas, relatórios CSV, kardex, estoque mínimo e cupom não fiscal (<em>/gestao</em>)</td><td><span class="status-chip status-concluido">CONCLUIDO</span></td></tr>
-          <tr><td>Caixa</td><td>Telas dedicadas de abertura, fechamento e relatório de fim de dia (DRE); movimentações e contexto de turno visível no menu</td><td><span class="status-chip status-concluido">CONCLUIDO</span></td></tr>
-          <tr><td>Financeiro</td><td>Pagamentos, estornos e conciliação de cartão com arquivos da operadora</td><td><span class="status-chip status-concluido">CONCLUIDO</span></td></tr>
-          <tr><td>Fiscal</td><td>Auditoria, painel do turno, fila de notas e reenvio automático — homologação real na SEFAZ aguarda credenciais</td><td><span class="status-chip status-validacao">VALIDACAO</span></td></tr>
-          <tr><td>Suporte</td><td>Console da fila de impressão, reenvio de cupons e backup/restauração do banco local</td><td><span class="status-chip status-concluido">CONCLUIDO</span></td></tr>
-          <tr><td>Preferências</td><td>Aparência, atalhos, temas visuais e configuração do banco (SQLite ou PostgreSQL)</td><td><span class="status-chip status-concluido">CONCLUIDO</span></td></tr>
+          <tr><td>Vendas</td><td>Carrinho, pagamentos, descontos, leitor de código de barras e finalização da venda.</td></tr>
+          <tr><td>Caixa</td><td>Abertura e fechamento de turno, movimentações e resumo do dia.</td></tr>
+          <tr><td>Produtos e estoque</td><td>Cadastro, entradas, alertas de estoque mínimo e histórico básico.</td></tr>
+          <tr><td>Gestão</td><td>Consulta de vendas, relatórios exportáveis e visão comercial do período.</td></tr>
+          <tr><td>Clientes</td><td>Cadastro e consulta conforme rotina da loja.</td></tr>
+          <tr><td>Fiscal</td><td>Emissão e fila de documentos fiscais; continuação automática quando a conexão retorna.</td></tr>
+          <tr><td>Backup</td><td>Cópia e restauração do banco de dados local.</td></tr>
         </tbody>
       </table>
-      <div class="cta-box">
-        <p>Abra o manual com diagramas, telas por área, velocidade validada e oferta Free / Premium.</p>
-        <a class="btn-primary" href="arquitetura/mapa-dominio-pdv.html">Abrir manual completo →</a>
-      </div>
     </section>
 
     <section class="card">
-      <h2>Pendências honestas</h2>
+      <h2>Operação</h2>
       <ul>
-        <li><strong>Polish pós-responsivo</strong> — PDF nos relatórios, impressora real no cupom (hoje MOCK), accordion LGPD mobile.</li>
-        <li><strong>Confirmação pós-corte (MC-002)</strong> — marco oficial em <strong>30/05/2026</strong>; operação assistida segue com monitoramento.</li>
-        <li><strong>Homologação fiscal real na SEFAZ</strong> — <span class="status-chip status-bloqueado">BLOQUEADA</span> até credenciais do ambiente de homologação; rotinas locais já validadas.</li>
-        <li><strong>Inventário cíclico</strong> — <span class="status-chip status-nao-iniciado">NAO_INICIADO</span> — planejado para ciclo futuro.</li>
-        <li><strong>Tela de vendas anterior</strong> — ainda disponível no menu como “Vendas legado”; devolução, troca e cancelamento pós-venda também acessíveis no V2 via painel pós-venda.</li>
+        <li>Instalado no Windows da loja; funciona offline para vendas e caixa.</li>
+        <li>Cada operador entra com usuário e senha.</li>
+        <li>Temas de tela claro e escuro, conforme preferência.</li>
+        <li>Atalhos de teclado para agilizar o balcão.</li>
       </ul>
-      <p class="doc-meta">Mais detalhes em <a class="ext-link" href="situacao-atual.html">Situação atual</a>.</p>
+    </section>
+
+    <section class="card">
+      <h2>Observações</h2>
+      <p>A homologação fiscal em ambiente real depende das credenciais e do acompanhamento do contador. Recursos avançados de rede multi-loja entram conforme evolução do produto e contrato.</p>
+      <p class="cta-box"><a class="btn-primary" href="download.html">Baixar e testar</a></p>
     </section>
   </main>
 
   <footer class="portal-footer">
-    CaraCore PDV v3 — Produto · <a href="index.html">Loja</a> · <a href="arquitetura/mapa-dominio-pdv.html">Manual completo</a>
+    CaraCore PDV v3 · <a href="index.html">Início</a> · <a href="download.html">Download</a>
   </footer>
   <script src="assets/js/portal.js"></script>
 </body>

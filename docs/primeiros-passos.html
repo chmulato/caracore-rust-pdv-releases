@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="description" content="Primeiros passos no CaraCore PDV v3 Rust — instalação Windows, setup inicial e operação offline." />
-  <title>Primeiros passos — CaraCore PDV v3 Rust</title>
+  <meta name="description" content="Primeiros passos com o CaraCore PDV v3 no Windows." />
+  <title>Primeiros passos — CaraCore PDV v3</title>
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="assets/css/tokens.css" />
   <link rel="stylesheet" href="assets/css/layout.css" />
@@ -18,83 +18,56 @@
         <span class="portal-brand-text">CaraCore PDV</span>
       </a>
       <div class="portal-header-content">
-        <span class="portal-header-badge">Onboarding · v3 Rust</span>
-        <h1>Primeiros passos no Windows</h1>
-        <p class="portal-header-lead">Guia rápido para extrair o pacote, criar atalho, concluir o setup e operar no balcão.</p>
-        <p class="portal-header-meta"><a href="download.html">Download</a> · <a href="arquitetura/mapa-dominio-pdv.html">Manual completo</a></p>
+        <span class="portal-header-badge">Primeiros passos</span>
+        <h1>Instalar e abrir o PDV</h1>
+        <p class="portal-header-lead">Passo a passo para a primeira execução no Windows.</p>
+        <p class="portal-header-meta"><a href="download.html">Download</a></p>
       </div>
     </div>
   </header>
 
-  <nav class="portal-nav" aria-label="Navegação principal da loja">
+  <nav class="portal-nav" aria-label="Navegação principal">
     <div class="portal-nav-inner">
       <a href="index.html">Início</a>
       <a href="produto.html">Produto</a>
-      <a href="arquitetura/desenvolvimento.html">Como funciona</a>
-      <a href="performance.html">Velocidade</a>
-      <a href="excelencia.html">Diferenciais</a>
       <a href="mercado.html">Para sua loja</a>
-      <a href="identidade.html">Aparência</a>
-      <a href="situacao-atual.html">Situação atual</a>
-      <a href="roadmap.html">Roadmap</a>
-      <a href="comprovacoes.html">Comprovações</a>
       <a href="download.html">Download</a>
-      <a href="governanca.html">Qualidade</a>
     </div>
   </nav>
 
   <main class="portal-main">
     <section class="card">
-      <h2>Antes de abrir</h2>
-      <ul>
-        <li>Windows 10 ou 11 (64 bits).</li>
-        <li><a class="ext-link" href="https://go.microsoft.com/fwlink/p/?LinkId=2124703">Microsoft Edge WebView2 Runtime</a> — na maioria dos PCs já instalado.</li>
-        <li>Pasta fixa para extrair o ZIP (ex.: <code>C:\Programas\CaraCore-PDV\</code>).</li>
-      </ul>
-    </section>
-
-    <section class="card">
-      <h2>Instalação</h2>
+      <h2>1. Instalar</h2>
       <ol>
-        <li>Baixe o ZIP em <a href="download.html">Download</a> e extraia todo o conteúdo.</li>
-        <li>Execute <code>instalar-atalho.bat</code>.</li>
-        <li>Abra o atalho <strong>CaraCore PDV</strong>.</li>
-        <li>Se o SmartScreen alertar, use “Mais informações” → “Executar assim mesmo”.</li>
+        <li>Baixe o ZIP em <a href="download.html">Download</a>.</li>
+        <li>Extraia todo o conteúdo em uma pasta fixa.</li>
+        <li>Execute o script que cria o atalho na Área de Trabalho.</li>
+        <li>Abra <strong>CaraCore PDV</strong> pelo atalho.</li>
       </ol>
     </section>
 
     <section class="card">
-      <h2>Primeira execução</h2>
-      <ol>
-        <li>Conclua o assistente em <em>/setup</em> (banco SQLite local).</li>
-        <li>Entre em <em>/login</em> com usuário, senha e código do caixa.</li>
-        <li>A tela padrão após login é vendas em <em>/vendas-v2</em>.</li>
-        <li>Configuração contínua: Preferências → Banco.</li>
-      </ol>
+      <h2>2. Configurar</h2>
+      <p>Na primeira abertura, o assistente orienta a preparação do banco de dados local. Depois, entre com usuário e senha fornecidos na implantação ou criados no setup.</p>
     </section>
 
     <section class="card">
-      <h2>Onde ficam seus dados</h2>
-      <table class="trace">
-        <thead><tr><th>Item</th><th>Caminho</th></tr></thead>
-        <tbody>
-          <tr><td>Banco SQLite</td><td><code>%APPDATA%\caracore-pdv\data\pdv.db</code></td></tr>
-          <tr><td>Configuração</td><td><code>%APPDATA%\caracore-pdv\config.json</code></td></tr>
-          <tr><td>Logs</td><td><code>%APPDATA%\caracore-pdv\logs\</code></td></tr>
-        </tbody>
-      </table>
-      <p class="section-subtitle">Atalho: Win+R → digite <code>%APPDATA%\caracore-pdv</code> → Enter.</p>
+      <h2>3. Operar</h2>
+      <p>Após o login, a tela de vendas fica disponível. Caixa, produtos e relatórios acessam-se pelo menu principal.</p>
     </section>
 
     <section class="card">
-      <h2>Operação offline</h2>
-      <p>O PDV funciona sem internet. Vendas, caixa e estoque usam SQLite local. Funções fiscais remotas (SEFAZ) dependem de conectividade quando configuradas.</p>
-      <p class="cta-box"><a class="btn-primary" href="produto.html">Conhecer o produto →</a></p>
+      <h2>Onde ficam os arquivos</h2>
+      <p>Dados e configuração ficam em <code>%APPDATA%\caracore-pdv\</code>. Para abrir essa pasta: tecla Windows + R, digite o caminho e confirme.</p>
+    </section>
+
+    <section class="card">
+      <p class="cta-box"><a class="btn-primary" href="produto.html">Ver funções do produto</a></p>
     </section>
   </main>
 
   <footer class="portal-footer">
-    CaraCore PDV v3 Rust — Loja pública · Cara Core Informática · <a href="download.html">Download</a>
+    CaraCore PDV v3 · <a href="download.html">Download</a>
   </footer>
   <script src="assets/js/portal.js"></script>
 </body>

@@ -219,6 +219,25 @@
 }
 .btn-secondary:hover { background: #eef4fb; }
 
+.download-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 1rem;
+}
+.download-option {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+  padding: 16px;
+  background: #fff;
+}
+.download-option h3 { margin: 0 0 6px; font-size: 15px; }
+.download-option p { margin: 0 0 12px; font-size: 13px; color: var(--muted); }
+.download-option a { width: 100%; box-sizing: border-box; }
+@media (max-width: 900px) {
+  .download-grid { grid-template-columns: 1fr; }
+}
+
 .proof-list { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
 .proof-item {
   border: 1px solid var(--line);

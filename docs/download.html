@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="description" content="Baixe o CaraCore PDV v3 para Windows — fonte oficial, verificação SHA256 e requisitos." />
+  <meta name="description" content="Baixe o CaraCore PDV v3 para Windows — instalador, MSI, ZIP piloto e verificação SHA256." />
   <link rel="canonical" href="https://chmulato.github.io/caracore-rust-pdv-releases/download.html" />
   <title>Download — CaraCore PDV v3</title>
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
@@ -20,8 +20,8 @@
       </a>
       <div class="portal-header-content">
         <span class="portal-header-badge">Download</span>
-        <h1>Pacote para Windows</h1>
-        <p class="portal-header-lead">Arquivo ZIP com o programa, atalho de instalação e instruções. Requer Windows 10 ou 11 (64 bits).</p>
+        <h1>Windows — instalador ou pacote piloto</h1>
+        <p class="portal-header-lead">Escolha o formato conforme o perfil: lojista (NSIS), TI (MSI) ou piloto portátil (ZIP).</p>
         <p class="portal-header-meta"><a href="primeiros-passos.html">Primeiros passos</a> · <a href="transparencia.html">Transparência</a></p>
       </div>
     </div>
@@ -39,51 +39,61 @@
   <main class="portal-main">
     <section class="card">
       <h2>Fonte oficial</h2>
-      <p>O arquivo é distribuído <strong>exclusivamente</strong> via releases do repositório GitHub abaixo. Esta página consulta a API pública do GitHub para mostrar a última versão — não hospeda cópias alternativas.</p>
+      <p>Artefatos publicados <strong>exclusivamente</strong> via GitHub Releases. Esta página consulta a API pública — não hospeda cópias alternativas.</p>
       <p><a class="ext-link" id="releases-page-link" href="https://github.com/chmulato/caracore-rust-pdv-releases/releases" rel="noopener noreferrer">Releases oficiais no GitHub</a></p>
     </section>
 
     <section class="card">
       <h2>Última versão</h2>
       <noscript>
-        <p>JavaScript desativado: abra diretamente a <a href="https://github.com/chmulato/caracore-rust-pdv-releases/releases" rel="noopener noreferrer">página de releases no GitHub</a> para baixar o ZIP mais recente.</p>
+        <p>JavaScript desativado: abra a <a href="https://github.com/chmulato/caracore-rust-pdv-releases/releases" rel="noopener noreferrer">página de releases</a>.</p>
       </noscript>
       <p id="release-summary">Consultando versão publicada…</p>
-      <p class="cta-box" style="margin-top: 1rem;">
+      <p id="release-date" class="section-subtitle"></p>
+
+      <div class="download-grid" id="download-grid" hidden>
+        <div class="download-option">
+          <h3>Lojista / piloto</h3>
+          <p>Instalador com assistente (NSIS).</p>
+          <a id="btn-nsis" class="btn-primary" href="#" rel="noopener noreferrer">Baixar instalador</a>
+        </div>
+        <div class="download-option">
+          <h3>TI / empresa</h3>
+          <p>Pacote MSI para deploy silencioso.</p>
+          <a id="btn-msi" class="btn-secondary" href="#" rel="noopener noreferrer">Baixar MSI</a>
+        </div>
+        <div class="download-option">
+          <h3>Portátil</h3>
+          <p>ZIP com atalho e instruções.</p>
+          <a id="btn-zip" class="btn-secondary" href="#" rel="noopener noreferrer">Baixar ZIP</a>
+        </div>
+      </div>
+
+      <p id="download-fallback" class="cta-box" style="margin-top: 1rem;">
         <a id="download-btn" class="btn-primary" href="https://github.com/chmulato/caracore-rust-pdv-releases/releases" rel="noopener noreferrer">Ver releases oficiais</a>
       </p>
       <p id="download-hint" class="section-subtitle"></p>
-      <p id="sha256-hint" class="footnote" hidden></p>
+      <p id="integrity-links" class="footnote" hidden></p>
     </section>
 
     <section class="card">
-      <h2>Conteúdo do ZIP</h2>
-      <ul>
-        <li>Programa principal (<code>caracore_pdv_desktop.exe</code>)</li>
-        <li>Script para criar atalho na Área de Trabalho</li>
-        <li>Arquivo de verificação (SHA256)</li>
-        <li>Instruções de instalação em texto</li>
-      </ul>
-      <p class="footnote">Como verificar o hash: <a href="transparencia.html">instruções em Transparência</a>.</p>
+      <h2>Verificação de integridade</h2>
+      <p>Confira o hash SHA256 antes de executar. Use o arquivo <code>SHA256SUMS.txt</code> da release ou o manifesto <code>RELEASE_MANIFEST.json</code>.</p>
+      <p><a href="transparencia.html">Instruções detalhadas →</a></p>
     </section>
 
     <section class="card">
       <h2>Requisitos</h2>
       <ul>
         <li>Windows 10 ou 11, 64 bits.</li>
-        <li>Componente WebView2 — em geral já presente no Windows atualizado. Se necessário: <a class="ext-link" href="https://go.microsoft.com/fwlink/p/?LinkId=2124703" rel="noopener noreferrer">download Microsoft</a>.</li>
-        <li>Se o Windows SmartScreen alertar sobre o arquivo, use “Mais informações” e “Executar assim mesmo” (comum enquanto o instalador não possui certificado digital — veja <a href="transparencia.html">Transparência</a>).</li>
+        <li>WebView2 Runtime — em geral já presente. Se necessário: <a class="ext-link" href="https://go.microsoft.com/fwlink/p/?LinkId=2124703" rel="noopener noreferrer">download Microsoft</a>.</li>
+        <li>SmartScreen: veja <a href="transparencia.html">Transparência</a> (comum sem certificado digital na fase piloto).</li>
       </ul>
     </section>
 
     <section class="card">
-      <h2>Instalação resumida</h2>
-      <ol>
-        <li>Extraia o ZIP em uma pasta fixa (ex.: <code>C:\Programas\CaraCore-PDV\</code>).</li>
-        <li>Execute o script de atalho.</li>
-        <li>Abra o CaraCore PDV e siga o assistente inicial.</li>
-      </ol>
-      <p><a href="primeiros-passos.html">Guia completo de primeiros passos →</a></p>
+      <h2>Linha Java (alternativa)</h2>
+      <p>A linha Quarkus/JavaFX continua em <a href="https://pdv.caracore.com.br/download.html" rel="noopener noreferrer">pdv.caracore.com.br</a>.</p>
     </section>
   </main>
 
@@ -91,80 +101,83 @@
     <p>CaraCore PDV v3 · Cara Core Informática · CNPJ 23.969.028/0001-37</p>
     <p class="portal-footer-links">
       <a href="transparencia.html">Transparência</a> ·
-      <a href="https://github.com/chmulato/caracore-rust-pdv-releases/releases" rel="noopener noreferrer">Releases oficiais (GitHub)</a> ·
-      <a href="https://www.caracore.com.br/" rel="noopener noreferrer">caracore.com.br</a> ·
-      <a href="mailto:suporte@caracore.com.br">suporte@caracore.com.br</a>
+      <a href="https://github.com/chmulato/caracore-rust-pdv-releases/releases" rel="noopener noreferrer">Releases oficiais</a> ·
+      <a href="https://www.caracore.com.br/" rel="noopener noreferrer">caracore.com.br</a>
     </p>
   </footer>
   <script src="assets/js/portal.js"></script>
+  <script src="assets/js/releases.js"></script>
   <script>
     (function () {
       "use strict";
-      var OWNER = "chmulato";
-      var REPO = "caracore-rust-pdv-releases";
-      var RELEASES_URL = "https://github.com/" + OWNER + "/" + REPO + "/releases";
+      var R = window.CaraCoreRustReleases;
       var summaryEl = document.getElementById("release-summary");
-      var btn = document.getElementById("download-btn");
+      var dateEl = document.getElementById("release-date");
+      var grid = document.getElementById("download-grid");
+      var fallback = document.getElementById("download-fallback");
       var hint = document.getElementById("download-hint");
-      var shaEl = document.getElementById("sha256-hint");
+      var integrity = document.getElementById("integrity-links");
       var releasesLink = document.getElementById("releases-page-link");
+      var btnNsis = document.getElementById("btn-nsis");
+      var btnMsi = document.getElementById("btn-msi");
+      var btnZip = document.getElementById("btn-zip");
 
-      function pickZipAsset(assets) {
-        if (!assets || !assets.length) return null;
-        var zip = assets.find(function (a) {
-          return /\.zip$/i.test(a.name) && /windows|win|x64|desktop|pdv/i.test(a.name);
-        });
-        return zip || assets.find(function (a) { return /\.zip$/i.test(a.name); }) || null;
+      function wireButton(el, asset, labelPrefix) {
+        if (!el || !asset) {
+          if (el) el.hidden = true;
+          return false;
+        }
+        el.href = asset.browser_download_url;
+        el.textContent = labelPrefix + asset.name;
+        el.hidden = false;
+        return true;
       }
 
-      function pickChecksumAsset(assets) {
-        if (!assets || !assets.length) return null;
-        return assets.find(function (a) {
-          return /sha256|checksum|sums/i.test(a.name) && /\.(txt|sha256)$/i.test(a.name);
-        }) || assets.find(function (a) { return /sha256/i.test(a.name); });
-      }
-
-      function setExternalLink(el, url) {
-        if (!el) return;
-        el.href = url;
-        el.setAttribute("rel", "noopener noreferrer");
-      }
-
-      fetch("https://api.github.com/repos/" + OWNER + "/" + REPO + "/releases/latest", {
-        headers: { Accept: "application/vnd.github+json" }
-      })
-        .then(function (res) {
-          if (!res.ok) throw new Error("no_release");
-          return res.json();
-        })
+      R.fetchLatestRelease()
         .then(function (data) {
           var label = data.tag_name || "Versão publicada";
           summaryEl.textContent = label + (data.name ? " — " + data.name : "");
-          if (data.html_url) setExternalLink(releasesLink, data.html_url);
+          if (data.published_at) {
+            dateEl.textContent = "Publicado em " + data.published_at.slice(0, 10) + ".";
+          }
+          if (data.html_url) {
+            releasesLink.href = data.html_url;
+          }
 
-          var asset = pickZipAsset(data.assets);
-          var checksum = pickChecksumAsset(data.assets);
+          var assets = data.assets || [];
+          var nsis = R.pickNsis(assets);
+          var msi = R.pickMsi(assets);
+          var zip = R.pickZip(assets);
+          var sums = R.pickSha256Sums(assets);
+          var manifest = R.pickManifest(assets);
 
-          if (asset) {
-            btn.href = asset.browser_download_url;
-            btn.textContent = "Baixar " + asset.name;
-            btn.setAttribute("rel", "noopener noreferrer");
-            hint.textContent = "Publicado em " + (data.published_at || "").slice(0, 10) + ". Confirme o SHA256 antes de executar.";
-            if (checksum) {
-              shaEl.hidden = false;
-              shaEl.innerHTML = 'Arquivo de verificação: <a class="ext-link" href="' + checksum.browser_download_url + '" rel="noopener noreferrer">' + checksum.name + "</a>.";
-            }
+          var any = wireButton(btnNsis, nsis, "Baixar ")
+            | wireButton(btnMsi, msi, "Baixar ")
+            | wireButton(btnZip, zip, "Baixar ");
+
+          if (any) {
+            grid.hidden = false;
+            fallback.hidden = true;
+            hint.textContent = "Confirme SHA256 antes de executar.";
           } else {
-            btn.textContent = "Ver release no GitHub";
-            setExternalLink(btn, data.html_url || RELEASES_URL);
-            hint.textContent = "Release listada sem arquivo ZIP anexo. Abra a página do release para conferir os anexos.";
+            hint.textContent = "Release sem anexos reconhecidos. Abra a página do GitHub.";
+          }
+
+          var parts = [];
+          if (sums) {
+            parts.push('<a class="ext-link" href="' + sums.browser_download_url + '" rel="noopener noreferrer">' + sums.name + "</a>");
+          }
+          if (manifest) {
+            parts.push('<a class="ext-link" href="' + manifest.browser_download_url + '" rel="noopener noreferrer">' + manifest.name + "</a>");
+          }
+          if (parts.length) {
+            integrity.hidden = false;
+            integrity.innerHTML = "Integridade: " + parts.join(" · ");
           }
         })
         .catch(function () {
           summaryEl.textContent = "Nenhuma versão publicada no momento.";
-          btn.textContent = "Acompanhar releases oficiais";
-          setExternalLink(btn, RELEASES_URL);
-          hint.textContent = "Para participar do piloto antes da primeira release pública, escreva para suporte@caracore.com.br.";
+          hint.textContent = "Para piloto antecipado: suporte@caracore.com.br.";
         });
     })();
   </script>

@@ -10,7 +10,7 @@ alwaysApply: true
 - **URL canónica:** https://rust-pdv.caracore.com.br/ — **vitrine principal** do produto Rust (sem canal delivery/pdv-rust na matriz).
 - **CNAME:** `docs/CNAME` → `rust-pdv.caracore.com.br`
 - **Oficina:** caracore-pdv-rust
-- **Referência institucional:** caracore.com.br/portfolio.html#caracore-pdv-rust (não delivery/pdv-rust)
+- **Referência institucional:** portfolio.html#caracore-pdv-rust · #pdv-coexistencia · footer loja → portfólio
 
 ## Linha Java (coexistência)
 - **PDV Desktop Java:** https://pdv.caracore.com.br/ — canal v3.1.2-free

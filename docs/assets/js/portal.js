@@ -4,6 +4,7 @@
   var body = document.body;
   var navRoot = body.getAttribute("data-nav-root") || "";
   var DESKTOP_NAV_MQ = window.matchMedia("(min-width: 1024px)");
+  var MOBILE_NAV_MQ = window.matchMedia("(max-width: 639px)");
 
   var PAGE_TO_NAV = {
     "index.html": "index.html",
@@ -11,8 +12,9 @@
     "mercado.html": "mercado.html",
     "download.html": "download.html",
     "primeiros-passos.html": "download.html",
+    "demonstracao.html": "demonstracao.html",
     "transparencia.html": "transparencia.html",
-    "comparacao.html": "index.html",
+    "comparacao.html": "comparacao.html",
     "rust-tauri.html": "wiki/index.html",
     "wiki/index.html": "wiki/index.html",
     "wiki/projeto-pdv.html": "wiki/index.html"
@@ -130,6 +132,9 @@
       if (e.key === "Escape") closeMobileNav(nav, inner, btn);
     });
 
+    MOBILE_NAV_MQ.addEventListener("change", function (e) {
+      if (!e.matches) closeMobileNav(nav, inner, btn);
+    });
     DESKTOP_NAV_MQ.addEventListener("change", function (e) {
       if (e.matches) closeMobileNav(nav, inner, btn);
     });

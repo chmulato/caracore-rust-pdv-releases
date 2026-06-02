@@ -24,18 +24,30 @@
   --shadow-card: 0 8px 20px rgba(11, 58, 102, 0.06);
   --shadow-card-hover: 0 10px 24px rgba(11, 58, 102, 0.1);
 
-  /* breakpoints (reference): mobile ≤639 · tablet 640–1023 · desktop ≥1024 */
+  /* breakpoints: mobile ≤639 · tablet 640–1023 · desktop ≥1024 */
+  --bp-mobile-max: 639px;
+  --bp-tablet-min: 640px;
+  --bp-desktop-min: 1024px;
 }
 
 @media (max-width: 639px) {
   :root {
-    --header-pad-y: 20px;
+    --header-pad-y: 18px;
     --radius-card: 12px;
+    --page-gutter: clamp(0.875rem, 4vw, 1.25rem);
+    --shell-margin: clamp(0.5rem, 2.5vw, 0.75rem);
   }
 }
 
 @media (min-width: 640px) and (max-width: 1023px) {
   :root {
-    --header-pad-y: 24px;
+    --header-pad-y: 22px;
+    --page-gutter: clamp(1rem, 3vw, 1.5rem);
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --page-gutter: clamp(1.25rem, 2.5vw, 1.75rem);
   }
 }

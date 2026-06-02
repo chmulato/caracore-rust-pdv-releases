@@ -1,132 +1,258 @@
-<!doctype html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="description" content="Demonstração do Cara Core PDV Desktop — fluxo de venda, caixa e gestão em passos objetivos." />
-  <link rel="canonical" href="https://rust-pdv.caracore.com.br/demonstracao.html" />
-  <title>Demonstração — Cara Core PDV Desktop</title>
-  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="assets/css/tokens.css" />
-  <link rel="stylesheet" href="assets/css/layout.css" />
-  <link rel="stylesheet" href="assets/css/components.css" />
-</head>
-<body data-portal-page="demonstracao" data-nav-root="">
-  <header class="portal-header">
-    <div class="portal-header-inner">
-      <a class="portal-brand" href="index.html">
-        <img src="assets/img/logo-mark.svg" width="32" height="32" alt="" />
-        <span class="portal-brand-text">CaraCore PDV</span>
-      </a>
-      <div class="portal-header-content">
-        <span class="portal-header-badge">Demonstração</span>
-        <h1>Fluxo do PDV em 4 passos</h1>
-        <p class="portal-header-lead">Do login à venda, caixa e gestão — visão objetiva do que o operador e o gestor fazem no dia a dia.</p>
-        <div class="hero-actions">
-          <a class="btn-primary btn-hero" href="download.html">Baixar PDV Desktop</a>
-          <a class="btn-secondary btn-hero" href="primeiros-passos.html">Instalar em 4 passos</a>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <nav class="portal-nav" aria-label="Navegação principal">
-    <div class="portal-nav-inner">
-      <a href="index.html">Início</a>
-      <a href="produto.html">Produto</a>
-      <a href="demonstracao.html">Demonstração</a>
-      <a href="mercado.html">Para sua loja</a>
-      <a href="download.html">Download</a>
-      <a href="comparacao.html">Comparar</a>
-      <a href="wiki/index.html">Wiki</a>
-    </div>
-  </nav>
-
-  <main class="portal-main">
-    <section class="card demo-tour" data-demo-tour data-demo-initial="vendas" aria-label="Tour do fluxo do PDV">
-      <p class="section-subtitle">Selecione uma etapa. Screenshots e vídeo serão publicados quando disponíveis.</p>
-      <div class="demo-tour__steps" role="tablist">
-        <button type="button" class="demo-tour__step" role="tab" data-demo-step="abrir" aria-selected="false">
-          <span class="demo-tour__num">1</span>
-          <span class="demo-tour__label">Abrir</span>
-        </button>
-        <button type="button" class="demo-tour__step demo-tour__step--active" role="tab" data-demo-step="vendas" aria-selected="true">
-          <span class="demo-tour__num">2</span>
-          <span class="demo-tour__label">Vender</span>
-        </button>
-        <button type="button" class="demo-tour__step" role="tab" data-demo-step="caixa" aria-selected="false">
-          <span class="demo-tour__num">3</span>
-          <span class="demo-tour__label">Caixa</span>
-        </button>
-        <button type="button" class="demo-tour__step" role="tab" data-demo-step="gestao" aria-selected="false">
-          <span class="demo-tour__num">4</span>
-          <span class="demo-tour__label">Gestão</span>
-        </button>
-      </div>
-
-      <div class="demo-tour__stage">
-        <div class="demo-tour__caption" data-demo-caption>
-          <strong>Vendas</strong>
-          <p>Busca rápida, carrinho, PIX e finalização por atalho (F9).</p>
-        </div>
-      </div>
-
-      <div hidden data-demo-panel="abrir">
-        <div data-demo-panel-caption>
-          <strong>Abrir</strong>
-          <p>Instale, faça login e abra o turno — o balcão fica pronto em segundos.</p>
-        </div>
-      </div>
-      <div hidden data-demo-panel="vendas">
-        <div data-demo-panel-caption>
-          <strong>Vendas</strong>
-          <p>Busca rápida, carrinho, PIX e finalização por atalho (F9).</p>
-        </div>
-      </div>
-      <div hidden data-demo-panel="caixa">
-        <div data-demo-panel-caption>
-          <strong>Caixa</strong>
-          <p>Turno, sangria, suprimento e backup automático ao fechar.</p>
-        </div>
-      </div>
-      <div hidden data-demo-panel="gestao">
-        <div data-demo-panel-caption>
-          <strong>Gestão</strong>
-          <p>Indicadores do período e exportação de relatório em PDF.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="card">
-      <h2>Fluxo resumido</h2>
-      <ol class="demo-flow-list">
-        <li><strong>Instalar</strong> — NSIS, MSI pt-BR ou ZIP (<a href="download.html">download</a>).</li>
-        <li><strong>Entrar</strong> — código do caixa, usuário e senha.</li>
-        <li><strong>Abrir turno</strong> — fundo de caixa registrado.</li>
-        <li><strong>Vender</strong> — itens, pagamento e cupom na fila local.</li>
-        <li><strong>Fechar</strong> — conferência, backup e relatório do dia.</li>
-      </ol>
-    </section>
-
-    <section class="card">
-      <div class="download-hero-cta">
-        <h2>Testar na sua loja</h2>
-        <p>Edição de teste sob proposta · instaladores com SHA256.</p>
-        <a class="btn-primary" href="download.html">Baixar PDV Desktop (Windows)</a>
-        <p class="hash-line"><a href="mercado.html#precos" style="color:#fff;text-decoration:underline;">Ver planos e licenciamento</a></p>
-      </div>
-    </section>
-  </main>
-
-  <footer class="portal-footer">
-    <p>Cara Core PDV Desktop (Rust + Tauri) · Cara Core Informática · CNPJ 23.969.028/0001-37</p>
-    <p class="portal-footer-links">
-      <a href="index.html">Início</a> ·
-      <a href="comparacao.html">Comparação Rust/Java</a> ·
-      <a href="mailto:suporte@caracore.com.br">suporte@caracore.com.br</a>
-    </p>
-  </footer>
-  <script src="assets/js/portal.js"></script>
-  <script src="assets/js/demo-tour.js"></script>
-</body>
-</html>
+<!doctype html>
+
+<html lang="pt-BR">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+  <meta name="description" content="Demonstração do Cara Core PDV Desktop — fluxo de venda, caixa e gestão em passos objetivos." />
+
+  <link rel="canonical" href="https://rust-pdv.caracore.com.br/demonstracao.html" />
+
+  <title>Demonstração — Cara Core PDV Desktop</title>
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+
+  <link rel="stylesheet" href="assets/css/tokens.css" />
+
+  <link rel="stylesheet" href="assets/css/layout.css" />
+
+  <link rel="stylesheet" href="assets/css/components.css" />
+
+</head>
+
+<body data-portal-page="demonstracao" data-nav-root="">
+
+  <header class="portal-header">
+
+    <div class="portal-header-inner">
+
+      <a class="portal-brand" href="index.html">
+
+        <img src="assets/img/logo-mark.svg" width="32" height="32" alt="" />
+
+        <span class="portal-brand-text">CaraCore PDV</span>
+
+      </a>
+
+      <div class="portal-header-content">
+
+        <span class="portal-header-badge">Demonstração</span>
+
+        <h1>Fluxo do PDV em 4 passos</h1>
+
+        <p class="portal-header-lead">Do login à venda, caixa e gestão — visão objetiva do que o operador e o gestor fazem no dia a dia.</p>
+
+        <div class="hero-actions">
+
+          <a class="btn-primary btn-hero" href="download.html">Baixar PDV Desktop</a>
+
+          <a class="btn-secondary btn-hero" href="primeiros-passos.html">Instalar em 4 passos</a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+
+  <nav class="portal-nav" aria-label="Navegação principal">
+
+    <div class="portal-nav-inner">
+
+      <a href="index.html">Início</a>
+
+      <a href="produto.html">Produto</a>
+
+      <a href="demonstracao.html">Demonstração</a>
+
+      <a href="mercado.html">Para sua loja</a>
+
+      <a href="download.html">Download</a>
+
+      <a href="comparacao.html">Comparar</a>
+
+      <a href="wiki/index.html">Wiki</a>
+
+    </div>
+
+  </nav>
+
+
+
+  <main class="portal-main">
+
+    <section class="card demo-tour" data-demo-tour data-demo-initial="vendas" aria-label="Tour do fluxo do PDV">
+
+      <p class="section-subtitle">Selecione uma etapa. Imagens geradas pelo script <code>capture_portal_screenshots_cdp.py</code> na oficina.</p>
+
+      <div class="demo-tour__steps" role="tablist">
+
+        <button type="button" class="demo-tour__step" role="tab" data-demo-step="abrir" aria-selected="false">
+
+          <span class="demo-tour__num">1</span>
+
+          <span class="demo-tour__label">Abrir</span>
+
+        </button>
+
+        <button type="button" class="demo-tour__step demo-tour__step--active" role="tab" data-demo-step="vendas" aria-selected="true">
+
+          <span class="demo-tour__num">2</span>
+
+          <span class="demo-tour__label">Vender</span>
+
+        </button>
+
+        <button type="button" class="demo-tour__step" role="tab" data-demo-step="caixa" aria-selected="false">
+
+          <span class="demo-tour__num">3</span>
+
+          <span class="demo-tour__label">Caixa</span>
+
+        </button>
+
+        <button type="button" class="demo-tour__step" role="tab" data-demo-step="gestao" aria-selected="false">
+
+          <span class="demo-tour__num">4</span>
+
+          <span class="demo-tour__label">Gestão</span>
+
+        </button>
+
+      </div>
+
+
+
+      <div class="demo-tour__stage">
+        <div class="portal-shot">
+          <img
+            class="demo-tour__img"
+            data-demo-img
+            src="assets/img/screenshot-vendas.png"
+            width="1280"
+            height="800"
+            alt="Captura da tela ativa do tour"
+            decoding="async"
+            sizes="(max-width: 639px) 92vw, (max-width: 1023px) 88vw, 720px"
+          />
+        </div>
+        <div class="demo-tour__caption" data-demo-caption>
+          <strong>Vendas</strong>
+          <p>Busca rápida, carrinho, PIX e finalização por atalho (F9).</p>
+        </div>
+      </div>
+
+      <div hidden data-demo-panel="abrir">
+        <div class="portal-shot">
+          <img src="assets/img/screenshot-login.png" width="1280" height="800" alt="Tela de login" decoding="async" sizes="(max-width: 639px) 92vw, (max-width: 1023px) 88vw, 720px" />
+        </div>
+        <div data-demo-panel-caption>
+          <strong>Abrir</strong>
+          <p>Instale, faça login e abra o turno — o balcão fica pronto em segundos.</p>
+        </div>
+      </div>
+      <div hidden data-demo-panel="vendas">
+        <div class="portal-shot">
+          <img src="assets/img/screenshot-vendas.png" width="1280" height="800" alt="Tela de vendas" decoding="async" sizes="(max-width: 639px) 92vw, (max-width: 1023px) 88vw, 720px" />
+        </div>
+        <div data-demo-panel-caption>
+          <strong>Vendas</strong>
+          <p>Busca rápida, carrinho, PIX e finalização por atalho (F9).</p>
+        </div>
+      </div>
+      <div hidden data-demo-panel="caixa">
+        <div class="portal-shot">
+          <img src="assets/img/screenshot-caixa.png" width="1280" height="800" alt="Tela de caixa" decoding="async" sizes="(max-width: 639px) 92vw, (max-width: 1023px) 88vw, 720px" />
+        </div>
+        <div data-demo-panel-caption>
+          <strong>Caixa</strong>
+          <p>Turno, sangria, suprimento e backup automático ao fechar.</p>
+        </div>
+      </div>
+      <div hidden data-demo-panel="gestao">
+        <div class="portal-shot">
+          <img src="assets/img/screenshot-gestao.png" width="1280" height="800" alt="Gestão comercial" decoding="async" sizes="(max-width: 639px) 92vw, (max-width: 1023px) 88vw, 720px" />
+        </div>
+        <div data-demo-panel-caption>
+          <strong>Gestão</strong>
+          <p>Indicadores do período e exportação de relatório em PDF.</p>
+        </div>
+      </div>
+
+    </section>
+
+
+
+    <section class="card">
+
+      <h2>Fluxo resumido</h2>
+
+      <ol class="demo-flow-list">
+
+        <li><strong>Instalar</strong> — NSIS, MSI pt-BR ou ZIP (<a href="download.html">download</a>).</li>
+
+        <li><strong>Entrar</strong> — código do caixa, usuário e senha.</li>
+
+        <li><strong>Abrir turno</strong> — fundo de caixa registrado.</li>
+
+        <li><strong>Vender</strong> — itens, pagamento e cupom na fila local.</li>
+
+        <li><strong>Fechar</strong> — conferência, backup e relatório do dia.</li>
+
+      </ol>
+
+    </section>
+
+
+
+    <section class="card">
+
+      <div class="download-hero-cta">
+
+        <h2>Testar na sua loja</h2>
+
+        <p>Edição de teste sob proposta · instaladores com SHA256.</p>
+
+        <a class="btn-primary" href="download.html">Baixar PDV Desktop (Windows)</a>
+
+        <p class="hash-line"><a href="mercado.html#precos" style="color:#fff;text-decoration:underline;">Ver planos e licenciamento</a></p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <footer class="portal-footer">
+
+    <p>Cara Core PDV Desktop (Rust + Tauri) · Cara Core Informática · CNPJ 23.969.028/0001-37</p>
+
+    <p class="portal-footer-links">
+
+      <a href="index.html">Início</a> ·
+
+      <a href="comparacao.html">Comparação Rust/Java</a> ·
+
+      <a href="mailto:suporte@caracore.com.br">suporte@caracore.com.br</a>
+
+    </p>
+
+  </footer>
+
+  <script src="assets/js/portal.js"></script>
+
+  <script src="assets/js/demo-tour.js"></script>
+
+</body>
+
+</html>
+

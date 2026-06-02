@@ -1,5 +1,7 @@
 /* Cara Core PDV Desktop (Rust + Tauri) — components */
 .card {
+  min-width: 0;
+  max-width: 100%;
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: var(--radius-card);
@@ -314,6 +316,13 @@
   .stack-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .hub-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .benefit-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .demo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .demo-grid .demo-item:last-child:nth-child(3) {
+    grid-column: 1 / -1;
+    max-width: min(100%, 560px);
+    justify-self: center;
+    width: 100%;
+  }
   .trust-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .download-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .pillars-grid,
@@ -332,6 +341,7 @@
   .stack-grid,
   .hub-grid,
   .benefit-grid,
+  .demo-grid,
   .trust-grid,
   .download-grid,
   .pillars-grid,
@@ -392,6 +402,10 @@
   .section-subtitle {
     font-size: 13px;
   }
+
+  .demo-item figcaption {
+    padding: 12px;
+  }
 }
 
 @media (max-width: 980px) {
@@ -440,6 +454,61 @@
   font-size: 13px;
   color: var(--muted);
   line-height: 1.5;
+}
+
+/* Capturas do PDV — caixa responsiva (mobile / tablet / desktop) */
+.portal-shot {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  aspect-ratio: var(--screenshot-aspect);
+  background: linear-gradient(180deg, #f4f8fc 0%, #e8f0fa 100%);
+  overflow: hidden;
+  contain: layout style;
+}
+.portal-shot img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: top center;
+}
+
+/* Demo gallery (screenshots reais) */
+.demo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(10px, 2vw, 14px);
+  min-width: 0;
+}
+.demo-item {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  background: #fff;
+}
+.demo-item .portal-shot {
+  flex: 0 0 auto;
+  border-bottom: 1px solid var(--line);
+  border-radius: 0;
+}
+.demo-item figcaption {
+  flex: 1 1 auto;
+  padding: clamp(10px, 2vw, 14px);
+  font-size: clamp(12px, 1.8vw, 13px);
+  color: var(--muted);
+  line-height: 1.45;
+}
+.demo-item figcaption strong {
+  display: block;
+  color: var(--brand);
+  font-size: clamp(13px, 2vw, 14px);
+  margin-bottom: 4px;
 }
 
 /* Pricing table */
@@ -586,17 +655,26 @@
 }
 .demo-tour__label { font-size: 14px; font-weight: 600; color: var(--brand); }
 .demo-tour__stage {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  max-width: 100%;
   border: 1px solid var(--line);
   border-radius: var(--radius-card);
+  overflow: hidden;
   background: #f8fbff;
 }
+.demo-tour__stage .portal-shot {
+  flex: 0 0 auto;
+  border-bottom: 1px solid var(--line);
+}
 .demo-tour__caption {
-  padding: 18px 20px;
-  font-size: 14px;
+  flex: 1 1 auto;
+  padding: clamp(14px, 3vw, 20px);
+  font-size: clamp(13px, 2vw, 14px);
   line-height: 1.5;
   color: var(--muted);
   background: #fff;
-  border-radius: var(--radius-card);
 }
 .demo-tour__caption strong {
   display: block;
@@ -642,6 +720,17 @@
     box-sizing: border-box;
   }
   .demo-tour__step { flex: 1 1 100%; }
+
+  .demo-tour__caption strong {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 1024px) {
+  #demo .demo-grid,
+  .card#demo .demo-grid {
+    gap: 16px;
+  }
 }
 
 /* Paisagem em telefones estreitos */

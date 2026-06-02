@@ -5,6 +5,7 @@
   if (!root) return;
 
   var steps = root.querySelectorAll("[data-demo-step]");
+  var img = root.querySelector("[data-demo-img]");
   var caption = root.querySelector("[data-demo-caption]");
 
   function activate(stepId) {
@@ -14,11 +15,20 @@
       btn.setAttribute("aria-selected", on ? "true" : "false");
     });
 
-    if (!caption) return;
-
     var panel = root.querySelector('[data-demo-panel="' + stepId + '"]');
-    var panelCap = panel && panel.querySelector("[data-demo-panel-caption]");
-    if (panelCap) {
+    if (!panel) return;
+
+    var panelImg = panel.querySelector("img");
+    var panelCap = panel.querySelector("[data-demo-panel-caption]");
+    if (img && panelImg) {
+      img.src = panelImg.getAttribute("src");
+      img.alt = panelImg.getAttribute("alt") || "";
+      var panelSizes = panelImg.getAttribute("sizes");
+      if (panelSizes) {
+        img.setAttribute("sizes", panelSizes);
+      }
+    }
+    if (caption && panelCap) {
       caption.innerHTML = panelCap.innerHTML;
     }
   }
@@ -29,6 +39,5 @@
     });
   });
 
-  var initial = root.getAttribute("data-demo-initial") || "vendas";
-  activate(initial);
+  activate(root.getAttribute("data-demo-initial") || "vendas");
 })();

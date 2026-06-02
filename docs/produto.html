@@ -38,6 +38,26 @@
 
   <main class="portal-main">
     <section class="card">
+      <h2>Novidades — build 02/06/2026 (v0.1.0)</h2>
+      <p>Melhorias recentes no piloto Windows, em linguagem de loja:</p>
+      <table class="trace">
+        <thead>
+          <tr><th>Rotina</th><th>O que mudou</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Abrir o PDV</td><td>Tela de progresso na inicialização — catálogo, licença e banco carregam com feedback visível.</td></tr>
+          <tr><td>Vender</td><td>Checkout v2: foco na busca após cada item, ajuda F1, total fixo, venda em espera, PIX com status e novo QR sem perder carrinho.</td></tr>
+          <tr><td>Estoque</td><td>Reserva ao adicionar itens; aviso ou bloqueio configurável; sugestão de produto substituto quando esgotar.</td></tr>
+          <tr><td>Trocar / devolver</td><td>Pós-venda pelo código da venda — lista de itens e fluxo guiado, sem burocracia extra.</td></tr>
+          <tr><td>Fechar caixa</td><td>Backup automático do banco após o turno; alerta quando o dinheiro físico passar do limite de sangria.</td></tr>
+          <tr><td>Equipe</td><td>Mensagens claras por perfil; senha do supervisor para desconto extra; bloqueio por inatividade com PIN.</td></tr>
+          <tr><td>Gestão</td><td>Estados vazios com atalhos; tour rápido no primeiro login; exportar dashboard em PDF.</td></tr>
+          <tr><td>Fiscal</td><td>Fila de documentos visível; avisos em português claro; contingência offline para não parar o balcão.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card">
       <h2>Tecnologia desktop</h2>
       <p>O Cara Core PDV Desktop (Rust + Tauri) combina um núcleo em <strong>Rust</strong> com shell <strong>Tauri 2</strong> no Windows — arquitetura pensada para lojas que querem software instalado, leve e auditável.</p>
       <ul>
@@ -55,13 +75,13 @@
           <tr><th>Área</th><th>Uso na loja</th></tr>
         </thead>
         <tbody>
-          <tr><td>Vendas</td><td>Carrinho, pagamentos, descontos, leitor de código de barras e finalização da venda.</td></tr>
-          <tr><td>Caixa</td><td>Abertura e fechamento de turno, movimentações e resumo do dia.</td></tr>
-          <tr><td>Produtos e estoque</td><td>Cadastro, entradas, alertas de estoque mínimo e histórico básico.</td></tr>
-          <tr><td>Gestão</td><td>Consulta de vendas, relatórios exportáveis e visão comercial do período.</td></tr>
+          <tr><td>Vendas</td><td>Carrinho, pagamentos mistos, PIX com status, descontos, leitor de código de barras, venda em espera e finalização.</td></tr>
+          <tr><td>Caixa</td><td>Abertura e fechamento de turno, sangria e suprimento, alerta de limite de dinheiro, backup automático pós-turno.</td></tr>
+          <tr><td>Produtos e estoque</td><td>Cadastro, reserva no carrinho, alertas de estoque mínimo, substitutos sugeridos e histórico básico.</td></tr>
+          <tr><td>Gestão</td><td>Consulta de vendas, relatórios exportáveis (incl. PDF do dashboard) e visão comercial do período.</td></tr>
           <tr><td>Clientes</td><td>Cadastro e consulta conforme rotina da loja.</td></tr>
-          <tr><td>Fiscal</td><td>Fila e emissão de documentos fiscais em evolução; homologação em produção depende de credenciais e acompanhamento do contador.</td></tr>
-          <tr><td>Backup</td><td>Cópia e restauração do banco de dados local.</td></tr>
+          <tr><td>Fiscal</td><td>Fila visível, contingência offline e diagnóstico amigável; homologação SEFAZ real depende de credenciais e contador.</td></tr>
+          <tr><td>Backup</td><td>Cópia automática ao fechar turno e restauração manual do banco local.</td></tr>
         </tbody>
       </table>
     </section>
@@ -72,7 +92,8 @@
         <li>Instalado no Windows da loja; funciona offline para vendas e caixa.</li>
         <li>Cada operador entra com usuário e senha.</li>
         <li>Temas de tela claro e escuro, conforme preferência.</li>
-        <li>Atalhos de teclado para agilizar o balcão.</li>
+        <li>Atalhos de teclado (F1 ajuda, F2 busca, F9 finalizar) para agilizar o balcão.</li>
+        <li>Cancelamentos com motivo registrado — trilha para auditoria e gestão.</li>
       </ul>
     </section>
 

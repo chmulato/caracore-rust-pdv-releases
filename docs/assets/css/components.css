@@ -314,7 +314,6 @@
   .stack-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .hub-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .benefit-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .demo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .trust-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .download-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .pillars-grid,
@@ -323,7 +322,6 @@
 
 /* Desktop ≥1024 */
 @media (min-width: 1024px) {
-  .demo-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .trust-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
   .download-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
@@ -334,7 +332,6 @@
   .stack-grid,
   .hub-grid,
   .benefit-grid,
-  .demo-grid,
   .trust-grid,
   .download-grid,
   .pillars-grid,
@@ -443,37 +440,6 @@
   font-size: 13px;
   color: var(--muted);
   line-height: 1.5;
-}
-
-/* Demo gallery */
-.demo-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
-}
-.demo-item {
-  border: 1px solid var(--line);
-  border-radius: var(--radius-card);
-  overflow: hidden;
-  background: #fff;
-}
-.demo-item img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-.demo-item figcaption {
-  padding: 12px 14px;
-  font-size: 13px;
-  color: var(--muted);
-  line-height: 1.45;
-  border-top: 1px solid var(--line);
-}
-.demo-item figcaption strong {
-  display: block;
-  color: var(--brand);
-  font-size: 14px;
-  margin-bottom: 4px;
 }
 
 /* Pricing table */
@@ -622,27 +588,24 @@
 .demo-tour__stage {
   border: 1px solid var(--line);
   border-radius: var(--radius-card);
-  overflow: hidden;
   background: #f8fbff;
 }
-.demo-tour__img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
 .demo-tour__caption {
-  padding: 14px 16px;
+  padding: 18px 20px;
   font-size: 14px;
   line-height: 1.5;
   color: var(--muted);
-  border-top: 1px solid var(--line);
   background: #fff;
+  border-radius: var(--radius-card);
 }
 .demo-tour__caption strong {
   display: block;
   color: var(--brand);
-  font-size: 15px;
-  margin-bottom: 4px;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+.demo-tour__caption p {
+  margin: 0;
 }
 .demo-flow-list { margin: 0; padding-left: 20px; }
 .demo-flow-list li { margin-bottom: 8px; }

@@ -45,7 +45,7 @@
     if (!activeHref) return;
 
     document.querySelectorAll(".portal-nav a[href]").forEach(function (link) {
-      var href = link.getAttribute("href");
+      var href = link.getAttribute("href") || "";
       if (!href || href.charAt(0) === "#") return;
       var name = href.split("/").pop().split("#")[0];
       if (name === activeHref) {
@@ -151,8 +151,19 @@
     });
   }
 
+  function wireOfficialDownloads() {
+    var R = global.CaraCoreRustReleases;
+    var url = (R && R.RELEASES_LATEST) || "https://github.com/chmulato/caracore-rust-pdv-releases/releases/latest";
+    document.querySelectorAll("[data-official-download]").forEach(function (link) {
+      link.href = url;
+      link.setAttribute("rel", "noopener noreferrer");
+      link.setAttribute("target", "_blank");
+    });
+  }
+
   enhanceNavLinks();
   enhanceExternalLinks();
+  wireOfficialDownloads();
   setActiveNav();
   initSmoothScroll();
   initMobileNavToggle();

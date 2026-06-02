@@ -4,6 +4,8 @@
   var OWNER = "chmulato";
   var REPO = "caracore-rust-pdv-releases";
   var RELEASES_PAGE = "https://github.com/" + OWNER + "/" + REPO + "/releases";
+  var RELEASES_LATEST = RELEASES_PAGE + "/latest";
+  var RELEASES_TAG_V011 = RELEASES_PAGE + "/tag/v0.1.1";
   var API_LATEST = "https://api.github.com/repos/" + OWNER + "/" + REPO + "/releases/latest";
   var DEFAULT_MSI_LOCALE = "pt-BR";
 
@@ -62,6 +64,8 @@
     OWNER: OWNER,
     REPO: REPO,
     RELEASES_PAGE: RELEASES_PAGE,
+    RELEASES_LATEST: RELEASES_LATEST,
+    RELEASES_TAG_V011: RELEASES_TAG_V011,
     DEFAULT_MSI_LOCALE: DEFAULT_MSI_LOCALE,
     fetchLatestRelease: fetchLatestRelease,
     pickZip: pickZip,

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="description" content="Baixe o Cara Core PDV Desktop (Rust + Tauri) para Windows — instalador, MSI, ZIP piloto e verificação SHA256." />
+  <meta name="description" content="Baixe o Cara Core PDV Desktop para Windows — instalador em português, MSI para TI, ZIP portátil e download verificado." />
   <link rel="canonical" href="https://rust-pdv.caracore.com.br/download.html" />
   <title>Download — Cara Core PDV Desktop (Rust + Tauri)</title>
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
@@ -45,7 +45,7 @@
         <h2>Baixar PDV Desktop (Windows)</h2>
         <p>Instaladores oficiais em português — NSIS, MSI pt-BR ou pacote portátil.</p>
         <a id="download-hero-btn" class="btn-primary" href="https://github.com/chmulato/caracore-rust-pdv-releases/releases" rel="noopener noreferrer">Baixar PDV Desktop (Windows)</a>
-        <p id="download-hero-hash" class="hash-line">Verificação SHA256 disponível abaixo após carregar a release.</p>
+        <p id="download-hero-hash" class="hash-line">A verificação de integridade aparece abaixo após carregar a release.</p>
       </div>
     </section>
 
@@ -53,7 +53,7 @@
       <h2>Instalação em 4 passos</h2>
       <ol>
         <li><strong>Baixar</strong> — escolha NSIS (lojista), MSI (TI) ou ZIP (portátil) abaixo.</li>
-        <li><strong>Verificar</strong> — confira o hash SHA256 antes de executar (<a href="transparencia.html">como verificar</a>).</li>
+        <li><strong>Verificar</strong> — confira a integridade do arquivo antes de executar (<a href="transparencia.html">como verificar</a>).</li>
         <li><strong>Instalar</strong> — siga o assistente em português ou extraia o ZIP (<a href="primeiros-passos.html">guia completo</a>).</li>
         <li><strong>Operar</strong> — faça login, abra o caixa e comece a vender.</li>
       </ol>
@@ -63,15 +63,15 @@
       <h2>Idioma dos instaladores</h2>
       <p>Os pacotes oficiais são gerados para o mercado brasileiro:</p>
       <ul>
-        <li><strong>NSIS</strong> (<code>*-setup.exe</code>) — assistente em português do Brasil.</li>
-        <li><strong>MSI</strong> (<code>*_pt-BR.msi</code>) — pacote WiX localizado para TI e deploy silencioso.</li>
-        <li><strong>ZIP</strong> — aplicativo portátil; instruções em português no <code>LEIA-ME-INSTALACAO.txt</code>.</li>
+        <li><strong>Instalador NSIS</strong> — assistente em português do Brasil, indicado para o lojista.</li>
+        <li><strong>MSI pt-BR</strong> — pacote para equipe de TI e instalação em rede.</li>
+        <li><strong>ZIP portátil</strong> — extração manual com guia de instalação em português.</li>
       </ul>
     </section>
 
     <section class="card">
       <h2>Fonte oficial</h2>
-      <p>Artefatos publicados <strong>exclusivamente</strong> via GitHub Releases. Esta página consulta a API pública — não hospeda cópias alternativas.</p>
+      <p>Os instaladores são publicados <strong>exclusivamente</strong> nos releases oficiais do GitHub. Esta página mostra a versão atual e os links diretos — sem espelhos alternativos.</p>
       <p><a class="ext-link" id="releases-page-link" href="https://github.com/chmulato/caracore-rust-pdv-releases/releases" rel="noopener noreferrer">Releases oficiais no GitHub</a></p>
     </section>
 
@@ -91,7 +91,7 @@
         </div>
         <div class="download-option">
           <h3>TI / empresa</h3>
-          <p>MSI pt-BR para deploy silencioso (<code>msiexec /i ... /qn</code>).</p>
+          <p>MSI pt-BR para instalação em rede ou silenciosa (orientação de TI).</p>
           <a id="btn-msi" class="btn-secondary" href="#" rel="noopener noreferrer">Baixar MSI</a>
         </div>
         <div class="download-option">
@@ -110,13 +110,13 @@
 
     <section class="card">
       <h2>Novidades da release</h2>
-      <p>Tag <strong>v0.1.0</strong> — checkout ágil, PIX com status, backup ao fechar turno e pós-venda por código. Detalhes no <a href="https://github.com/chmulato/caracore-rust-pdv-releases/blob/master/CHANGELOG.md" rel="noopener noreferrer">CHANGELOG</a> · benefícios em <a href="produto.html">Produto</a>.</p>
+      <p>Versão <strong>v0.1.0</strong> — checkout ágil, PIX com status, backup ao fechar turno e pós-venda por código. Veja o <a href="https://github.com/chmulato/caracore-rust-pdv-releases/blob/master/CHANGELOG.md" rel="noopener noreferrer">histórico de versões</a> · benefícios em <a href="produto.html">Produto</a>.</p>
     </section>
 
     <section class="card">
       <h2>Verificação de integridade</h2>
-      <p>Confira o hash SHA256 antes de executar. Use o arquivo <code>SHA256SUMS.txt</code> da release ou o manifesto <code>RELEASE_MANIFEST.json</code>.</p>
-      <p><a href="transparencia.html">Instruções detalhadas →</a></p>
+      <p>Antes de instalar, compare o arquivo baixado com a lista de verificação publicada no mesmo release. Assim você confirma que o pacote não foi alterado no caminho.</p>
+      <p><a href="transparencia.html">Passo a passo para conferir →</a></p>
     </section>
 
     <section class="card">
@@ -198,7 +198,7 @@
           if (any) {
             grid.hidden = false;
             fallback.hidden = true;
-            hint.textContent = "Confirme SHA256 antes de executar.";
+            hint.textContent = "Confirme a integridade do arquivo antes de executar.";
             if (heroBtn && nsis) {
               heroBtn.href = nsis.browser_download_url;
               heroBtn.textContent = "Baixar " + nsis.name;
@@ -210,19 +210,30 @@
           }
 
           if (heroHash && sums) {
-            heroHash.innerHTML = 'Integridade: <a href="' + sums.browser_download_url + '" rel="noopener noreferrer" style="color:#fff;text-decoration:underline;">' + sums.name + "</a>";
+            heroHash.innerHTML =
+              'Integridade: <a href="' +
+              sums.browser_download_url +
+              '" rel="noopener noreferrer" style="color:#fff;text-decoration:underline;">baixar lista de verificação</a>';
           }
 
           var parts = [];
           if (sums) {
-            parts.push('<a class="ext-link" href="' + sums.browser_download_url + '" rel="noopener noreferrer">' + sums.name + "</a>");
+            parts.push(
+              '<a class="ext-link" href="' +
+                sums.browser_download_url +
+                '" rel="noopener noreferrer">Lista de verificação</a>'
+            );
           }
           if (manifest) {
-            parts.push('<a class="ext-link" href="' + manifest.browser_download_url + '" rel="noopener noreferrer">' + manifest.name + "</a>");
+            parts.push(
+              '<a class="ext-link" href="' +
+                manifest.browser_download_url +
+                '" rel="noopener noreferrer">Detalhes da release</a>'
+            );
           }
           if (parts.length) {
             integrity.hidden = false;
-            integrity.innerHTML = "Integridade: " + parts.join(" · ");
+            integrity.innerHTML = "Arquivos de conferência: " + parts.join(" · ");
           }
         })
         .catch(function () {

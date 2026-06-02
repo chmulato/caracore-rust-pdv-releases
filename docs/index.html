@@ -108,19 +108,28 @@
       <div class="demo-grid">
         <figure class="demo-item">
           <div class="portal-shot">
-            <img src="assets/img/screenshot-vendas.png" width="1280" height="800" alt="Tela de vendas do PDV Desktop" loading="lazy" decoding="async" sizes="(max-width: 639px) 92vw, (max-width: 1023px) 46vw, 400px" />
+            <picture>
+              <source type="image/webp" sizes="(max-width: 639px) 92vw, (max-width: 1023px) 46vw, 400px" srcset="assets/img/screenshot-vendas-400w.webp 400w, assets/img/screenshot-vendas-640w.webp 640w, assets/img/screenshot-vendas-960w.webp 960w, assets/img/screenshot-vendas-1280w.webp 1280w" />
+              <img src="assets/img/screenshot-vendas.png" width="1280" height="800" alt="Tela de vendas do PDV Desktop" loading="lazy" decoding="async" sizes="(max-width: 639px) 92vw, (max-width: 1023px) 46vw, 400px" />
+            </picture>
           </div>
           <figcaption><strong>Vendas</strong>Checkout ágil com busca, PIX e finalização por atalho.</figcaption>
         </figure>
         <figure class="demo-item">
           <div class="portal-shot">
-            <img src="assets/img/screenshot-caixa.png" width="1280" height="800" alt="Tela de caixa e turno" loading="lazy" decoding="async" sizes="(max-width: 639px) 92vw, (max-width: 1023px) 46vw, 400px" />
+            <picture>
+              <source type="image/webp" sizes="(max-width: 639px) 92vw, (max-width: 1023px) 46vw, 400px" srcset="assets/img/screenshot-caixa-400w.webp 400w, assets/img/screenshot-caixa-640w.webp 640w, assets/img/screenshot-caixa-960w.webp 960w, assets/img/screenshot-caixa-1280w.webp 1280w" />
+              <img src="assets/img/screenshot-caixa.png" width="1280" height="800" alt="Tela de caixa e turno" loading="lazy" decoding="async" sizes="(max-width: 639px) 92vw, (max-width: 1023px) 46vw, 400px" />
+            </picture>
           </div>
           <figcaption><strong>Caixa</strong>Turno, sangria, suprimento e backup automático.</figcaption>
         </figure>
         <figure class="demo-item">
           <div class="portal-shot">
-            <img src="assets/img/screenshot-gestao.png" width="1280" height="800" alt="Tela de gestão comercial" loading="lazy" decoding="async" sizes="(max-width: 639px) 92vw, (max-width: 1023px) 46vw, 400px" />
+            <picture>
+              <source type="image/webp" sizes="(max-width: 639px) 92vw, (max-width: 1023px) 46vw, 400px" srcset="assets/img/screenshot-gestao-400w.webp 400w, assets/img/screenshot-gestao-640w.webp 640w, assets/img/screenshot-gestao-960w.webp 960w, assets/img/screenshot-gestao-1280w.webp 1280w" />
+              <img src="assets/img/screenshot-gestao.png" width="1280" height="800" alt="Tela de gestão comercial" loading="lazy" decoding="async" sizes="(max-width: 639px) 92vw, (max-width: 1023px) 46vw, 400px" />
+            </picture>
           </div>
           <figcaption><strong>Gestão</strong>Visão do período e exportação de relatório em PDF.</figcaption>
         </figure>
@@ -142,7 +151,7 @@
       </blockquote>
       <div class="trust-grid" style="margin-top: 14px;">
         <div class="trust-badge"><strong>MSI + NSIS</strong><span>Instaladores profissionais em português do Brasil</span></div>
-        <div class="trust-badge"><strong>SHA256</strong><span>Verificação de integridade em cada release oficial</span></div>
+        <div class="trust-badge"><strong>Integridade</strong><span>Cada release oficial traz lista para conferir o arquivo baixado</span></div>
         <div class="trust-badge"><strong>Fiscal</strong><span>Fila offline e contingência; SEFAZ conforme credenciais da loja</span></div>
         <div class="trust-badge"><strong>CNPJ</strong><span>23.969.028/0001-37</span></div>
       </div>
@@ -155,8 +164,8 @@
     </section>
 
     <section class="card">
-      <h2>Documentação técnica</h2>
-      <p>Stack, comparativos e detalhes de engenharia ficam separados do conteúdo comercial.</p>
+      <h2>Saiba mais</h2>
+      <p>Comparativos, piloto Windows e detalhes para gestores e TI — sem misturar com o fluxo de compra.</p>
       <div class="hub-grid">
         <a class="hub-card" href="rust-tauri.html">
           <h3>Por que Rust + Tauri?</h3>
@@ -176,9 +185,9 @@
     <section class="card">
       <div class="download-hero-cta">
         <h2>Baixar PDV Desktop (Windows)</h2>
-        <p>Instalador NSIS, MSI pt-BR ou pacote portátil — releases oficiais com verificação SHA256.</p>
+        <p>Instalador NSIS, MSI pt-BR ou pacote portátil — sempre pelo canal oficial, com verificação de integridade.</p>
         <a class="btn-primary" href="download.html">Baixar agora</a>
-        <p class="hash-line">Confira o hash SHA256 na página de download antes de instalar.</p>
+        <p class="hash-line">Na página de download, confira a integridade do arquivo antes de instalar.</p>
       </div>
       <p class="section-subtitle" style="margin-top: 12px; text-align: center;">Instalação em 4 passos: <a href="primeiros-passos.html">guia de primeiros passos</a> · Release atual: <a href="download.html">v0.1.0</a></p>
     </section>

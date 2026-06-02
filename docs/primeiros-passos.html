@@ -42,11 +42,11 @@
     <section class="card">
       <h2>1. Baixar</h2>
       <p>Use apenas os <a href="https://github.com/chmulato/caracore-rust-pdv-releases/releases" rel="noopener noreferrer">releases oficiais no GitHub</a> ou a página <a href="download.html">Download</a>.</p>
-      <p>Confira o SHA256 conforme <a href="transparencia.html">Transparência</a> antes de executar qualquer arquivo.</p>
+      <p>Confira a integridade do arquivo conforme <a href="transparencia.html">Transparência</a> antes de executar qualquer instalador.</p>
       <ul>
-        <li><strong>Instalador (NSIS)</strong> — recomendado para lojista; assistente em português.</li>
-        <li><strong>MSI pt-BR</strong> — recomendado para TI; arquivo <code>*_pt-BR.msi</code>.</li>
-        <li><strong>ZIP portátil</strong> — extração manual; inclui <code>LEIA-ME-INSTALACAO.txt</code> em português.</li>
+        <li><strong>Instalador NSIS</strong> — recomendado para lojista; assistente em português.</li>
+        <li><strong>MSI pt-BR</strong> — recomendado para equipe de TI.</li>
+        <li><strong>ZIP portátil</strong> — extração manual com guia em português no pacote.</li>
       </ul>
     </section>
 
@@ -54,19 +54,19 @@
       <h2>2. Instalar</h2>
       <h3>Opção A — Instalador NSIS (lojista)</h3>
       <ol>
-        <li>Execute o arquivo <code>*-setup.exe</code>.</li>
-        <li>Siga o assistente em português até concluir.</li>
+        <li>Execute o instalador baixado (assistente em português).</li>
+        <li>Siga as telas até concluir.</li>
         <li>Abra <strong>CaraCore PDV</strong> pelo menu Iniciar ou atalho criado.</li>
       </ol>
       <h3>Opção B — MSI (TI / empresa)</h3>
       <ol>
-        <li>Instale o pacote <code>*_pt-BR.msi</code> (duplo clique ou <code>msiexec /i "arquivo.msi"</code>).</li>
-        <li>Para instalação silenciosa: <code>msiexec /i "arquivo.msi" /qn</code>.</li>
+        <li>Instale o pacote MSI pt-BR (duplo clique ou ferramenta de deploy da sua TI).</li>
+        <li>Para instalação silenciosa em rede, use o procedimento padrão de MSI da sua equipe de TI.</li>
       </ol>
       <h3>Opção C — ZIP portátil</h3>
       <ol>
-        <li>Extraia todo o conteúdo em uma pasta fixa (ex.: <code>C:\Programas\CaraCore-PDV\</code>).</li>
-        <li>Execute <code>instalar-atalho.bat</code> para criar atalho na Área de Trabalho.</li>
+        <li>Extraia todo o conteúdo em uma pasta fixa no computador da loja.</li>
+        <li>Use o atalho ou script de instalação incluído no pacote, se disponível.</li>
         <li>Abra <strong>CaraCore PDV</strong> pelo atalho.</li>
       </ol>
     </section>
@@ -83,7 +83,7 @@
 
     <section class="card">
       <h2>Onde ficam os arquivos</h2>
-      <p>Dados e configuração ficam em <code>%APPDATA%\caracore-pdv\</code>. Para abrir essa pasta: tecla Windows + R, digite o caminho e confirme.</p>
+      <p>Dados e configuração ficam no perfil do Windows do usuário que opera o PDV. Se precisar localizar a pasta, a equipe de suporte Cara Core orienta conforme sua instalação.</p>
     </section>
 
     <section class="card">

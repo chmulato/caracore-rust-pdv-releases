@@ -52,7 +52,7 @@
         <strong>Fase piloto (Windows)</strong>
         A iniciativa <strong>Rust + Tauri 2</strong> (release v0.1.0) está em avaliação com lojas piloto. Não confunda com o PDV Desktop Java maduro em <a class="ext-link" href="https://pdv.caracore.com.br/" rel="noopener noreferrer">pdv.caracore.com.br</a> (canal v3.1.2-free).
       </div>
-      <p>Esta loja publica somente a iniciativa <strong>Rust + Tauri 2</strong> (release v0.1.0). O código-fonte e a documentação técnica ficam na oficina, separados desta vitrine.</p>
+      <p>Este site apresenta somente o <strong>PDV Desktop (Rust + Tauri)</strong> em fase piloto (release v0.1.0). Aqui você encontra benefícios, download e orientações para a loja — sem jargão de engenharia.</p>
     </section>
 
     <section class="card">
@@ -65,10 +65,10 @@
       <h2>Artefatos publicados</h2>
       <p>Cada release inclui instaladores localizados para o Brasil:</p>
       <ul>
-        <li><strong>NSIS</strong> — <code>CaraCore PDV_{versão}_x64-setup.exe</code> (assistente em português).</li>
-        <li><strong>MSI</strong> — <code>CaraCore PDV_{versão}_x64_pt-BR.msi</code> (WiX pt-BR).</li>
-        <li><strong>ZIP</strong> — pacote portátil com instruções em português.</li>
-        <li><strong>SHA256SUMS.txt</strong> e <strong>RELEASE_MANIFEST.json</strong> — verificação e manifesto técnico.</li>
+        <li><strong>Instalador NSIS</strong> — assistente em português para o lojista.</li>
+        <li><strong>MSI pt-BR</strong> — pacote para equipe de TI e instalação em rede.</li>
+        <li><strong>ZIP portátil</strong> — uso sem instalador, com guia em português.</li>
+        <li><strong>Lista de integridade</strong> — publicada junto a cada release para você conferir o arquivo baixado.</li>
       </ul>
     </section>
 
@@ -84,12 +84,12 @@
     </section>
 
     <section class="card">
-      <h2>Verificação do arquivo (SHA256)</h2>
-      <p>Cada release inclui um arquivo de somas (<code>SHA256SUMS.txt</code> ou equivalente) junto ao ZIP. Depois de baixar:</p>
+      <h2>Como conferir se o download é autêntico</h2>
+      <p>Cada release oficial traz uma <strong>lista de verificação de integridade</strong> (algoritmo SHA-256). Depois de baixar o instalador ou ZIP:</p>
       <ol>
-        <li>Abra o PowerShell na pasta do download.</li>
-        <li>Execute: <code>Get-FileHash .\nome-do-arquivo.zip -Algorithm SHA256</code></li>
-        <li>Compare o valor com o listado no arquivo de somas do release.</li>
+        <li>Abra a pasta do download no Windows.</li>
+        <li>Gere a “impressão digital” do arquivo pelo PowerShell ou por ferramenta de hash indicada na própria release.</li>
+        <li>Compare o resultado com o valor publicado na lista do release.</li>
       </ol>
       <p>Se os valores não coincidirem, não execute o programa e avise <a href="mailto:suporte@caracore.com.br">suporte@caracore.com.br</a>.</p>
     </section>
@@ -98,14 +98,14 @@
       <h2>Assinatura digital e SmartScreen</h2>
       <div class="notice notice-warn">
         <strong>Sem certificado de editor (por enquanto)</strong>
-        O instalador piloto ainda não possui assinatura digital de código. O Windows SmartScreen pode exibir aviso na primeira execução. Isso é esperado nesta fase — não significa que o arquivo veio de outra fonte, desde que baixado do release oficial e verificado pelo SHA256.
+        O instalador piloto ainda não possui assinatura digital de código. O Windows SmartScreen pode exibir aviso na primeira execução. Isso é esperado nesta fase — não significa que o arquivo veio de outra fonte, desde que baixado do release oficial e conferido na lista de integridade.
       </div>
     </section>
 
     <section class="card">
       <h2>Dados e privacidade</h2>
       <ul>
-        <li>Produtos, vendas e caixa ficam no computador da loja (pasta em <code>%APPDATA%\caracore-pdv\</code>).</li>
+        <li>Produtos, vendas e caixa ficam no computador da loja, em pasta de dados do usuário Windows (perfil do operador).</li>
         <li>O fluxo normal de operação local não envia o faturamento diário para servidores CaraCore.</li>
         <li>Emissão fiscal eletrônica, quando configurada, comunica-se apenas com os serviços exigidos pela legislação (SEFAZ, conforme credenciais da loja).</li>
         <li>Backups são responsabilidade da loja; o sistema oferece ferramenta local de cópia e restauração.</li>
@@ -120,11 +120,11 @@
 
     <section class="card">
       <h2>Links externos</h2>
-      <p>Links para sites de terceiros (Microsoft WebView2, GitHub, site CaraCore) abrem com <code>rel="noopener noreferrer"</code> quando saem deste domínio, para reduzir riscos de redirecionamento indevido.</p>
-      <p>Repositórios relacionados:</p>
+      <p>Links para Microsoft, GitHub e demais sites da Cara Core abrem em nova aba com proteção padrão contra redirecionamentos indevidos.</p>
+      <p>Download e histórico de versões:</p>
       <ul>
-        <li><a class="ext-link" href="https://github.com/chmulato/caracore-rust-pdv-releases" rel="noopener noreferrer">Releases (esta loja)</a></li>
-        <li><a class="ext-link" href="https://github.com/chmulato/caracore-rust-pdv" rel="noopener noreferrer">Desenvolvimento (oficina técnica)</a></li>
+        <li><a class="ext-link" href="https://github.com/chmulato/caracore-rust-pdv-releases/releases" rel="noopener noreferrer">Releases oficiais no GitHub</a></li>
+        <li><a href="download.html">Página de download desta loja</a></li>
       </ul>
     </section>
   </main>

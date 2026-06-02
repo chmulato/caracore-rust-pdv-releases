@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="Comparação entre PDV Desktop Rust + Tauri e PDV Desktop Java — qual escolher para sua loja." />
+  <title>Comparação Rust vs Java — Cara Core PDV Desktop</title>
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/css/tokens.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+</head>
+<body data-portal-page="comparacao" data-nav-root="">
+  <header class="portal-header">
+    <div class="portal-header-inner">
+      <a class="portal-brand" href="index.html">
+        <img src="assets/img/logo-mark.svg" width="32" height="32" alt="" />
+        <span class="portal-brand-text">CaraCore PDV</span>
+      </a>
+      <div class="portal-header-content">
+        <span class="portal-header-badge">Comparação</span>
+        <h1>PDV Desktop Rust vs PDV Desktop Java</h1>
+        <p class="portal-header-lead">Dois produtos CaraCore PDV, stacks distintas — escolha conforme plataforma, maturidade e perfil da operação.</p>
+        <p class="portal-header-meta"><a href="index.html">Início</a></p>
+      </div>
+    </div>
+  </header>
+
+  <nav class="portal-nav" aria-label="Navegação principal">
+    <div class="portal-nav-inner">
+      <a href="index.html">Início</a>
+      <a href="produto.html">Produto</a>
+      <a href="mercado.html">Para sua loja</a>
+      <a href="download.html">Download</a>
+      <a href="wiki/index.html">Wiki</a>
+    </div>
+  </nav>
+
+  <main class="portal-main">
+    <section class="card exec-summary">
+      <h2>Resumo rápido</h2>
+      <p class="exec-lead">Ambos são o <strong>mesmo produto CaraCore PDV</strong>, com faixas de versão independentes. Não há substituição — coexistem para atender perfis diferentes de loja e TI.</p>
+    </section>
+
+    <section class="card">
+      <h2>Comparação lado a lado</h2>
+      <table class="trace pricing-table">
+        <thead>
+          <tr>
+            <th>Critério</th>
+            <th>PDV Desktop Rust + Tauri</th>
+            <th>PDV Desktop Java</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Status</strong></td>
+            <td>Piloto Windows · v0.1.x</td>
+            <td>Oferta madura · v3.1.x-free</td>
+          </tr>
+          <tr>
+            <td><strong>Plataforma</strong></td>
+            <td>Windows 10/11 (64 bits)</td>
+            <td>Windows, Linux e macOS</td>
+          </tr>
+          <tr>
+            <td><strong>Instaladores</strong></td>
+            <td>NSIS, MSI pt-BR, ZIP portátil</td>
+            <td>Instaladores da linha Java madura</td>
+          </tr>
+          <tr>
+            <td><strong>Startup</strong></td>
+            <td>Rápido — shell Tauri enxuto</td>
+            <td>Estável — JVM aquecida após abertura</td>
+          </tr>
+          <tr>
+            <td><strong>Consumo de memória</strong></td>
+            <td>Menor pegada — binário nativo</td>
+            <td>Maior — runtime Java</td>
+          </tr>
+          <tr>
+            <td><strong>Operação offline</strong></td>
+            <td>Vendas e caixa locais</td>
+            <td>Vendas e caixa locais</td>
+          </tr>
+          <tr>
+            <td><strong>Ideal para</strong></td>
+            <td>Piloto Windows, PCs modestos, avaliar stack Rust</td>
+            <td>Operação madura, multi-plataforma, escala consolidada</td>
+          </tr>
+          <tr>
+            <td><strong>Onde baixar</strong></td>
+            <td><a href="download.html">rust-pdv.caracore.com.br</a></td>
+            <td><a href="https://pdv.caracore.com.br/download.html" rel="noopener noreferrer">pdv.caracore.com.br</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2>Quando escolher cada linha</h2>
+      <div class="pillars-grid">
+        <div class="pillar">
+          <h3>Escolha Rust + Tauri se…</h3>
+          <ul>
+            <li>Opera só no Windows e quer avaliar o piloto mais recente.</li>
+            <li>Prioriza startup rápido e menor consumo de RAM.</li>
+            <li>Prefere instaladores MSI/NSIS pt-BR com verificação SHA256.</li>
+            <li>Quer participar da validação da nova stack desktop.</li>
+          </ul>
+        </div>
+        <div class="pillar">
+          <h3>Escolha Java se…</h3>
+          <ul>
+            <li>Precisa de Linux ou macOS além do Windows.</li>
+            <li>Quer a oferta madura, canal v3.1.x, já consolidada.</li>
+            <li>Operação exige maturidade máxima antes de migrar stack.</li>
+            <li>Já usa o PDV Java e quer continuidade sem mudança.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <p class="cta-box">
+        <a class="btn-primary" href="download.html">Baixar PDV Rust (Windows)</a>
+        <a class="btn-secondary" href="https://pdv.caracore.com.br/download.html" rel="noopener noreferrer">Baixar PDV Java</a>
+      </p>
+      <p class="section-subtitle">Matriz institucional: <a href="https://www.caracore.com.br/portfolio.html#pdv-coexistencia" rel="noopener noreferrer">portfólio Cara Core</a></p>
+    </section>
+  </main>
+
+  <footer class="portal-footer">
+    <p>Cara Core PDV Desktop (Rust + Tauri) · Cara Core Informática · CNPJ 23.969.028/0001-37</p>
+    <p class="portal-footer-links">
+      <a href="rust-tauri.html">Por que Rust + Tauri</a> ·
+      <a href="transparencia.html">Transparência</a> ·
+      <a href="https://www.caracore.com.br/" rel="noopener noreferrer">caracore.com.br</a> ·
+      <a href="mailto:suporte@caracore.com.br">suporte@caracore.com.br</a>
+    </p>
+  </footer>
+  <script src="assets/js/portal.js"></script>
+</body>
+</html>

@@ -340,3 +340,191 @@
 @media (max-width: 980px) {
   .pillars-grid, .two-col { grid-template-columns: 1fr; }
 }
+
+/* Hero actions */
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+.hero-actions .btn-primary,
+.hero-actions .btn-secondary {
+  font-size: 14px;
+  padding: 14px 24px;
+}
+.hero-actions .btn-hero {
+  font-size: 15px;
+  padding: 16px 28px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* Benefit cards */
+.benefit-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.benefit-card {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 16px;
+  background: #fff;
+}
+.benefit-card strong {
+  display: block;
+  color: var(--brand);
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+.benefit-card p {
+  margin: 0;
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/* Demo gallery */
+.demo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+.demo-item {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  background: #fff;
+}
+.demo-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.demo-item figcaption {
+  padding: 12px 14px;
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.45;
+  border-top: 1px solid var(--line);
+}
+.demo-item figcaption strong {
+  display: block;
+  color: var(--brand);
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+/* Pricing table */
+.pricing-table { min-width: 560px; }
+.pricing-table .plan-name { font-weight: 700; color: var(--brand); }
+.pricing-table .plan-highlight { background: #f0f7ff; }
+.pricing-note {
+  margin-top: 12px;
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+/* Trust section */
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+.trust-badge {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 16px;
+  background: #fff;
+  text-align: center;
+}
+.trust-badge strong {
+  display: block;
+  font-size: 22px;
+  color: var(--brand);
+  margin-bottom: 6px;
+}
+.trust-badge span {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.45;
+}
+.trust-seal {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--brand);
+  background: #fff;
+  margin: 4px 6px 4px 0;
+}
+
+/* Audience chips */
+.audience-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.audience-list li {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-size: 13px;
+  background: #fff;
+  color: var(--ink);
+}
+
+/* Download hero CTA */
+.download-hero-cta {
+  text-align: center;
+  padding: 24px;
+  background: linear-gradient(135deg, #0b3a66 0%, #14538e 100%);
+  border-radius: var(--radius-card);
+  color: #fff;
+}
+.download-hero-cta h2 {
+  margin: 0 0 8px;
+  color: #fff;
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
+}
+.download-hero-cta p {
+  margin: 0 0 16px;
+  opacity: 0.92;
+  font-size: 14px;
+}
+.download-hero-cta .btn-primary {
+  background: #fff;
+  color: var(--brand);
+  font-size: 15px;
+  padding: 16px 32px;
+}
+.download-hero-cta .btn-primary:hover {
+  background: #eef4fb;
+}
+.download-hero-cta .hash-line {
+  margin-top: 14px;
+  font-size: 11px;
+  opacity: 0.85;
+  font-family: Consolas, "Courier New", monospace;
+  word-break: break-all;
+}
+
+@media (max-width: 900px) {
+  .demo-grid { grid-template-columns: 1fr; }
+  .trust-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 639px) {
+  .benefit-grid,
+  .trust-grid { grid-template-columns: 1fr; }
+  .hero-actions { flex-direction: column; }
+  .hero-actions .btn-primary,
+  .hero-actions .btn-secondary { width: 100%; justify-content: center; }
+}

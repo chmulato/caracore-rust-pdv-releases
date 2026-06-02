@@ -39,6 +39,25 @@
 
   <main class="portal-main">
     <section class="card">
+      <div class="download-hero-cta">
+        <h2>Baixar PDV Desktop (Windows)</h2>
+        <p>Instaladores oficiais em português — NSIS, MSI pt-BR ou pacote portátil.</p>
+        <a id="download-hero-btn" class="btn-primary" href="https://github.com/chmulato/caracore-rust-pdv-releases/releases" rel="noopener noreferrer">Baixar PDV Desktop (Windows)</a>
+        <p id="download-hero-hash" class="hash-line">Verificação SHA256 disponível abaixo após carregar a release.</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Instalação em 4 passos</h2>
+      <ol>
+        <li><strong>Baixar</strong> — escolha NSIS (lojista), MSI (TI) ou ZIP (portátil) abaixo.</li>
+        <li><strong>Verificar</strong> — confira o hash SHA256 antes de executar (<a href="transparencia.html">como verificar</a>).</li>
+        <li><strong>Instalar</strong> — siga o assistente em português ou extraia o ZIP (<a href="primeiros-passos.html">guia completo</a>).</li>
+        <li><strong>Operar</strong> — faça login, abra o caixa e comece a vender.</li>
+      </ol>
+    </section>
+
+    <section class="card">
       <h2>Idioma dos instaladores</h2>
       <p>Os pacotes oficiais são gerados para o mercado brasileiro:</p>
       <ul>
@@ -109,7 +128,8 @@
 
     <section class="card">
       <h2>Linha Java (oferta madura)</h2>
-      <p>O <strong>PDV Desktop (Java · JavaFX)</strong> permanece a referência multi-plataforma, canal <strong>v3.1.2-free</strong>, em <a href="https://pdv.caracore.com.br/download.html" rel="noopener noreferrer">pdv.caracore.com.br</a>. Escolha Java para operação madura ou Linux/macOS; escolha Rust + Tauri para piloto Windows e avaliação da stack.</p>
+      <p>O PDV Desktop Java permanece a referência multi-plataforma em <a href="https://pdv.caracore.com.br/download.html" rel="noopener noreferrer">pdv.caracore.com.br</a>.</p>
+      <p class="section-subtitle"><a href="comparacao.html">Veja comparação completa Rust vs Java →</a></p>
     </section>
   </main>
 
@@ -137,6 +157,8 @@
       var btnNsis = document.getElementById("btn-nsis");
       var btnMsi = document.getElementById("btn-msi");
       var btnZip = document.getElementById("btn-zip");
+      var heroBtn = document.getElementById("download-hero-btn");
+      var heroHash = document.getElementById("download-hero-hash");
 
       function wireButton(el, asset, labelPrefix) {
         if (!el || !asset) {
@@ -175,8 +197,18 @@
             grid.hidden = false;
             fallback.hidden = true;
             hint.textContent = "Confirme SHA256 antes de executar.";
+            if (heroBtn && nsis) {
+              heroBtn.href = nsis.browser_download_url;
+              heroBtn.textContent = "Baixar " + nsis.name;
+            } else if (heroBtn && data.html_url) {
+              heroBtn.href = data.html_url;
+            }
           } else {
             hint.textContent = "Release sem anexos reconhecidos. Abra a página do GitHub.";
+          }
+
+          if (heroHash && sums) {
+            heroHash.innerHTML = 'Integridade: <a href="' + sums.browser_download_url + '" rel="noopener noreferrer" style="color:#fff;text-decoration:underline;">' + sums.name + "</a>";
           }
 
           var parts = [];

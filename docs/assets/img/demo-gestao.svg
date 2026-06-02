@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-labelledby="title desc">
+  <title id="title">Tela de gestão  CaraCore PDV</title>
+  <desc id="desc">Ilustração do dashboard comercial com vendas e exportação PDF.</desc>
+  <rect width="640" height="400" fill="#eef4fb" rx="12"/>
+  <rect x="16" y="16" width="608" height="36" fill="#0b3a66" rx="6"/>
+  <rect x="28" y="26" width="90" height="16" fill="#fff" opacity="0.9" rx="3"/>
+  <rect x="16" y="64" width="608" height="320" fill="#fff" stroke="#c6d5e6" rx="8"/>
+  <text x="36" y="96" fill="#0b3a66" font-family="Segoe UI,sans-serif" font-size="16" font-weight="600">Gestão comercial</text>
+  <rect x="36" y="112" width="130" height="64" fill="#f2f6fb" stroke="#c6d5e6" rx="8"/>
+  <text x="48" y="134" fill="#4f647a" font-family="Segoe UI,sans-serif" font-size="10">Vendas hoje</text>
+  <text x="48" y="158" fill="#0b3a66" font-family="Segoe UI,sans-serif" font-size="20" font-weight="700">38</text>
+  <rect x="180" y="112" width="130" height="64" fill="#f2f6fb" stroke="#c6d5e6" rx="8"/>
+  <text x="192" y="134" fill="#4f647a" font-family="Segoe UI,sans-serif" font-size="10">Ticket médio</text>
+  <text x="192" y="158" fill="#0b3a66" font-family="Segoe UI,sans-serif" font-size="20" font-weight="700">R$ 62</text>
+  <rect x="324" y="112" width="130" height="64" fill="#f2f6fb" stroke="#c6d5e6" rx="8"/>
+  <text x="336" y="134" fill="#4f647a" font-family="Segoe UI,sans-serif" font-size="10">Produtos ativos</text>
+  <text x="336" y="158" fill="#0b3a66" font-family="Segoe UI,sans-serif" font-size="20" font-weight="700">412</text>
+  <rect x="468" y="112" width="136" height="64" fill="#eef4fb" stroke="#b8caf7" rx="8"/>
+  <text x="480" y="150" fill="#14538e" font-family="Segoe UI,sans-serif" font-size="12" font-weight="600">Exportar PDF</text>
+  <rect x="36" y="196" width="568" height="160" fill="#fafcfe" stroke="#c6d5e6" rx="8"/>
+  <rect x="52" y="320" width="40" height="24" fill="#14538e" opacity="0.6" rx="2"/>
+  <rect x="100" y="280" width="40" height="64" fill="#14538e" opacity="0.8" rx="2"/>
+  <rect x="148" y="300" width="40" height="44" fill="#14538e" opacity="0.5" rx="2"/>
+  <rect x="196" y="260" width="40" height="84" fill="#14538e" opacity="0.9" rx="2"/>
+  <rect x="244" y="290" width="40" height="54" fill="#14538e" opacity="0.6" rx="2"/>
+  <rect x="292" y="270" width="40" height="74" fill="#14538e" opacity="0.7" rx="2"/>
+  <rect x="340" y="310" width="40" height="34" fill="#14538e" opacity="0.4" rx="2"/>
+  <text x="52" y="220" fill="#4f647a" font-family="Segoe UI,sans-serif" font-size="12">Vendas por dia  últimos 7 dias</text>
+</svg>

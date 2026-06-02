@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="Por que Rust + Tauri no CaraCore PDV Desktop — startup rápido, estabilidade e dados locais em linguagem simples." />
+  <title>Por que Rust + Tauri? — Cara Core PDV Desktop</title>
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/css/tokens.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+</head>
+<body data-portal-page="rust-tauri" data-nav-root="">
+  <header class="portal-header">
+    <div class="portal-header-inner">
+      <a class="portal-brand" href="index.html">
+        <img src="assets/img/logo-mark.svg" width="32" height="32" alt="" />
+        <span class="portal-brand-text">CaraCore PDV</span>
+      </a>
+      <div class="portal-header-content">
+        <span class="portal-header-badge">Tecnologia</span>
+        <h1>Por que Rust + Tauri?</h1>
+        <p class="portal-header-lead">Engenharia de ponta traduzida em benefícios reais para o balcão — sem jargão desnecessário.</p>
+        <p class="portal-header-meta"><a href="index.html">Início</a> · <a href="comparacao.html">Comparação Rust/Java</a></p>
+      </div>
+    </div>
+  </header>
+
+  <nav class="portal-nav" aria-label="Navegação principal">
+    <div class="portal-nav-inner">
+      <a href="index.html">Início</a>
+      <a href="produto.html">Produto</a>
+      <a href="mercado.html">Para sua loja</a>
+      <a href="download.html">Download</a>
+      <a href="wiki/index.html">Wiki</a>
+    </div>
+  </nav>
+
+  <main class="portal-main">
+    <section class="card exec-summary">
+      <h2>O que isso significa para a loja</h2>
+      <div class="stack-grid">
+        <div class="stack-item"><strong>Rápido</strong><span>Abre em segundos — menos fila na abertura do turno.</span></div>
+        <div class="stack-item"><strong>Estável</strong><span>Núcleo nativo com previsibilidade de memória no caixa.</span></div>
+        <div class="stack-item"><strong>Seguro</strong><span>Dados locais protegidos na máquina da loja.</span></div>
+        <div class="stack-item"><strong>Independente</strong><span>Funciona mesmo quando a internet oscila.</span></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Comparação prática</h2>
+      <table class="trace">
+        <thead>
+          <tr><th>Aspecto</th><th>Rust + Tauri (esta linha)</th><th>Stack desktop tradicional</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Abertura do programa</strong></td>
+            <td>Shell enxuto — startup rápido no Windows</td>
+            <td>Runtime pesado — aquecimento mais lento</td>
+          </tr>
+          <tr>
+            <td><strong>Memória RAM</strong></td>
+            <td>Menor pegada — ideal para PCs modestos</td>
+            <td>Maior consumo com runtime completo</td>
+          </tr>
+          <tr>
+            <td><strong>Estabilidade</strong></td>
+            <td>Núcleo Rust com segurança de memória</td>
+            <td>Depende da stack e do runtime</td>
+          </tr>
+          <tr>
+            <td><strong>Instalação</strong></td>
+            <td>MSI/NSIS pt-BR, ZIP portátil, SHA256</td>
+            <td>Varia conforme a linha escolhida</td>
+          </tr>
+          <tr>
+            <td><strong>Dados</strong></td>
+            <td>SQLite local — operação Bunker</td>
+            <td>Local na linha Java madura também</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2>Como funciona por baixo dos panos</h2>
+      <div class="pillars-grid">
+        <div class="pillar">
+          <h3>Rust — o motor</h3>
+          <p>Linguagem compilada que gera binário nativo. Menos surpresas de memória e performance previsível no núcleo do caixa — vendas, estoque, caixa e fiscal.</p>
+        </div>
+        <div class="pillar">
+          <h3>Tauri 2 — a janela</h3>
+          <p>Shell desktop leve que usa o WebView2 do Windows. Interface moderna sem carregar um navegador inteiro — startup rápido e instaladores profissionais.</p>
+        </div>
+        <div class="pillar">
+          <h3>SQLite — seus dados</h3>
+          <p>Banco local na máquina da loja. Vendas e movimentos ficam sob seu controle, com backup automático ao fechar turno.</p>
+        </div>
+        <div class="pillar">
+          <h3>React — a tela</h3>
+          <p>Interface operacional pensada para o balcão: busca rápida, atalhos de teclado e telas responsivas para gestão.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Distribuição profissional</h2>
+      <ul>
+        <li><strong>NSIS</strong> — instalador com assistente em português para o lojista.</li>
+        <li><strong>MSI WiX pt-BR</strong> — pacote para TI e deploy silencioso.</li>
+        <li><strong>SHA256</strong> — verificação de integridade em cada release oficial.</li>
+        <li><strong>Pipeline oficina → loja</strong> — releases rastreáveis no GitHub.</li>
+      </ul>
+      <p class="cta-box">
+        <a class="btn-primary" href="download.html">Baixar PDV Desktop</a>
+        <a class="btn-secondary" href="comparacao.html">Comparar com PDV Java</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="portal-footer">
+    <p>Cara Core PDV Desktop (Rust + Tauri) · Cara Core Informática · CNPJ 23.969.028/0001-37</p>
+    <p class="portal-footer-links">
+      <a href="wiki/index.html">Wiki técnica</a> ·
+      <a href="transparencia.html">Transparência</a> ·
+      <a href="https://www.caracore.com.br/" rel="noopener noreferrer">caracore.com.br</a> ·
+      <a href="mailto:suporte@caracore.com.br">suporte@caracore.com.br</a>
+    </p>
+  </footer>
+  <script src="assets/js/portal.js"></script>
+</body>
+</html>

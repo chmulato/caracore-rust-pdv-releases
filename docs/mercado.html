@@ -53,14 +53,46 @@
       <p>Produtos, vendas e movimentos de caixa ficam no computador da loja. A build de <strong>02/06/2026</strong> pode gerar <strong>backup automático</strong> do banco ao fechar o turno — o gestor não precisa lembrar de copiar o arquivo manualmente todo dia. Restauração e cópias extras continuam disponíveis nas telas de suporte.</p>
     </section>
 
-    <section class="card">
-      <h2>Licenciamento</h2>
-      <ul>
-        <li><strong>Edição de teste</strong> — para conhecer o fluxo de venda e caixa em operação real, com limites definidos na proposta comercial.</li>
-        <li><strong>Edição completa</strong> — amplia recursos e suporte conforme contrato com a Cara Core.</li>
-        <li><strong>CaraCore Seed (opcional)</strong> — integração com licença do ecossistema; se a licença expirar, o sistema avisa em modo degradado antes de bloquear novas vendas.</li>
-      </ul>
-      <p>Valores e condições são informados no contato comercial. O download desta página aponta para releases oficiais no GitHub — consulte <a href="download.html">Download</a> para saber se já há pacote publicado.</p>
+    <section class="card" id="precos">
+      <h2>Planos e licenciamento</h2>
+      <p>Modelo de <strong>ativo licenciado</strong> — você adquire o software para a loja, com opção de mensalidade de suporte. Valores finais conforme proposta comercial.</p>
+      <table class="trace pricing-table">
+        <thead>
+          <tr>
+            <th>Plano</th>
+            <th>Para quem</th>
+            <th>O que inclui</th>
+            <th>Investimento</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="plan-name">Edição de teste</td>
+            <td>Conhecer o fluxo antes de decidir</td>
+            <td>Vendas, caixa e gestão básica; limites definidos na proposta</td>
+            <td>Sob consulta</td>
+          </tr>
+          <tr class="plan-highlight">
+            <td class="plan-name">Edição completa</td>
+            <td>Loja em operação regular</td>
+            <td>Todos os recursos do contrato, suporte e atualizações conforme acordo</td>
+            <td>Sob consulta</td>
+          </tr>
+          <tr>
+            <td class="plan-name">Suporte mensal (opcional)</td>
+            <td>Quem quer acompanhamento contínuo</td>
+            <td>Canal de suporte, orientação operacional e prioridade em correções</td>
+            <td>Sob consulta</td>
+          </tr>
+          <tr>
+            <td class="plan-name">CaraCore Seed (opcional)</td>
+            <td>Integração com ecossistema CaraCore</td>
+            <td>Licença centralizada; aviso em modo degradado antes de restringir novas vendas</td>
+            <td>Sob consulta</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="pricing-note">Todos os planos incluem: instaladores pt-BR (NSIS, MSI), dados locais na loja, operação offline para vendas e caixa, e verificação SHA256 nos releases. <a href="mailto:suporte@caracore.com.br">Solicite proposta comercial →</a></p>
     </section>
 
     <section class="card">
@@ -70,10 +102,11 @@
 
     <section class="card">
       <h2>Outras edições</h2>
-      <p>A Cara Core mantém duas linhas do <strong>mesmo produto CaraCore PDV</strong>: esta loja trata da iniciativa <strong>Rust + Tauri 2</strong> (release v0.1.0, piloto Windows). O PDV Desktop Java (canal v3.1.x, multi-plataforma) está em <a class="ext-link" href="https://pdv.caracore.com.br/" rel="noopener noreferrer">pdv.caracore.com.br</a> — faixas de versão independentes, sem conflito.</p>
+      <p>A Cara Core mantém duas linhas do <strong>mesmo produto CaraCore PDV</strong>. Esta loja trata da linha <strong>Rust + Tauri</strong> (piloto Windows). O PDV Desktop Java (canal maduro, multi-plataforma) está em <a class="ext-link" href="https://pdv.caracore.com.br/" rel="noopener noreferrer">pdv.caracore.com.br</a>.</p>
+      <p class="section-subtitle"><a href="comparacao.html">Veja comparação completa Rust vs Java →</a></p>
       <p class="cta-box">
-        <a class="btn-primary" href="download.html">Ver download e releases</a>
-        · <a href="mailto:suporte@caracore.com.br">suporte@caracore.com.br</a>
+        <a class="btn-primary" href="download.html">Baixar PDV Desktop (Windows)</a>
+        <a class="btn-secondary" href="mailto:suporte@caracore.com.br">Solicitar proposta</a>
       </p>
     </section>
   </main>

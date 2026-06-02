@@ -12,6 +12,8 @@
     "download.html": "download.html",
     "primeiros-passos.html": "download.html",
     "transparencia.html": "transparencia.html",
+    "comparacao.html": "index.html",
+    "rust-tauri.html": "wiki/index.html",
     "wiki/index.html": "wiki/index.html",
     "wiki/projeto-pdv.html": "wiki/index.html"
   };

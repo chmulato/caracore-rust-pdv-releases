@@ -92,6 +92,15 @@ body {
 }
 .portal-header-meta a { color: #fff; text-decoration: underline; }
 
+.portal-header .hero-actions .btn-secondary {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.35);
+}
+.portal-header .hero-actions .btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
 .portal-nav {
   position: sticky;
   top: 0;

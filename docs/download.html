@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="description" content="Baixe o Cara Core PDV Desktop para Windows — instalador em português, MSI para TI, ZIP portátil e download verificado." />
+  <meta name="description" content="Baixe o Cara Core PDV Desktop — Windows, Linux e macOS. Instaladores em português, licença Seed opcional e download verificado." />
   <link rel="canonical" href="https://rust-pdv.caracore.com.br/download.html" />
   <title>Download — Cara Core PDV Desktop (Rust + Tauri)</title>
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
@@ -44,7 +44,7 @@
       <div class="download-hero-cta">
         <h2>Baixar PDV Desktop (Windows)</h2>
         <p>Instaladores oficiais em português — NSIS, MSI pt-BR ou pacote portátil.</p>
-        <a id="download-hero-btn" class="btn-primary" href="https://github.com/chmulato/caracore-rust-pdv-releases/releases" rel="noopener noreferrer">Baixar PDV Desktop (Windows)</a>
+        <a id="download-hero-btn" class="btn-primary" href="https://github.com/chmulato/caracore-rust-pdv-releases/releases" rel="noopener noreferrer">Baixar PDV Desktop</a>
         <p id="download-hero-hash" class="hash-line">A verificação de integridade aparece abaixo após carregar a release.</p>
       </div>
     </section>
@@ -95,9 +95,20 @@
           <a id="btn-msi" class="btn-secondary" href="#" rel="noopener noreferrer">Baixar MSI</a>
         </div>
         <div class="download-option">
-          <h3>Portátil</h3>
+          <h3>Portátil (Windows)</h3>
           <p>ZIP com atalho e instruções.</p>
           <a id="btn-zip" class="btn-secondary" href="#" rel="noopener noreferrer">Baixar ZIP</a>
+        </div>
+        <div class="download-option">
+          <h3>Linux</h3>
+          <p>Pacote .deb ou AppImage, conforme publicado na release.</p>
+          <a id="btn-deb" class="btn-secondary" href="#" rel="noopener noreferrer" hidden>Baixar .deb</a>
+          <a id="btn-appimage" class="btn-secondary" href="#" rel="noopener noreferrer" hidden style="margin-top:8px;display:inline-block;">Baixar AppImage</a>
+        </div>
+        <div class="download-option">
+          <h3>macOS</h3>
+          <p>Imagem .dmg para instalar no Mac da loja.</p>
+          <a id="btn-dmg" class="btn-secondary" href="#" rel="noopener noreferrer" hidden>Baixar .dmg</a>
         </div>
       </div>
 
@@ -110,7 +121,7 @@
 
     <section class="card">
       <h2>Novidades da release</h2>
-      <p>Versão <strong>v0.1.0</strong> — checkout ágil, PIX com status, backup ao fechar turno e pós-venda por código. Veja o <a href="https://github.com/chmulato/caracore-rust-pdv-releases/blob/master/CHANGELOG.md" rel="noopener noreferrer">histórico de versões</a> · benefícios em <a href="produto.html">Produto</a>.</p>
+      <p>Versão <strong>v0.1.1</strong> — Windows, Linux e macOS; licença CaraCore Seed opcional; checkout ágil, PIX e backup ao fechar turno. Veja o <a href="https://github.com/chmulato/caracore-rust-pdv-releases/blob/master/CHANGELOG.md" rel="noopener noreferrer">histórico de versões</a> · benefícios em <a href="produto.html">Produto</a>.</p>
     </section>
 
     <section class="card">
@@ -159,6 +170,9 @@
       var btnNsis = document.getElementById("btn-nsis");
       var btnMsi = document.getElementById("btn-msi");
       var btnZip = document.getElementById("btn-zip");
+      var btnDeb = document.getElementById("btn-deb");
+      var btnAppImage = document.getElementById("btn-appimage");
+      var btnDmg = document.getElementById("btn-dmg");
       var heroBtn = document.getElementById("download-hero-btn");
       var heroHash = document.getElementById("download-hero-hash");
 
@@ -188,12 +202,18 @@
           var nsis = R.pickNsis(assets);
           var msi = R.pickMsi(assets);
           var zip = R.pickZip(assets);
+          var deb = R.pickDeb(assets);
+          var appimage = R.pickAppImage(assets);
+          var dmg = R.pickDmg(assets);
           var sums = R.pickSha256Sums(assets);
           var manifest = R.pickManifest(assets);
 
           var any = wireButton(btnNsis, nsis, "Baixar ")
             | wireButton(btnMsi, msi, "Baixar ")
-            | wireButton(btnZip, zip, "Baixar ");
+            | wireButton(btnZip, zip, "Baixar ")
+            | wireButton(btnDeb, deb, "Baixar ")
+            | wireButton(btnAppImage, appimage, "Baixar ")
+            | wireButton(btnDmg, dmg, "Baixar ");
 
           if (any) {
             grid.hidden = false;

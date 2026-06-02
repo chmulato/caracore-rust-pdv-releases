@@ -39,6 +39,18 @@
     return pickAsset(assets, function (a) { return /^release_manifest\.json$/i.test(a.name); });
   }
 
+  function pickDeb(assets) {
+    return pickAsset(assets, function (a) { return /\.deb$/i.test(a.name); });
+  }
+
+  function pickAppImage(assets) {
+    return pickAsset(assets, function (a) { return /\.appimage$/i.test(a.name); });
+  }
+
+  function pickDmg(assets) {
+    return pickAsset(assets, function (a) { return /\.dmg$/i.test(a.name); });
+  }
+
   function fetchLatestRelease() {
     return fetch(API_LATEST, { headers: { Accept: "application/vnd.github+json" } }).then(function (res) {
       if (!res.ok) throw new Error("no_release");
@@ -56,6 +68,9 @@
     pickNsis: pickNsis,
     pickMsi: pickMsi,
     pickSha256Sums: pickSha256Sums,
-    pickManifest: pickManifest
+    pickManifest: pickManifest,
+    pickDeb: pickDeb,
+    pickAppImage: pickAppImage,
+    pickDmg: pickDmg
   };
 })(typeof window !== "undefined" ? window : this);

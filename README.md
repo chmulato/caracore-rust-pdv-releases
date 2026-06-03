@@ -48,14 +48,16 @@ Lista completa: [`CHANGELOG.md`](CHANGELOG.md).
 
 | Caminho | Conteúdo |
 | ------- | -------- |
-| `README.md` | Visão institucional e versão atual |
+| `README.md` | Visão institucional e versão atual (único `.md` na raiz além do changelog) |
 | `CHANGELOG.md` | Histórico de releases da vitrine |
-| `PUBLICACAO_CHECKLIST.md` | Roteiro oficina → release → loja |
-| `docs/` | Portal GitHub Pages |
-| `docs/modalidades.html` | PDV local vs PDV na rede (linguagem leiga) |
+| `docs/` | **Somente HTML** comercial para leigos + `assets/` (CSS, JS, imagens) — GitHub Pages |
+| `docs/transparencia.html` | Limites honestos (free 100 vendas, PIX, fiscal) |
+| `docs/modalidades.html` | PDV local vs PDV na rede |
 | `docs/download.html` | Download via API GitHub |
-| `docs/assets/js/releases.js` | Cliente da API de releases |
+| `.cursor/rules/` | Checklists e continuidade (**não** publicados na vitrine) |
 | `.github/workflows/` | Validação da loja |
+
+Documentação técnica e matrizes de engenharia ficam na **oficina** (`caracore-rust-pdv`), não em `docs/` desta loja.
 
 GitHub Pages: branch **master**, pasta **/docs**, arquivo **docs/.nojekyll**.
 

@@ -37,6 +37,7 @@
       <a href="https://github.com/chmulato/caracore-rust-pdv-releases/releases" rel="noopener noreferrer" target="_blank">Download</a>
       <a href="download.html">Formatos</a>
       <a href="comparacao.html">Comparar</a>
+      <a href="transparencia.html" aria-current="page">Transparência</a>
       <a href="wiki/index.html">Wiki</a>
     </div>
   </nav>
@@ -114,10 +115,72 @@
       </ul>
     </section>
 
+    <section class="card" id="edicao-gratuita">
+      <h2>Edição gratuita (piloto) — o que você recebe</h2>
+      <p>O instalador para <strong>testar no seu PC</strong> (PDV Local) opera como <strong>edição gratuita</strong> por padrão: vendas e caixa no computador, sem nuvem obrigatória. Esta página espelha o compromisso publicado com o produto em piloto (atualizado em junho/2026).</p>
+
+      <table class="trace">
+        <thead>
+          <tr>
+            <th>Promessa</th>
+            <th>Na prática hoje</th>
+            <th>Limite honesto</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Bunker local</strong> — vender offline</td>
+            <td>Sim — SQLite em <code>%APPDATA%\caracore-pdv\</code></td>
+            <td>Fiscal eletrônico real exige rede e credenciais SEFAZ</td>
+          </tr>
+          <tr>
+            <td><strong>Balcão</strong> — produtos, operadores, vendas, gestão</td>
+            <td>Sim — checkout, caixa, relatórios básicos</td>
+            <td>Impressora de cupom ainda em modo demonstração (MOCK)</td>
+          </tr>
+          <tr>
+            <td><strong>PIX</strong> no checkout</td>
+            <td>Sim — QR Code gerado no app + confirmação em duas etapas</td>
+            <td>Sem integração automática com banco/PSP na edição gratuita</td>
+          </tr>
+          <tr>
+            <td><strong>Degustação</strong></td>
+            <td>Até <strong>100 vendas concluídas</strong> no mesmo banco local</td>
+            <td>Na 101ª tentativa o sistema bloqueia novas vendas com aviso</td>
+          </tr>
+          <tr>
+            <td><strong>Premium / contrato</strong></td>
+            <td>Sem teto de vendas + recursos conforme proposta</td>
+            <td>Licença CaraCore Seed ou edição contratada — fale com a Cara Core</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>PIX na edição gratuita (passo a passo)</h3>
+      <ol>
+        <li>Finalize a venda com pagamento PIX (atalho F9) — o sistema gera o <strong>QR Code</strong> e o código Pix Copia e Cola.</li>
+        <li>O cliente paga no app do banco e informa no balcão.</li>
+        <li>O operador marca que o <strong>cliente informou o pagamento</strong> e que <strong>conferiu valor/comprovante</strong>.</li>
+        <li>Toque em <strong>Confirmar recebimento PIX</strong> — só então a venda é registrada.</li>
+      </ol>
+      <p class="section-subtitle">Confirmação automática via banco (webhook PSP) é evolução da <strong>edição Premium</strong>, não do pacote gratuito de teste.</p>
+
+      <h3>Limite de 100 vendas</h3>
+      <ul>
+        <li>Contam apenas vendas com status <strong>concluída</strong> no banco local.</li>
+        <li>O programa exibe aviso com vendas restantes antes do bloqueio.</li>
+        <li>Para remover o teto: contrato Premium ou licença Seed válida em modo estrito — <a href="mailto:suporte@caracore.com.br?subject=PDV%20Premium">solicite proposta</a>.</li>
+      </ul>
+      <div class="notice notice-info">
+        <strong>Modo rede (vários caixas)</strong>
+        Evolução com implantação assistida — não é o mesmo pacote do “baixar e testar” em um PC. Veja <a href="modalidades.html">Local e rede</a>.
+      </div>
+    </section>
+
     <section class="card">
       <h2>Escopo fiscal e funcional</h2>
-      <p>O PDV inclui fila e rotinas fiscais em desenvolvimento. A homologação em ambiente real da sua loja depende de credenciais, certificado digital e orientação do contador. Recursos avançados (multi-loja, integrações específicas) seguem roadmap e contrato — não estão implícitos no pacote de teste.</p>
-      <p>Consulte <a href="produto.html">Produto</a> para a lista de áreas disponíveis hoje.</p>
+      <p>O PDV inclui fila e rotinas fiscais em desenvolvimento. Na edição gratuita o ambiente fiscal padrão é <strong>simulado (LOCAL_MOCK)</strong> — adequado para treinar o balcão, não para substituir NF-e homologada sem projeto com contador.</p>
+      <p>Homologação SEFAZ real, multi-loja e integrações específicas seguem contrato Premium. Consulte <a href="produto.html">Produto</a> para áreas disponíveis hoje.</p>
     </section>
 
     <section class="card">

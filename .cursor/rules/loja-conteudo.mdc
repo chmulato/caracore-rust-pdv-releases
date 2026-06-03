@@ -1,0 +1,31 @@
+---
+description: Loja rust-pdv — apenas HTML comercial em docs/ (+ README e CHANGELOG na raiz)
+alwaysApply: true
+---
+
+# Conteúdo da loja (rust-pdv)
+
+## Regra
+
+| Local | Permitido |
+|-------|-----------|
+| `docs/` | **Somente** páginas `.html` com estilo comercial para **leigos** + `assets/` (CSS, JS, imagens) + `CNAME`, `_config.yml`, `.nojekyll` |
+| Raiz do repo | **`README.md`** e **`CHANGELOG.md`** apenas |
+| Manutenção interna | `.cursor/rules/` — checklists, continuidade, publicação (não deployar na Pages) |
+
+## Proibido em `docs/`
+
+- `.md`, `.txt`, briefings técnicos, matrizes de engenharia, roteiros de oficina
+- Duplicar `consistencia_pdv.md` da oficina — usar **`transparencia.html#edicao-gratuita`**
+
+## Fonte canônica (oficina)
+
+- Produto / gates: `D:\dev\caracore-pdv-rust\docs\consistencia_pdv.md`
+- Espelho público: https://rust-pdv.caracore.com.br/transparencia.html#edicao-gratuita
+
+## Ao alinhar produto → loja
+
+1. Atualizar HTML (`transparencia.html`, `modalidades.html`, `mercado.html`, etc.).
+2. Entrada em `CHANGELOG.md` (vitrine).
+3. Tabela de versão em `README.md` se mudar tag ou copy.
+4. **Não** criar novos `.md` em `docs/`.

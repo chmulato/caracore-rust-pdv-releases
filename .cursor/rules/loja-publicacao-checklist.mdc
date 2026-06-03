@@ -1,0 +1,45 @@
+---
+description: Checklist interno — build oficina, release GitHub, push loja Pages (não é página pública)
+alwaysApply: false
+---
+
+# Checklist de publicação — loja rust-pdv
+
+Padrão ecossistema `caracore-*-releases`. **Não publicar este arquivo na vitrine.**
+
+## 1. Build na oficina
+
+`D:\dev\caracore-pdv-rust`
+
+```powershell
+python tools/release_gate.py --bundle-installer --skip-ui-smokes --skip-icon
+python tools/package_pilot_zip.py
+```
+
+## 2. Release binários (GitHub)
+
+```powershell
+python tools/publish_release_delivery.py --include-zip --skip-smoke
+```
+
+Destino: https://github.com/chmulato/caracore-rust-pdv-releases/releases
+
+Artefatos: NSIS `*-setup.exe`, MSI `*_pt-BR.msi`, ZIP piloto, `SHA256SUMS.txt`, `RELEASE_MANIFEST.json`.
+
+## 3. Vitrine (só HTML + CHANGELOG)
+
+- [ ] `docs/*.html` — copy alinhada a `transparencia.html` se mudou free/Premium/PIX
+- [ ] `docs/download.html` + `releases.js` — MSI pt-BR prioritário
+- [ ] `README.md` — versão vitrine vs binário
+- [ ] `CHANGELOG.md` — entrada da versão
+- [ ] **Sem** novos `.md` em `docs/`
+
+## 4. Push e validar
+
+```powershell
+cd D:\dev\caracore-pdv-rust-releases
+git push origin master
+```
+
+- https://rust-pdv.caracore.com.br/transparencia.html#edicao-gratuita
+- https://rust-pdv.caracore.com.br/download.html

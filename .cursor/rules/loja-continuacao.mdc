@@ -9,23 +9,24 @@ alwaysApply: true
 
 ## Estado
 
-- Vitrine **v0.1.2** (copy + UX) pronta em disco local.
+- Vitrine **v0.1.2** (copy + UX + **transparência free/PIX/100 vendas**) em disco local — alinhada a `consistencia_pdv.md` da oficina.
 - Binários oficiais ainda **v0.1.1** no GitHub.
 - **Push:** `master` alinhada com `origin` (2026-06-03) — validar https://rust-pdv.caracore.com.br/modalidades.html
 
 ## Validar após push
 
-1. https://rust-pdv.caracore.com.br/modalidades.html — cards, CTA fixo, jornada 3 passos.
-2. https://rust-pdv.caracore.com.br/ — hub “Dois modos”.
-3. Botões **Baixar** → `releases/latest` (GitHub).
+1. https://rust-pdv.caracore.com.br/transparencia.html#edicao-gratuita — matriz free (100 vendas, PIX manual).
+2. https://rust-pdv.caracore.com.br/modalidades.html — cards, CTA fixo, jornada 3 passos.
+3. https://rust-pdv.caracore.com.br/ — hub “Dois modos”.
+4. Botões **Baixar** → `releases/latest` (GitHub).
 
 ## Arquivos tocados na última sessão
 
-- `docs/modalidades.html`, `docs/index.html`, `docs/mercado.html`
+- `docs/transparencia.html`, `docs/modalidades.html`, `docs/index.html`, `docs/mercado.html`, `docs/produto.html`, `docs/download.html` (somente HTML em `docs/`)
 - `docs/assets/css/components.css`
 - `CHANGELOG.md`, `README.md`
 - Nav: `docs/*.html`, `docs/wiki/*.html`
-- Briefing (não deploy): `docs/melhorias.txt`
+- Regra de conteúdo: `.cursor/rules/loja-conteudo.mdc` — sem `.md` em `docs/`
 
 ## Próximo passo único (se só houver tempo)
 

@@ -51,7 +51,7 @@ Não prometer features só da vitrine sem release correspondente.
 | `download.html` | Formatos + `releases.js` |
 | `wiki/` | TI / projeto |
 
-Referência de melhorias: `docs/melhorias.txt` (briefing UX — não publicar na Pages).
+Conteúdo `docs/`: **apenas HTML** comercial (+ assets). Raiz: `README.md` + `CHANGELOG.md`. Regra: `loja-conteudo.mdc`.
 
 ## Assets e JS
 

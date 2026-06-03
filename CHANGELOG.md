@@ -6,6 +6,12 @@ Formato alinhado às demais lojas `*-releases` do ecossistema CaraCore.
 
 **Versão comercial da loja:** narrativa local + rede com cards, CTAs fixos, jornada “comece pequeno”, provas objetivas (piloto/lab), seção de dados e acordeão TI. **Binários:** tag GitHub vigente ([`v0.1.1`](https://github.com/chmulato/caracore-rust-pdv-releases/releases/tag/v0.1.1) ou mais recente).
 
+### Transparência com o cliente (alinhamento produto)
+
+- **[Transparência](https://rust-pdv.caracore.com.br/transparencia.html#edicao-gratuita)** — matriz honesta: bunker local, **100 vendas concluídas** na edição gratuita, PIX (QR + confirmação cliente/operador), limites fiscal/MOCK.
+- **Planos** — linha “Edição gratuita (piloto)” com download direto; Premium sob proposta.
+- **Local e rede**, **Início**, **Produto**, **Download** — links e copy alinhados à oficina (`consistencia_pdv`); matriz do cliente só em `transparencia.html` (sem `.md` em `docs/`).
+
 ### O que mudou na loja (linguagem para leigos)
 
 - **[Local e rede](https://rust-pdv.caracore.com.br/modalidades.html)** reescrita: benefícios em vez de jargão, comparação visual, miniaturas das telas.

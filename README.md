@@ -1,8 +1,8 @@
 # Cara Core PDV Desktop (Rust + Tauri) — Loja e Releases
 
-Canal público de apresentação e distribuição da **iniciativa Rust + Tauri 2** do CaraCore PDV (Windows, release v0.1.0). Coexiste com o PDV Desktop Java (canal v3.1.x) em pdv.caracore.com.br.
+Canal público de apresentação e distribuição da **iniciativa Rust + Tauri 2** do CaraCore PDV (Windows, Linux e macOS na release v0.1.1). Coexiste com o PDV Desktop Java (canal v3.1.x) em [pdv.caracore.com.br](https://pdv.caracore.com.br/).
 
-A loja comunica o produto em linguagem comercial. Documentação técnica, evidências e gates ficam na oficina (`caracore-rust-pdv`).
+A loja comunica o produto em **linguagem comercial para leigos**: PDV **local** (um PC na loja) e PDV **na rede** (vários caixas + servidor da loja). Documentação técnica, evidências e gates ficam na oficina (`caracore-rust-pdv`).
 
 ---
 
@@ -10,34 +10,25 @@ A loja comunica o produto em linguagem comercial. Documentação técnica, evid�
 
 | Campo | Valor |
 | ----- | ----- |
-| Versão | `v0.1.0` |
-| Status | Piloto Windows |
+| Versão comercial (vitrine) | `v0.1.2` — narrativa local + rede (jun/2026) |
+| Binários publicados | `v0.1.1` — Windows, Linux e macOS |
+| Status | Piloto Windows; rede da loja em implantação assistida |
 | Idioma dos instaladores | Português do Brasil (pt-BR) |
-| Publicação | 06/2026 (build operacional 02/06/2026) |
-| Stack da oficina | Rust + Tauri 2 + React + SQLite local |
-| Release | https://github.com/chmulato/caracore-rust-pdv-releases/releases/tag/v0.1.0 |
+| Stack da oficina | Rust + Tauri 2 + React + SQLite local / PostgreSQL na rede |
+| Release | https://github.com/chmulato/caracore-rust-pdv-releases/releases/latest |
 | Loja | https://rust-pdv.caracore.com.br/ |
 
-### Novidades (build 02/06/2026)
+### Destaques (v0.1.2 — loja)
 
-Mesma versão **v0.1.0**, com pacote e experiência de loja atualizados. Destaques para quem opera o caixa:
+- Página **[Local e rede](https://rust-pdv.caracore.com.br/modalidades.html)** — PDV na sua máquina vs PDV na rede da loja.
+- Planos e primeiros passos alinhados às duas modalidades.
+- Mesmo produto: comece local; evolua para vários caixas com suporte Cara Core.
 
-- Checkout v2 polido: foco na busca, ajuda F1, total fixo, venda em espera, PIX com status e substituto quando faltar estoque.
-- Caixa: alerta de limite de sangria, backup automático ao fechar turno, confirmações e motivo em cancelamentos, supervisor e bloqueio por inatividade.
-- Pós-venda por código da venda; gestão com PDF do dashboard, tour de boas-vindas e fila fiscal visível.
-- Licença CaraCore Seed opcional (modo degradado com aviso antes de bloquear vendas).
+### Destaques (v0.1.1 — produto)
 
-Lista completa: [`CHANGELOG.md`](CHANGELOG.md) · vitrine: [rust-pdv.caracore.com.br](https://rust-pdv.caracore.com.br/).
+- Licença CaraCore Seed opcional; multiplataforma; checkout, caixa, gestão PDF, fila fiscal visível.
 
-### Artefatos v0.1.0
-
-| Artefato | Perfil | Verificação |
-| -------- | ------ | ----------- |
-| `CaraCore PDV_0.1.0_x64-setup.exe` | Lojista / piloto (NSIS) | `SHA256SUMS.txt` |
-| `CaraCore PDV_0.1.0_x64_pt-BR.msi` | TI / empresa (MSI, pt-BR) | `SHA256SUMS.txt` |
-| `CaraCore-PDV-v0.1.0-windows.zip` | Portátil piloto | `SHA256SUMS.txt` |
-| `RELEASE_MANIFEST.json` | Manifesto técnico | JSON na release |
-| `SHA256SUMS.txt` | Fonte oficial de hashes | Anexo da release |
+Lista completa: [`CHANGELOG.md`](CHANGELOG.md).
 
 ---
 
@@ -46,6 +37,7 @@ Lista completa: [`CHANGELOG.md`](CHANGELOG.md) · vitrine: [rust-pdv.caracore.co
 | Papel | Local |
 | ----- | ----- |
 | Loja oficial | https://rust-pdv.caracore.com.br/ |
+| Modalidades (local / rede) | https://rust-pdv.caracore.com.br/modalidades.html |
 | Releases / download | https://github.com/chmulato/caracore-rust-pdv-releases/releases |
 | Oficina (código) | https://github.com/chmulato/caracore-rust-pdv |
 | Linha Java (alternativa) | https://pdv.caracore.com.br/ |
@@ -60,7 +52,8 @@ Lista completa: [`CHANGELOG.md`](CHANGELOG.md) · vitrine: [rust-pdv.caracore.co
 | `CHANGELOG.md` | Histórico de releases da vitrine |
 | `PUBLICACAO_CHECKLIST.md` | Roteiro oficina → release → loja |
 | `docs/` | Portal GitHub Pages |
-| `docs/download.html` | Download NSIS / MSI pt-BR / ZIP via API GitHub |
+| `docs/modalidades.html` | PDV local vs PDV na rede (linguagem leiga) |
+| `docs/download.html` | Download via API GitHub |
 | `docs/assets/js/releases.js` | Cliente da API de releases |
 | `.github/workflows/` | Validação da loja |
 
@@ -72,10 +65,11 @@ GitHub Pages: branch **master**, pasta **/docs**, arquivo **docs/.nojekyll**.
 
 | Página | Conteúdo |
 | ------ | -------- |
-| `docs/index.html` | Apresentação |
+| `docs/index.html` | Apresentação e hub local/rede |
+| `docs/modalidades.html` | Como usar: máquina única ou rede da loja |
 | `docs/produto.html` | Funções do sistema |
-| `docs/mercado.html` | Licenciamento e adoção |
-| `docs/download.html` | Download Windows (NSIS, MSI, ZIP) |
+| `docs/mercado.html` | Licenciamento, modalidades e planos |
+| `docs/download.html` | Download (NSIS, MSI, ZIP e multi-OS na tag) |
 | `docs/transparencia.html` | Piloto, SHA256, privacidade |
 | `docs/primeiros-passos.html` | Instalação inicial |
 

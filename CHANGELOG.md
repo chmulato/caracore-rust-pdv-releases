@@ -2,6 +2,26 @@
 
 Formato alinhado às demais lojas `*-releases` do ecossistema CaraCore.
 
+## v0.1.2 — 2026-06-03 (vitrine · PDV local e PDV na rede)
+
+**Versão comercial da loja:** narrativa alinhada ao produto em duas modalidades. **Binários:** continuam na tag GitHub vigente ([`v0.1.1`](https://github.com/chmulato/caracore-rust-pdv-releases/releases/tag/v0.1.1) ou mais recente publicada).
+
+### O que mudou na loja (linguagem para leigos)
+
+- Nova página **[Local e rede](https://rust-pdv.caracore.com.br/modalidades.html)** — explica PDV na sua máquina vs PDV na rede da loja, sem jargão técnico.
+- **PDV local** posicionado para MEI, demo, aprendizado e loja única — dados no PC, vendas offline.
+- **PDV na rede** posicionado para vários caixas + servidor da loja — sync de vendas e catálogo, indicador “Sync loja”, piloto com implantação assistida.
+- Planos comerciais e primeiros passos atualizados com escolha de modalidade.
+
+### Produto (oficina — referência técnica)
+
+- Ecossistema distribuído validado em laboratório (caixa → loja); modo **standalone** recomendado para demonstração e operação em um PC.
+- Wizard em **Preferências → Banco** para papel Caixa na rede; badge de sincronização no balcão.
+
+Loja: https://rust-pdv.caracore.com.br/
+
+---
+
 ## v0.1.1 — 2026-06-02 (multiplataforma · licença)
 
 **Versão comercial:** `v0.1.1` · **Plataformas:** Windows (x64), Linux (deb / AppImage), macOS (dmg).
@@ -24,7 +44,7 @@ Formato alinhado às demais lojas `*-releases` do ecossistema CaraCore.
 
 | Variável | Uso |
 | -------- | --- |
-| `PDV_SEED_MODE` | `off` ou integração com licença CaraCore Seed |
+| `PDV_SEED_MODE` | `off` (piloto/demo) ou integração com licença CaraCore Seed |
 | `PDV_SEED_LICENSE_KEY` / `PDV_SEED_LICENSE_FILE` | Chave ou arquivo de licença |
 
 Loja: https://rust-pdv.caracore.com.br/

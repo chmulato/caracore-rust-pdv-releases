@@ -152,7 +152,10 @@ body {
 }
 .portal-nav-toggle {
   display: none;
-  flex: 1 1 auto;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
   min-height: var(--nav-link-min-h);
   padding: 10px 14px;
   font-size: 13px;
@@ -164,6 +167,32 @@ body {
   cursor: pointer;
   text-align: center;
   -webkit-tap-highlight-color: transparent;
+}
+.portal-nav-toggle__bars {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  width: 18px;
+  height: 14px;
+  flex-shrink: 0;
+}
+.portal-nav-toggle__bars span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: currentColor;
+  border-radius: 1px;
+  transition: transform 0.15s, opacity 0.15s;
+}
+.portal-nav-toggle[aria-expanded="true"] .portal-nav-toggle__bars span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+.portal-nav-toggle[aria-expanded="true"] .portal-nav-toggle__bars span:nth-child(2) {
+  opacity: 0;
+}
+.portal-nav-toggle[aria-expanded="true"] .portal-nav-toggle__bars span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
 }
 .portal-nav-toggle:focus-visible {
   outline: 2px solid var(--brand-2);
@@ -213,20 +242,20 @@ body {
   align-items: center;
 }
 
-/* ——— Responsivo: mobile (≤639) ——— */
-@media (max-width: 639px) {
+/* ——— Responsivo: mobile + tablet (≤1023) — menu colapsável ——— */
+@media (max-width: 1023px) {
   .portal-footer { font-size: 11px; }
 
   .portal-nav {
     display: flex;
     flex-direction: column;
     align-items: stretch;
+    z-index: 101;
   }
 
   .portal-nav-toggle {
-    display: block;
+    display: flex;
     margin: 8px 0 0;
-    width: 100%;
   }
 
   .portal-nav-inner {
@@ -237,7 +266,7 @@ body {
     gap: 4px;
     padding-top: 4px;
     padding-bottom: 10px;
-    max-height: min(70dvh, 420px);
+    max-height: min(70dvh, 480px);
     overflow-y: auto;
     overscroll-behavior: contain;
     -webkit-overflow-scrolling: touch;
@@ -254,8 +283,23 @@ body {
     width: 100%;
     font-size: 13px;
     padding: 10px 14px;
+    box-sizing: border-box;
   }
 
+  body.portal-nav-open {
+    overflow: hidden;
+  }
+
+  body.portal-nav-open::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(11, 58, 102, 0.35);
+    z-index: 99;
+  }
+}
+
+@media (max-width: 639px) {
   .portal-header-inner {
     grid-template-columns: 1fr;
     gap: 12px;
@@ -268,31 +312,13 @@ body {
   }
 }
 
-/* ——— Responsivo: tablet (640–1023) ——— */
+@media (max-width: 639px) and (orientation: landscape) {
+  .portal-nav-inner--open {
+    max-height: min(50dvh, 320px);
+  }
+}
+
 @media (min-width: 640px) and (max-width: 1023px) {
-  .portal-nav-toggle {
-    display: none !important;
-  }
-
-  .portal-nav-inner {
-    display: grid !important;
-    /* 10 itens = 2 linhas × 5 colunas (evita fileira órfã 9+1) */
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    gap: 6px;
-    padding-top: 8px;
-    padding-bottom: 10px;
-  }
-
-  .portal-nav a {
-    font-size: 12px;
-    padding: 9px 10px;
-    white-space: normal;
-    justify-content: center;
-    text-align: center;
-    width: 100%;
-    box-sizing: border-box;
-  }
-
   .portal-header-inner {
     grid-template-columns: auto 1fr;
     gap: 14px 18px;
@@ -335,16 +361,7 @@ body {
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .portal-nav a { transition: none; }
-}
-
-body.portal-nav-open {
-  overflow: hidden;
-}
-
-@media (min-width: 640px) {
-  body.portal-nav-open {
-    overflow: auto;
-  }
+  .portal-nav-toggle__bars span { transition: none; }
 }
 
 /* Conteúdo e mídia não estouram a largura */

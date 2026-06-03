@@ -1,6 +1,6 @@
 # Cara Core PDV Desktop (Rust + Tauri) — Loja e Releases
 
-Canal público de apresentação e distribuição da **iniciativa Rust + Tauri 2** do CaraCore PDV (Windows, Linux e macOS na release v0.1.1). Coexiste com o PDV Desktop Java (canal v3.1.x) em [pdv.caracore.com.br](https://pdv.caracore.com.br/).
+Canal público de apresentação e distribuição da **iniciativa Rust + Tauri 2** do CaraCore PDV (Windows na release [v0.1.2](https://github.com/chmulato/caracore-rust-pdv-releases/releases/tag/v0.1.2)). Coexiste com o PDV Desktop Java (canal v3.1.x) em [pdv.caracore.com.br](https://pdv.caracore.com.br/).
 
 A loja comunica o produto em **linguagem comercial para leigos**: PDV **local** (um PC na loja) e PDV **na rede** (vários caixas + servidor da loja). Documentação técnica, evidências e gates ficam na oficina (`caracore-rust-pdv`).
 
@@ -11,7 +11,7 @@ A loja comunica o produto em **linguagem comercial para leigos**: PDV **local** 
 | Campo | Valor |
 | ----- | ----- |
 | Versão comercial (vitrine) | `v0.1.2` — narrativa local + rede (jun/2026) |
-| Binários publicados | `v0.1.1` — Windows, Linux e macOS |
+| Binários publicados | **`v0.1.2`** — Windows (NSIS, MSI pt-BR, ZIP piloto) |
 | Status | Piloto Windows; rede da loja em implantação assistida |
 | Idioma dos instaladores | Português do Brasil (pt-BR) |
 | Stack da oficina | Rust + Tauri 2 + React + SQLite local / PostgreSQL na rede |

@@ -752,12 +752,7 @@
   }
 }
 
-/* Paisagem em telefones estreitos */
-@media (max-width: 639px) and (orientation: landscape) {
-  .portal-nav-inner--open {
-    max-height: min(50dvh, 320px);
-  }
-}
+/* Paisagem em telefones estreitos — regra movida para layout.css */
 
 /* —— Apresentação comercial (modalidades, hub) —— */
 .cta-sticky {

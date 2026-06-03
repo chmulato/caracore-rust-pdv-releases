@@ -2,9 +2,18 @@
 
 Formato alinhado às demais lojas `*-releases` do ecossistema CaraCore.
 
-## v0.1.2 — 2026-06-03 (vitrine · PDV local e PDV na rede · UX comercial)
+## v0.1.2 — 2026-06-03 (produto + vitrine)
 
-**Versão comercial da loja:** narrativa local + rede com cards, CTAs fixos, jornada “comece pequeno”, provas objetivas (piloto/lab), seção de dados e acordeão TI. **Binários:** tag GitHub vigente ([`v0.1.1`](https://github.com/chmulato/caracore-rust-pdv-releases/releases/tag/v0.1.1) ou mais recente).
+**Binários Windows publicados:** [`v0.1.2`](https://github.com/chmulato/caracore-rust-pdv-releases/releases/tag/v0.1.2) — NSIS, MSI pt-BR, ZIP piloto.
+
+### Produto (oficina)
+
+- Edição gratuita: até **100 vendas concluídas**; PIX com QR e confirmação cliente + operador.
+- Licença Seed e limite free documentados em `transparencia.html`.
+
+### Vitrine (PDV local e PDV na rede · UX comercial)
+
+**Versão comercial da loja:** narrativa local + rede + transparência (free 100 vendas, PIX manual). **Binários:** [`v0.1.2`](https://github.com/chmulato/caracore-rust-pdv-releases/releases/tag/v0.1.2) (2026-06-03).
 
 ### Transparência com o cliente (alinhamento produto)
 

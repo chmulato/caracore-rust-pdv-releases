@@ -4,10 +4,11 @@
   var body = document.body;
   var navRoot = body.getAttribute("data-nav-root") || "";
   var DESKTOP_NAV_MQ = window.matchMedia("(min-width: 1024px)");
-  var MOBILE_NAV_MQ = window.matchMedia("(max-width: 639px)");
+  var COLLAPSIBLE_NAV_MQ = window.matchMedia("(max-width: 1023px)");
 
   var PAGE_TO_NAV = {
     "index.html": "index.html",
+    "modalidades.html": "modalidades.html",
     "produto.html": "produto.html",
     "mercado.html": "mercado.html",
     "download.html": "download.html",
@@ -26,6 +27,9 @@
     var file = parts.length ? parts[parts.length - 1] : "";
     if (!file || file.indexOf(".html") === -1) {
       return "index.html";
+    }
+    if (parts.length >= 2 && parts[parts.length - 2] === "wiki") {
+      return "wiki/" + file;
     }
     return file;
   }
@@ -48,7 +52,8 @@
       var href = link.getAttribute("href") || "";
       if (!href || href.charAt(0) === "#") return;
       var name = href.split("/").pop().split("#")[0];
-      if (name === activeHref) {
+      var activeName = activeHref.split("/").pop();
+      if (name === activeName) {
         link.setAttribute("aria-current", "page");
       } else {
         link.removeAttribute("aria-current");
@@ -79,25 +84,29 @@
     });
   }
 
-  function closeMobileNav(nav, inner, btn) {
+  function closeCollapsibleNav(nav, inner, btn) {
     inner.classList.remove("portal-nav-inner--open");
     if (btn) {
       btn.setAttribute("aria-expanded", "false");
-      btn.textContent = "Menu";
+      btn.setAttribute("aria-label", "Abrir menu de navegação");
+      var label = btn.querySelector(".portal-nav-toggle__label");
+      if (label) label.textContent = "Menu";
     }
     body.classList.remove("portal-nav-open");
   }
 
-  function openMobileNav(inner, btn) {
+  function openCollapsibleNav(inner, btn) {
     inner.classList.add("portal-nav-inner--open");
     if (btn) {
       btn.setAttribute("aria-expanded", "true");
-      btn.textContent = "Fechar";
+      btn.setAttribute("aria-label", "Fechar menu de navegação");
+      var label = btn.querySelector(".portal-nav-toggle__label");
+      if (label) label.textContent = "Fechar";
     }
     body.classList.add("portal-nav-open");
   }
 
-  function initMobileNavToggle() {
+  function initCollapsibleNavToggle() {
     var nav = document.querySelector(".portal-nav");
     if (!nav || nav.querySelector(".portal-nav-toggle")) return;
 
@@ -110,33 +119,41 @@
     btn.setAttribute("aria-expanded", "false");
     btn.setAttribute("aria-controls", "portal-nav-links");
     btn.setAttribute("aria-label", "Abrir menu de navegação");
-    btn.textContent = "Menu";
+    btn.innerHTML =
+      '<span class="portal-nav-toggle__bars" aria-hidden="true"><span></span><span></span><span></span></span>' +
+      '<span class="portal-nav-toggle__label">Menu</span>';
 
     inner.id = "portal-nav-links";
 
     btn.addEventListener("click", function () {
       if (inner.classList.contains("portal-nav-inner--open")) {
-        closeMobileNav(nav, inner, btn);
+        closeCollapsibleNav(nav, inner, btn);
       } else {
-        openMobileNav(inner, btn);
+        openCollapsibleNav(inner, btn);
       }
     });
 
     inner.querySelectorAll('a[href]:not([href^="#"])').forEach(function (link) {
       link.addEventListener("click", function () {
-        closeMobileNav(nav, inner, btn);
+        closeCollapsibleNav(nav, inner, btn);
       });
     });
 
     document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape") closeMobileNav(nav, inner, btn);
+      if (e.key === "Escape") closeCollapsibleNav(nav, inner, btn);
     });
 
-    MOBILE_NAV_MQ.addEventListener("change", function (e) {
-      if (!e.matches) closeMobileNav(nav, inner, btn);
+    body.addEventListener("click", function (e) {
+      if (!body.classList.contains("portal-nav-open")) return;
+      if (nav.contains(e.target)) return;
+      closeCollapsibleNav(nav, inner, btn);
+    });
+
+    COLLAPSIBLE_NAV_MQ.addEventListener("change", function (e) {
+      if (!e.matches) closeCollapsibleNav(nav, inner, btn);
     });
     DESKTOP_NAV_MQ.addEventListener("change", function (e) {
-      if (e.matches) closeMobileNav(nav, inner, btn);
+      if (e.matches) closeCollapsibleNav(nav, inner, btn);
     });
 
     nav.insertBefore(btn, inner);
@@ -166,5 +183,5 @@
   wireOfficialDownloads();
   setActiveNav();
   initSmoothScroll();
-  initMobileNavToggle();
+  initCollapsibleNavToggle();
 })();

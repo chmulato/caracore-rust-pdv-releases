@@ -1,51 +1,84 @@
 ---
-description: Memória da loja PDV Desktop Rust — rust-pdv.caracore.com.br; v0.1.1; download GitHub Releases
+description: Memória da loja PDV Desktop Rust — rust-pdv; v0.1.2 vitrine; modalidades comercial; push pendente
 alwaysApply: true
 ---
 
 # Memória da Loja — caracore-pdv-rust-releases
 
-**Atualizado:** 2026-06-02
+**Atualizado:** 2026-06-03 (sessão UX comercial + alinhamento oficina)
 
 ## Repositório e papel
 
 - **Repo:** `caracore-pdv-rust-releases` · local `D:\dev\caracore-pdv-rust-releases`
 - **URL canónica:** https://rust-pdv.caracore.com.br/
-- **CNAME:** `docs/CNAME` → rust-pdv.caracore.com.br
-- **Papel:** **Vitrine comercial** (produto, mercado, wiki, transparência, formatos) — **não** hospeda binários
+- **GitHub Pages:** branch `master`, pasta `/docs`, `docs/CNAME` → rust-pdv.caracore.com.br
+- **Papel:** Vitrine comercial — **não** hospeda binários (só links para GitHub Releases)
 
-## Download oficial (artefatos)
+## Oficina pareada
 
-- **GitHub Releases:** https://github.com/chmulato/caracore-rust-pdv-releases/releases
-- **Latest:** `/releases/latest` · tag atual **v0.1.1**
-- **Nav “Download”:** abre GitHub Releases (nova aba)
-- **Nav “Formatos”:** `download.html` — guia NSIS, MSI pt-BR, ZIP (+ links dinâmicos via `releases.js`)
+- **Código:** `D:\dev\caracore-pdv-rust` (caracore-rust-pdv)
+- **Demo local (roteiro técnico):** oficina `docs/demo-aprendizado-local.md`
+- **LEIA-ME piloto (ZIP):** oficina `docs/distribuicao/LEIA-ME-INSTALACAO.txt` (não copiado para `docs/` da loja)
 
-## Oficina e índice ecossistema
+## Versões (honestidade)
 
-- **Oficina:** `caracore-pdv-rust`
-- **Índice:** `caracore-site/docs/ECOSYSTEM_MEMORIA.md`
-- **Matriz:** `portfolio.html#caracore-pdv-rust` · `#pdv-coexistencia`
-- **Redirect legado:** `caracore-site` `/delivery/pdv-rust/*` → rust-pdv
+| Camada | Versão | Nota |
+|--------|--------|------|
+| **Vitrine / CHANGELOG** | **v0.1.2** | Copy + UX (jun/2026) — local, push pendente |
+| **Binários GitHub** | **v0.1.1** | NSIS, MSI pt-BR, ZIP, Linux, macOS |
+| Links `releases/latest` | Apontam para tag publicada no GitHub |
 
-## Linha Java (coexistência)
+Não prometer features só da vitrine sem release correspondente.
 
-- https://pdv.caracore.com.br/ — canal **v3.1.2-free** — **não substituir**
+## Discurso comercial (2026-06-03)
 
-## Discurso comercial (loja)
+- **Um produto, duas fases:** PDV **Local** (1 PC, offline) → PDV **na Rede** (vários caixas + central na loja).
+- **Diferencial:** evoluir **sem trocar de sistema** / sem migração forçada.
+- **Rede:** selo **validado em laboratório**; implantação com Cara Core — sem depoimentos ou métricas inventadas.
+- **CTAs:** barra fixa + hero — **Baixar PDV Local** · **Falar com especialista (rede)**.
+- Evitar: "PDV v3" sozinho, "migração obrigatória", números de clientes não homologados.
 
-- Stack desktop: Rust + Tauri 2 + React + SQLite local (Bunker)
-- **Sem SEED** na vitrine (sem banner/roadmap Seed injetados)
-- Piloto **v0.1.1** · multi-OS · licença Seed **opcional** no app (degradação graciosa) — não é tema da loja
-- Evitar: “nova geração”, “migração obrigatória”, “PDV v3” sozinho
+## Páginas principais (`docs/`)
 
-## Estrutura (`docs/`)
+| Página | Função |
+|--------|--------|
+| `index.html` | Hub local/rede, benefícios comerciais, screenshots |
+| **`modalidades.html`** | Página canónica local vs rede (cards, jornada, comparação, TI accordion) |
+| `produto.html` | Funções + bloco rede |
+| `mercado.html` | Planos + tabela modalidades |
+| `primeiros-passos.html` | Passo 0 escolher modalidade |
+| `demonstracao.html` | Tour 4 passos |
+| `download.html` | Formatos + `releases.js` |
+| `wiki/` | TI / projeto |
 
-- index · produto · mercado · download · primeiros-passos · transparencia · comparacao · demonstracao · wiki/
-- **JS:** `assets/js/releases.js` (URLs GitHub) · `assets/js/portal.js` (`wireOfficialDownloads`, nav)
+Referência de melhorias: `docs/melhorias.txt` (briefing UX — não publicar na Pages).
+
+## Assets e JS
+
+- `assets/css/components.css` — classes comerciais: `cta-sticky`, `mode-card`, `journey-path`, `compare-matrix`, `data-vault-grid`, `ti-accordion`, etc.
+- `assets/js/releases.js` — API GitHub Releases
+- `assets/js/portal.js` — nav, downloads oficiais
+
+## Download oficial
+
+- https://github.com/chmulato/caracore-rust-pdv-releases/releases
+- Nav **Download** → GitHub (nova aba) · **Formatos** → `download.html`
+
+## Onde paramos (sessão 2026-06-03)
+
+- Reescrita **`modalidades.html`** + CSS comercial + ajustes `index.html`, `mercado.html`, `CHANGELOG.md`, `README.md`.
+- Nav **Local e rede** em todas as páginas HTML do portal.
+- **Não commitado / não publicado** no GitHub remoto (salvo o usuário pedir).
+
+## Próximo foco (loja)
+
+1. `git status` → commit + push `master` (ativar vitrine v0.1.2 no ar).
+2. Conferir Pages: https://rust-pdv.caracore.com.br/modalidades.html
+3. Se nova release binária v0.1.2+: alinhar links de tag em `index.html` e `CHANGELOG.md`.
+4. Opcional: copiar trecho comercial para matriz / wiki institucional (oficina coordena).
 
 ## Convenções
 
-- Links públicos: **rust-pdv.caracore.com.br** + **GitHub Releases** para baixar
-- Não recriar `delivery/pdv-rust` na matriz
-- Alinhar versão/copy com matriz, wiki e oficina ao publicar release
+- Links públicos: **rust-pdv.caracore.com.br** + **GitHub Releases** para baixar.
+- **Não commitar** salvo pedido explícito (regra alinhada à oficina).
+- Ao publicar release na oficina: atualizar copy, `CHANGELOG.md`, screenshots se mudarem telas.

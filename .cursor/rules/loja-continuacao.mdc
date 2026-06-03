@@ -1,0 +1,41 @@
+---
+description: Retomada rápida da loja rust-pdv — o que falta publicar e como validar
+alwaysApply: true
+---
+
+# Loja rust-pdv — continuidade
+
+**Atualizado:** 2026-06-03 · Repo: `D:\dev\caracore-pdv-rust-releases`
+
+## Estado
+
+- Vitrine **v0.1.2** (copy + UX) pronta em disco local.
+- Binários oficiais ainda **v0.1.1** no GitHub.
+- **Push pendente** para GitHub Pages refletir `modalidades.html` e CSS novo.
+
+## Validar após push
+
+1. https://rust-pdv.caracore.com.br/modalidades.html — cards, CTA fixo, jornada 3 passos.
+2. https://rust-pdv.caracore.com.br/ — hub “Dois modos”.
+3. Botões **Baixar** → `releases/latest` (GitHub).
+
+## Arquivos tocados na última sessão
+
+- `docs/modalidades.html`, `docs/index.html`, `docs/mercado.html`
+- `docs/assets/css/components.css`
+- `CHANGELOG.md`, `README.md`
+- Nav: `docs/*.html`, `docs/wiki/*.html`
+- Briefing (não deploy): `docs/melhorias.txt`
+
+## Próximo passo único (se só houver tempo)
+
+```powershell
+cd D:\dev\caracore-pdv-rust-releases
+git status
+# commit + push master quando o usuário autorizar
+```
+
+## Alinhar com oficina
+
+- Roteiro demo: `D:\dev\caracore-pdv-rust\docs\demo-aprendizado-local.md`
+- Não duplicar LEIA-ME do ZIP em `docs/` — linkar `primeiros-passos.html` + `download.html`

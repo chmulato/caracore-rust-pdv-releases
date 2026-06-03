@@ -12,6 +12,7 @@ A loja comunica o produto em **linguagem comercial para leigos**: PDV **local** 
 | ----- | ----- |
 | Versão comercial (vitrine) | `v0.1.2` — narrativa local + rede (jun/2026) |
 | Binários publicados | **`v0.1.2`** — Windows (NSIS, MSI pt-BR, ZIP piloto) |
+| Manifesto vitrine (offline) | `docs/assets/data/release-latest.json` — sem API GitHub no browser |
 | Status | Piloto Windows; rede da loja em implantação assistida |
 | Idioma dos instaladores | Português do Brasil (pt-BR) |
 | Stack da oficina | Rust + Tauri 2 + React + SQLite local / PostgreSQL na rede |

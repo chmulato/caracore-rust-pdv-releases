@@ -9,7 +9,7 @@ alwaysApply: true
 
 | Local | Permitido |
 |-------|-----------|
-| `docs/` | **Somente** páginas `.html` com estilo comercial para **leigos** + `assets/` (CSS, JS, imagens) + `CNAME`, `_config.yml`, `.nojekyll` |
+| `docs/` | **Somente** páginas `.html` com estilo comercial para **leigos** + `assets/` (CSS, JS, imagens, **`assets/data/release-latest.json`**) + `CNAME`, `_config.yml`, `.nojekyll` |
 | Raiz do repo | **`README.md`** e **`CHANGELOG.md`** apenas |
 | Manutenção interna | `.cursor/rules/` — checklists, continuidade, publicação (não deployar na Pages) |
 
@@ -23,9 +23,16 @@ alwaysApply: true
 - Produto / gates: `D:\dev\caracore-pdv-rust\docs\consistencia_pdv.md`
 - Espelho público: https://rust-pdv.caracore.com.br/transparencia.html#edicao-gratuita
 
+## Assets — sem CDN nem API externa
+
+- **CSS/JS:** apenas `assets/css/*` e `assets/js/*` (nada de Bootstrap, Google Fonts, jsDelivr, etc.).
+- **Release na página Download:** `assets/data/release-latest.json` (manifesto estático na vitrine). **Não** chamar `api.github.com` no navegador.
+- Ao publicar binários no GitHub: atualizar `release-latest.json` com `tag_name`, `html_url` e `assets[]` (nomes + `browser_download_url`).
+
 ## Ao alinhar produto → loja
 
 1. Atualizar HTML (`transparencia.html`, `modalidades.html`, `mercado.html`, etc.).
 2. Entrada em `CHANGELOG.md` (vitrine).
 3. Tabela de versão em `README.md` se mudar tag ou copy.
-4. **Não** criar novos `.md` em `docs/`.
+4. Se nova tag: sincronizar `docs/assets/data/release-latest.json`.
+5. **Não** criar novos `.md` em `docs/`.

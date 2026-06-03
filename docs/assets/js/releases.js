@@ -5,9 +5,19 @@
   var REPO = "caracore-rust-pdv-releases";
   var RELEASES_PAGE = "https://github.com/" + OWNER + "/" + REPO + "/releases";
   var RELEASES_LATEST = RELEASES_PAGE + "/latest";
-  var RELEASES_TAG_V011 = RELEASES_PAGE + "/tag/v0.1.1";
-  var API_LATEST = "https://api.github.com/repos/" + OWNER + "/" + REPO + "/releases/latest";
+  var RELEASES_TAG_V012 = RELEASES_PAGE + "/tag/v0.1.2";
   var DEFAULT_MSI_LOCALE = "pt-BR";
+
+  function manifestUrl() {
+    var scripts = document.getElementsByTagName("script");
+    for (var i = 0; i < scripts.length; i++) {
+      var src = scripts[i].getAttribute("src") || "";
+      if (/releases\.js/i.test(src)) {
+        return src.replace(/releases\.js.*$/i, "data/release-latest.json");
+      }
+    }
+    return "assets/data/release-latest.json";
+  }
 
   function pickAsset(assets, predicate) {
     if (!assets || !assets.length) return null;
@@ -53,8 +63,9 @@
     return pickAsset(assets, function (a) { return /\.dmg$/i.test(a.name); });
   }
 
+  /** Manifesto estático na vitrine (sem api.github.com). Atualizar em assets/data/release-latest.json ao publicar release. */
   function fetchLatestRelease() {
-    return fetch(API_LATEST, { headers: { Accept: "application/vnd.github+json" } }).then(function (res) {
+    return fetch(manifestUrl(), { cache: "no-cache" }).then(function (res) {
       if (!res.ok) throw new Error("no_release");
       return res.json();
     });
@@ -65,8 +76,9 @@
     REPO: REPO,
     RELEASES_PAGE: RELEASES_PAGE,
     RELEASES_LATEST: RELEASES_LATEST,
-    RELEASES_TAG_V011: RELEASES_TAG_V011,
+    RELEASES_TAG_V012: RELEASES_TAG_V012,
     DEFAULT_MSI_LOCALE: DEFAULT_MSI_LOCALE,
+    manifestUrl: manifestUrl,
     fetchLatestRelease: fetchLatestRelease,
     pickZip: pickZip,
     pickNsis: pickNsis,
@@ -77,4 +89,4 @@
     pickAppImage: pickAppImage,
     pickDmg: pickDmg
   };
-})(typeof window !== "undefined" ? window : this);
+})(typeof globalThis !== "undefined" ? globalThis : typeof window !== "undefined" ? window : this);

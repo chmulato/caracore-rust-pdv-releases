@@ -6,6 +6,11 @@ Formato alinhado às demais lojas `*-releases` do ecossistema CaraCore.
 
 **Binários Windows publicados:** [`v0.1.2`](https://github.com/chmulato/caracore-rust-pdv-releases/releases/tag/v0.1.2) — NSIS, MSI pt-BR, ZIP piloto.
 
+### Vitrine técnica (jun/2026)
+
+- CSS/JS **somente** em `docs/assets/` — sem CDN nem `api.github.com` no navegador.
+- Manifesto de release: `docs/assets/data/release-latest.json` (página Download).
+
 ### Produto (oficina)
 
 - Edição gratuita: até **100 vendas concluídas**; PIX com QR e confirmação cliente + operador.

@@ -4,7 +4,7 @@
   var body = document.body;
   var navRoot = body.getAttribute("data-nav-root") || "";
   var DESKTOP_NAV_MQ = window.matchMedia("(min-width: 1024px)");
-  var MOBILE_NAV_MQ = window.matchMedia("(max-width: 639px)");
+  var MOBILE_NAV_MQ = window.matchMedia("(max-width: 1023px)");
 
   var TOGGLE_HTML =
     '<span class="portal-nav-toggle__bars" aria-hidden="true"><span></span><span></span><span></span></span>' +

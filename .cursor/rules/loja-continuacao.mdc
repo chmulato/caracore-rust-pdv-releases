@@ -11,7 +11,7 @@ alwaysApply: true
 
 - Vitrine **v0.1.2** (copy + UX) pronta em disco local.
 - Binários oficiais ainda **v0.1.1** no GitHub.
-- **Push pendente** para GitHub Pages refletir `modalidades.html` e CSS novo.
+- **Push:** `master` alinhada com `origin` (2026-06-03) — validar https://rust-pdv.caracore.com.br/modalidades.html
 
 ## Validar após push
 

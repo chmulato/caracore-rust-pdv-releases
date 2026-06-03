@@ -47,17 +47,28 @@
     return navRoot + href;
   }
 
+  function navLinkKey(href) {
+    if (!href || href.charAt(0) === "#" || /^https?:/i.test(href)) return null;
+    var path = href.split("#")[0];
+    if (navRoot && path.indexOf(navRoot) === 0) {
+      path = path.slice(navRoot.length);
+    }
+    if (!path || path === "./") return "index.html";
+    return path;
+  }
+
   function setActiveNav() {
     var file = currentFile();
     var activeHref = PAGE_TO_NAV[file];
     if (!activeHref) return;
 
     document.querySelectorAll(".portal-nav a[href]").forEach(function (link) {
-      var href = link.getAttribute("href") || "";
-      if (!href || href.charAt(0) === "#") return;
-      var name = href.split("/").pop().split("#")[0];
-      var activeName = activeHref.split("/").pop();
-      if (name === activeName) {
+      var key = navLinkKey(link.getAttribute("href") || "");
+      if (!key) {
+        link.removeAttribute("aria-current");
+        return;
+      }
+      if (key === activeHref) {
         link.setAttribute("aria-current", "page");
       } else {
         link.removeAttribute("aria-current");

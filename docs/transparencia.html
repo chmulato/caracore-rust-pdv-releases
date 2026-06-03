@@ -22,7 +22,7 @@
         <span class="portal-header-badge">Transparência</span>
         <h1>Informações claras sobre o produto</h1>
         <p class="portal-header-lead">Quem publica o software, onde baixar com segurança, o que esperar na fase piloto e quais limites ainda existem.</p>
-        <p class="portal-header-meta"><a href="index.html">Início</a></p>
+        <p class="portal-header-meta"><a href="index.html">Início</a> · <a href="#edicao-gratuita">Edição gratuita</a></p>
       </div>
     </div>
   </header>
@@ -43,82 +43,197 @@
   </nav>
 
   <main class="portal-main">
-    <section class="card">
+    <section class="card exec-summary" aria-label="Sumário da página">
+      <h2>Nesta página</h2>
+      <div class="hub-grid">
+        <a class="hub-card" href="#quem-somos"><h3>Quem somos</h3><p>Editor, CNPJ e contato</p></a>
+        <a class="hub-card" href="#status-do-produto"><h3>Status do produto</h3><p>Fase piloto v0.1.1</p></a>
+        <a class="hub-card" href="#onde-baixar"><h3>Onde baixar</h3><p>Vitrine e GitHub oficial</p></a>
+        <a class="hub-card" href="#formatos-de-instalador"><h3>Formatos</h3><p>NSIS, MSI, ZIP e integridade</p></a>
+        <a class="hub-card" href="#verificar-integridade"><h3>Verificar arquivo</h3><p>Lista SHA-256</p></a>
+        <a class="hub-card" href="#smartscreen"><h3>SmartScreen</h3><p>Assinatura digital</p></a>
+        <a class="hub-card" href="#dados-e-privacidade"><h3>Privacidade</h3><p>Dados locais e backups</p></a>
+        <a class="hub-card" href="#edicao-gratuita"><h3>Edição gratuita</h3><p>100 vendas, PIX e limites</p><span class="hub-tag">Essencial</span></a>
+        <a class="hub-card" href="#escopo-fiscal"><h3>Escopo fiscal</h3><p>LOCAL_MOCK e Premium</p></a>
+      </div>
+    </section>
+
+    <section class="card" id="quem-somos">
       <h2>Quem somos</h2>
       <p>O <strong>Cara Core PDV Desktop (Rust + Tauri)</strong> é desenvolvido e distribuído pela <strong>Cara Core Informática</strong>, CNPJ <strong>23.969.028/0001-37</strong>.</p>
-      <p>Site institucional: <a class="ext-link" href="https://www.caracore.com.br/" rel="noopener noreferrer">caracore.com.br</a>. Contato comercial e suporte: <a href="mailto:suporte@caracore.com.br">suporte@caracore.com.br</a>.</p>
+      <table class="trace">
+        <thead>
+          <tr>
+            <th>Canal</th>
+            <th>Endereço</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Site institucional</td>
+            <td><a class="ext-link" href="https://www.caracore.com.br/" rel="noopener noreferrer">caracore.com.br</a></td>
+          </tr>
+          <tr>
+            <td>Suporte e comercial</td>
+            <td><a href="mailto:suporte@caracore.com.br">suporte@caracore.com.br</a></td>
+          </tr>
+        </tbody>
+      </table>
     </section>
 
-    <section class="card">
+    <section class="card" id="status-do-produto">
       <h2>Status do produto</h2>
-      <div class="notice notice-info">
-        <strong>Fase piloto (Windows)</strong>
-        A iniciativa <strong>Rust + Tauri 2</strong> (release v0.1.1) está em avaliação com lojas piloto em Windows, Linux e macOS. Não confunda com o PDV Desktop Java maduro em <a class="ext-link" href="https://pdv.caracore.com.br/" rel="noopener noreferrer">pdv.caracore.com.br</a>.
+      <div class="notice notice-warn">
+        <strong>Fase piloto</strong>
+        A iniciativa <strong>Rust + Tauri 2</strong> (release <strong>v0.1.1</strong>) está em avaliação com lojas piloto em <strong>Windows, Linux e macOS</strong>. <strong>Não confunda</strong> com o PDV Desktop Java maduro em <a class="ext-link" href="https://pdv.caracore.com.br/" rel="noopener noreferrer">pdv.caracore.com.br</a>.
       </div>
-      <p>Este site apresenta o <strong>PDV Desktop (Rust + Tauri)</strong> em fase piloto (release v0.1.1). Aqui você encontra benefícios, download multiplataforma e orientações para a loja.</p>
+      <p>Este site é a vitrine do <strong>PDV Desktop (Rust + Tauri)</strong> em fase piloto. Aqui você encontra benefícios, download multiplataforma e orientações para a loja.</p>
     </section>
 
-    <section class="card">
-      <h2>Loja oficial</h2>
-      <p>Esta loja em <strong><a href="https://rust-pdv.caracore.com.br/">rust-pdv.caracore.com.br</a></strong> é a vitrine do PDV Desktop (Rust + Tauri 2). O download oficial está em <a href="https://github.com/chmulato/caracore-rust-pdv-releases/releases" rel="noopener noreferrer">GitHub Releases</a> — a página <a href="download.html">Formatos</a> só orienta NSIS, MSI e ZIP.</p>
-      <p>PDV Desktop Java maduro: <a href="https://pdv.caracore.com.br/" rel="noopener noreferrer">pdv.caracore.com.br</a> · Portfólio Cara Core: <a href="https://www.caracore.com.br/portfolio.html#caracore-pdv-rust" rel="noopener noreferrer">caracore.com.br</a>.</p>
-    </section>
+    <section class="card" id="onde-baixar">
+      <h2>Onde baixar</h2>
 
-    <section class="card">
-      <h2>Artefatos publicados</h2>
-      <p>Cada release inclui instaladores localizados para o Brasil:</p>
-      <ul>
-        <li><strong>Instalador NSIS</strong> — assistente em português para o lojista.</li>
-        <li><strong>MSI pt-BR</strong> — pacote para equipe de TI e instalação em rede.</li>
-        <li><strong>ZIP portátil</strong> — uso sem instalador, com guia em português.</li>
-        <li><strong>Lista de integridade</strong> — publicada junto a cada release para você conferir o arquivo baixado.</li>
-      </ul>
-    </section>
+      <h3>Loja oficial (vitrine)</h3>
+      <p><strong><a href="https://rust-pdv.caracore.com.br/">rust-pdv.caracore.com.br</a></strong> — apresenta o produto, planos e orientações. <strong>Não hospeda os binários</strong> em outro domínio.</p>
 
-    <section class="card">
-      <h2>Fonte oficial de download</h2>
-      <p>Baixe o pacote <strong>somente</strong> pelos releases publicados no GitHub:</p>
+      <h3>Download oficial (arquivos)</h3>
+      <p>Baixe <strong>somente</strong> pelos releases publicados no GitHub:</p>
       <p><a class="ext-link" href="https://github.com/chmulato/caracore-rust-pdv-releases/releases" rel="noopener noreferrer">github.com/chmulato/caracore-rust-pdv-releases/releases</a></p>
+      <p class="section-subtitle">A página <a href="download.html">Formatos</a> desta loja explica NSIS, MSI e ZIP — ela <em>aponta</em> para o mesmo endereço acima.</p>
+
+      <p><strong>Regras de segurança:</strong></p>
       <ul>
-        <li>Esta página de download apenas <em>aponta</em> para o mesmo endereço — não hospeda arquivos em outro domínio.</li>
-        <li>Desconfie de links enviados por terceiros, espelhos ou pastas compartilhadas sem confirmação com a Cara Core.</li>
-        <li>Se ainda não houver release publicado, o botão de download mostrará “Acompanhar releases” em vez de um arquivo inexistente.</li>
+        <li>Desconfie de links de terceiros, espelhos ou pastas compartilhadas sem confirmação com a Cara Core.</li>
+        <li>Se ainda não houver release publicado, o botão de download mostrará <strong>“Acompanhar releases”</strong> em vez de um arquivo inexistente.</li>
       </ul>
+
+      <h3>Produto relacionado (outra linha)</h3>
+      <table class="trace">
+        <thead>
+          <tr>
+            <th>Produto</th>
+            <th>Endereço</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>PDV Desktop Java (maduro)</td>
+            <td><a class="ext-link" href="https://pdv.caracore.com.br/" rel="noopener noreferrer">pdv.caracore.com.br</a></td>
+          </tr>
+          <tr>
+            <td>Portfólio Cara Core</td>
+            <td><a class="ext-link" href="https://www.caracore.com.br/portfolio.html#caracore-pdv-rust" rel="noopener noreferrer">caracore.com.br</a></td>
+          </tr>
+        </tbody>
+      </table>
     </section>
 
-    <section class="card">
-      <h2>Como conferir se o download é autêntico</h2>
-      <p>Cada release oficial traz uma <strong>lista de verificação de integridade</strong> (algoritmo SHA-256). Depois de baixar o instalador ou ZIP:</p>
+    <section class="card" id="formatos-de-instalador">
+      <h2>Formatos de instalador</h2>
+      <p>Cada release inclui instaladores localizados para o Brasil:</p>
+      <table class="trace">
+        <thead>
+          <tr>
+            <th>Formato</th>
+            <th>Para quem</th>
+            <th>O que é</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>NSIS</strong></td>
+            <td>Lojista</td>
+            <td>Instalador com assistente em português</td>
+          </tr>
+          <tr>
+            <td><strong>MSI pt-BR</strong></td>
+            <td>Equipe de TI</td>
+            <td>Pacote para instalação em rede</td>
+          </tr>
+          <tr>
+            <td><strong>ZIP portátil</strong></td>
+            <td>Uso sem instalador</td>
+            <td>Extração direta, com guia em português</td>
+          </tr>
+          <tr>
+            <td><strong>Lista de integridade</strong></td>
+            <td>Todos</td>
+            <td>Valores SHA-256 publicados junto ao release</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card" id="verificar-integridade">
+      <h2>Como verificar a integridade do arquivo</h2>
+      <p>Cada release oficial traz uma <strong>lista de verificação de integridade</strong> (algoritmo <strong>SHA-256</strong>). Use-a <strong>antes de executar</strong> o instalador ou ZIP.</p>
+
+      <div class="stack-grid" style="margin: 14px 0;">
+        <div class="stack-item"><strong>1. Baixar</strong><span>Obtenha o pacote somente do release oficial no GitHub.</span></div>
+        <div class="stack-item"><strong>2. Gerar hash</strong><span>Calcule o SHA-256 localmente (PowerShell ou ferramenta indicada na release).</span></div>
+        <div class="stack-item"><strong>3. Comparar</strong><span>Confira se o valor bate com a lista publicada no mesmo release.</span></div>
+      </div>
+
+      <p class="diagram-caption"><strong>Resultado:</strong> valores iguais → pode instalar. Valores diferentes → <strong>não execute</strong> o programa.</p>
+
+      <h3>Passo a passo (Windows)</h3>
       <ol>
-        <li>Abra a pasta do download no Windows.</li>
-        <li>Gere a “impressão digital” do arquivo pelo PowerShell ou por ferramenta de hash indicada na própria release.</li>
+        <li>Abra a pasta do download.</li>
+        <li>Gere a “impressão digital” do arquivo pelo <strong>PowerShell</strong> ou pela ferramenta de hash indicada na própria release.</li>
         <li>Compare o resultado com o valor publicado na lista do release.</li>
       </ol>
-      <p>Se os valores não coincidirem, não execute o programa e avise <a href="mailto:suporte@caracore.com.br">suporte@caracore.com.br</a>.</p>
-    </section>
 
-    <section class="card">
-      <h2>Assinatura digital e SmartScreen</h2>
       <div class="notice notice-warn">
-        <strong>Sem certificado de editor (por enquanto)</strong>
-        O instalador piloto ainda não possui assinatura digital de código. O Windows SmartScreen pode exibir aviso na primeira execução. Isso é esperado nesta fase — não significa que o arquivo veio de outra fonte, desde que baixado do release oficial e conferido na lista de integridade.
+        <strong>Se os valores não coincidirem</strong>
+        Não execute o programa e avise <a href="mailto:suporte@caracore.com.br">suporte@caracore.com.br</a>.
       </div>
     </section>
 
-    <section class="card">
+    <section class="card" id="smartscreen">
+      <h2>SmartScreen e assinatura digital</h2>
+      <div class="notice notice-warn">
+        <strong>Sem certificado de editor (por enquanto)</strong>
+        O instalador piloto <strong>ainda não possui assinatura digital de código</strong>. O Windows SmartScreen pode exibir aviso na <strong>primeira execução</strong>.
+      </div>
+      <p>Isso é <strong>esperado nesta fase</strong>. Não significa que o arquivo veio de outra fonte — desde que tenha sido baixado do <strong>release oficial</strong> e conferido na <strong>lista de integridade</strong>.</p>
+    </section>
+
+    <section class="card" id="dados-e-privacidade">
       <h2>Dados e privacidade</h2>
-      <ul>
-        <li>Produtos, vendas e caixa ficam no computador da loja, em pasta de dados do usuário Windows (perfil do operador).</li>
-        <li>O fluxo normal de operação local não envia o faturamento diário para servidores CaraCore.</li>
-        <li>Emissão fiscal eletrônica, quando configurada, comunica-se apenas com os serviços exigidos pela legislação (SEFAZ, conforme credenciais da loja).</li>
-        <li>Backups são responsabilidade da loja; o sistema oferece ferramenta local de cópia e restauração.</li>
-      </ul>
+      <table class="trace">
+        <thead>
+          <tr>
+            <th>Tema</th>
+            <th>Como funciona</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Onde ficam os dados</strong></td>
+            <td>Produtos, vendas e caixa ficam no computador da loja, na pasta de dados do usuário Windows (perfil do operador).</td>
+          </tr>
+          <tr>
+            <td><strong>Envio para Cara Core</strong></td>
+            <td>O fluxo normal de operação local <strong>não envia</strong> o faturamento diário para servidores CaraCore.</td>
+          </tr>
+          <tr>
+            <td><strong>Fiscal eletrônico</strong></td>
+            <td>Quando configurada, comunica-se apenas com serviços exigidos pela legislação (SEFAZ, conforme credenciais da loja).</td>
+          </tr>
+          <tr>
+            <td><strong>Backups</strong></td>
+            <td>Responsabilidade da loja; o sistema oferece ferramenta <strong>local</strong> de cópia e restauração.</td>
+          </tr>
+        </tbody>
+      </table>
     </section>
 
     <section class="card" id="edicao-gratuita">
-      <h2>Edição gratuita (piloto) — o que você recebe</h2>
-      <p>O instalador para <strong>testar no seu PC</strong> (PDV Local) opera como <strong>edição gratuita</strong> por padrão: vendas e caixa no computador, sem nuvem obrigatória. Esta página espelha o compromisso publicado com o produto em piloto (atualizado em junho/2026).</p>
+      <h2>Edição gratuita (piloto)</h2>
+      <p>O instalador para <strong>testar no seu PC</strong> (PDV Local) opera como <strong>edição gratuita</strong> por padrão: vendas e caixa no computador, <strong>sem nuvem obrigatória</strong>.</p>
+      <p class="section-subtitle">Compromisso publicado com o produto em piloto — atualizado em junho/2026.</p>
 
+      <h3>O que está incluído (e o que não está)</h3>
       <table class="trace">
         <thead>
           <tr>
@@ -146,7 +261,7 @@
           <tr>
             <td><strong>Degustação</strong></td>
             <td>Até <strong>100 vendas concluídas</strong> no mesmo banco local</td>
-            <td>Na 101ª tentativa o sistema bloqueia novas vendas com aviso</td>
+            <td>Na <strong>101ª tentativa</strong> o sistema bloqueia novas vendas com aviso</td>
           </tr>
           <tr>
             <td><strong>Premium / contrato</strong></td>
@@ -156,40 +271,81 @@
         </tbody>
       </table>
 
-      <h3>PIX na edição gratuita (passo a passo)</h3>
+      <h3>PIX na edição gratuita</h3>
+      <p>Confirmação <strong>manual</strong> em duas etapas — sem webhook bancário automático.</p>
+
+      <div class="stack-grid" style="margin: 14px 0;">
+        <div class="stack-item"><strong>1. Operador (F9)</strong><span>Gera QR Code e código Pix Copia e Cola na finalização da venda.</span></div>
+        <div class="stack-item"><strong>2. Cliente</strong><span>Paga no app do banco e informa no balcão.</span></div>
+        <div class="stack-item"><strong>3. Operador confere</strong><span>Marca pagamento informado, confere valor/comprovante e toca em Confirmar recebimento PIX.</span></div>
+        <div class="stack-item"><strong>4. Venda registrada</strong><span>Só após a confirmação manual a venda entra no caixa.</span></div>
+      </div>
+
+      <p><strong>Passo a passo:</strong></p>
       <ol>
-        <li>Finalize a venda com pagamento PIX (atalho F9) — o sistema gera o <strong>QR Code</strong> e o código Pix Copia e Cola.</li>
+        <li>Finalize a venda com pagamento PIX (<strong>atalho F9</strong>) — o sistema gera o <strong>QR Code</strong> e o código <strong>Pix Copia e Cola</strong>.</li>
         <li>O cliente paga no app do banco e informa no balcão.</li>
         <li>O operador marca que o <strong>cliente informou o pagamento</strong> e que <strong>conferiu valor/comprovante</strong>.</li>
         <li>Toque em <strong>Confirmar recebimento PIX</strong> — só então a venda é registrada.</li>
       </ol>
-      <p class="section-subtitle">Confirmação automática via banco (webhook PSP) é evolução da <strong>edição Premium</strong>, não do pacote gratuito de teste.</p>
+      <p class="section-subtitle"><strong>Não incluído na edição gratuita:</strong> confirmação automática via banco (webhook PSP). Isso é evolução da <strong>edição Premium</strong>.</p>
 
       <h3>Limite de 100 vendas</h3>
+      <div class="notice notice-warn">
+        <strong>Atenção — teto de degustação</strong>
+        A edição gratuita permite até <strong>100 vendas concluídas</strong> no mesmo banco local. Na <strong>101ª tentativa</strong>, novas vendas são <strong>bloqueadas</strong> com aviso.
+      </div>
       <ul>
         <li>Contam apenas vendas com status <strong>concluída</strong> no banco local.</li>
-        <li>O programa exibe aviso com vendas restantes antes do bloqueio.</li>
-        <li>Para remover o teto: contrato Premium ou licença Seed válida em modo estrito — <a href="mailto:suporte@caracore.com.br?subject=PDV%20Premium">solicite proposta</a>.</li>
+        <li>O programa exibe aviso com <strong>vendas restantes</strong> antes do bloqueio.</li>
+        <li>Para remover o teto: contrato <strong>Premium</strong> ou licença <strong>Seed</strong> válida em modo estrito — <a href="mailto:suporte@caracore.com.br?subject=PDV%20Premium">solicite proposta</a>.</li>
       </ul>
+
       <div class="notice notice-info">
         <strong>Modo rede (vários caixas)</strong>
-        Evolução com implantação assistida — não é o mesmo pacote do “baixar e testar” em um PC. Veja <a href="modalidades.html">Local e rede</a>.
+        Operar <strong>vários caixas</strong> é evolução com <strong>implantação assistida</strong> — não equivale ao teste em um único PC. Veja <a href="modalidades.html">Local e rede</a>.
       </div>
     </section>
 
-    <section class="card">
+    <section class="card" id="escopo-fiscal">
       <h2>Escopo fiscal e funcional</h2>
-      <p>O PDV inclui fila e rotinas fiscais em desenvolvimento. Na edição gratuita o ambiente fiscal padrão é <strong>simulado (LOCAL_MOCK)</strong> — adequado para treinar o balcão, não para substituir NF-e homologada sem projeto com contador.</p>
-      <p>Homologação SEFAZ real, multi-loja e integrações específicas seguem contrato Premium. Consulte <a href="produto.html">Produto</a> para áreas disponíveis hoje.</p>
+      <p>O PDV inclui fila e rotinas fiscais <strong>em desenvolvimento</strong>.</p>
+      <p>Na edição gratuita, o ambiente fiscal padrão é <strong>simulado (LOCAL_MOCK)</strong> — adequado para <strong>treinar o balcão</strong>, não para substituir NF-e homologada sem projeto com contador.</p>
+
+      <table class="trace">
+        <thead>
+          <tr>
+            <th>Disponível hoje (free)</th>
+            <th>Sob contrato Premium</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Ambiente fiscal simulado (LOCAL_MOCK)</td>
+            <td>Homologação SEFAZ real</td>
+          </tr>
+          <tr>
+            <td>Treino de balcão</td>
+            <td>Multi-loja</td>
+          </tr>
+          <tr>
+            <td>—</td>
+            <td>Integrações específicas</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="section-subtitle">Consulte <a href="produto.html">Produto</a> para áreas disponíveis hoje.</p>
     </section>
 
-    <section class="card">
-      <h2>Links externos</h2>
-      <p>Links para Microsoft, GitHub e demais sites da Cara Core abrem em nova aba com proteção padrão contra redirecionamentos indevidos.</p>
-      <p>Download e histórico de versões:</p>
+    <section class="card" id="links-uteis">
+      <h2>Links úteis</h2>
+      <p>Links para Microsoft, GitHub e demais sites da Cara Core abrem em <strong>nova aba</strong>, com proteção padrão contra redirecionamentos indevidos.</p>
+      <p><strong>Download e documentação:</strong></p>
       <ul>
         <li><a class="ext-link" href="https://github.com/chmulato/caracore-rust-pdv-releases/releases" rel="noopener noreferrer">Releases oficiais no GitHub</a></li>
         <li><a href="download.html">Formatos de instalador (esta loja)</a></li>
+        <li><a href="modalidades.html">Local e rede</a></li>
+        <li><a href="produto.html">Produto</a></li>
       </ul>
     </section>
   </main>

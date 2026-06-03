@@ -4,7 +4,11 @@
   var body = document.body;
   var navRoot = body.getAttribute("data-nav-root") || "";
   var DESKTOP_NAV_MQ = window.matchMedia("(min-width: 1024px)");
-  var COLLAPSIBLE_NAV_MQ = window.matchMedia("(max-width: 1023px)");
+  var MOBILE_NAV_MQ = window.matchMedia("(max-width: 639px)");
+
+  var TOGGLE_HTML =
+    '<span class="portal-nav-toggle__bars" aria-hidden="true"><span></span><span></span><span></span></span>' +
+    '<span class="portal-nav-toggle__label">Menu</span>';
 
   var PAGE_TO_NAV = {
     "index.html": "index.html",
@@ -84,7 +88,7 @@
     });
   }
 
-  function closeCollapsibleNav(nav, inner, btn) {
+  function closeMobileNav(nav, inner, btn) {
     inner.classList.remove("portal-nav-inner--open");
     if (btn) {
       btn.setAttribute("aria-expanded", "false");
@@ -95,7 +99,7 @@
     body.classList.remove("portal-nav-open");
   }
 
-  function openCollapsibleNav(inner, btn) {
+  function openMobileNav(inner, btn) {
     inner.classList.add("portal-nav-inner--open");
     if (btn) {
       btn.setAttribute("aria-expanded", "true");
@@ -106,57 +110,67 @@
     body.classList.add("portal-nav-open");
   }
 
-  function initCollapsibleNavToggle() {
+  function ensureMobileNavToggle(nav, inner) {
+    var btn = nav.querySelector(".portal-nav-toggle");
+    if (!btn) {
+      btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "portal-nav-toggle";
+      btn.setAttribute("aria-expanded", "false");
+      btn.setAttribute("aria-label", "Abrir menu de navegação");
+      btn.innerHTML = TOGGLE_HTML;
+      nav.insertBefore(btn, inner);
+    } else if (!btn.querySelector(".portal-nav-toggle__bars")) {
+      btn.innerHTML = TOGGLE_HTML;
+    }
+
+    if (!inner.id) inner.id = "portal-nav-links";
+    btn.setAttribute("aria-controls", "portal-nav-links");
+    return btn;
+  }
+
+  function initMobileNavToggle() {
     var nav = document.querySelector(".portal-nav");
-    if (!nav || nav.querySelector(".portal-nav-toggle")) return;
+    if (!nav) return;
 
     var inner = nav.querySelector(".portal-nav-inner");
     if (!inner) return;
 
-    var btn = document.createElement("button");
-    btn.type = "button";
-    btn.className = "portal-nav-toggle";
-    btn.setAttribute("aria-expanded", "false");
-    btn.setAttribute("aria-controls", "portal-nav-links");
-    btn.setAttribute("aria-label", "Abrir menu de navegação");
-    btn.innerHTML =
-      '<span class="portal-nav-toggle__bars" aria-hidden="true"><span></span><span></span><span></span></span>' +
-      '<span class="portal-nav-toggle__label">Menu</span>';
+    var btn = ensureMobileNavToggle(nav, inner);
 
-    inner.id = "portal-nav-links";
-
-    btn.addEventListener("click", function () {
+    btn.addEventListener("click", function (e) {
+      e.stopPropagation();
       if (inner.classList.contains("portal-nav-inner--open")) {
-        closeCollapsibleNav(nav, inner, btn);
+        closeMobileNav(nav, inner, btn);
       } else {
-        openCollapsibleNav(inner, btn);
+        openMobileNav(inner, btn);
       }
     });
 
     inner.querySelectorAll('a[href]:not([href^="#"])').forEach(function (link) {
       link.addEventListener("click", function () {
-        closeCollapsibleNav(nav, inner, btn);
+        closeMobileNav(nav, inner, btn);
       });
     });
 
     document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape") closeCollapsibleNav(nav, inner, btn);
+      if (e.key === "Escape") closeMobileNav(nav, inner, btn);
     });
 
     body.addEventListener("click", function (e) {
       if (!body.classList.contains("portal-nav-open")) return;
       if (nav.contains(e.target)) return;
-      closeCollapsibleNav(nav, inner, btn);
+      closeMobileNav(nav, inner, btn);
     });
 
-    COLLAPSIBLE_NAV_MQ.addEventListener("change", function (e) {
-      if (!e.matches) closeCollapsibleNav(nav, inner, btn);
+    MOBILE_NAV_MQ.addEventListener("change", function (e) {
+      if (!e.matches) closeMobileNav(nav, inner, btn);
     });
-    DESKTOP_NAV_MQ.addEventListener("change", function (e) {
-      if (e.matches) closeCollapsibleNav(nav, inner, btn);
+    DESKTOP_NAV_MQ.addEventListener("change", function () {
+      closeMobileNav(nav, inner, btn);
     });
 
-    nav.insertBefore(btn, inner);
+    closeMobileNav(nav, inner, btn);
   }
 
   function enhanceExternalLinks() {
@@ -183,5 +197,5 @@
   wireOfficialDownloads();
   setActiveNav();
   initSmoothScroll();
-  initCollapsibleNavToggle();
+  initMobileNavToggle();
 })();

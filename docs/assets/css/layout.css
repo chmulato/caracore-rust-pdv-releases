@@ -242,8 +242,8 @@ body {
   align-items: center;
 }
 
-/* ——— Responsivo: mobile + tablet (≤1023) — menu colapsável ——— */
-@media (max-width: 1023px) {
+/* ——— Responsivo: mobile (≤639) — menu sanduíche ——— */
+@media (max-width: 639px) {
   .portal-footer { font-size: 11px; }
 
   .portal-nav {
@@ -256,24 +256,25 @@ body {
   .portal-nav-toggle {
     display: flex;
     margin: 8px 0 0;
+    justify-content: space-between;
   }
 
   .portal-nav-inner {
-    display: none;
+    display: none !important;
     flex-direction: column;
     align-items: stretch;
     width: 100%;
     gap: 4px;
     padding-top: 4px;
     padding-bottom: 10px;
-    max-height: min(70dvh, 480px);
+    max-height: min(70dvh, 420px);
     overflow-y: auto;
     overscroll-behavior: contain;
     -webkit-overflow-scrolling: touch;
   }
 
   .portal-nav-inner--open {
-    display: flex;
+    display: flex !important;
   }
 
   .portal-nav a {
@@ -297,9 +298,7 @@ body {
     background: rgba(11, 58, 102, 0.35);
     z-index: 99;
   }
-}
 
-@media (max-width: 639px) {
   .portal-header-inner {
     grid-template-columns: 1fr;
     gap: 12px;
@@ -318,7 +317,30 @@ body {
   }
 }
 
+/* ——— Responsivo: tablet (640–1023) — links visíveis em grade ——— */
 @media (min-width: 640px) and (max-width: 1023px) {
+  .portal-nav-toggle {
+    display: none !important;
+  }
+
+  .portal-nav-inner {
+    display: grid !important;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 6px;
+    padding-top: 8px;
+    padding-bottom: 10px;
+  }
+
+  .portal-nav a {
+    font-size: 12px;
+    padding: 9px 10px;
+    white-space: normal;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
   .portal-header-inner {
     grid-template-columns: auto 1fr;
     gap: 14px 18px;

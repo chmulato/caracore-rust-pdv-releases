@@ -45,7 +45,7 @@
   <main class="portal-main">
     <section class="card exec-summary" aria-label="Sumário da página">
       <h2>Nesta página</h2>
-      <div class="hub-grid">
+      <div class="hub-grid hub-grid--toc">
         <a class="hub-card" href="#quem-somos"><h3>Quem somos</h3><p>Editor, CNPJ e contato</p></a>
         <a class="hub-card" href="#status-do-produto"><h3>Status do produto</h3><p>Fase piloto v0.1.1</p></a>
         <a class="hub-card" href="#onde-baixar"><h3>Onde baixar</h3><p>Vitrine e GitHub oficial</p></a>
@@ -130,51 +130,18 @@
 
     <section class="card" id="formatos-de-instalador">
       <h2>Formatos de instalador</h2>
-      <p>Cada release inclui instaladores localizados para o Brasil:</p>
-      <table class="trace">
-        <thead>
-          <tr>
-            <th>Formato</th>
-            <th>Para quem</th>
-            <th>O que é</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>NSIS</strong></td>
-            <td>Lojista</td>
-            <td>Instalador com assistente em português</td>
-          </tr>
-          <tr>
-            <td><strong>MSI pt-BR</strong></td>
-            <td>Equipe de TI</td>
-            <td>Pacote para instalação em rede</td>
-          </tr>
-          <tr>
-            <td><strong>ZIP portátil</strong></td>
-            <td>Uso sem instalador</td>
-            <td>Extração direta, com guia em português</td>
-          </tr>
-          <tr>
-            <td><strong>Lista de integridade</strong></td>
-            <td>Todos</td>
-            <td>Valores SHA-256 publicados junto ao release</td>
-          </tr>
-        </tbody>
-      </table>
+      <p>NSIS (lojista), MSI pt-BR (TI) e ZIP portátil — escolha e baixe em <a href="download.html">Formatos</a>. Lista SHA-256 publicada em cada release.</p>
     </section>
 
     <section class="card" id="verificar-integridade">
       <h2>Como verificar a integridade do arquivo</h2>
       <p>Cada release oficial traz uma <strong>lista de verificação de integridade</strong> (algoritmo <strong>SHA-256</strong>). Use-a <strong>antes de executar</strong> o instalador ou ZIP.</p>
 
-      <div class="stack-grid" style="margin: 14px 0;">
+      <div class="stack-grid stack-grid--3" style="margin: 14px 0;">
         <div class="stack-item"><strong>1. Baixar</strong><span>Obtenha o pacote somente do release oficial no GitHub.</span></div>
         <div class="stack-item"><strong>2. Gerar hash</strong><span>Calcule o SHA-256 localmente (PowerShell ou ferramenta indicada na release).</span></div>
         <div class="stack-item"><strong>3. Comparar</strong><span>Confira se o valor bate com a lista publicada no mesmo release.</span></div>
       </div>
-
-      <p class="diagram-caption"><strong>Resultado:</strong> valores iguais → pode instalar. Valores diferentes → <strong>não execute</strong> o programa.</p>
 
       <h3>Passo a passo (Windows)</h3>
       <ol>
@@ -274,32 +241,18 @@
       <h3>PIX na edição gratuita</h3>
       <p>Confirmação <strong>manual</strong> em duas etapas — sem webhook bancário automático.</p>
 
-      <div class="stack-grid" style="margin: 14px 0;">
-        <div class="stack-item"><strong>1. Operador (F9)</strong><span>Gera QR Code e código Pix Copia e Cola na finalização da venda.</span></div>
+      <div class="stack-grid stack-grid--3" style="margin: 14px 0;">
+        <div class="stack-item"><strong>1. Operador (F9)</strong><span>Gera QR Code e Pix Copia e Cola.</span></div>
         <div class="stack-item"><strong>2. Cliente</strong><span>Paga no app do banco e informa no balcão.</span></div>
-        <div class="stack-item"><strong>3. Operador confere</strong><span>Marca pagamento informado, confere valor/comprovante e toca em Confirmar recebimento PIX.</span></div>
-        <div class="stack-item"><strong>4. Venda registrada</strong><span>Só após a confirmação manual a venda entra no caixa.</span></div>
+        <div class="stack-item"><strong>3. Confirmar</strong><span>Operador confere comprovante e confirma recebimento — só então a venda entra.</span></div>
       </div>
-
-      <p><strong>Passo a passo:</strong></p>
-      <ol>
-        <li>Finalize a venda com pagamento PIX (<strong>atalho F9</strong>) — o sistema gera o <strong>QR Code</strong> e o código <strong>Pix Copia e Cola</strong>.</li>
-        <li>O cliente paga no app do banco e informa no balcão.</li>
-        <li>O operador marca que o <strong>cliente informou o pagamento</strong> e que <strong>conferiu valor/comprovante</strong>.</li>
-        <li>Toque em <strong>Confirmar recebimento PIX</strong> — só então a venda é registrada.</li>
-      </ol>
-      <p class="section-subtitle"><strong>Não incluído na edição gratuita:</strong> confirmação automática via banco (webhook PSP). Isso é evolução da <strong>edição Premium</strong>.</p>
+      <p class="section-subtitle">Webhook bancário automático: <strong>edição Premium</strong>, não o pacote gratuito.</p>
 
       <h3>Limite de 100 vendas</h3>
       <div class="notice notice-warn">
         <strong>Atenção — teto de degustação</strong>
-        A edição gratuita permite até <strong>100 vendas concluídas</strong> no mesmo banco local. Na <strong>101ª tentativa</strong>, novas vendas são <strong>bloqueadas</strong> com aviso.
+        Até <strong>100 vendas concluídas</strong> no mesmo banco local; na <strong>101ª</strong>, novas vendas bloqueadas. Contam só status <strong>concluída</strong>; o app avisa vendas restantes. Remover teto: <a href="mailto:suporte@caracore.com.br?subject=PDV%20Premium">Premium ou Seed</a>.
       </div>
-      <ul>
-        <li>Contam apenas vendas com status <strong>concluída</strong> no banco local.</li>
-        <li>O programa exibe aviso com <strong>vendas restantes</strong> antes do bloqueio.</li>
-        <li>Para remover o teto: contrato <strong>Premium</strong> ou licença <strong>Seed</strong> válida em modo estrito — <a href="mailto:suporte@caracore.com.br?subject=PDV%20Premium">solicite proposta</a>.</li>
-      </ul>
 
       <div class="notice notice-info">
         <strong>Modo rede (vários caixas)</strong>
@@ -335,18 +288,6 @@
         </tbody>
       </table>
       <p class="section-subtitle">Consulte <a href="produto.html">Produto</a> para áreas disponíveis hoje.</p>
-    </section>
-
-    <section class="card" id="links-uteis">
-      <h2>Links úteis</h2>
-      <p>Links para Microsoft, GitHub e demais sites da Cara Core abrem em <strong>nova aba</strong>, com proteção padrão contra redirecionamentos indevidos.</p>
-      <p><strong>Download e documentação:</strong></p>
-      <ul>
-        <li><a class="ext-link" href="https://github.com/chmulato/caracore-rust-pdv-releases/releases" rel="noopener noreferrer">Releases oficiais no GitHub</a></li>
-        <li><a href="download.html">Formatos de instalador (esta loja)</a></li>
-        <li><a href="modalidades.html">Local e rede</a></li>
-        <li><a href="produto.html">Produto</a></li>
-      </ul>
     </section>
   </main>
 

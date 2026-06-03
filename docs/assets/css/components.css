@@ -63,6 +63,11 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 12px;
+  align-items: stretch;
+}
+/* Sumário de página: 9 cards = grade 3×3 */
+.hub-grid--toc {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 .hub-card {
   border: 1px solid var(--line);
@@ -72,8 +77,10 @@
   text-decoration: none;
   color: inherit;
   transition: box-shadow 0.15s, border-color 0.15s, transform 0.15s;
-  display: block;
+  display: flex;
+  flex-direction: column;
   min-height: 44px;
+  height: 100%;
 }
 @media (hover: hover) and (pointer: fine) {
   .hub-card:hover {
@@ -86,7 +93,8 @@
 .hub-card p { margin: 0; font-size: 13px; color: var(--muted); line-height: 1.5; }
 .hub-card .hub-tag {
   display: inline-block;
-  margin-top: 10px;
+  margin-top: auto;
+  padding-top: 10px;
   font-size: 11px;
   font-weight: 700;
   color: var(--brand-2);
@@ -126,6 +134,9 @@
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 10px;
   margin-bottom: 16px;
+}
+.stack-grid--3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 .stack-item {
   border: 1px solid var(--line);
@@ -315,6 +326,7 @@
   .exec-kpi-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .stack-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .hub-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .hub-grid--toc { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .benefit-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .demo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .demo-grid .demo-item:last-child:nth-child(3) {
@@ -339,7 +351,9 @@
 @media (max-width: 639px) {
   .exec-kpi-grid,
   .stack-grid,
+  .stack-grid--3,
   .hub-grid,
+  .hub-grid--toc,
   .benefit-grid,
   .demo-grid,
   .trust-grid,

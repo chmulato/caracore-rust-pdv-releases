@@ -276,7 +276,8 @@ body {
 
   .portal-nav-inner {
     display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    /* 10 itens = 2 linhas × 5 colunas (evita fileira órfã 9+1) */
+    grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: 6px;
     padding-top: 8px;
     padding-bottom: 10px;
@@ -284,7 +285,7 @@ body {
 
   .portal-nav a {
     font-size: 12px;
-    padding: 9px 12px;
+    padding: 9px 10px;
     white-space: normal;
     justify-content: center;
     text-align: center;
@@ -305,14 +306,29 @@ body {
   }
 
   .portal-nav-inner {
-    display: flex !important;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    display: grid !important;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: 6px;
   }
 
   .portal-nav a {
     font-size: 12px;
+    padding: 8px 10px;
+    white-space: normal;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+@media (min-width: 1280px) {
+  .portal-nav-inner {
+    grid-template-columns: repeat(10, minmax(0, 1fr));
+  }
+
+  .portal-nav a {
+    white-space: nowrap;
   }
 }
 

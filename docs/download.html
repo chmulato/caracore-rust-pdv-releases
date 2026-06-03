@@ -55,35 +55,19 @@
     <section class="card">
       <h2>Instalação em 4 passos</h2>
       <ol>
-        <li><strong>Baixar</strong> — escolha NSIS (lojista), MSI (TI) ou ZIP (portátil) abaixo.</li>
-        <li><strong>Verificar</strong> — confira a integridade do arquivo antes de executar (<a href="transparencia.html">como verificar</a>).</li>
-        <li><strong>Instalar</strong> — siga o assistente em português ou extraia o ZIP (<a href="primeiros-passos.html">guia completo</a>).</li>
-        <li><strong>Operar</strong> — faça login, abra o caixa e comece a vender.</li>
+        <li><strong>Baixar</strong> — escolha o formato abaixo (NSIS, MSI ou ZIP).</li>
+        <li><strong>Verificar</strong> — <a href="transparencia.html#verificar-integridade">SHA-256</a> antes de executar.</li>
+        <li><strong>Instalar</strong> — <a href="primeiros-passos.html">guia completo</a>.</li>
+        <li><strong>Operar</strong> — login, caixa e vendas.</li>
       </ol>
     </section>
 
     <section class="card">
-      <h2>Idioma dos instaladores</h2>
-      <p>Os pacotes oficiais são gerados para o mercado brasileiro:</p>
-      <ul>
-        <li><strong>Instalador NSIS</strong> — assistente em português do Brasil, indicado para o lojista.</li>
-        <li><strong>MSI pt-BR</strong> — pacote para equipe de TI e instalação em rede.</li>
-        <li><strong>ZIP portátil</strong> — extração manual com guia de instalação em português.</li>
-      </ul>
-    </section>
-
-    <section class="card">
-      <h2>Fonte oficial</h2>
-      <p>Os instaladores são publicados <strong>exclusivamente</strong> nos releases oficiais do GitHub. Esta página mostra a versão atual e os links diretos — sem espelhos alternativos.</p>
-      <p><a class="ext-link" id="releases-page-link" href="https://github.com/chmulato/caracore-rust-pdv-releases/releases" rel="noopener noreferrer">Releases oficiais no GitHub</a></p>
-    </section>
-
-    <section class="card">
       <div class="notice notice-info">
-        <strong>Fonte oficial de download</strong>
-        Todos os instaladores são publicados em
+        <strong>Fonte oficial</strong>
+        Binários somente em
         <a class="ext-link" href="https://github.com/chmulato/caracore-rust-pdv-releases/releases" rel="noopener noreferrer">github.com/chmulato/caracore-rust-pdv-releases/releases</a>.
-        Esta página lista a versão atual e os links diretos — não há outro espelho de arquivos.
+        Esta página lista a versão atual — sem espelhos alternativos.
       </div>
 
       <h2>Última versão</h2>
@@ -92,6 +76,7 @@
       </noscript>
       <p id="release-summary">Consultando versão publicada…</p>
       <p id="release-date" class="section-subtitle"></p>
+      <p class="section-subtitle"><a class="ext-link" id="releases-page-link" href="https://github.com/chmulato/caracore-rust-pdv-releases/releases" rel="noopener noreferrer">Página de releases</a> · <a href="transparencia.html#edicao-gratuita">Limites da edição gratuita</a> · <a href="https://github.com/chmulato/caracore-rust-pdv-releases/blob/master/CHANGELOG.md" rel="noopener noreferrer">CHANGELOG</a></p>
 
       <div class="download-grid" id="download-grid" hidden>
         <div class="download-option">
@@ -130,29 +115,12 @@
     </section>
 
     <section class="card">
-      <h2>Novidades da release</h2>
-      <p>Versão <strong>v0.1.1</strong> — Windows, Linux e macOS. Edição gratuita (piloto): até <strong>100 vendas concluídas</strong>, PIX com QR e confirmação no caixa. Veja <a href="transparencia.html#edicao-gratuita">Transparência</a> · <a href="https://github.com/chmulato/caracore-rust-pdv-releases/blob/master/CHANGELOG.md" rel="noopener noreferrer">histórico</a> · <a href="produto.html">Produto</a>.</p>
-    </section>
-
-    <section class="card">
-      <h2>Verificação de integridade</h2>
-      <p>Antes de instalar, compare o arquivo baixado com a lista de verificação publicada no mesmo release. Assim você confirma que o pacote não foi alterado no caminho.</p>
-      <p><a href="transparencia.html">Passo a passo para conferir →</a></p>
-    </section>
-
-    <section class="card">
       <h2>Requisitos</h2>
       <ul>
-        <li>Windows 10 ou 11, 64 bits.</li>
-        <li>WebView2 Runtime — em geral já presente. Se necessário: <a class="ext-link" href="https://go.microsoft.com/fwlink/p/?LinkId=2124703" rel="noopener noreferrer">download Microsoft</a>.</li>
-        <li>SmartScreen: veja <a href="transparencia.html">Transparência</a> (comum sem certificado digital na fase piloto).</li>
+        <li>Windows 10 ou 11, 64 bits; WebView2 (geralmente já instalado — <a class="ext-link" href="https://go.microsoft.com/fwlink/p/?LinkId=2124703" rel="noopener noreferrer">Microsoft</a>).</li>
+        <li>SmartScreen na fase piloto: <a href="transparencia.html#smartscreen">Transparência</a>.</li>
+        <li>Linha Java madura: <a href="comparacao.html">Comparar Rust vs Java</a>.</li>
       </ul>
-    </section>
-
-    <section class="card">
-      <h2>Linha Java (oferta madura)</h2>
-      <p>O PDV Desktop Java permanece a referência multi-plataforma em <a href="https://pdv.caracore.com.br/download.html" rel="noopener noreferrer">pdv.caracore.com.br</a>.</p>
-      <p class="section-subtitle"><a href="comparacao.html">Veja comparação completa Rust vs Java →</a></p>
     </section>
   </main>
 

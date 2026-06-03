@@ -50,145 +50,42 @@
   <main class="portal-main">
     <section class="card exec-summary">
       <h2>O que é o CaraCore PDV Desktop</h2>
-      <p class="exec-lead">Um <strong>programa de caixa instalado no computador da loja</strong> — não é site na internet. Você vende, controla estoque, fecha turno e consulta relatórios. Comece <strong>só no seu PC</strong>; quando precisar de mais balcões, evolua para <strong>PDV na rede</strong> com o mesmo produto.</p>
-      <p class="section-subtitle">Linha <strong>Rust + Tauri 2</strong> — release <strong>v0.1.1</strong> (Windows, Linux e macOS). <a href="modalidades.html">Entenda local vs rede →</a> · <a href="comparacao.html">Compare</a> com o PDV Desktop Java.</p>
-    </section>
-
-    <section class="card">
-      <h2>Dois modos, um produto</h2>
-      <p class="tagline-hero" style="margin-bottom: 14px;">Comece no <em>seu PC</em>; quando abrir mais caixas, evolua na <em>rede da loja</em> — sem trocar de sistema.</p>
-      <div class="hub-grid" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
+      <p class="exec-lead">Programa de caixa instalado no computador da loja — vendas, estoque, turno e relatórios. Comece <strong>no seu PC</strong>; evolua para <strong>vários caixas na rede</strong> com o mesmo produto.</p>
+      <p class="section-subtitle">Release <strong>v0.1.1</strong> (piloto) · <a href="modalidades.html">Local vs rede</a> · <a href="comparacao.html">Rust vs Java</a></p>
+      <div class="hub-grid" style="grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 14px;">
         <a class="hub-card" href="modalidades.html#local">
-          <h3>🖥️ PDV Local</h3>
-          <p>Venda quando a internet cair. Instalação em minutos — ideal para MEI e loja única.</p>
-          <span class="hub-tag">Baixar grátis</span>
+          <h3>PDV Local</h3>
+          <p>Um PC, offline, edição gratuita para testar.</p>
         </a>
         <a class="hub-card" href="modalidades.html#rede">
-          <h3>🧩 PDV na Rede</h3>
-          <p>Preços e produtos uma vez — todos os caixas atualizam. Balcão continua offline.</p>
-          <span class="hub-tag">Falar com especialista</span>
+          <h3>PDV na Rede</h3>
+          <p>Vários caixas + central na loja.</p>
         </a>
       </div>
-      <p class="section-subtitle"><a href="modalidades.html">Comparativo visual e jornada de crescimento →</a></p>
     </section>
 
     <section class="card">
       <h2>Para quem é</h2>
-      <ul class="audience-list">
-        <li>MEI e microempresa de varejo</li>
-        <li>Lojas de bairro e comércio local</li>
-        <li>Quem quer caixa offline e dados na própria máquina</li>
-        <li>Lojas com dois ou mais caixas — evolução para rede com suporte Cara Core</li>
-        <li>Gestores que valorizam software instalado, não SaaS</li>
-        <li>TI que precisa de MSI/NSIS em português</li>
-      </ul>
+      <p>MEI, varejo de bairro, quiosque e lojas que querem caixa offline no PC — com evolução para rede. <a href="mercado.html">Como adotar →</a></p>
     </section>
 
     <section class="card">
-      <h2>Benefícios no dia a dia</h2>
-      <div class="stack-grid">
-        <div class="stack-item"><strong>Rápido</strong><span>Abre em segundos — menos fila, mais vendas no balcão.</span></div>
-        <div class="stack-item"><strong>Estável</strong><span>Feito para o dia inteiro no caixa, sem “travou na hora do rush”.</span></div>
-        <div class="stack-item"><strong>Seus dados</strong><span>Ficam no PC da loja — você controla backup e acesso.</span></div>
-        <div class="stack-item"><strong>Offline</strong><span>Venda e feche turno sem internet — zero parada por queda de link.</span></div>
-      </div>
-    </section>
-
-    <section class="card">
-      <h2>Funcionalidades que fazem diferença</h2>
-      <div class="benefit-grid">
-        <div class="benefit-card">
-          <strong>Inicialização rápida</strong>
-          <p>O caixa começa a vender em segundos, com progresso claro na abertura do sistema.</p>
-        </div>
-        <div class="benefit-card">
-          <strong>Atenda mais clientes</strong>
-          <p>Pause e retome vendas, PIX com confirmação clara e total sempre visível no checkout.</p>
-        </div>
-        <div class="benefit-card">
-          <strong>Estoque sob controle</strong>
-          <p>Aviso ou bloqueio quando faltar produto; sugestão de substituto na hora da venda.</p>
-        </div>
-        <div class="benefit-card">
-          <strong>Caixa organizado</strong>
-          <p>Sangria com alerta, backup automático ao fechar turno e cancelamento com motivo registrado.</p>
-        </div>
-        <div class="benefit-card">
-          <strong>Pós-venda simples</strong>
-          <p>Devolução e troca pelo código da venda — fluxo guiado, sem burocracia extra.</p>
-        </div>
-        <div class="benefit-card">
-          <strong>Offline de verdade</strong>
-          <p>Vendas e caixa locais; fila fiscal visível quando a internet ou a SEFAZ falhar.</p>
-        </div>
-      </div>
-      <p class="section-subtitle">Detalhes por área: <a href="produto.html">Produto</a></p>
-    </section>
-
-    <section class="card" id="demo">
-      <h2>Veja como funciona</h2>
-      <p class="section-subtitle">Fluxo principal do PDV — vendas, caixa e gestão.</p>
-      <div class="demo-grid">
-        <figure class="demo-item">
-          <div class="portal-shot">
-            <picture>
-              <source type="image/webp" sizes="(max-width: 639px) 92vw, (max-width: 1023px) 46vw, 400px" srcset="assets/img/screenshot-vendas-400w.webp 400w, assets/img/screenshot-vendas-640w.webp 640w, assets/img/screenshot-vendas-960w.webp 960w, assets/img/screenshot-vendas-1280w.webp 1280w" />
-              <img src="assets/img/screenshot-vendas.png" width="1280" height="800" alt="Tela de vendas do PDV Desktop" loading="lazy" decoding="async" sizes="(max-width: 639px) 92vw, (max-width: 1023px) 46vw, 400px" />
-            </picture>
-          </div>
-          <figcaption><strong>Vendas</strong>Checkout ágil com busca, PIX e finalização por atalho.</figcaption>
-        </figure>
-        <figure class="demo-item">
-          <div class="portal-shot">
-            <picture>
-              <source type="image/webp" sizes="(max-width: 639px) 92vw, (max-width: 1023px) 46vw, 400px" srcset="assets/img/screenshot-caixa-400w.webp 400w, assets/img/screenshot-caixa-640w.webp 640w, assets/img/screenshot-caixa-960w.webp 960w, assets/img/screenshot-caixa-1280w.webp 1280w" />
-              <img src="assets/img/screenshot-caixa.png" width="1280" height="800" alt="Tela de caixa e turno" loading="lazy" decoding="async" sizes="(max-width: 639px) 92vw, (max-width: 1023px) 46vw, 400px" />
-            </picture>
-          </div>
-          <figcaption><strong>Caixa</strong>Turno, sangria, suprimento e backup automático.</figcaption>
-        </figure>
-        <figure class="demo-item">
-          <div class="portal-shot">
-            <picture>
-              <source type="image/webp" sizes="(max-width: 639px) 92vw, (max-width: 1023px) 46vw, 400px" srcset="assets/img/screenshot-gestao-400w.webp 400w, assets/img/screenshot-gestao-640w.webp 640w, assets/img/screenshot-gestao-960w.webp 960w, assets/img/screenshot-gestao-1280w.webp 1280w" />
-              <img src="assets/img/screenshot-gestao.png" width="1280" height="800" alt="Tela de gestão comercial" loading="lazy" decoding="async" sizes="(max-width: 639px) 92vw, (max-width: 1023px) 46vw, 400px" />
-            </picture>
-          </div>
-          <figcaption><strong>Gestão</strong>Visão do período e exportação de relatório em PDF.</figcaption>
-        </figure>
-      </div>
-      <p class="section-subtitle" style="margin-top: 14px;"><a href="demonstracao.html">Tour em 4 passos →</a> · <a href="primeiros-passos.html">Instalação</a></p>
+      <h2>Funcionalidades</h2>
+      <p>Checkout, PIX, caixa, estoque, gestão e fila fiscal — detalhes em <a href="produto.html">Produto</a> · tour em <a href="demonstracao.html">Demonstração</a>.</p>
     </section>
 
     <section class="card">
       <h2>Preço e licenciamento</h2>
-      <p><strong>Edição gratuita (piloto):</strong> baixe e opere no seu PC — até <strong>100 vendas concluídas</strong>, PIX com QR e confirmação no balcão. <strong>Edição Premium:</strong> contrato com suporte, sem teto de vendas e evoluções fiscais/integrações conforme acordo. Licença CaraCore Seed opcional.</p>
-      <p class="section-subtitle"><a href="mercado.html#precos">Planos</a> · <a href="transparencia.html#edicao-gratuita">Transparência (limites do free)</a></p>
+      <p>Edição gratuita para testar no PC; Premium e Seed sob proposta. <a href="mercado.html#precos">Planos</a> · <a href="transparencia.html#edicao-gratuita">Limites da edição gratuita</a></p>
     </section>
 
     <section class="card">
-      <h2>Por que confiar</h2>
-      <blockquote class="pilot-quote">
-        <p>Programa piloto com lojas parceiras: validamos venda, caixa e fechamento de turno em operação real antes de escalar a oferta.</p>
-        <cite>Cara Core Informática — sem números ou depoimentos publicados até homologação</cite>
-      </blockquote>
-      <div class="trust-grid" style="margin-top: 14px;">
-        <div class="trust-badge"><strong>MSI + NSIS</strong><span>Instaladores profissionais em português do Brasil</span></div>
-        <div class="trust-badge"><strong>Integridade</strong><span>Cada release oficial traz lista para conferir o arquivo baixado</span></div>
-        <div class="trust-badge"><strong>Fiscal</strong><span>Fila offline e contingência; SEFAZ conforme credenciais da loja</span></div>
-        <div class="trust-badge"><strong>CNPJ</strong><span>23.969.028/0001-37</span></div>
-      </div>
-      <p style="margin-top: 14px;">
-        <span class="trust-seal">✓ Instalador NSIS pt-BR</span>
-        <span class="trust-seal">✓ MSI WiX pt-BR</span>
-        <span class="trust-seal">✓ ZIP portátil</span>
-        <span class="trust-seal">✓ Releases no GitHub</span>
-      </p>
+      <h2>Confiança e download</h2>
+      <p>Piloto v0.1.1, integridade SHA-256 e limites honestos em <a href="transparencia.html">Transparência</a>. Instaladores em <a href="download.html">Formatos</a>.</p>
     </section>
 
     <section class="card">
       <h2>Saiba mais</h2>
-      <p>Comparativos, piloto Windows e detalhes para gestores e TI — sem misturar com o fluxo de compra.</p>
       <div class="hub-grid">
         <a class="hub-card" href="rust-tauri.html">
           <h3>Por que Rust + Tauri?</h3>
@@ -210,13 +107,10 @@
     </section>
 
     <section class="card">
-      <div class="download-hero-cta">
-        <h2>Baixar PDV Desktop (Windows)</h2>
-        <p>Instalador NSIS, MSI pt-BR ou pacote portátil — sempre pelo canal oficial, com verificação de integridade.</p>
-        <a class="btn-primary" href="https://github.com/chmulato/caracore-rust-pdv-releases/releases/latest" rel="noopener noreferrer" data-official-download>Baixar agora</a>
-        <p class="hash-line">Download oficial no GitHub — confira a integridade antes de instalar.</p>
+      <div class="cta-box">
+        <a class="btn-primary" href="https://github.com/chmulato/caracore-rust-pdv-releases/releases/latest" rel="noopener noreferrer" data-official-download>Baixar PDV Desktop</a>
+        <p class="section-subtitle" style="margin:0;"><a href="download.html">Formatos</a> · <a href="primeiros-passos.html">Primeiros passos</a></p>
       </div>
-      <p class="section-subtitle" style="margin-top: 12px; text-align: center;">Instalação: <a href="primeiros-passos.html">guia em 4 passos</a> · Release: <a href="https://github.com/chmulato/caracore-rust-pdv-releases/releases/tag/v0.1.1" rel="noopener noreferrer">v0.1.1</a> · <a href="download.html">escolher formato</a></p>
     </section>
 
     <p class="footnote" style="text-align: center;">Também existe o PDV Desktop Java (canal maduro, multi-plataforma). <a href="comparacao.html">Veja comparação completa</a>.</p>

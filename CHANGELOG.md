@@ -2,16 +2,17 @@
 
 Formato alinhado às demais lojas `*-releases` do ecossistema CaraCore.
 
-## v0.1.2 — 2026-06-03 (vitrine · PDV local e PDV na rede)
+## v0.1.2 — 2026-06-03 (vitrine · PDV local e PDV na rede · UX comercial)
 
-**Versão comercial da loja:** narrativa alinhada ao produto em duas modalidades. **Binários:** continuam na tag GitHub vigente ([`v0.1.1`](https://github.com/chmulato/caracore-rust-pdv-releases/releases/tag/v0.1.1) ou mais recente publicada).
+**Versão comercial da loja:** narrativa local + rede com cards, CTAs fixos, jornada “comece pequeno”, provas objetivas (piloto/lab), seção de dados e acordeão TI. **Binários:** tag GitHub vigente ([`v0.1.1`](https://github.com/chmulato/caracore-rust-pdv-releases/releases/tag/v0.1.1) ou mais recente).
 
 ### O que mudou na loja (linguagem para leigos)
 
-- Nova página **[Local e rede](https://rust-pdv.caracore.com.br/modalidades.html)** — explica PDV na sua máquina vs PDV na rede da loja, sem jargão técnico.
-- **PDV local** posicionado para MEI, demo, aprendizado e loja única — dados no PC, vendas offline.
-- **PDV na rede** posicionado para vários caixas + servidor da loja — sync de vendas e catálogo, indicador “Sync loja”, piloto com implantação assistida.
-- Planos comerciais e primeiros passos atualizados com escolha de modalidade.
+- **[Local e rede](https://rust-pdv.caracore.com.br/modalidades.html)** reescrita: benefícios em vez de jargão, comparação visual, miniaturas das telas.
+- **PDV local** — “venda quando a internet cair”; CTA **Baixar PDV Local** em destaque (barra fixa + rodapé).
+- **PDV na rede** — “preços uma vez, todos os caixas atualizam”; selo **validado em laboratório**; CTA **Falar com especialista**.
+- **Início** e **Para sua loja** alinhados à mesma narrativa comercial.
+- CSS: `mode-card`, `journey-path`, `compare-matrix`, `cta-sticky`, `data-vault`, `ti-accordion`.
 
 ### Produto (oficina — referência técnica)
 

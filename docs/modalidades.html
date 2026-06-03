@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="description" content="Cara Core PDV Desktop — use na sua máquina (local) ou na rede da loja (vários caixas). Linguagem simples para gestores e MEI." />
+  <meta name="description" content="PDV na sua máquina ou na rede da loja — mesmo produto, evolução sem trocar de sistema. Linguagem clara para gestores e MEI." />
   <link rel="canonical" href="https://rust-pdv.caracore.com.br/modalidades.html" />
-  <title>PDV local e PDV na rede — Cara Core PDV Desktop</title>
+  <title>Comece no seu PC, cresça na rede — Cara Core PDV</title>
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="assets/css/tokens.css" />
   <link rel="stylesheet" href="assets/css/layout.css" />
@@ -20,9 +20,9 @@
       </a>
       <div class="portal-header-content">
         <span class="portal-header-badge">Como usar</span>
-        <h1>Dois jeitos de usar o mesmo PDV</h1>
-        <p class="portal-header-lead">Você não precisa escolher “outro software”. É o <strong>mesmo CaraCore PDV Desktop</strong> — primeiro na sua máquina; depois, se crescer, na rede da loja com vários caixas.</p>
-        <p class="portal-header-meta"><a href="index.html">Início</a> · <a href="primeiros-passos.html">Primeiros passos</a></p>
+        <h1>Comece pequeno. Cresça sem trocar de PDV.</h1>
+        <p class="portal-header-lead">Um único programa para a loja: primeiro <strong>no seu computador</strong>, depois — se abrir mais caixas — <strong>na rede da loja</strong>. Sem migração, sem “outro sistema”.</p>
+        <p class="portal-header-meta"><a href="index.html">Início</a> · <a href="demonstracao.html">Ver telas</a></p>
       </div>
     </div>
   </header>
@@ -41,118 +41,239 @@
     </div>
   </nav>
 
+  <div class="cta-sticky" role="region" aria-label="Ações rápidas">
+    <span class="cta-sticky__label">Próximo passo:</span>
+    <a class="btn-primary" href="https://github.com/chmulato/caracore-rust-pdv-releases/releases/latest" rel="noopener noreferrer" data-official-download>Baixar PDV Local</a>
+    <a class="btn-secondary" href="mailto:suporte@caracore.com.br?subject=PDV%20na%20rede">Falar com especialista (rede)</a>
+  </div>
+
   <main class="portal-main">
     <section class="card exec-summary">
-      <h2>Resumo em uma frase</h2>
-      <p class="exec-lead"><strong>PDV local</strong> = um computador na loja, tudo guardado ali, vende mesmo sem internet. <strong>PDV na rede</strong> = cada caixa no balcão + um “computador central” da loja que junta vendas e catálogo — os caixas continuam rápidos e offline no dia a dia.</p>
-    </section>
+      <p class="tagline-hero">O diferencial CaraCore: <em>você não compra dois produtos</em> — evolui no mesmo PDV quando a loja cresce.</p>
+      <div class="mode-grid" role="list">
+        <article class="mode-card mode-card--local" id="local" role="listitem">
+          <div class="mode-card__head">
+            <span class="mode-card__icon" aria-hidden="true">🖥️</span>
+            <div>
+              <p class="mode-card__for">Para começar hoje</p>
+              <h2 class="mode-card__title">PDV Local</h2>
+              <p class="mode-card__pitch">Venda mesmo quando a internet cai — zero filas por queda de link.</p>
+            </div>
+          </div>
+          <ul class="mode-benefit-list">
+            <li>Instalação guiada em poucos minutos — assistente na primeira abertura.</li>
+            <li>Seus dados ficam no PC da loja; nada preso em nuvem obrigatória.</li>
+            <li>Ideal para MEI, quiosque e loja de bairro com um balcão.</li>
+          </ul>
+          <p class="cta-box">
+            <a class="btn-primary" href="https://github.com/chmulato/caracore-rust-pdv-releases/releases/latest" rel="noopener noreferrer" data-official-download>Baixar grátis para testar</a>
+            <a class="btn-secondary" href="primeiros-passos.html">Guia de instalação</a>
+          </p>
+        </article>
 
-    <section class="card" id="local">
-      <h2>PDV local — na sua máquina</h2>
-      <p class="section-subtitle">Também chamamos de <strong>loja única</strong> ou <strong>modo aprendizado</strong>. É o caminho recomendado para conhecer o produto e operar sem servidor.</p>
-      <div class="benefit-grid">
-        <div class="benefit-card">
-          <strong>Para quem é</strong>
-          <p>MEI, loja de bairro, quiosque, primeiro PDV da empresa, treinamento de equipe e demonstração comercial.</p>
-        </div>
-        <div class="benefit-card">
-          <strong>O que você instala</strong>
-          <p>Um programa no Windows (ou Linux/macOS na release v0.1.1). Produtos, vendas e caixa ficam <em>nesse</em> computador.</p>
-        </div>
-        <div class="benefit-card">
-          <strong>Internet</strong>
-          <p>Não precisa de internet para vender nem para fechar o turno. Fiscal eletrônico, quando configurado, usa a rede só na hora de enviar nota.</p>
-        </div>
-        <div class="benefit-card">
-          <strong>Vantagem comercial</strong>
-          <p>Simples de explicar: “é um caixa profissional no PC da loja, seus dados são seus”.</p>
-        </div>
+        <article class="mode-card mode-card--rede" id="rede" role="listitem">
+          <div class="mode-card__head">
+            <span class="mode-card__icon" aria-hidden="true">🧩</span>
+            <div>
+              <p class="mode-card__for">Quando a loja cresce</p>
+              <h2 class="mode-card__title">PDV na Rede</h2>
+              <p class="mode-card__pitch">Altere preços e produtos uma vez — todos os caixas atualizam sozinhos.</p>
+            </div>
+          </div>
+          <ul class="mode-benefit-list">
+            <li>Cada balcão continua rápido e vendendo offline no dia a dia.</li>
+            <li>Um computador central organiza vendas, catálogo e visão do gestor.</li>
+            <li>Indicador “Sync loja” — o operador sabe na hora se falta enviar algo.</li>
+          </ul>
+          <p class="cta-box">
+            <a class="btn-secondary" href="mailto:suporte@caracore.com.br?subject=PDV%20na%20rede%20-%20proposta">Falar com especialista</a>
+            <a class="btn-secondary" href="mercado.html#precos">Ver planos</a>
+          </p>
+        </article>
       </div>
-      <ul>
-        <li>Instalação em minutos — assistente na primeira abertura.</li>
-        <li>Backup na própria máquina ao fechar o turno.</li>
-        <li>Ideal para <strong>teste gratuito de fluxo</strong>, curso, piloto em uma loja só.</li>
-      </ul>
-      <p class="cta-box">
-        <a class="btn-primary" href="https://github.com/chmulato/caracore-rust-pdv-releases/releases/latest" rel="noopener noreferrer" data-official-download>Baixar e testar (local)</a>
-        <a class="btn-secondary" href="primeiros-passos.html">Guia de instalação</a>
-      </p>
-    </section>
-
-    <section class="card" id="rede">
-      <h2>PDV na rede — loja com vários caixas</h2>
-      <p class="section-subtitle">Também chamamos de <strong>PDV distribuído</strong>. Cada balcão tem seu programa; a loja tem um servidor que concentra o que importa para gestão e crescimento.</p>
-      <div class="stack-grid">
-        <div class="stack-item"><strong>Caixa no balcão</strong><span>Programa leve em cada PC — vende offline como no modo local.</span></div>
-        <div class="stack-item"><strong>Servidor da loja</strong><span>Um computador na loja (ou na TI) guarda o “retrato” do negócio: vendas reunidas, catálogo único.</span></div>
-        <div class="stack-item"><strong>Sincronização</strong><span>Quando a rede estiver boa, as vendas sobem para a loja; o catálogo desce para todos os caixas.</span></div>
-        <div class="stack-item"><strong>Visível no programa</strong><span>Indicador “Sync loja” no topo — o operador sabe se falta enviar algo.</span></div>
-      </div>
-      <h3>Quando faz sentido</h3>
-      <ul>
-        <li>Duas ou mais frentes de caixa na mesma loja.</li>
-        <li>Gestor quer ver vendas de todos os balcões num só lugar.</li>
-        <li>Catálogo e preços mudam na loja e precisam chegar em todos os caixas.</li>
-        <li>Projeto de rede com a Cara Core (implantação assistida).</li>
-      </ul>
-      <div class="notice notice-info">
-        <strong>Transparência</strong>
-        O modo rede está em <strong>piloto técnico</strong> (validado em laboratório; implantação em loja real com acompanhamento Cara Core). A nuvem corporativa multi-loja é evolução planejada — não é requisito para começar na rede local da loja.
-      </div>
-      <p class="cta-box">
-        <a class="btn-secondary" href="mailto:suporte@caracore.com.br?subject=PDV%20na%20rede%20-%20proposta">Falar sobre PDV na rede</a>
-        <a class="btn-secondary" href="mercado.html#precos">Ver planos</a>
-      </p>
     </section>
 
     <section class="card">
-      <h2>Comparação rápida</h2>
-      <table class="trace pricing-table">
+      <h2>Veja o sistema em ação</h2>
+      <p class="section-subtitle">Telas reais do PDV Desktop — vendas, caixa e gestão.</p>
+      <div class="demo-thumb-row">
+        <a class="demo-thumb" href="demonstracao.html">
+          <img src="assets/img/screenshot-vendas-400w.webp" width="400" height="250" alt="Tela de vendas" loading="lazy" decoding="async" />
+          <span>Vendas</span>
+        </a>
+        <a class="demo-thumb" href="demonstracao.html">
+          <img src="assets/img/screenshot-caixa-400w.webp" width="400" height="250" alt="Tela de caixa" loading="lazy" decoding="async" />
+          <span>Caixa</span>
+        </a>
+        <a class="demo-thumb" href="demonstracao.html">
+          <img src="assets/img/screenshot-gestao-400w.webp" width="400" height="250" alt="Gestão comercial" loading="lazy" decoding="async" />
+          <span>Gestão</span>
+        </a>
+      </div>
+      <p class="section-subtitle"><a href="demonstracao.html">Tour guiado em 4 passos →</a></p>
+    </section>
+
+    <section class="card">
+      <h2>Como funciona o PDV na rede (sem jargão)</h2>
+      <div class="stack-grid">
+        <div class="stack-item"><strong>Balcão</strong><span>Rápido e sem travamentos — igual ao modo local, mesmo com internet instável.</span></div>
+        <div class="stack-item"><strong>Central da loja</strong><span>Um PC na loja reúne vendas e catálogo — relatórios sem depender da nuvem o tempo todo.</span></div>
+        <div class="stack-item"><strong>Sincronização</strong><span>Quando a rede estiver boa, tudo se alinha sozinho entre caixas e central.</span></div>
+      </div>
+      <p class="seal-lab" role="note">✓ Modo rede validado em laboratório · implantação em loja com acompanhamento Cara Core</p>
+      <p class="section-subtitle">Nuvem corporativa multi-loja: evolução planejada — não é obrigatória para começar na rede local.</p>
+    </section>
+
+    <section class="card">
+      <h2>🔐 Seus dados, sob seu controle</h2>
+      <p class="section-subtitle">Argumento que importa para o pequeno varejo: o caixa não fica refém de um link ou de um servidor distante.</p>
+      <div class="data-vault-grid">
+        <div class="data-vault-item">
+          <span class="dv-icon" aria-hidden="true">📍</span>
+          <strong>Na sua máquina</strong>
+          <p>Produtos, vendas e turno guardados no computador da loja.</p>
+        </div>
+        <div class="data-vault-item">
+          <span class="dv-icon" aria-hidden="true">💾</span>
+          <strong>Backup automático</strong>
+          <p>Cópia de segurança ao fechar o turno — menos risco de perder o dia.</p>
+        </div>
+        <div class="data-vault-item">
+          <span class="dv-icon" aria-hidden="true">📡</span>
+          <strong>Offline de verdade</strong>
+          <p>Venda e feche caixa sem internet; fiscal usa rede só quando você configurar.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Por que confiar na Cara Core</h2>
+      <div class="credibility-strip">
+        <div class="credibility-item">
+          <strong>Piloto real</strong>
+          <span>Fluxo de venda e caixa validado com lojas parceiras antes de escalar.</span>
+        </div>
+        <div class="credibility-item">
+          <strong>Instalação rápida</strong>
+          <span>Assistente pt-BR — NSIS, MSI ou ZIP oficial.</span>
+        </div>
+        <div class="credibility-item">
+          <strong>Leve no balcão</strong>
+          <span>Rust + Tauri — abre em segundos em PCs modestos.</span>
+        </div>
+        <div class="credibility-item">
+          <strong>Empresa brasileira</strong>
+          <span>CNPJ 23.969.028/0001-37 · releases com SHA256.</span>
+        </div>
+      </div>
+      <blockquote class="pilot-quote">
+        <p>Priorizamos honestidade: não publicamos depoimentos ou números de clientes até homologação comercial — mas o produto já roda em piloto e em testes automatizados de release.</p>
+        <cite>Cara Core Informática</cite>
+      </blockquote>
+    </section>
+
+    <section class="card">
+      <h2>Qual modalidade é a sua?</h2>
+      <table class="compare-matrix trace">
         <thead>
           <tr>
-            <th>Pergunta do gestor</th>
-            <th>PDV local</th>
-            <th>PDV na rede</th>
+            <th scope="col">Pergunta</th>
+            <th scope="col">PDV Local</th>
+            <th scope="col">PDV na Rede</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Quantos PCs de caixa?</td>
-            <td>Um (ou poucos, cada um independente)</td>
-            <td>Vários caixas + servidor da loja</td>
+            <th scope="row">Para quem é</th>
+            <td class="cell-highlight cell-yes">MEI · 1 balcão · primeiro PDV</td>
+            <td class="cell-highlight-rede cell-yes">2+ caixas · gestor central</td>
           </tr>
           <tr>
-            <td>Precisa de servidor?</td>
-            <td>Não</td>
-            <td>Sim — computador da loja na rede local</td>
+            <th scope="row">Precisa servidor?</th>
+            <td class="cell-no">Não</td>
+            <td class="cell-yes">Sim — PC central na loja</td>
           </tr>
           <tr>
-            <td>Vende sem internet?</td>
-            <td>Sim</td>
-            <td>Sim — sync quando a rede voltar</td>
+            <th scope="row">Internet para vender</th>
+            <td class="cell-yes">Não precisa</td>
+            <td class="cell-yes">Não no balcão</td>
           </tr>
           <tr>
-            <td>Quem começa a usar?</td>
-            <td>Lojista, MEI, demo, aprendizado</td>
-            <td>Loja em crescimento, com TI ou parceiro</td>
-          </tr>
-          <tr>
-            <td>Como baixar hoje</td>
-            <td><a href="download.html">Instalador Windows</a> — pronto</td>
-            <td>Mesmo instalador + projeto de rede com suporte</td>
+            <th scope="row">Como começar</th>
+            <td class="cell-highlight"><a href="download.html">Baixar instalador</a></td>
+            <td class="cell-highlight-rede">Mesmo app + projeto com suporte</td>
           </tr>
         </tbody>
       </table>
     </section>
 
     <section class="card">
-      <h2>Caminho sugerido para o sucesso do produto</h2>
-      <ol>
-        <li><strong>Aprendizado e demo</strong> — instale o PDV local, treine venda → caixa → gestão em um PC.</li>
-        <li><strong>Operação real</strong> — use na loja única até o fluxo estar redondo.</li>
-        <li><strong>Crescimento</strong> — quando abrir o segundo caixa, evolua para PDV na rede com a Cara Core.</li>
-      </ol>
-      <p class="section-subtitle">Detalhes técnicos para TI: <a href="wiki/projeto-pdv.html">Wiki — projeto PDV</a> · Oficina: documentação de laboratório no repositório de desenvolvimento.</p>
+      <h2>Comece pequeno, cresça com segurança</h2>
+      <p class="section-subtitle">Poucos PDVs permitem essa evolução <strong>sem migração de dados nem troca de marca</strong>.</p>
+      <div class="journey-path" role="list">
+        <div class="journey-step" role="listitem">
+          <strong>Comece pequeno</strong>
+          <span>Instale o PDV Local, treine equipe em um PC.</span>
+        </div>
+        <div class="journey-step" role="listitem">
+          <strong>Fique estável</strong>
+          <span>Opere a loja no dia a dia até o fluxo estar redondo.</span>
+        </div>
+        <div class="journey-step" role="listitem">
+          <strong>Cresça na rede</strong>
+          <span>Segundo caixa? Ative PDV na Rede com a Cara Core.</span>
+        </div>
+      </div>
+      <div class="download-hero-cta" style="margin-top: 20px;">
+        <h2>Pronto para o primeiro passo?</h2>
+        <p>Baixe o PDV Local pelo canal oficial. Quando precisar de rede, falamos da implantação.</p>
+        <a class="btn-primary" href="https://github.com/chmulato/caracore-rust-pdv-releases/releases/latest" rel="noopener noreferrer" data-official-download>Baixar PDV Local</a>
+        <a class="btn-secondary" href="mailto:suporte@caracore.com.br?subject=PDV%20na%20rede" style="margin-left: 8px;">Falar sobre PDV na Rede</a>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Para equipe de TI</h2>
+      <p class="section-subtitle">Documentação, requisitos e arquitetura — sem misturar com o discurso do lojista.</p>
+      <div class="ti-accordion">
+        <details>
+          <summary>Documentação e release</summary>
+          <div class="ti-body">
+            <ul>
+              <li><a href="wiki/projeto-pdv.html">Wiki — projeto PDV</a></li>
+              <li><a href="transparencia.html">Transparência, SHA256 e piloto</a></li>
+              <li><a href="https://github.com/chmulato/caracore-rust-pdv-releases/releases" rel="noopener noreferrer">Releases oficiais (GitHub)</a></li>
+            </ul>
+          </div>
+        </details>
+        <details>
+          <summary>Requisitos mínimos</summary>
+          <div class="ti-body">
+            <ul>
+              <li>Windows 10/11 x64, WebView2 Runtime</li>
+              <li>Dados: <code>%APPDATA%\caracore-pdv\</code> (SQLite local)</li>
+              <li>Ver <a href="primeiros-passos.html">Primeiros passos</a> e <a href="download.html">formatos de instalador</a></li>
+            </ul>
+          </div>
+        </details>
+        <details>
+          <summary>Arquitetura e sincronização</summary>
+          <div class="ti-body">
+            <p>Modo local: <code>standalone</code> + SQLite. Modo rede: papéis <code>caixa</code> e <code>servidor_loja</code>, fila de sync e PostgreSQL na loja — validado em laboratório.</p>
+            <p>Roadmap: nuvem corporativa multi-loja é evolução planejada, não requisito da rede local.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Segurança e dados</summary>
+          <div class="ti-body">
+            <ul>
+              <li>Backup automático pós-turno (configurável)</li>
+              <li>Licença CaraCore Seed opcional (<code>PDV_SEED_MODE</code>)</li>
+              <li>Fiscal: fila local e contingência; homolog SEFAZ com credenciais</li>
+            </ul>
+          </div>
+        </details>
+      </div>
     </section>
   </main>
 

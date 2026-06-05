@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="description" content="Por que Rust + Tauri no CaraCore PDV Desktop — startup rápido, estabilidade e dados locais em linguagem simples." />
-  <title>Por que Rust + Tauri? — Cara Core PDV Desktop</title>
+  <meta name="description" content="Bunker Digital CaraCore — offline-first, sync na rede, Rust + Tauri e SQLite. Arquitetura explicada em linguagem comercial para gestores e varejo." />
+  <link rel="canonical" href="https://rust-pdv.caracore.com.br/rust-tauri.html" />
+  <title>Bunker Digital — Por que Rust + Tauri? — Cara Core PDV</title>
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="assets/css/tokens.css" />
   <link rel="stylesheet" href="assets/css/layout.css?v=20260606" />
-  <link rel="stylesheet" href="assets/css/components.css?v=20260606" />
+  <link rel="stylesheet" href="assets/css/components.css?v=20260607" />
 </head>
 <body data-portal-page="rust-tauri" data-nav-root="">
   <header class="portal-header">
@@ -18,10 +19,10 @@
         <span class="portal-brand-text">CaraCore PDV</span>
       </a>
       <div class="portal-header-content">
-        <span class="portal-header-badge">Tecnologia</span>
+        <span class="portal-header-badge">Bunker Digital</span>
         <h1>Por que Rust + Tauri?</h1>
-        <p class="portal-header-lead">Engenharia de ponta traduzida em benefícios reais para o balcão — sem jargão desnecessário.</p>
-        <p class="portal-header-meta"><a href="index.html">Início</a> · <a href="comparacao.html">Comparação Rust/Java</a></p>
+        <p class="portal-header-lead">Não é só um programinha de caixa — é um <strong>Bunker Digital</strong>: vende offline, sincroniza na rede e roda leve no PC da loja. Engenharia de elite traduzida em benefícios reais no balcão.</p>
+        <p class="portal-header-meta"><a href="index.html">Início</a> · <a href="modalidades.html">Local e rede</a> · <a href="comparacao.html">Comparação Rust/Java</a></p>
       </div>
     </div>
   </header>
@@ -47,13 +48,75 @@
 
   <main class="portal-main">
     <section class="card exec-summary">
-      <h2>O que isso significa para a loja</h2>
-      <div class="stack-grid">
-        <div class="stack-item"><strong>Rápido</strong><span>Abre em segundos — menos fila na abertura do turno.</span></div>
-        <div class="stack-item"><strong>Estável</strong><span>Núcleo nativo com previsibilidade de memória no caixa.</span></div>
-        <div class="stack-item"><strong>Seguro</strong><span>Dados locais protegidos na máquina da loja.</span></div>
-        <div class="stack-item"><strong>Independente</strong><span>Funciona mesmo quando a internet oscila.</span></div>
+      <p class="arch-promise"><strong>Resumo da promessa:</strong> um software pensado para o varejo moderno — leve como app nativo, seguro como Rust, imune a quedas de internet no balcão graças ao SQLite local, e preparado para crescer de <strong>1 para dezenas de caixas</strong> na rede da loja.</p>
+      <div class="credibility-strip" role="list">
+        <div class="credibility-item" role="listitem"><strong>Offline real</strong><span>Venda sem depender da internet</span></div>
+        <div class="credibility-item" role="listitem"><strong>Sync inteligente</strong><span>Caixas e central alinhados sozinhos</span></div>
+        <div class="credibility-item" role="listitem"><strong>Sem conflito</strong><span>Vários balcões ao mesmo tempo</span></div>
+        <div class="credibility-item" role="listitem"><strong>PC modesto</strong><span>Menos RAM, mais fluidez</span></div>
       </div>
+    </section>
+
+    <section class="card" id="pilares">
+      <h2>Seis compromissos de engenharia</h2>
+      <p class="section-subtitle">O que a arquitetura CaraCore entrega para corporativo e varejo — em linguagem de gestor, não de laboratório.</p>
+      <div class="pillars-grid">
+        <div class="pillar">
+          <h3>1. Soberania local (offline-first)</h3>
+          <p>Se a internet cair por horas, o operador de caixa nem precisa notar. As regras de negócio rodam na máquina da loja e cada venda grava na hora no banco local — autonomia total para o balcão.</p>
+        </div>
+        <div class="pillar">
+          <h3>2. Sincronismo estável na rede</h3>
+          <p>No <a href="modalidades.html#rede">PDV na Rede</a>, vendas dos caixas sobem para a central quando a rede volta; preços, produtos e políticas cadastrados na retaguarda descem para todos os balcões — <strong>sem reiniciar o programa</strong> dos operadores.</p>
+        </div>
+        <div class="pillar">
+          <h3>3. Conflito zero entre caixas</h3>
+          <p>Cada operação recebe um identificador único (UUID). Vários caixas vendendo ao mesmo tempo não sobrescrevem dados uns dos outros na consolidação — fusão limpa e transparente no servidor da loja.</p>
+        </div>
+        <div class="pillar">
+          <h3>4. Quatro camadas de defesa</h3>
+          <p>Interface, motor de regras, persistência local e replicação trabalham em sequência — performance na tela, velocidade no núcleo, segurança nos dados e escala quando a loja cresce. Detalhes na seção <a href="#camadas">Quatro camadas</a>.</p>
+        </div>
+        <div class="pillar">
+          <h3>5. Dados validados em camadas</h3>
+          <p>Validação na tela impede entrada errada; o motor nativo processa com previsibilidade; o acesso ao banco é verificado em tempo de compilação. Menos “surpresa em produção” por dado inconsistente.</p>
+        </div>
+        <div class="pillar">
+          <h3>6. Eficiência no hardware</h3>
+          <p>Enquanto stacks desktop pesadas exigem PCs caros e consomem muita memória, o núcleo Rust + shell Tauri enxuto foi pensado para fluir em máquinas modestas — o investimento vai para a loja, não para “puxar” o programa.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="camadas">
+      <h2>Quatro camadas, uma operação</h2>
+      <p class="diagram-caption"><strong>Do clique do operador à escala na rede</strong> — cada camada tem uma função clara. Nomes técnicos entre parênteses para equipe de TI.</p>
+      <div class="arch-stack" role="list">
+        <div class="arch-layer arch-layer--ui" role="listitem">
+          <span class="arch-layer__label">Camada 1 · Experiência</span>
+          <strong>Tela moderna e validação rígida</strong>
+          <p>Interface responsiva no balcão; dados inválidos são barrados antes de seguir (TypeScript / Tauri / Zod).</p>
+        </div>
+        <div class="arch-layer__arrow" aria-hidden="true">↓</div>
+        <div class="arch-layer arch-layer--core" role="listitem">
+          <span class="arch-layer__label">Camada 2 · Regras de negócio</span>
+          <strong>Motor nativo em alta velocidade</strong>
+          <p>Vendas, estoque, caixa e fiscal executados sem garbage collector — performance previsível (Rust / DDD).</p>
+        </div>
+        <div class="arch-layer__arrow" aria-hidden="true">↓</div>
+        <div class="arch-layer arch-layer--data" role="listitem">
+          <span class="arch-layer__label">Camada 3 · Persistência</span>
+          <strong>Gravação local imediata e segura</strong>
+          <p>SQLite na máquina do cliente, com concorrência e integridade (SQLx / modo WAL).</p>
+        </div>
+        <div class="arch-layer__arrow" aria-hidden="true">↓</div>
+        <div class="arch-layer arch-layer--sync" role="listitem">
+          <span class="arch-layer__label">Camada 4 · Escala</span>
+          <strong>Da loja única à rede distribuída</strong>
+          <p>Replicação bidirecional quando a rede está disponível — do MEI ao varejo com vários caixas (SymmetricDS na arquitetura de rede).</p>
+        </div>
+      </div>
+      <p class="section-subtitle" style="margin-top: 16px;">Modo <strong>local</strong> usa as três primeiras camadas hoje. Modo <strong>rede</strong> acrescenta sincronização — <a href="modalidades.html">como funciona na prática →</a></p>
     </section>
 
     <section class="card">
@@ -92,26 +155,48 @@
       </table>
     </section>
 
-    <section class="card">
-      <h2>Como funciona por baixo dos panos</h2>
-      <div class="pillars-grid">
-        <div class="pillar">
-          <h3>Rust — o motor</h3>
-          <p>Linguagem compilada que gera binário nativo. Menos surpresas de memória e performance previsível no núcleo do caixa — vendas, estoque, caixa e fiscal.</p>
-        </div>
-        <div class="pillar">
-          <h3>Tauri 2 — a janela</h3>
-          <p>Shell desktop leve que usa o WebView2 do Windows. Interface moderna sem carregar um navegador inteiro — startup rápido e instaladores profissionais.</p>
-        </div>
-        <div class="pillar">
-          <h3>SQLite — seus dados</h3>
-          <p>Banco local na máquina da loja. Vendas e movimentos ficam sob seu controle, com backup automático ao fechar turno.</p>
-        </div>
-        <div class="pillar">
-          <h3>React — a tela</h3>
-          <p>Interface operacional pensada para o balcão: busca rápida, atalhos de teclado e telas responsivas para gestão.</p>
-        </div>
+    <section class="card" id="validacao">
+      <h2>Blindagem contra dados corrompidos</h2>
+      <p class="section-subtitle">Três portões antes de uma venda virar registro definitivo — menos retrabalho e menos risco no dia a dia.</p>
+      <div class="stack-grid stack-grid--3">
+        <div class="stack-item"><strong>Na tela</strong><span>Campos e totais conferidos antes do envio — o operador corrige na hora.</span></div>
+        <div class="stack-item"><strong>No motor</strong><span>Processamento nativo com segurança de memória — estabilidade no turno inteiro.</span></div>
+        <div class="stack-item"><strong>No banco</strong><span>Consultas alinhadas ao esquema real — inconsistência estrutural detectada antes do deploy.</span></div>
       </div>
+    </section>
+
+    <section class="card" id="hardware">
+      <h2>Leve no balcão, pesado na confiabilidade</h2>
+      <p>O selo <strong>Rust + Tauri</strong> não é moda: é escolha de engenharia para o caixa. Startup rápido, pegada de memória menor e binário nativo — ideal para lojas que não querem trocar de PC só para abrir o PDV.</p>
+      <table class="trace">
+        <thead>
+          <tr><th>Cenário</th><th>CaraCore PDV (Rust + Tauri)</th><th>Stack desktop tradicional</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Abertura do turno</strong></td>
+            <td>Shell enxuto — pronto em segundos</td>
+            <td>Runtime pesado — aquecimento perceptível</td>
+          </tr>
+          <tr>
+            <td><strong>Memória RAM</strong></td>
+            <td>Fração do consumo de apps Electron ou Java antigo</td>
+            <td>Mais RAM para o mesmo fluxo de caixa</td>
+          </tr>
+          <tr>
+            <td><strong>Hardware da loja</strong></td>
+            <td>Fluidez em PCs modestos e notebooks comuns</td>
+            <td>Costuma exigir máquina mais nova ou mais cara</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card" id="hoje">
+      <h2>O que já está no ar hoje</h2>
+      <p>Transparência primeiro: o <strong>PDV Local</strong> (piloto v0.1.2) já opera com SQLite offline, interface Tauri e núcleo Rust. O <strong>PDV na Rede</strong> segue o roteiro descrito aqui — validado em laboratório, implantação em loja com acompanhamento Cara Core.</p>
+      <p class="seal-lab" role="note">✓ Bunker local disponível para download · rede sob proposta com suporte</p>
+      <p class="section-subtitle"><a href="transparencia.html#status-do-produto">Status do piloto</a> · <a href="modalidades.html">Local vs rede</a> · <a href="wiki/projeto-pdv.html">Wiki técnica</a></p>
     </section>
 
     <section class="card">

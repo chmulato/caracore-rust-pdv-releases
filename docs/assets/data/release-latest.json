@@ -1,7 +1,7 @@
 {
   "tag_name": "v0.1.2",
   "name": "Cara Core PDV Desktop v0.1.2",
-  "published_at": "2026-06-05T15:12:46Z",
+  "published_at": "2026-06-05T19:28:56.767413Z",
   "html_url": "https://github.com/chmulato/caracore-rust-pdv-releases/releases/tag/v0.1.2",
   "assets": [
     {
@@ -17,12 +17,16 @@
       "browser_download_url": "https://github.com/chmulato/caracore-rust-pdv-releases/releases/download/v0.1.2/caracore-pdv_0.1.2_x64-pilot.zip"
     },
     {
-      "name": "SHA256SUMS.txt",
-      "browser_download_url": "https://github.com/chmulato/caracore-rust-pdv-releases/releases/download/v0.1.2/SHA256SUMS.txt"
+      "name": "sha256sums.txt",
+      "browser_download_url": "https://github.com/chmulato/caracore-rust-pdv-releases/releases/download/v0.1.2/sha256sums.txt"
     },
     {
-      "name": "RELEASE_MANIFEST.json",
-      "browser_download_url": "https://github.com/chmulato/caracore-rust-pdv-releases/releases/download/v0.1.2/RELEASE_MANIFEST.json"
+      "name": "release_manifest.json",
+      "browser_download_url": "https://github.com/chmulato/caracore-rust-pdv-releases/releases/download/v0.1.2/release_manifest.json"
+    },
+    {
+      "name": "sbom.spdx.json",
+      "browser_download_url": "https://github.com/chmulato/caracore-rust-pdv-releases/releases/download/v0.1.2/sbom.spdx.json"
     }
   ]
 }

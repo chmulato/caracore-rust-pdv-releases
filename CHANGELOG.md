@@ -9,11 +9,16 @@ Formato alinhado às demais lojas `*-releases` do ecossistema CaraCore.
 ### Novidades desta build (oficina)
 
 - **UX-063:** impressora MOCK configurável (`pdv.printer.port.v1`), PDF gestão + relatório fim de dia.
-- **Sprint B:** SQL TEF extraído para gateway; ACL RBAC na fila de impressão (`/suporte/impressao`).
+- **Melhorias Técnicas (Sprints A, B e C):**
+  - **Modularização de TEF backend**: Structs e chamadas isoladas em módulo próprio, simplificando `main.rs`.
+  - **Fatiamento de UI**: Simplificação e segmentação de código em `ClientesPage.tsx` e `AuditoriaPage.tsx` utilizando hooks customizados e subcomponentes.
+  - **Segurança de Supply Chain**: Análise de dependências e vulnerabilidades em CI com `cargo-audit`, `cargo-deny` e `npm audit`.
+  - **Geração de SBOM**: Geração e inclusão automática do Software Bill of Materials no padrão SPDX 2.3 (`sbom.spdx.json`).
+  - **Assinatura de Código**: Planejamento e documentação da assinatura de executáveis e instaladores no Windows.
 - **Integração front↔back:** OpenAPI 84 IPC, validação Zod, smoke CDP 7/7.
-- **Correção:** colisão rara de `codigo_venda` em vendas no mesmo milissegundo (UUID v7).
+- **Correção:** colisão rara de `codigo_venda` em vendas no mesmo milissegundo (UUID v7) e ajuste de testes assíncronos no shell do PDV.
 
-Checksums atualizados em `sha256sums.txt` na release GitHub e manifesto vitrine `docs/assets/data/release-latest.json`.
+Checksums atualizados em `sha256sums.txt` na release GitHub e manifesto vitrine `docs/assets/data/release-latest.json` (incluindo o artefato `sbom.spdx.json`).
 
 ---
 

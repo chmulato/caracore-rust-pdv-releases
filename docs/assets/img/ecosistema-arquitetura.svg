@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" role="img" aria-labelledby="ecoTitle ecoDesc">
-  <title id="ecoTitle">Ecossistema tecnologico CaraCore PDV — quatro camadas</title>
+  <title id="ecoTitle">Ecossistema tecnologico CaraCore PDV ï¿½ quatro camadas</title>
   <desc id="ecoDesc">Fluxo vertical: Front-end TypeScript e Tauri, Back-end Rust DDD, Persistencia SQLx SQLite, Replicacao SymmetricDS.</desc>
   <defs>
     <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#e8f1ff"/><stop offset="100%" stop-color="#f8fbff"/></linearGradient>

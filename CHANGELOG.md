@@ -2,6 +2,21 @@
 
 Formato alinhado às demais lojas `*-releases` do ecossistema CaraCore.
 
+## v0.1.2 — 2026-06-05 (republicação binários · oficina jun/2026)
+
+**Binários Windows republicados:** [`v0.1.2`](https://github.com/chmulato/caracore-rust-pdv-releases/releases/tag/v0.1.2) — NSIS, MSI pt-BR, ZIP piloto (build 05/06/2026, gate release APROVADO).
+
+### Novidades desta build (oficina)
+
+- **UX-063:** impressora MOCK configurável (`pdv.printer.port.v1`), PDF gestão + relatório fim de dia.
+- **Sprint B:** SQL TEF extraído para gateway; ACL RBAC na fila de impressão (`/suporte/impressao`).
+- **Integração front↔back:** OpenAPI 84 IPC, validação Zod, smoke CDP 7/7.
+- **Correção:** colisão rara de `codigo_venda` em vendas no mesmo milissegundo (UUID v7).
+
+Checksums atualizados em `sha256sums.txt` na release GitHub e manifesto vitrine `docs/assets/data/release-latest.json`.
+
+---
+
 ## v0.1.2 — 2026-06-03 (produto + vitrine)
 
 **Binários Windows publicados:** [`v0.1.2`](https://github.com/chmulato/caracore-rust-pdv-releases/releases/tag/v0.1.2) — NSIS, MSI pt-BR, ZIP piloto.

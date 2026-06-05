@@ -9,7 +9,7 @@
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="assets/css/tokens.css" />
   <link rel="stylesheet" href="assets/css/layout.css?v=20260606" />
-  <link rel="stylesheet" href="assets/css/components.css?v=20260610" />
+  <link rel="stylesheet" href="assets/css/components.css?v=20260611" />
 </head>
 <body data-portal-page="inicio" data-nav-root="">
   <header class="portal-header">
@@ -288,19 +288,69 @@
     <section class="card" id="ecosistema">
       <h2>Ecossistema em 4 camadas</h2>
       <p class="diagram-caption"><strong>Do clique no balcão à escala na rede</strong> — funciona offline, é rápido no PC e sincroniza os caixas quando a loja cresce.</p>
-      <img
-        class="er-diagram home-eco-diagram"
-        src="assets/img/ecosistema-arquitetura.svg"
-        width="720"
-        height="480"
-        alt="Diagrama do ecossistema CaraCore PDV: Front-end TypeScript e Tauri, Back-end Rust, Persistência SQLx SQLite e Replicação SymmetricDS, com setas do fluxo vertical entre as camadas."
-        loading="lazy"
-        decoding="async"
-      />
-      <p class="section-subtitle">Modo <strong>local</strong> usa as três primeiras camadas hoje. Modo <strong>rede</strong> acrescenta sincronização entre caixas.</p>
+
+      <figure class="eco-diagram" aria-labelledby="eco-diagram-heading-home">
+        <p id="eco-diagram-heading-home" class="eco-diagram__title">Fluxo arquitetural · Bunker Digital</p>
+        <div class="eco-diagram__stack">
+          <div class="eco-layer eco-layer--frontend">
+            <div class="eco-layer__box">
+              <strong>FRONT-END</strong>
+              <span>(TypeScript / Tauri)</span>
+            </div>
+            <div class="eco-layer__arrow-h" aria-hidden="true"><span>→</span></div>
+            <div class="eco-layer__benefit">
+              Garante interface moderna e validação rígida na tela <em>(Zod)</em>
+            </div>
+          </div>
+          <div class="eco-connector" aria-hidden="true">
+            <span class="eco-connector__line"></span>
+            <span class="eco-connector__chev">▼</span>
+          </div>
+          <div class="eco-layer eco-layer--backend">
+            <div class="eco-layer__box">
+              <strong>BACK-END</strong>
+              <span>(Rust / DDD)</span>
+            </div>
+            <div class="eco-layer__arrow-h" aria-hidden="true"><span>→</span></div>
+            <div class="eco-layer__benefit">
+              Executa as regras de negócio em alta velocidade <em>(sem Garbage Collector)</em>
+            </div>
+          </div>
+          <div class="eco-connector" aria-hidden="true">
+            <span class="eco-connector__line"></span>
+            <span class="eco-connector__chev">▼</span>
+          </div>
+          <div class="eco-layer eco-layer--persist">
+            <div class="eco-layer__box">
+              <strong>PERSISTÊNCIA</strong>
+              <span>(SQLx / SQLite)</span>
+            </div>
+            <div class="eco-layer__arrow-h" aria-hidden="true"><span>→</span></div>
+            <div class="eco-layer__benefit">
+              Grava os dados localmente com segurança de tipo e concorrência <em>(modo WAL)</em>
+            </div>
+          </div>
+          <div class="eco-connector" aria-hidden="true">
+            <span class="eco-connector__line"></span>
+            <span class="eco-connector__chev">▼</span>
+          </div>
+          <div class="eco-layer eco-layer--replica">
+            <div class="eco-layer__box">
+              <strong>REPLICAÇÃO</strong>
+              <span>(SymmetricDS)</span>
+            </div>
+            <div class="eco-layer__arrow-h" aria-hidden="true"><span>→</span></div>
+            <div class="eco-layer__benefit">
+              Garante a escala do pequeno negócio para redes distribuídas <em>(PDV na Rede)</em>
+            </div>
+          </div>
+        </div>
+        <p class="eco-diagram__legend">Modo <strong>local</strong>: camadas 1–3 em operação no piloto. Modo <strong>rede</strong>: acrescenta a camada 4 — <a href="modalidades.html#rede">como funciona na prática →</a></p>
+      </figure>
+
       <p class="cta-box">
-        <a class="btn-primary" href="rust-tauri.html#ecosistema">Ver diagrama interativo</a>
         <a class="btn-secondary" href="rust-tauri.html">Bunker Digital — narrativa completa</a>
+        <a class="btn-secondary" href="assets/img/ecosistema-arquitetura.svg" target="_blank" rel="noopener">Abrir diagrama SVG</a>
       </p>
     </section>
 

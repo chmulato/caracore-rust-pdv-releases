@@ -9,7 +9,7 @@
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="assets/css/tokens.css" />
   <link rel="stylesheet" href="assets/css/layout.css?v=20260606" />
-  <link rel="stylesheet" href="assets/css/components.css?v=20260608" />
+  <link rel="stylesheet" href="assets/css/components.css?v=20260611" />
 </head>
 <body data-portal-page="rust-tauri" data-nav-root="">
   <header class="portal-header">
@@ -100,7 +100,7 @@
               <strong>FRONT-END</strong>
               <span>(TypeScript / Tauri)</span>
             </div>
-            <div class="eco-layer__arrow-h" aria-hidden="true">→</div>
+            <div class="eco-layer__arrow-h" aria-hidden="true"><span>→</span></div>
             <div class="eco-layer__benefit">
               Garante interface moderna e validação rígida na tela <em>(Zod)</em>
             </div>
@@ -116,7 +116,7 @@
               <strong>BACK-END</strong>
               <span>(Rust / DDD)</span>
             </div>
-            <div class="eco-layer__arrow-h" aria-hidden="true">→</div>
+            <div class="eco-layer__arrow-h" aria-hidden="true"><span>→</span></div>
             <div class="eco-layer__benefit">
               Executa as regras de negócio em alta velocidade <em>(sem Garbage Collector)</em>
             </div>
@@ -132,7 +132,7 @@
               <strong>PERSISTÊNCIA</strong>
               <span>(SQLx / SQLite)</span>
             </div>
-            <div class="eco-layer__arrow-h" aria-hidden="true">→</div>
+            <div class="eco-layer__arrow-h" aria-hidden="true"><span>→</span></div>
             <div class="eco-layer__benefit">
               Grava os dados localmente com segurança de tipo e concorrência <em>(modo WAL)</em>
             </div>
@@ -148,7 +148,7 @@
               <strong>REPLICAÇÃO</strong>
               <span>(SymmetricDS)</span>
             </div>
-            <div class="eco-layer__arrow-h" aria-hidden="true">→</div>
+            <div class="eco-layer__arrow-h" aria-hidden="true"><span>→</span></div>
             <div class="eco-layer__benefit">
               Garante a escala do pequeno negócio para redes distribuídas <em>(PDV na Rede)</em>
             </div>
@@ -157,16 +157,26 @@
         <p class="eco-diagram__legend">Modo <strong>local</strong>: camadas 1–3 em operação no piloto. Modo <strong>rede</strong>: acrescenta a camada 4 — <a href="modalidades.html#rede">como funciona na prática →</a></p>
       </figure>
 
-      <p class="section-subtitle">Mesmo diagrama em imagem (SVG) — útil para impressão ou compartilhamento:</p>
-      <img
-        class="er-diagram"
-        src="assets/img/ecosistema-arquitetura.svg"
-        width="720"
-        height="480"
-        alt="Diagrama do ecossistema CaraCore PDV: Front-end TypeScript e Tauri, Back-end Rust DDD, Persistência SQLx SQLite e Replicação SymmetricDS, com setas indicando o fluxo vertical entre as camadas."
-        loading="lazy"
-        decoding="async"
-      />
+      <details class="eco-diagram-static">
+        <summary>Baixar diagrama em imagem (SVG)</summary>
+        <object
+          class="er-diagram eco-diagram-object"
+          type="image/svg+xml"
+          data="assets/img/ecosistema-arquitetura.svg"
+          width="720"
+          height="480"
+          aria-label="Diagrama do ecossistema CaraCore PDV em quatro camadas"
+        >
+          <img
+            class="er-diagram"
+            src="assets/img/ecosistema-arquitetura.svg"
+            width="720"
+            height="480"
+            alt="Diagrama do ecossistema CaraCore PDV em quatro camadas"
+            decoding="sync"
+          />
+        </object>
+      </details>
     </section>
 
     <section class="card">

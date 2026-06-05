@@ -292,7 +292,18 @@
   background: #fcfeff;
   padding: 8px;
 }
-.er-diagram { width: 100%; min-width: min(720px, 100%); height: auto; display: block; }
+.er-diagram {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.eco-diagram-object {
+  min-height: 280px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+}
 
 .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .doc-meta {
@@ -1449,13 +1460,22 @@
     text-align: center;
   }
   .eco-layer__arrow-h {
-    transform: rotate(90deg);
-    height: 28px;
+    flex-direction: column;
+    min-height: 32px;
     margin: 2px auto;
   }
-  .eco-layer__arrow-h::before,
+  .eco-layer__arrow-h::before {
+    width: 2px;
+    height: 10px;
+    flex: 0 0 auto;
+    margin: 0 auto 2px;
+  }
   .eco-layer__arrow-h::after {
-    max-width: 12px;
+    display: none;
+  }
+  .eco-layer__arrow-h span {
+    font-size: 18px;
+    line-height: 1;
   }
   .eco-connector {
     max-width: none;

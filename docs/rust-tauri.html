@@ -9,7 +9,7 @@
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="assets/css/tokens.css" />
   <link rel="stylesheet" href="assets/css/layout.css?v=20260606" />
-  <link rel="stylesheet" href="assets/css/components.css?v=20260607" />
+  <link rel="stylesheet" href="assets/css/components.css?v=20260608" />
 </head>
 <body data-portal-page="rust-tauri" data-nav-root="">
   <header class="portal-header">
@@ -75,7 +75,7 @@
         </div>
         <div class="pillar">
           <h3>4. Quatro camadas de defesa</h3>
-          <p>Interface, motor de regras, persistência local e replicação trabalham em sequência — performance na tela, velocidade no núcleo, segurança nos dados e escala quando a loja cresce. Detalhes na seção <a href="#camadas">Quatro camadas</a>.</p>
+          <p>Interface, motor de regras, persistência local e replicação trabalham em sequência — performance na tela, velocidade no núcleo, segurança nos dados e escala quando a loja cresce. Veja o <a href="#ecosistema">diagrama do ecossistema</a>.</p>
         </div>
         <div class="pillar">
           <h3>5. Dados validados em camadas</h3>
@@ -88,35 +88,87 @@
       </div>
     </section>
 
-    <section class="card" id="camadas">
-      <h2>Quatro camadas, uma operação</h2>
-      <p class="diagram-caption"><strong>Do clique do operador à escala na rede</strong> — cada camada tem uma função clara. Nomes técnicos entre parênteses para equipe de TI.</p>
-      <div class="arch-stack" role="list">
-        <div class="arch-layer arch-layer--ui" role="listitem">
-          <span class="arch-layer__label">Camada 1 · Experiência</span>
-          <strong>Tela moderna e validação rígida</strong>
-          <p>Interface responsiva no balcão; dados inválidos são barrados antes de seguir (TypeScript / Tauri / Zod).</p>
+    <section class="card" id="ecosistema">
+      <h2>Ecossistema tecnológico consolidado</h2>
+      <p class="diagram-caption"><strong>Quatro camadas de defesa e performance</strong> — do clique do operador à escala na rede. Fluxo visual alinhado à arquitetura do produto.</p>
+
+      <figure class="eco-diagram" aria-labelledby="eco-diagram-heading">
+        <p id="eco-diagram-heading" class="eco-diagram__title">Fluxo arquitetural · Bunker Digital</p>
+        <div class="eco-diagram__stack">
+          <div class="eco-layer eco-layer--frontend">
+            <div class="eco-layer__box">
+              <strong>FRONT-END</strong>
+              <span>(TypeScript / Tauri)</span>
+            </div>
+            <div class="eco-layer__arrow-h" aria-hidden="true">→</div>
+            <div class="eco-layer__benefit">
+              Garante interface moderna e validação rígida na tela <em>(Zod)</em>
+            </div>
+          </div>
+
+          <div class="eco-connector" aria-hidden="true">
+            <span class="eco-connector__line"></span>
+            <span class="eco-connector__chev">▼</span>
+          </div>
+
+          <div class="eco-layer eco-layer--backend">
+            <div class="eco-layer__box">
+              <strong>BACK-END</strong>
+              <span>(Rust / DDD)</span>
+            </div>
+            <div class="eco-layer__arrow-h" aria-hidden="true">→</div>
+            <div class="eco-layer__benefit">
+              Executa as regras de negócio em alta velocidade <em>(sem Garbage Collector)</em>
+            </div>
+          </div>
+
+          <div class="eco-connector" aria-hidden="true">
+            <span class="eco-connector__line"></span>
+            <span class="eco-connector__chev">▼</span>
+          </div>
+
+          <div class="eco-layer eco-layer--persist">
+            <div class="eco-layer__box">
+              <strong>PERSISTÊNCIA</strong>
+              <span>(SQLx / SQLite)</span>
+            </div>
+            <div class="eco-layer__arrow-h" aria-hidden="true">→</div>
+            <div class="eco-layer__benefit">
+              Grava os dados localmente com segurança de tipo e concorrência <em>(modo WAL)</em>
+            </div>
+          </div>
+
+          <div class="eco-connector" aria-hidden="true">
+            <span class="eco-connector__line"></span>
+            <span class="eco-connector__chev">▼</span>
+          </div>
+
+          <div class="eco-layer eco-layer--replica">
+            <div class="eco-layer__box">
+              <strong>REPLICAÇÃO</strong>
+              <span>(SymmetricDS)</span>
+            </div>
+            <div class="eco-layer__arrow-h" aria-hidden="true">→</div>
+            <div class="eco-layer__benefit">
+              Garante a escala do pequeno negócio para redes distribuídas <em>(PDV na Rede)</em>
+            </div>
+          </div>
         </div>
-        <div class="arch-layer__arrow" aria-hidden="true">↓</div>
-        <div class="arch-layer arch-layer--core" role="listitem">
-          <span class="arch-layer__label">Camada 2 · Regras de negócio</span>
-          <strong>Motor nativo em alta velocidade</strong>
-          <p>Vendas, estoque, caixa e fiscal executados sem garbage collector — performance previsível (Rust / DDD).</p>
-        </div>
-        <div class="arch-layer__arrow" aria-hidden="true">↓</div>
-        <div class="arch-layer arch-layer--data" role="listitem">
-          <span class="arch-layer__label">Camada 3 · Persistência</span>
-          <strong>Gravação local imediata e segura</strong>
-          <p>SQLite na máquina do cliente, com concorrência e integridade (SQLx / modo WAL).</p>
-        </div>
-        <div class="arch-layer__arrow" aria-hidden="true">↓</div>
-        <div class="arch-layer arch-layer--sync" role="listitem">
-          <span class="arch-layer__label">Camada 4 · Escala</span>
-          <strong>Da loja única à rede distribuída</strong>
-          <p>Replicação bidirecional quando a rede está disponível — do MEI ao varejo com vários caixas (SymmetricDS na arquitetura de rede).</p>
-        </div>
-      </div>
-      <p class="section-subtitle" style="margin-top: 16px;">Modo <strong>local</strong> usa as três primeiras camadas hoje. Modo <strong>rede</strong> acrescenta sincronização — <a href="modalidades.html">como funciona na prática →</a></p>
+        <p class="eco-diagram__legend">Modo <strong>local</strong>: camadas 1–3 em operação no piloto. Modo <strong>rede</strong>: acrescenta a camada 4 — <a href="modalidades.html#rede">como funciona na prática →</a></p>
+      </figure>
+
+      <details class="eco-diagram-static">
+        <summary>Abrir diagrama em imagem (SVG)</summary>
+        <img
+          class="er-diagram"
+          src="assets/img/ecosistema-arquitetura.svg"
+          width="720"
+          height="480"
+          alt="Diagrama do ecossistema CaraCore PDV: Front-end TypeScript e Tauri, Back-end Rust DDD, Persistência SQLx SQLite e Replicação SymmetricDS, com setas indicando o fluxo vertical entre as camadas."
+          loading="lazy"
+          decoding="async"
+        />
+      </details>
     </section>
 
     <section class="card">

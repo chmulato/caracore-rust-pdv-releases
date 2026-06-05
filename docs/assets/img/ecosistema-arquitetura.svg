@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" role="img" aria-labelledby="ecoTitle ecoDesc">
+  <title id="ecoTitle">Ecossistema tecnológico CaraCore PDV  quatro camadas</title>
+  <desc id="ecoDesc">Fluxo vertical: Front-end TypeScript e Tauri, Back-end Rust DDD, Persistência SQLx SQLite, Replicação SymmetricDS.</desc>
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#e8f1ff"/><stop offset="100%" stop-color="#f8fbff"/></linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#e5f7eb"/><stop offset="100%" stop-color="#f6fcf8"/></linearGradient>
+    <linearGradient id="g3" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fff4d6"/><stop offset="100%" stop-color="#fffbf0"/></linearGradient>
+    <linearGradient id="g4" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ede6ff"/><stop offset="100%" stop-color="#f8f5ff"/></linearGradient>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#14538e"/></marker>
+  </defs>
+  <rect x="8" y="8" width="704" height="464" rx="14" fill="#fafcfe" stroke="#b8caf7" stroke-width="2" stroke-dasharray="8 6"/>
+  <text x="360" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11" font-weight="700" fill="#14538e" letter-spacing="1">ECOSSISTEMA TECNOLÓGICO CONSOLIDADO</text>
+
+  <!-- Layer 1 -->
+  <rect x="40" y="58" width="200" height="72" rx="10" fill="url(#g1)" stroke="#7aa8e8" stroke-width="2"/>
+  <text x="140" y="84" text-anchor="middle" font-family="Consolas, monospace" font-size="12" font-weight="700" fill="#0b3a66">FRONT-END</text>
+  <text x="140" y="104" text-anchor="middle" font-family="Consolas, monospace" font-size="11" fill="#14538e">(TypeScript / Tauri)</text>
+  <line x1="240" y1="94" x2="268" y2="94" stroke="#14538e" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="276" y="66" width="404" height="56" rx="10" fill="#fff" stroke="#c6d5e6"/>
+  <text x="290" y="90" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1a2a3a">Interface moderna e validação rígida na tela</text>
+  <text x="290" y="110" font-family="Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600" fill="#14538e">(Zod)</text>
+
+  <line x1="140" y1="130" x2="140" y2="148" stroke="#14538e" stroke-width="2"/>
+  <polygon points="140,148 134,138 146,138" fill="#14538e"/>
+
+  <!-- Layer 2 -->
+  <rect x="40" y="156" width="200" height="72" rx="10" fill="url(#g2)" stroke="#5cb87a" stroke-width="2"/>
+  <text x="140" y="182" text-anchor="middle" font-family="Consolas, monospace" font-size="12" font-weight="700" fill="#0b3a66">BACK-END</text>
+  <text x="140" y="202" text-anchor="middle" font-family="Consolas, monospace" font-size="11" fill="#14538e">(Rust / DDD)</text>
+  <line x1="240" y1="192" x2="268" y2="192" stroke="#14538e" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="276" y="164" width="404" height="56" rx="10" fill="#fff" stroke="#c6d5e6"/>
+  <text x="290" y="186" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1a2a3a">Regras de negócio em alta velocidade</text>
+  <text x="290" y="206" font-family="Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600" fill="#14538e">(sem Garbage Collector)</text>
+
+  <line x1="140" y1="228" x2="140" y2="246" stroke="#14538e" stroke-width="2"/>
+  <polygon points="140,246 134,236 146,236" fill="#14538e"/>
+
+  <!-- Layer 3 -->
+  <rect x="40" y="254" width="200" height="72" rx="10" fill="url(#g3)" stroke="#d4a84a" stroke-width="2"/>
+  <text x="140" y="276" text-anchor="middle" font-family="Consolas, monospace" font-size="11" font-weight="700" fill="#0b3a66">PERSISTÊNCIA</text>
+  <text x="140" y="296" text-anchor="middle" font-family="Consolas, monospace" font-size="11" fill="#14538e">(SQLx / SQLite)</text>
+  <line x1="240" y1="290" x2="268" y2="290" stroke="#14538e" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="276" y="262" width="404" height="56" rx="10" fill="#fff" stroke="#c6d5e6"/>
+  <text x="290" y="284" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1a2a3a">Gravação local com segurança de tipo</text>
+  <text x="290" y="304" font-family="Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600" fill="#14538e">(modo WAL)</text>
+
+  <line x1="140" y1="326" x2="140" y2="344" stroke="#14538e" stroke-width="2"/>
+  <polygon points="140,344 134,334 146,334" fill="#14538e"/>
+
+  <!-- Layer 4 -->
+  <rect x="40" y="352" width="200" height="72" rx="10" fill="url(#g4)" stroke="#9a7fd4" stroke-width="2"/>
+  <text x="140" y="378" text-anchor="middle" font-family="Consolas, monospace" font-size="12" font-weight="700" fill="#0b3a66">REPLICAÇÃO</text>
+  <text x="140" y="398" text-anchor="middle" font-family="Consolas, monospace" font-size="11" fill="#14538e">(SymmetricDS)</text>
+  <line x1="240" y1="388" x2="268" y2="388" stroke="#14538e" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="276" y="360" width="404" height="56" rx="10" fill="#fff" stroke="#c6d5e6"/>
+  <text x="290" y="382" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1a2a3a">Escala do pequeno negócio à rede distribuída</text>
+  <text x="290" y="402" font-family="Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600" fill="#14538e">(modo rede)</text>
+
+  <text x="360" y="456" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#4f647a">Cara Core PDV Desktop · Bunker Digital</text>
+</svg>

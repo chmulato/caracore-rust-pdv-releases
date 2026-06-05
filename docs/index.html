@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="description" content="Cara Core PDV Desktop — na sua máquina ou na rede da loja. Caixa profissional para MEI e pequeno varejo. Rápido, estável, offline." />
+  <meta name="description" content="Cara Core PDV Desktop — caixa no seu PC para MEI e pequeno varejo. Vende offline, é rápido e tem edição gratuita para testar." />
   <link rel="canonical" href="https://rust-pdv.caracore.com.br/" />
   <title>Cara Core PDV Desktop — Caixa para MEI e Pequeno Varejo</title>
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="assets/css/tokens.css" />
   <link rel="stylesheet" href="assets/css/layout.css?v=20260606" />
-  <link rel="stylesheet" href="assets/css/components.css?v=20260606" />
+  <link rel="stylesheet" href="assets/css/components.css?v=20260610" />
 </head>
 <body data-portal-page="inicio" data-nav-root="">
   <header class="portal-header">
@@ -19,21 +19,20 @@
         <span class="portal-brand-text">CaraCore PDV</span>
       </a>
       <div class="portal-header-content">
-        <span class="portal-header-badge">PDV Desktop · Windows</span>
-        <h1>PDV Desktop Profissional para MEI e Pequeno Varejo</h1>
-        <p class="portal-header-lead">Um PDV instalado na loja — <strong>na sua máquina</strong> ou <strong>na rede</strong> com vários caixas. Rápido, estável e independente da internet para vender no balcão.</p>
+        <span class="portal-header-badge">PDV no seu PC · Windows</span>
+        <h1>Caixa profissional que vende mesmo sem internet</h1>
+        <p class="portal-header-lead">Programa instalado na loja para <strong>vender, controlar caixa e ver relatórios</strong> — no seu computador hoje; na rede com vários balcões quando a loja crescer.</p>
         <div class="hero-actions">
-          <a class="btn-primary btn-hero" href="https://github.com/chmulato/caracore-rust-pdv-releases/releases/latest" rel="noopener noreferrer" data-official-download>Baixar PDV Desktop</a>
-          <a class="btn-secondary btn-hero" href="modalidades.html">Local ou rede?</a>
-          <a class="btn-secondary btn-hero" href="mercado.html#precos">Ver preços</a>
-          <a class="btn-secondary btn-hero" href="demonstracao.html">Ver demonstração</a>
+          <a class="btn-primary btn-hero" href="https://github.com/chmulato/caracore-rust-pdv-releases/releases/latest" rel="noopener noreferrer" data-official-download>Baixar agora — grátis</a>
+          <a class="btn-secondary btn-hero" href="demonstracao.html">Ver como funciona</a>
+          <a class="btn-secondary btn-hero" href="primeiros-passos.html">Começar em 2 minutos</a>
         </div>
       </div>
     </div>
   </header>
 
   <nav class="portal-nav" aria-label="Navegação principal">
-        <button type="button" class="portal-nav-toggle" aria-expanded="false" aria-controls="portal-nav-links" aria-label="Abrir menu de navegação">
+    <button type="button" class="portal-nav-toggle" aria-expanded="false" aria-controls="portal-nav-links" aria-label="Abrir menu de navegação">
       <span class="portal-nav-toggle__bars" aria-hidden="true"><span></span><span></span><span></span></span>
       <span class="portal-nav-toggle__label">Menu</span>
     </button>
@@ -52,86 +51,323 @@
   </nav>
 
   <main class="portal-main">
-    <section class="card exec-summary">
-      <h2>O que é o CaraCore PDV Desktop</h2>
-      <p class="exec-lead">Programa de caixa instalado no computador da loja — vendas, estoque, turno e relatórios. Comece <strong>no seu PC</strong>; evolua para <strong>vários caixas na rede</strong> com o mesmo produto.</p>
-      <p class="section-subtitle">Release <strong>v0.1.2</strong> (piloto) · <a href="modalidades.html">Local vs rede</a> · <a href="comparacao.html">Rust vs Java</a></p>
-      <div class="hub-grid hub-grid--intro">
-        <a class="hub-card" href="modalidades.html#local">
-          <h3>PDV Local</h3>
-          <p>Um PC, offline, edição gratuita para testar.</p>
-        </a>
-        <a class="hub-card" href="modalidades.html#rede">
-          <h3>PDV na Rede</h3>
-          <p>Vários caixas + central na loja.</p>
-        </a>
+    <nav class="home-jump" aria-label="Atalhos desta página">
+      <a href="#o-que-e">O que é</a>
+      <a href="#para-quem">Para quem</a>
+      <a href="#gratuito">Grátis</a>
+      <a href="#funcionalidades">O que faz</a>
+      <a href="#ver-em-acao">Ver telas</a>
+      <a href="#comecar">Como começar</a>
+      <a href="#precos">Preço</a>
+      <a href="#comparar">Rust vs Java</a>
+      <a href="#ecosistema">Arquitetura</a>
+    </nav>
+
+    <section class="card exec-summary" id="o-que-e">
+      <h2>O que é o CaraCore PDV?</h2>
+      <p class="exec-lead">É um <strong>programa de caixa</strong> que fica no computador da sua loja — não depende de nuvem para vender no balcão. Você registra vendas, controla o turno, acompanha estoque e exporta relatórios.</p>
+      <p class="home-solves"><strong>O que ele resolve:</strong> fila por internet instável, sistema pesado que trava o PC e a dor de trocar de PDV quando abre o segundo caixa. Comece em um PC; evolua para rede com o <em>mesmo</em> produto.</p>
+      <div class="exec-kpi-grid">
+        <div class="exec-kpi"><strong>Offline</strong><span>Vende com ou sem internet</span></div>
+        <div class="exec-kpi"><strong>Rápido</strong><span>Abre em segundos no Windows</span></div>
+        <div class="exec-kpi"><strong>No seu PC</strong><span>Dados ficam na loja</span></div>
+        <div class="exec-kpi"><strong>Escala</strong><span>1 PC hoje · vários caixas depois</span></div>
       </div>
+      <p class="section-subtitle">Piloto <strong>v0.1.2</strong> · <a href="modalidades.html">PDV Local ou na Rede</a></p>
     </section>
 
-    <section class="card">
+    <section class="card" id="para-quem">
       <h2>Para quem é</h2>
-      <p>MEI, varejo de bairro, quiosque e lojas que querem caixa offline no PC — com evolução para rede. <a href="mercado.html">Como adotar →</a></p>
-    </section>
-
-    <section class="card">
-      <h2>Funcionalidades</h2>
-      <p>Checkout, PIX, caixa, estoque, gestão e fila fiscal — detalhes em <a href="produto.html">Produto</a> · tour em <a href="demonstracao.html">Demonstração</a>.</p>
-    </section>
-
-    <section class="card">
-      <h2>Preço e licenciamento</h2>
-      <p>Edição gratuita para testar no PC; Premium e Seed sob proposta. <a href="mercado.html#precos">Planos</a> · <a href="transparencia.html#edicao-gratuita">Limites da edição gratuita</a></p>
-    </section>
-
-    <section class="card">
-      <h2>Confiança e download</h2>
-      <p>Piloto v0.1.2, integridade SHA-256 e limites honestos em <a href="transparencia.html">Transparência</a>. Instaladores em <a href="download.html">Formatos</a>.</p>
-    </section>
-
-    <section class="card">
-      <h2>Saiba mais</h2>
-      <div class="hub-grid">
-        <a class="hub-card" href="rust-tauri.html#ecosistema">
-          <h3>Bunker Digital</h3>
-          <p>Diagrama do ecossistema em 4 camadas — offline, Rust, SQLite e sync na rede.</p>
-        </a>
-        <a class="hub-card" href="comparacao.html">
-          <h3>Rust vs Java</h3>
-          <p>Qual PDV Desktop escolher para sua operação.</p>
-        </a>
-        <a class="hub-card" href="modalidades.html">
-          <h3>Local e rede</h3>
-          <p>Escolha o jeito de usar — linguagem simples, sem TI.</p>
-        </a>
-        <a class="hub-card" href="wiki/index.html">
-          <h3>Wiki</h3>
-          <p>Documentação completa da linha Rust + Tauri.</p>
-        </a>
+      <div class="benefit-grid">
+        <div class="benefit-card benefit-card--icon">
+          <span class="benefit-card__icon" aria-hidden="true">🏪</span>
+          <div>
+            <strong>MEI e loja de bairro</strong>
+            <p>Um balcão, primeiro PDV, operação simples no dia a dia.</p>
+          </div>
+        </div>
+        <div class="benefit-card benefit-card--icon">
+          <span class="benefit-card__icon" aria-hidden="true">☕</span>
+          <div>
+            <strong>Quiosque e conveniência</strong>
+            <p>Checkout ágil, PIX no caixa e controle de turno.</p>
+          </div>
+        </div>
+        <div class="benefit-card benefit-card--icon">
+          <span class="benefit-card__icon" aria-hidden="true">📈</span>
+          <div>
+            <strong>Loja em crescimento</strong>
+            <p>Segundo caixa sem migrar dados — ative o modo rede com suporte.</p>
+          </div>
+        </div>
+        <div class="benefit-card benefit-card--icon">
+          <span class="benefit-card__icon" aria-hidden="true">🖥️</span>
+          <div>
+            <strong>PC modesto</strong>
+            <p>Projetado para rodar leve — sem exigir máquina nova.</p>
+          </div>
+        </div>
       </div>
     </section>
 
+    <section class="card free-banner" id="gratuito">
+      <p class="free-banner__eyebrow">Sem custo para testar</p>
+      <h2>Edição gratuita no seu PC</h2>
+      <p class="free-banner__lead">Baixe, instale e use no piloto — <strong>sem limite de tempo</strong> para conhecer o fluxo. Ideal para testar antes de contratar edição completa.</p>
+      <ul class="free-banner__list">
+        <li>Vendas, caixa e gestão no computador local</li>
+        <li>Até <strong>100 vendas concluídas</strong> na edição gratuita</li>
+        <li>PIX com QR Code e confirmação no balcão</li>
+        <li>Sem nuvem obrigatória — seus dados ficam na loja</li>
+      </ul>
+      <div class="free-banner__actions">
+        <a class="btn-primary" href="https://github.com/chmulato/caracore-rust-pdv-releases/releases/latest" rel="noopener noreferrer" data-official-download>Baixar grátis agora</a>
+        <a class="btn-secondary" href="transparencia.html#edicao-gratuita">Ver limites completos</a>
+      </div>
+    </section>
+
+    <section class="card" id="funcionalidades">
+      <h2>O que o PDV faz no dia a dia</h2>
+      <p class="section-subtitle">Recursos pensados para o balcão — detalhes em <a href="produto.html">Produto</a>.</p>
+      <div class="benefit-grid">
+        <div class="benefit-card benefit-card--icon">
+          <span class="benefit-card__icon" aria-hidden="true">🛒</span>
+          <div>
+            <strong>Vendas no balcão</strong>
+            <p>Busca rápida, carrinho, descontos, PIX e finalização por atalho.</p>
+          </div>
+        </div>
+        <div class="benefit-card benefit-card--icon">
+          <span class="benefit-card__icon" aria-hidden="true">💰</span>
+          <div>
+            <strong>Caixa e turno</strong>
+            <p>Abertura, sangria, suprimento e backup ao fechar o turno.</p>
+          </div>
+        </div>
+        <div class="benefit-card benefit-card--icon">
+          <span class="benefit-card__icon" aria-hidden="true">📦</span>
+          <div>
+            <strong>Estoque</strong>
+            <p>Reserva ao vender; aviso ou bloqueio quando acabar.</p>
+          </div>
+        </div>
+        <div class="benefit-card benefit-card--icon">
+          <span class="benefit-card__icon" aria-hidden="true">📊</span>
+          <div>
+            <strong>Gestão</strong>
+            <p>Indicadores do período e relatório em PDF.</p>
+          </div>
+        </div>
+        <div class="benefit-card benefit-card--icon">
+          <span class="benefit-card__icon" aria-hidden="true">🔒</span>
+          <div>
+            <strong>Equipe</strong>
+            <p>Perfis de acesso e senha do supervisor para descontos.</p>
+          </div>
+        </div>
+        <div class="benefit-card benefit-card--icon">
+          <span class="benefit-card__icon" aria-hidden="true">🧾</span>
+          <div>
+            <strong>Fiscal</strong>
+            <p>Fila visível e contingência — fiscal real conforme contrato.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="ver-em-acao">
+      <h2>Veja o produto em ação</h2>
+      <p class="section-subtitle">Telas reais do PDV — tour interativo em <a href="demonstracao.html">Demonstração</a> (venda → caixa → relatório).</p>
+      <div class="demo-grid">
+        <figure class="demo-item">
+          <div class="portal-shot">
+            <img src="assets/img/screenshot-vendas.png" width="1280" height="800" alt="Tela de vendas com carrinho e busca de produtos" loading="lazy" decoding="async" sizes="(max-width: 639px) 92vw, 33vw" />
+          </div>
+          <figcaption><strong>Vender</strong>Busca, carrinho e PIX no balcão.</figcaption>
+        </figure>
+        <figure class="demo-item">
+          <div class="portal-shot">
+            <img src="assets/img/screenshot-caixa.png" width="1280" height="800" alt="Tela de caixa com controle de turno" loading="lazy" decoding="async" sizes="(max-width: 639px) 92vw, 33vw" />
+          </div>
+          <figcaption><strong>Caixa</strong>Turno, sangria e fechamento.</figcaption>
+        </figure>
+        <figure class="demo-item">
+          <div class="portal-shot">
+            <img src="assets/img/screenshot-gestao.png" width="1280" height="800" alt="Painel de gestão comercial" loading="lazy" decoding="async" sizes="(max-width: 639px) 92vw, 33vw" />
+          </div>
+          <figcaption><strong>Gestão</strong>Indicadores e PDF do período.</figcaption>
+        </figure>
+      </div>
+      <p class="cta-box">
+        <a class="btn-primary" href="demonstracao.html">Ver demonstração completa</a>
+        <a class="btn-secondary" href="primeiros-passos.html">Instalar agora</a>
+      </p>
+    </section>
+
+    <section class="card" id="comecar">
+      <h2>Como começar</h2>
+      <div class="home-steps">
+        <div class="home-step">
+          <strong>Baixar</strong>
+          <p>Instalador oficial no GitHub — NSIS ou MSI em português.</p>
+        </div>
+        <div class="home-step">
+          <strong>Instalar</strong>
+          <p>Assistente guiado; dados em <code>%APPDATA%\caracore-pdv\</code>.</p>
+        </div>
+        <div class="home-step">
+          <strong>Vender</strong>
+          <p>Login, abertura de turno e primeira venda em minutos.</p>
+        </div>
+      </div>
+      <p class="cta-box">
+        <a class="btn-primary" href="https://github.com/chmulato/caracore-rust-pdv-releases/releases/latest" rel="noopener noreferrer" data-official-download>Instalar agora</a>
+        <a class="btn-secondary" href="primeiros-passos.html">Guia passo a passo</a>
+        <a class="btn-secondary" href="download.html">Formatos de instalador</a>
+      </p>
+    </section>
+
+    <section class="card" id="precos">
+      <h2>Quanto custa</h2>
+      <table class="trace pricing-table">
+        <thead>
+          <tr>
+            <th>Opção</th>
+            <th>Para você</th>
+            <th>Investimento</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="plan-highlight">
+            <td class="plan-name">Edição gratuita</td>
+            <td>Testar no seu PC — vendas, caixa e gestão (até 100 vendas)</td>
+            <td><strong>Grátis</strong> · <a href="https://github.com/chmulato/caracore-rust-pdv-releases/releases/latest" rel="noopener noreferrer" data-official-download>Baixar</a></td>
+          </tr>
+          <tr>
+            <td class="plan-name">Edição completa</td>
+            <td>Loja em operação regular, sem limites do piloto</td>
+            <td>Sob proposta</td>
+          </tr>
+          <tr>
+            <td class="plan-name">PDV na rede</td>
+            <td>Vários caixas + central na loja</td>
+            <td>Projeto com implantação · <a href="mailto:suporte@caracore.com.br">Falar com a Cara Core</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="pricing-note"><a href="mercado.html#precos">Todos os planos</a> · <a href="transparencia.html#edicao-gratuita">Limites da edição gratuita</a></p>
+    </section>
+
+    <section class="card compare-teaser" id="comparar">
+      <h2>Rust vs Java — qual PDV escolher?</h2>
+      <p>A Cara Core mantém <strong>duas linhas desktop</strong>. Esta vitrine é o PDV novo (Rust + Tauri, piloto Windows). O PDV Java é o canal maduro multi-plataforma.</p>
+      <div class="compare-teaser__grid">
+        <div class="compare-teaser__col">
+          <h3>Este PDV (Rust) — escolha se…</h3>
+          <ul>
+            <li>Opera no Windows e quer o piloto mais recente.</li>
+            <li>Prioriza programa leve e abertura rápida.</li>
+            <li>Quer testar grátis no PC da loja.</li>
+          </ul>
+        </div>
+        <div class="compare-teaser__col">
+          <h3>PDV Java — escolha se…</h3>
+          <ul>
+            <li>Precisa de Linux ou macOS.</li>
+            <li>Quer a linha v3.1.x já consolidada.</li>
+            <li>Já usa o PDV Java e quer continuidade.</li>
+          </ul>
+        </div>
+      </div>
+      <p class="cta-box">
+        <a class="btn-primary" href="comparacao.html">Comparar Rust vs Java</a>
+        <a class="btn-secondary" href="https://pdv.caracore.com.br/download.html" rel="noopener noreferrer">Baixar PDV Java</a>
+      </p>
+    </section>
+
+    <section class="card" id="ecosistema">
+      <h2>Ecossistema em 4 camadas</h2>
+      <p class="diagram-caption"><strong>Do clique no balcão à escala na rede</strong> — funciona offline, é rápido no PC e sincroniza os caixas quando a loja cresce.</p>
+      <img
+        class="er-diagram home-eco-diagram"
+        src="assets/img/ecosistema-arquitetura.svg"
+        width="720"
+        height="480"
+        alt="Diagrama do ecossistema CaraCore PDV: Front-end TypeScript e Tauri, Back-end Rust, Persistência SQLx SQLite e Replicação SymmetricDS, com setas do fluxo vertical entre as camadas."
+        loading="lazy"
+        decoding="async"
+      />
+      <p class="section-subtitle">Modo <strong>local</strong> usa as três primeiras camadas hoje. Modo <strong>rede</strong> acrescenta sincronização entre caixas.</p>
+      <p class="cta-box">
+        <a class="btn-primary" href="rust-tauri.html#ecosistema">Ver diagrama interativo</a>
+        <a class="btn-secondary" href="rust-tauri.html">Bunker Digital — narrativa completa</a>
+      </p>
+    </section>
+
+    <section class="card home-tech" id="tecnico">
+      <h2>Detalhes técnicos (opcional)</h2>
+      <p class="section-subtitle">Para gestores, a frase que importa: <em>funciona offline, é rápido e sincroniza com outros caixas quando estiver na rede.</em></p>
+      <details>
+        <summary>Como a tecnologia ajuda a loja</summary>
+        <div class="ti-body">
+          <p>Programa nativo leve, dados no SQLite local e sincronização na rede quando você crescer — sem trocar de sistema. Leia <a href="rust-tauri.html">Por que Rust + Tauri</a> ou volte ao <a href="#ecosistema">diagrama acima</a>.</p>
+        </div>
+      </details>
+      <details>
+        <summary>Confiança, privacidade e piloto</summary>
+        <div class="ti-body">
+          <p>Download verificado (SHA-256), dados locais e limites honestos do piloto em <a href="transparencia.html">Transparência</a>.</p>
+        </div>
+      </details>
+      <details>
+        <summary>Documentação para TI</summary>
+        <div class="ti-body">
+          <p><a href="wiki/index.html">Wiki</a> · <a href="wiki/projeto-pdv.html">Projeto PDV</a> · <a href="modalidades.html">Arquitetura local e rede</a></p>
+        </div>
+      </details>
+    </section>
+
     <section class="card">
-      <div class="cta-box">
+      <div class="download-hero-cta">
+        <h2>Pronto para testar na sua loja?</h2>
+        <p>Edição gratuita no PC — instale em minutos e veja o fluxo real de venda.</p>
         <a class="btn-primary" href="https://github.com/chmulato/caracore-rust-pdv-releases/releases/latest" rel="noopener noreferrer" data-official-download>Baixar PDV Desktop</a>
-        <p class="section-subtitle" style="margin:0;"><a href="download.html">Formatos</a> · <a href="primeiros-passos.html">Primeiros passos</a></p>
+        <a class="btn-secondary" href="demonstracao.html" style="margin-left: 8px;">Ver demonstração</a>
       </div>
     </section>
-
-    <p class="footnote" style="text-align: center;">Também existe o PDV Desktop Java (canal maduro, multi-plataforma). <a href="comparacao.html">Veja comparação completa</a>.</p>
   </main>
 
-  <footer class="portal-footer">
-    <p>Cara Core PDV Desktop (Rust + Tauri) · Cara Core Informática · CNPJ 23.969.028/0001-37</p>
-    <p class="portal-footer-links">
-      <a href="demonstracao.html">Demonstração</a> ·
-      <a href="wiki/index.html">Wiki</a> ·
-      <a href="comparacao.html">Comparação Rust/Java</a> ·
-      <a href="transparencia.html">Transparência</a> ·
-      <a href="https://github.com/chmulato/caracore-rust-pdv-releases/releases" rel="noopener noreferrer">Releases oficiais (GitHub)</a> ·
-      <a href="https://www.caracore.com.br/portfolio.html#caracore-pdv-rust" rel="noopener noreferrer">Portfólio</a> ·
-      <a href="https://www.caracore.com.br/" rel="noopener noreferrer">caracore.com.br</a> ·
-      <a href="mailto:suporte@caracore.com.br">suporte@caracore.com.br</a>
-    </p>
+  <footer class="portal-footer portal-footer--columns">
+    <div class="footer-columns">
+      <div class="footer-col">
+        <strong>Produto</strong>
+        <ul>
+          <li><a href="produto.html">Funcionalidades</a></li>
+          <li><a href="demonstracao.html">Demonstração</a></li>
+          <li><a href="modalidades.html">Local e rede</a></li>
+          <li><a href="comparacao.html">Rust vs Java</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <strong>Baixar e começar</strong>
+        <ul>
+          <li><a href="https://github.com/chmulato/caracore-rust-pdv-releases/releases/latest" rel="noopener noreferrer" data-official-download>Download oficial</a></li>
+          <li><a href="primeiros-passos.html">Primeiros passos</a></li>
+          <li><a href="download.html">Formatos de instalador</a></li>
+          <li><a href="transparencia.html#edicao-gratuita">Edição gratuita</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <strong>Cara Core</strong>
+        <ul>
+          <li><a href="mercado.html#precos">Preços</a></li>
+          <li><a href="transparencia.html">Transparência</a></li>
+          <li><a href="https://www.caracore.com.br/" rel="noopener noreferrer">caracore.com.br</a></li>
+          <li><a href="mailto:suporte@caracore.com.br">suporte@caracore.com.br</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-legal">Cara Core PDV Desktop · Cara Core Informática · CNPJ 23.969.028/0001-37</p>
   </footer>
   <script src="assets/js/releases.js?v=20260606"></script>
   <script src="assets/js/portal.js?v=20260606"></script>

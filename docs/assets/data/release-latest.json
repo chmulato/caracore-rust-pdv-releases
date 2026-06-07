@@ -1,28 +1,28 @@
 {
-  "tag_name": "v3.2.2-free",
-  "name": "CaraCore-PDV v3.2.2-free FREE — Windows · Linux · macOS",
-  "published_at": "2026-06-03T00:10:45Z",
-  "html_url": "https://github.com/chmulato/caracore-pdv-releases/releases/tag/v3.2.2-free",
+  "tag_name": "v0.1.2",
+  "name": "CaraCore PDV v0.1.2",
+  "published_at": "2026-06-07T13:23:18Z",
+  "html_url": "https://github.com/chmulato/caracore-pdv-releases/releases/tag/v0.1.2",
   "assets": [
     {
-      "name": "caracore-pdv-v3.2.2-free-free-linux-x64.zip",
-      "browser_download_url": "https://github.com/chmulato/caracore-pdv-releases/releases/download/v3.2.2-free/caracore-pdv-v3.2.2-free-free-linux-x64.zip"
+      "name": "CaraCore-PDV-v0.1.2-windows.zip",
+      "browser_download_url": "https://github.com/chmulato/caracore-pdv-releases/releases/download/v0.1.2/CaraCore-PDV-v0.1.2-windows.zip"
     },
     {
-      "name": "caracore-pdv-v3.2.2-free-free-macos-x64.zip",
-      "browser_download_url": "https://github.com/chmulato/caracore-pdv-releases/releases/download/v3.2.2-free/caracore-pdv-v3.2.2-free-free-macos-x64.zip"
+      "name": "CaraCore.PDV_0.1.2_x64-setup.exe",
+      "browser_download_url": "https://github.com/chmulato/caracore-pdv-releases/releases/download/v0.1.2/CaraCore.PDV_0.1.2_x64-setup.exe"
     },
     {
-      "name": "caracore-pdv-v3.2.2-free-free-windows-x64.zip",
-      "browser_download_url": "https://github.com/chmulato/caracore-pdv-releases/releases/download/v3.2.2-free/caracore-pdv-v3.2.2-free-free-windows-x64.zip"
+      "name": "CaraCore.PDV_0.1.2_x64_pt-BR.msi",
+      "browser_download_url": "https://github.com/chmulato/caracore-pdv-releases/releases/download/v0.1.2/CaraCore.PDV_0.1.2_x64_pt-BR.msi"
     },
     {
       "name": "RELEASE_MANIFEST.json",
-      "browser_download_url": "https://github.com/chmulato/caracore-pdv-releases/releases/download/v3.2.2-free/RELEASE_MANIFEST.json"
+      "browser_download_url": "https://github.com/chmulato/caracore-pdv-releases/releases/download/v0.1.2/RELEASE_MANIFEST.json"
     },
     {
       "name": "SHA256SUMS.txt",
-      "browser_download_url": "https://github.com/chmulato/caracore-pdv-releases/releases/download/v3.2.2-free/SHA256SUMS.txt"
+      "browser_download_url": "https://github.com/chmulato/caracore-pdv-releases/releases/download/v0.1.2/SHA256SUMS.txt"
     }
   ]
 }

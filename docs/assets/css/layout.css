@@ -150,6 +150,12 @@ body {
   color: #fff;
   border-color: var(--brand);
 }
+/* Defesa visual: se houver atributo duplicado por cache antigo, apenas o primeiro fica ativo. */
+.portal-nav a[aria-current="page"] ~ a[aria-current="page"] {
+  background: transparent;
+  color: var(--brand);
+  border-color: transparent;
+}
 .portal-nav-toggle {
   display: none;
   align-items: center;

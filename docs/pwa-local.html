@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="Guia rápido: O que é o PWA Empacotado Local do CaraCore PDV? Entenda a tecnologia em português claro e veja por que seu caixa não trava." />
+  <link rel="canonical" href="https://rust-pdv.caracore.com.br/pwa-local.html" />
+  <title>PWA Empacotado Local — Cara Core PDV Desktop</title>
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/css/tokens.css" />
+  <link rel="stylesheet" href="assets/css/layout.css?v=20260606" />
+  <link rel="stylesheet" href="assets/css/components.css?v=20260611" />
+</head>
+<body data-portal-page="pwa-local" data-nav-root="">
+  <header class="portal-header">
+    <div class="portal-header-inner">
+      <a class="portal-brand" href="index.html">
+        <img src="assets/img/logo-mark.svg" width="32" height="32" alt="" />
+        <span class="portal-brand-text">CaraCore PDV</span>
+      </a>
+      <div class="portal-header-content">
+        <span class="portal-header-badge">Tecnologia Simples</span>
+        <h1>PWA Empacotado Local</h1>
+        <p class="portal-header-lead">A beleza de um site moderno com a força de um programa instalado. Entenda, sem termos complicados, a tecnologia que protege o seu caixa contra travamentos e quedas de internet.</p>
+        <p class="portal-header-meta"><a href="index.html">Início</a> · <a href="primeiros-passos.html">Primeiros passos</a> · <a href="download.html">Downloads</a></p>
+      </div>
+    </div>
+  </header>
+
+  <nav class="portal-nav" aria-label="Navegação principal">
+    <button type="button" class="portal-nav-toggle" aria-expanded="false" aria-controls="portal-nav-links" aria-label="Abrir menu de navegação">
+      <span class="portal-nav-toggle__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      <span class="portal-nav-toggle__label">Menu</span>
+    </button>
+    <div class="portal-nav-inner" id="portal-nav-links">
+      <a href="index.html">Início</a>
+      <a href="modalidades.html">Local e rede</a>
+      <a href="produto.html">Produto</a>
+      <a href="demonstracao.html">Demonstração</a>
+      <a href="mercado.html">Para sua loja</a>
+      <a href="https://github.com/chmulato/caracore-rust-pdv-releases/releases" rel="noopener noreferrer" target="_blank">Download</a>
+      <a href="download.html">Formatos</a>
+      <a href="comparacao.html">Comparar</a>
+      <a href="transparencia.html">Transparência</a>
+      <a href="wiki/index.html">Wiki</a>
+    </div>
+  </nav>
+
+  <main class="portal-main">
+    <section class="card exec-summary">
+      <h2>O que significa "PWA Empacotado Local"?</h2>
+      <p class="exec-lead">Imagine a velocidade e o visual moderno de um site que você acessa no navegador, mas com a robustez e a segurança de um programa tradicional que fica instalado dentro da sua máquina. Isso é o <strong>PWA Empacotado Local</strong>.</p>
+      <p>Em vez de rodar dentro do Chrome ou do Edge (onde qualquer aba travada ou oscilação de sinal de internet prejudica a venda), o CaraCore PDV funciona em uma **janela própria, limpa e dedicada**, abrindo instantaneamente a partir de um atalho na sua Área de Trabalho.</p>
+    </section>
+
+    <section class="card">
+      <h2>Os 4 Grandes Benefícios para a sua Loja</h2>
+      <div class="benefit-grid">
+        <div class="benefit-card benefit-card--icon">
+          <span class="benefit-card__icon" aria-label="Sem internet" role="img">🖥️</span>
+          <div>
+            <strong>1. Imunidade a quedas de internet</strong>
+            <p>Diferente de sistemas web comuns que param de funcionar se a internet oscilar, o PWA Local processa as vendas diretamente no seu computador. Fique offline e continue vendendo normalmente.</p>
+          </div>
+        </div>
+        <div class="benefit-card benefit-card--icon">
+          <span class="benefit-card__icon" aria-label="Soberania de dados" role="img">🛡️</span>
+          <div>
+            <strong>2. Soberania e privacidade dos dados</strong>
+            <p>Seus cadastros, vendas e dados de clientes (como CPF) moram no HD do seu computador. Não enviamos seu faturamento diário para servidores em nuvem, garantindo conformidade natural com a LGPD.</p>
+          </div>
+        </div>
+        <div class="benefit-card benefit-card--icon">
+          <span class="benefit-card__icon" aria-label="Instalação fácil" role="img">⚡</span>
+          <div>
+            <strong>3. Instalação limpa em 1 clique</strong>
+            <p>PWAs de navegador geralmente exigem instalar um site e depois baixar um assistente de impressão separado. Nosso app já vem empacotado com tudo incluso (interface + banco SQLite + motor em Rust).</p>
+          </div>
+        </div>
+        <div class="benefit-card benefit-card--icon">
+          <span class="benefit-card__icon" aria-label="Leveza" role="img">💻</span>
+          <div>
+            <strong>4. Leve no bolso e no PC</strong>
+            <p>A tecnologia por trás do app foi desenvolvida em Rust. Isso significa que ele consome uma fração mínima de memória RAM, rodando liso mesmo em computadores de caixa antigos ou mais modestos.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Como funciona a mágica por trás (Sem jargões)</h2>
+      <div class="stack-grid">
+        <div class="stack-item">
+          <strong>A Interface Moderna (Web)</strong>
+          <span>É a tela bonita que o operador usa para passar os produtos. Ela foi feita com ferramentas web modernas, tornando o visual leve, fácil de entender e muito ágil no teclado.</span>
+        </div>
+        <div class="stack-item">
+          <strong>O Motor Invisível (Rust)</strong>
+          <span>É um mecanismo ultrarrápido que roda em segundo plano. Ele controla o banco de dados, detecta automaticamente pendrives para fazer backups silenciosos no fim do turno e gerencia a comunicação com suas impressoras.</span>
+        </div>
+        <div class="stack-item">
+          <strong>O Banco de Dados Seguro (SQLite WAL)</strong>
+          <span>Um arquivo gravado no seu próprio computador que armazena os produtos e vendas com máxima proteção contra dados corrompidos, mesmo se o computador for desligado da tomada abruptamente.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Por que não usamos PWA puro de navegador?</h2>
+      <div class="notice notice-info">
+        <strong>Decisão de Engenharia CaraCore</strong>
+        Um PWA rodando puro dentro do navegador convencional (como Chrome ou Safari) é impedido, pelas regras de segurança dos navegadores, de acessar diretamente as impressoras térmicas de cupom da loja ou de ler mídias removíveis (como pendrives de backup). Ao <strong>empacotar o PWA localmente via Tauri</strong>, superamos essas limitações com segurança, entregando uma experiência robusta e nativa.
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="download-hero-cta">
+        <h2>Pronto para testar a experiência na sua loja?</h2>
+        <p>Baixe a edição gratuita para Windows e comece a testar em menos de 2 minutos.</p>
+        <a class="btn-primary" href="https://github.com/chmulato/caracore-rust-pdv-releases/releases/latest" rel="noopener noreferrer" data-official-download>Baixar PDV Desktop</a>
+        <a class="btn-secondary" href="primeiros-passos.html" style="margin-left: 8px;">Guia de Instalação</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="portal-footer portal-footer--columns">
+    <div class="footer-columns">
+      <div class="footer-col">
+        <strong>Produto</strong>
+        <ul>
+          <li><a href="produto.html">Funcionalidades</a></li>
+          <li><a href="demonstracao.html">Demonstração</a></li>
+          <li><a href="modalidades.html">Local e rede</a></li>
+          <li><a href="comparacao.html">Rust vs Java</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <strong>Baixar e começar</strong>
+        <ul>
+          <li><a href="https://github.com/chmulato/caracore-rust-pdv-releases/releases/latest" rel="noopener noreferrer" data-official-download>Download oficial</a></li>
+          <li><a href="primeiros-passos.html">Primeiros passos</a></li>
+          <li><a href="download.html">Formatos de instalador</a></li>
+          <li><a href="transparencia.html#edicao-gratuita">Edição gratuita</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <strong>Cara Core</strong>
+        <ul>
+          <li><a href="mercado.html#precos">Preços</a></li>
+          <li><a href="transparencia.html">Transparência</a></li>
+          <li><a href="https://www.caracore.com.br/" rel="noopener noreferrer">caracore.com.br</a></li>
+          <li><a href="mailto:suporte@caracore.com.br">suporte@caracore.com.br</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-legal">Cara Core PDV Desktop · Cara Core Informática · CNPJ 23.969.028/0001-37</p>
+  </footer>
+  <script src="assets/js/releases.js?v=20260606"></script>
+  <script src="assets/js/portal.js?v=20260606"></script>
+</body>
+</html>

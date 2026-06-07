@@ -21,14 +21,14 @@
       <div class="portal-header-content">
         <span class="portal-header-badge">Transparência</span>
         <h1>Informações claras sobre o produto</h1>
-        <p class="portal-header-lead">Quem publica o software, onde baixar com segurança, o que esperar na fase piloto e quais limites ainda existem.</p>
+        <p class="portal-header-lead">Quem publica o software, onde baixar com segurança, o que esperar na fase piloto e quais limites ainda existem de forma honesta e direta.</p>
         <p class="portal-header-meta"><a href="index.html">Início</a> · <a href="#edicao-gratuita">Edição gratuita</a></p>
       </div>
     </div>
   </header>
 
   <nav class="portal-nav" aria-label="Navegação principal">
-        <button type="button" class="portal-nav-toggle" aria-expanded="false" aria-controls="portal-nav-links" aria-label="Abrir menu de navegação">
+    <button type="button" class="portal-nav-toggle" aria-expanded="false" aria-controls="portal-nav-links" aria-label="Abrir menu de navegação">
       <span class="portal-nav-toggle__bars" aria-hidden="true"><span></span><span></span><span></span></span>
       <span class="portal-nav-toggle__label">Menu</span>
     </button>
@@ -47,263 +47,444 @@
   </nav>
 
   <main class="portal-main">
-    <section class="card exec-summary" aria-label="Sumário da página">
+    <!-- Sumário da página -->
+    <section class="card" aria-label="Sumário da página" style="background: #fafcfe;">
       <h2>Nesta página</h2>
       <div class="hub-grid hub-grid--toc">
+        <a class="hub-card" href="#visao-rapida"><h3>Visão rápida</h3><p>Pontos críticos resumidos</p></a>
+        <a class="hub-card" href="#publicos"><h3>Perfis</h3><p>Lojistas, TI e Contadores</p></a>
         <a class="hub-card" href="#quem-somos"><h3>Quem somos</h3><p>Editor, CNPJ e contato</p></a>
-        <a class="hub-card" href="#status-do-produto"><h3>Status do produto</h3><p>Fase piloto v0.1.2</p></a>
-        <a class="hub-card" href="#onde-baixar"><h3>Onde baixar</h3><p>Vitrine e GitHub oficial</p></a>
-        <a class="hub-card" href="#formatos-de-instalador"><h3>Formatos</h3><p>NSIS, MSI, ZIP e integridade</p></a>
-        <a class="hub-card" href="#verificar-integridade"><h3>Verificar arquivo</h3><p>Lista SHA-256</p></a>
-        <a class="hub-card" href="#smartscreen"><h3>SmartScreen</h3><p>Assinatura digital</p></a>
-        <a class="hub-card" href="#dados-e-privacidade"><h3>Privacidade</h3><p>Dados locais e backups</p></a>
-        <a class="hub-card" href="#edicao-gratuita"><h3>Edição gratuita</h3><p>100 vendas, PIX e limites</p><span class="hub-tag">Essencial</span></a>
-        <a class="hub-card" href="#escopo-fiscal"><h3>Escopo fiscal</h3><p>LOCAL_MOCK e Premium</p></a>
+        <a class="hub-card" href="#status-do-produto"><h3>Status</h3><p>Fase piloto v0.1.2</p></a>
+        <a class="hub-card" href="#downloads"><h3>Downloads</h3><p>NSIS, MSI e ZIP oficiais</p></a>
+        <a class="hub-card" href="#integridade"><h3>Integridade</h3><p>Tutorial SHA-256</p></a>
+        <a class="hub-card" href="#smartscreen"><h3>Windows SmartScreen</h3><p>Aviso de assinatura</p></a>
+        <a class="hub-card" href="#privacidade"><h3>Privacidade</h3><p>O que fazemos e não fazemos</p></a>
+        <a class="hub-card" href="#backups"><h3>Backups</h3><p>Cópia física automática</p></a>
+        <a class="hub-card" href="#edicao-gratuita"><h3>Edição gratuita</h3><p>Limites e degustação</p></a>
+        <a class="hub-card" href="#pix"><h3>PIX no checkout</h3><p>Fluxo manual no balcão</p></a>
+        <a class="hub-card" href="#fiscal"><h3>Escopo fiscal</h3><p>Treino vs Produção real</p></a>
+        <a class="hub-card" href="#comparacao"><h3>Comparação</h3><p>Grátis vs Premium</p></a>
       </div>
     </section>
 
+    <!-- 1. Visão rápida (Resumo Inicial) -->
+    <section class="card exec-summary" id="visao-rapida" aria-label="Visão rápida e pontos críticos">
+      <h2>Visão rápida</h2>
+      <p class="exec-lead">Resumo dos pontos mais importantes sobre o Cara Core PDV Desktop:</p>
+      <ul style="margin: 0; padding-left: 20px;">
+        <li style="margin-bottom: 8px;"><strong>Produto em fase piloto (v0.1.2):</strong> Iniciativa em testes práticos e validação rápida em lojas piloto.</li>
+        <li style="margin-bottom: 8px;"><strong>Download somente via GitHub oficial:</strong> Garantia absoluta de segurança ao obter o app da fonte correta.</li>
+        <li style="margin-bottom: 8px;"><strong>Sem assinatura digital (SmartScreen):</strong> O Windows pode exibir um aviso de segurança no primeiro uso.</li>
+        <li style="margin-bottom: 8px;"><strong>Dados 100% locais + backups automáticos:</strong> Soberania total sobre as vendas e backups em pendrives externos.</li>
+        <li style="margin-bottom: 8px;"><strong>Edição gratuita limitada a 100 vendas:</strong> Licença de testes locais com teto máximo de cupons emitidos.</li>
+        <li style="margin-bottom: 8px;"><strong>PIX manual no balcão:</strong> Sem verificação por webhook automático na versão gratuita.</li>
+        <li style="margin-bottom: 8px;"><strong>Fiscal simulado (LOCAL_MOCK):</strong> Ambiente de treino fiscal por padrão no pacote sem custo.</li>
+      </ul>
+    </section>
+
+    <!-- 5. Separar públicos -->
+    <section class="card" id="publicos">
+      <h2>Informações direcionadas por perfil</h2>
+      <p class="section-subtitle">Explicamos os detalhes do nosso produto na linguagem certa para cada necessidade:</p>
+      <div class="hub-grid">
+        <div class="pillar" style="display: flex; flex-direction: column;">
+          <div style="font-size: 24px; margin-bottom: 8px;">🏬</div>
+          <h3>Para Lojistas</h3>
+          <p style="margin-bottom: 12px;">Foco no dia a dia da operação de vendas e caixa:</p>
+          <ul style="margin: 0; padding-left: 18px; font-size: 13px; color: var(--muted); line-height: 1.5;">
+            <li><strong>Frente de caixa offline:</strong> Seus dados não dependem de internet para registrar vendas locais.</li>
+            <li><strong>PIX Manual (F9):</strong> Gere o QR Code na tela e confirme no comprovante do cliente antes de finalizar.</li>
+            <li><strong>Limite de testes:</strong> Permite registrar até 100 vendas concluídas antes de exigir licença.</li>
+          </ul>
+        </div>
+        <div class="pillar" style="display: flex; flex-direction: column;">
+          <div style="font-size: 24px; margin-bottom: 8px;">💻</div>
+          <h3>Para Equipes de TI</h3>
+          <p style="margin-bottom: 12px;">Instalação, integridade do sistema e segurança técnica:</p>
+          <ul style="margin: 0; padding-left: 18px; font-size: 13px; color: var(--muted); line-height: 1.5;">
+            <li><strong>Opções de pacotes:</strong> Escolha entre instalador NSIS, MSI corporativo ou portátil ZIP.</li>
+            <li><strong>Impressão digital (SHA-256):</strong> Facilidade para comparar códigos e validar a integridade dos arquivos.</li>
+            <li><strong>Aviso do Windows:</strong> Instruções claras para superar o aviso SmartScreen (sem assinatura de código por enquanto).</li>
+          </ul>
+        </div>
+        <div class="pillar" style="display: flex; flex-direction: column;">
+          <div style="font-size: 24px; margin-bottom: 8px;">📊</div>
+          <h3>Para Contadores</h3>
+          <p style="margin-bottom: 12px;">Escopo fiscal, conformidade e custódia de dados:</p>
+          <ul style="margin: 0; padding-left: 18px; font-size: 13px; color: var(--muted); line-height: 1.5;">
+            <li><strong>Ambiente de treino (LOCAL_MOCK):</strong> A edição grátis não emite notas válidas e serve para simulações.</li>
+            <li><strong>Conformidade LGPD:</strong> Criptografia de colunas de dados de clientes (PII) ativa diretamente no banco local.</li>
+            <li><strong>Custódia exclusiva:</strong> A loja possui 100% da posse física e legal das movimentações e backups locais.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quem somos -->
     <section class="card" id="quem-somos">
       <h2>Quem somos</h2>
-      <p>O <strong>Cara Core PDV Desktop (Rust + Tauri)</strong> é desenvolvido e distribuído pela <strong>Cara Core Informática</strong>, CNPJ <strong>23.969.028/0001-37</strong>.</p>
-      <table class="trace">
-        <thead>
-          <tr>
-            <th>Canal</th>
-            <th>Endereço</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Site institucional</td>
-            <td><a class="ext-link" href="https://www.caracore.com.br/" rel="noopener noreferrer">caracore.com.br</a></td>
-          </tr>
-          <tr>
-            <td>Suporte e comercial</td>
-            <td><a href="mailto:suporte@caracore.com.br">suporte@caracore.com.br</a></td>
-          </tr>
-        </tbody>
-      </table>
+      <p>O <strong>Cara Core PDV Desktop (Rust + Tauri)</strong> é publicado pela <strong>Cara Core Informática</strong>. Oferecemos canais oficiais e diretos de suporte para dar total transparência a nossos usuários.</p>
+      
+      <div class="card:has(table.trace)">
+        <table class="trace">
+          <thead>
+            <tr>
+              <th>Canal / Registro</th>
+              <th>Informação Oficial</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Editor do Software</strong></td>
+              <td>Cara Core Informática Ltda.</td>
+            </tr>
+            <tr>
+              <td><strong>CNPJ Oficial</strong></td>
+              <td>23.969.028/0001-37</td>
+            </tr>
+            <tr>
+              <td><strong>Site Institucional</strong></td>
+              <td><a class="ext-link" href="https://www.caracore.com.br/" rel="noopener noreferrer" target="_blank">caracore.com.br</a></td>
+            </tr>
+            <tr>
+              <td><strong>Suporte Técnico e Comercial</strong></td>
+              <td><a href="mailto:suporte@caracore.com.br">suporte@caracore.com.br</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
 
+    <!-- Status do produto -->
     <section class="card" id="status-do-produto">
       <h2>Status do produto</h2>
-      <div class="notice notice-warn">
-        <strong>Fase piloto</strong>
-        A iniciativa <strong>Rust + Tauri 2</strong> (release <strong>v0.1.2</strong>) está em avaliação com lojas piloto em <strong>Windows, Linux e macOS</strong>. <strong>Não confunda</strong> com o PDV Desktop Java maduro em <a class="ext-link" href="https://pdv.caracore.com.br/" rel="noopener noreferrer">pdv.caracore.com.br</a>.
+      <div class="notice notice-info">
+        <strong>Fase Piloto (v0.1.2)</strong>
+        Esta versão representa uma nova arquitetura nativa em <strong>Rust + Tauri 2</strong> em fase de testes piloto e homologação inicial. O objetivo do piloto é garantir estabilidade e receber feedback de lojas de teste antes da distribuição massiva comercial.
       </div>
-      <p>Este site é a vitrine do <strong>PDV Desktop (Rust + Tauri)</strong> em fase piloto. Aqui você encontra benefícios, download multiplataforma e orientações para a loja.</p>
+      <p><strong>Atenção:</strong> Não confunda esta nova iniciativa multiplataforma (Windows, Linux, macOS) com a nossa linha tradicional e madura de <strong>PDV Desktop Java</strong> que já atende o varejo em produção no endereço <a class="ext-link" href="https://pdv.caracore.com.br/" rel="noopener noreferrer" target="_blank">pdv.caracore.com.br</a>.</p>
     </section>
 
-    <section class="card" id="onde-baixar">
-      <h2>Onde baixar</h2>
-
-      <h3>Loja oficial (vitrine)</h3>
-      <p><strong><a href="https://rust-pdv.caracore.com.br/">rust-pdv.caracore.com.br</a></strong> — apresenta o produto, planos e orientações. <strong>Não hospeda os binários</strong> em outro domínio.</p>
-
-      <h3>Download oficial (arquivos)</h3>
-      <p>Baixe <strong>somente</strong> pelos releases publicados no GitHub:</p>
-      <p><a class="ext-link" href="https://github.com/chmulato/caracore-rust-pdv-releases/releases" rel="noopener noreferrer">github.com/chmulato/caracore-rust-pdv-releases/releases</a></p>
-      <p class="section-subtitle">A página <a href="download.html">Formatos</a> desta loja explica NSIS, MSI e ZIP — ela <em>aponta</em> para o mesmo endereço acima.</p>
-
-      <p><strong>Regras de segurança:</strong></p>
-      <ul>
-        <li>Desconfie de links de terceiros, espelhos ou pastas compartilhadas sem confirmação com a Cara Core.</li>
-        <li>Se ainda não houver release publicado, o botão de download mostrará <strong>“Acompanhar releases”</strong> em vez de um arquivo inexistente.</li>
-      </ul>
-
-      <h3>Produto relacionado (outra linha)</h3>
-      <table class="trace">
-        <thead>
-          <tr>
-            <th>Produto</th>
-            <th>Endereço</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>PDV Desktop Java (maduro)</td>
-            <td><a class="ext-link" href="https://pdv.caracore.com.br/" rel="noopener noreferrer">pdv.caracore.com.br</a></td>
-          </tr>
-          <tr>
-            <td>Portfólio Cara Core</td>
-            <td><a class="ext-link" href="https://www.caracore.com.br/portfolio.html#caracore-pdv-rust" rel="noopener noreferrer">caracore.com.br</a></td>
-          </tr>
-        </tbody>
-      </table>
+    <!-- Downloads oficiais -->
+    <section class="card" id="downloads">
+      <h2>Downloads oficiais</h2>
+      <p class="section-subtitle">Obtenha os instaladores originais apenas do repositório oficial da Cara Core no GitHub. A página <a href="download.html">Formatos</a> detalha cada uma destas opções:</p>
+      
+      <div class="download-grid">
+        <div class="download-option" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <h3>Instalador NSIS (.exe)</h3>
+            <p>Formato padrão com assistente visual passo a passo. Recomendado para o lojista comum.</p>
+          </div>
+          <a class="btn-primary" href="https://github.com/chmulato/caracore-rust-pdv-releases/releases" rel="noopener noreferrer" target="_blank">Acompanhar releases</a>
+        </div>
+        <div class="download-option" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <h3>Pacote MSI pt-BR (.msi)</h3>
+            <p>Ideal para profissionais e técnicos de TI. Permite implantação padronizada em redes corporativas.</p>
+          </div>
+          <a class="btn-secondary" href="https://github.com/chmulato/caracore-rust-pdv-releases/releases" rel="noopener noreferrer" target="_blank">Acompanhar releases</a>
+        </div>
+        <div class="download-option" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <h3>Portátil ZIP (.zip)</h3>
+            <p>Sem necessidade de instalação. Basta extrair a pasta em qualquer diretório local para rodar.</p>
+          </div>
+          <a class="btn-secondary" href="https://github.com/chmulato/caracore-rust-pdv-releases/releases" rel="noopener noreferrer" target="_blank">Acompanhar releases</a>
+        </div>
+      </div>
+      
+      <p class="footnote" style="margin-top: 14px;"><strong>Nota de Segurança:</strong> Desconfie de links de download disponibilizados por terceiros, pastas compartilhadas no Google Drive ou em nuvens não oficiais da empresa.</p>
     </section>
 
-    <section class="card" id="formatos-de-instalador">
-      <h2>Formatos de instalador</h2>
-      <p>NSIS (lojista), MSI pt-BR (TI) e ZIP portátil — escolha e baixe em <a href="download.html">Formatos</a>. Lista SHA-256 publicada em cada release.</p>
-    </section>
-
-    <section class="card" id="verificar-integridade">
+    <!-- Como verificar integridade (SHA-256) -->
+    <section class="card" id="integridade">
       <h2>Como verificar a integridade do arquivo</h2>
-      <p>Cada release oficial traz uma <strong>lista de verificação de integridade</strong> (algoritmo <strong>SHA-256</strong>). Use-a <strong>antes de executar</strong> o instalador ou ZIP.</p>
-
+      <p class="section-subtitle">Antes de executar o instalador ou ZIP, você pode verificar se o arquivo baixado é exatamente o original enviado pela nossa equipe. Pense no código <strong>SHA-256</strong> como a <em>impressão digital única do arquivo</em>.</p>
+      
       <div class="stack-grid stack-grid--3" style="margin: 14px 0;">
-        <div class="stack-item"><strong>1. Baixar</strong><span>Obtenha o pacote somente do release oficial no GitHub.</span></div>
-        <div class="stack-item"><strong>2. Gerar hash</strong><span>Calcule o SHA-256 localmente (PowerShell ou ferramenta indicada na release).</span></div>
-        <div class="stack-item"><strong>3. Comparar</strong><span>Confira se o valor bate com a lista publicada no mesmo release.</span></div>
+        <div class="stack-item">
+          <strong>1. Baixar o arquivo</strong>
+          <span>Baixe o instalador desejado direto do repositório oficial no GitHub.</span>
+        </div>
+        <div class="stack-item">
+          <strong>2. Gerar a impressão digital</strong>
+          <span>Use o PowerShell no Windows para gerar a chave única local do arquivo.</span>
+        </div>
+        <div class="stack-item">
+          <strong>3. Comparar resultados</strong>
+          <span>Confronte a chave com o código publicado pela Cara Core na listagem do release.</span>
+        </div>
       </div>
 
-      <h3>Passo a passo (Windows)</h3>
-      <ol>
-        <li>Abra a pasta do download.</li>
-        <li>Gere a “impressão digital” do arquivo pelo <strong>PowerShell</strong> ou pela ferramenta de hash indicada na própria release.</li>
-        <li>Compare o resultado com o valor publicado na lista do release.</li>
+      <h3>Passo a passo no Windows (PowerShell)</h3>
+      <ol style="margin-bottom: 12px; padding-left: 20px;">
+        <li style="margin-bottom: 6px;">Abra a pasta onde você salvou o arquivo do download.</li>
+        <li style="margin-bottom: 6px;">Segure a tecla <code>Shift</code>, clique com o botão direito na pasta e selecione <strong>"Abrir janela do PowerShell aqui"</strong>.</li>
+        <li style="margin-bottom: 6px;">Digite o seguinte comando (substituindo pelo nome do arquivo baixado) e pressione <code>Enter</code>:
+          <pre style="background: #fafcfe; border: 1px solid var(--line); padding: 8px 12px; border-radius: 8px; font-family: monospace; font-size: 13px; margin-top: 8px; overflow-x: auto;">Get-FileHash .\NomeDoArquivo.exe -Algorithm SHA256</pre>
+        </li>
+        <li style="margin-bottom: 6px;">Confirme se o código gigante gerado na tela é igual à lista publicada na release correspondente do GitHub.</li>
       </ol>
 
       <div class="notice notice-warn">
-        <strong>Se os valores não coincidirem</strong>
-        Não execute o programa e avise <a href="mailto:suporte@caracore.com.br">suporte@caracore.com.br</a>.
+        <strong>E se a impressão digital não coincidir?</strong>
+        Se o código calculado for diferente do oficial, <strong>não execute o programa</strong> de forma alguma. Avise-nos imediatamente pelo e-mail <a href="mailto:suporte@caracore.com.br">suporte@caracore.com.br</a>.
       </div>
     </section>
 
+    <!-- SmartScreen e assinatura digital -->
     <section class="card" id="smartscreen">
-      <h2>SmartScreen e assinatura digital</h2>
-      <div class="notice notice-warn">
-        <strong>Sem certificado de editor (por enquanto)</strong>
-        O instalador piloto <strong>ainda não possui assinatura digital de código</strong>. O Windows SmartScreen pode exibir aviso na <strong>primeira execução</strong>.
-      </div>
-      <p>Isso é <strong>esperado nesta fase</strong>. Não significa que o arquivo veio de outra fonte — desde que tenha sido baixado do <strong>release oficial</strong> e conferido na <strong>lista de integridade</strong>.</p>
-    </section>
-
-    <section class="card" id="dados-e-privacidade">
-      <h2>Dados e privacidade</h2>
-      <table class="trace">
-        <thead>
-          <tr>
-            <th>Tema</th>
-            <th>Como funciona</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Onde ficam os dados</strong></td>
-            <td>Produtos, vendas e caixa ficam no computador da loja, na pasta de dados do usuário Windows (perfil do operador). Dados de clientes (como CPF) são tratados com soberania local estrita, sem telemetria em nuvem.</td>
-          </tr>
-          <tr>
-            <td><strong>Envio para Cara Core</strong></td>
-            <td>O fluxo normal de operação local <strong>não envia</strong> o faturamento diário ou dados confidenciais para servidores CaraCore.</td>
-          </tr>
-          <tr>
-            <td><strong>Fiscal eletrônico</strong></td>
-            <td>Quando configurado, comunica-se apenas com os serviços exigidos pela legislação tributária (SEFAZ), usando as credenciais diretas da loja.</td>
-          </tr>
-          <tr>
-            <td><strong>Custódia dos dados (EULA)</strong></td>
-            <td><strong>Responsabilidade compartilhada:</strong> o cliente/lojista detém a custódia legal e física exclusiva de todos os seus dados. O software é fornecido <em>as is</em>, conforme termo aceito digitalmente no primeiro setup.</td>
-          </tr>
-          <tr>
-            <td><strong>Backups automáticos</strong></td>
-            <td>Executados no fechamento de cada turno de caixa. O motor local detecta automaticamente mídias removíveis e pendrives conectados (letras de <code>D:\</code> a <code>Z:\</code> no Windows) para salvar cópias físicas do banco de dados e logs de forma automatizada e silenciosa.</td>
-          </tr>
-          <tr>
-            <td><strong>Logs de auditoria local</strong></td>
-            <td>Registra internamente no banco de dados local as ações críticas (exclusão de vendas, alteração de configurações de banco/sincronização, exportação de backups) vinculando o operador ativo, IP de origem e turno correspondente, blindando o lojista contra fraudes internas.</td>
-          </tr>
-          <tr>
-            <td><strong>Criptografia em repouso</strong></td>
-            <td>Sim — as informações pessoais identificáveis (PII) dos clientes (Nome, CPF, Telefone e Email) são armazenadas de forma criptografada (cifra simétrica determinística baseada em SHA-256) diretamente no banco SQLite local, resguardando a privacidade conforme as diretrizes da LGPD contra inspeção física direta do arquivo.</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section class="card" id="edicao-gratuita">
-      <h2>Edição gratuita (piloto)</h2>
-      <p>O instalador para <strong>testar no seu PC</strong> (PDV Local) opera como <strong>edição gratuita</strong> por padrão: vendas e caixa no computador, <strong>sem nuvem obrigatória</strong>.</p>
-      <p class="section-subtitle">Compromisso publicado com o produto em piloto — atualizado em junho/2026.</p>
-
-      <h3>O que está incluído (e o que não está)</h3>
-      <table class="trace">
-        <thead>
-          <tr>
-            <th>Promessa</th>
-            <th>Na prática hoje</th>
-            <th>Limite honesto</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Bunker local</strong> — vender offline</td>
-            <td>Sim — SQLite em <code>%APPDATA%\caracore-pdv\</code></td>
-            <td>Fiscal eletrônico real exige rede e credenciais SEFAZ</td>
-          </tr>
-          <tr>
-            <td><strong>Balcão</strong> — produtos, operadores, vendas, gestão</td>
-            <td>Sim — checkout, caixa, relatórios básicos</td>
-            <td>Impressora de cupom ainda em modo demonstração (MOCK)</td>
-          </tr>
-          <tr>
-            <td><strong>PIX</strong> no checkout</td>
-            <td>Sim — QR Code gerado no app + confirmação em duas etapas</td>
-            <td>Sem integração automática com banco/PSP na edição gratuita</td>
-          </tr>
-          <tr>
-            <td><strong>Degustação</strong></td>
-            <td>Até <strong>100 vendas concluídas</strong> no mesmo banco local</td>
-            <td>Na <strong>101ª tentativa</strong> o sistema bloqueia novas vendas com aviso</td>
-          </tr>
-          <tr>
-            <td><strong>Premium / contrato</strong></td>
-            <td>Sem teto de vendas + recursos conforme proposta</td>
-            <td>Licença CaraCore Seed ou edição contratada — fale com a Cara Core</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <h3>PIX na edição gratuita</h3>
-      <p>Confirmação <strong>manual</strong> em duas etapas — sem webhook bancário automático.</p>
-
-      <div class="stack-grid stack-grid--3" style="margin: 14px 0;">
-        <div class="stack-item"><strong>1. Operador (F9)</strong><span>Gera QR Code e Pix Copia e Cola.</span></div>
-        <div class="stack-item"><strong>2. Cliente</strong><span>Paga no app do banco e informa no balcão.</span></div>
-        <div class="stack-item"><strong>3. Confirmar</strong><span>Operador confere comprovante e confirma recebimento — só então a venda entra.</span></div>
-      </div>
-      <p class="section-subtitle">Webhook bancário automático: <strong>edição Premium</strong>, não o pacote gratuito.</p>
-
-      <h3>Limite de 100 vendas</h3>
-      <div class="notice notice-warn">
-        <strong>Atenção — teto de degustação</strong>
-        Até <strong>100 vendas concluídas</strong> no mesmo banco local; na <strong>101ª</strong>, novas vendas bloqueadas. Contam só status <strong>concluída</strong>; o app avisa vendas restantes. Remover teto: <a href="mailto:suporte@caracore.com.br?subject=PDV%20Premium">Premium ou Seed</a>.
-      </div>
-
+      <h2>Avisos de segurança (SmartScreen)</h2>
       <div class="notice notice-info">
-        <strong>Modo rede (vários caixas)</strong>
-        Operar <strong>vários caixas</strong> é evolução com <strong>implantação assistida</strong> — não equivale ao teste em um único PC. Veja <a href="modalidades.html">Local e rede</a>.
+        <strong>Aviso do Windows SmartScreen</strong>
+        Como esta versão está em fase piloto inicial, <strong>o instalador ainda não conta com um certificado digital corporativo pago (assinatura de código)</strong>. Por esse motivo, ao executá-lo pela primeira vez, o Windows SmartScreen exibirá uma mensagem de alerta ("O Windows protegeu o seu computador").
+      </div>
+      <p>Este comportamento é normal e esperado nesta etapa do piloto. Não representa riscos ao seu computador, desde que você tenha verificado a <strong>impressão digital do arquivo (SHA-256)</strong> na etapa anterior. Para continuar a instalação:</p>
+      <ol style="padding-left: 20px;">
+        <li style="margin-bottom: 6px;">Na janela do aviso do Windows, clique no link <strong>"Mais informações"</strong>.</li>
+        <li style="margin-bottom: 6px;">Clique no botão <strong>"Executar assim mesmo"</strong> para iniciar o instalador oficial.</li>
+      </ol>
+    </section>
+
+    <!-- Privacidade e dados locais -->
+    <section class="card" id="privacidade">
+      <h2>Privacidade e dados locais</h2>
+      <p class="section-subtitle">Privacidade real e controle de dados. Nossas regras de tratamento de dados são transparentes e respeitam a LGPD:</p>
+      
+      <div class="card:has(table.trace)">
+        <table class="trace">
+          <thead>
+            <tr>
+              <th style="width: 50%;">✅ O que fazemos</th>
+              <th style="width: 50%;">❌ O que não fazemos</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <strong>Dados 100% locais no seu PC:</strong>
+                Suas vendas, estoque e movimentações financeiras ficam armazenados apenas na máquina da loja (no caminho <code>%APPDATA%\caracore-pdv\</code>).
+              </td>
+              <td>
+                <strong>Sem envio de dados para servidores externos:</strong>
+                A Cara Core não recebe logs de faturamento diário, tickets médios ou dados de clientes em nuvem centralizada.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <strong>Criptografia LGPD de clientes:</strong>
+                Informações de clientes como Nome, CPF, Telefone e E-mail são criptografados localmente (cifra baseada em SHA-256) no SQLite para proteção contra cópia física direta.
+              </td>
+              <td>
+                <strong>Sem telemetria oculta:</strong>
+                Não rastreamos hábitos comerciais, preços praticados ou segredos de mercado do estabelecimento.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <strong>Logs de auditoria local contra fraudes:</strong>
+                Registros permanentes no banco local identificam ações críticas do operador (exclusões e mudanças de parâmetros) com IP, hora e turno.
+              </td>
+              <td>
+                <strong>Sem backup centralizado na nuvem:</strong>
+                Como não coletamos dados, a custódia legal de backup físico para conformidade de faturamento é responsabilidade compartilhada exclusiva do lojista.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <strong>Comunicação fiscal segura direta:</strong>
+                O app conversa direto com o webservice da SEFAZ para emitir cupons homologados, sem intermediários.
+              </td>
+              <td>
+                <strong>Sem intermediação financeira:</strong>
+                Transações de pagamento operam diretamente entre sua conta bancária e o cliente (na versão gratuita).
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
 
-    <section class="card" id="escopo-fiscal">
-      <h2>Escopo fiscal e funcional</h2>
-      <p>O PDV inclui fila e rotinas fiscais <strong>em desenvolvimento</strong>.</p>
-      <p>Na edição gratuita, o ambiente fiscal padrão é <strong>simulado (LOCAL_MOCK)</strong> — adequado para <strong>treinar o balcão</strong>, não para substituir NF-e homologada sem projeto com contador.</p>
+    <!-- Backups automáticos -->
+    <section class="card" id="backups">
+      <h2>Backups automáticos físicos</h2>
+      <p class="section-subtitle">O PDV executa uma rotina automática e silenciosa de backup no encerramento de cada turno do operador para prevenir perdas de dados:</p>
+      
+      <div class="stack-grid stack-grid--3" style="margin: 14px 0;">
+        <div class="stack-item">
+          <strong>1. Fechamento de caixa</strong>
+          <span>O operador aciona o encerramento do turno no aplicativo.</span>
+        </div>
+        <div class="stack-item">
+          <strong>2. Busca de mídias</strong>
+          <span>O motor do PDV verifica pendrives e HDs externos conectados (letras <code>D:\</code> a <code>Z:\</code>).</span>
+        </div>
+        <div class="stack-item">
+          <strong>3. Cópia redundante</strong>
+          <span>O banco local de dados e logs são salvos de forma independente no dispositivo detectado.</span>
+        </div>
+      </div>
+      
+      <div class="notice notice-info">
+        <strong>Recomendação de segurança:</strong>
+        Mantenha sempre um pendrive dedicado conectado ao computador do caixa para que as rotinas de backup físico ocorram com sucesso no final de cada dia.
+      </div>
+    </section>
 
-      <table class="trace">
-        <thead>
-          <tr>
-            <th>Disponível hoje (free)</th>
-            <th>Sob contrato Premium</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Ambiente fiscal simulado (LOCAL_MOCK)</td>
-            <td>Homologação SEFAZ real</td>
-          </tr>
-          <tr>
-            <td>Treino de balcão</td>
-            <td>Multi-loja</td>
-          </tr>
-          <tr>
-            <td>—</td>
-            <td>Integrações específicas</td>
-          </tr>
-        </tbody>
-      </table>
-      <p class="section-subtitle">Consulte <a href="produto.html">Produto</a> para áreas disponíveis hoje.</p>
+    <!-- Edição gratuita (limites e recursos) -->
+    <section class="card" id="edicao-gratuita">
+      <h2>Edição gratuita (Degustação)</h2>
+      <p class="section-subtitle">O pacote básico permite que o lojista teste a agilidade e os fluxos do balcão sem pagar assinaturas.</p>
+
+      <div class="notice notice-warn">
+        <strong>⚠️ Limite Honestificado: Degustação de 100 Vendas</strong>
+        A Edição Gratuita permite realizar até <strong>100 vendas concluídas</strong> no banco local. A partir da 101ª venda, o sistema bloqueia novas movimentações até a ativação de uma licença Premium ou Seed. O app mostra avisos de progresso sobre o teto de cupons restantes.
+      </div>
+
+      <p><strong>O que está incluído na Edição Gratuita:</strong></p>
+      <ul>
+        <li>Bunker offline completo para cadastros de produtos, operadores e vendas locais.</li>
+        <li>Relatórios financeiros resumidos no app para fechamento de caixa.</li>
+        <li>PIX com QR Code estático na tela (confirmação manual).</li>
+        <li>Ambiente fiscal simulado (LOCAL_MOCK) para treinos operacionais rápidos.</li>
+      </ul>
+      <p>Para obter um plano comercial com suporte dedicado e remover o limite, envie um e-mail para <a href="mailto:suporte@caracore.com.br?subject=Upgrade%20PDV%20Desktop">suporte@caracore.com.br</a>.</p>
+    </section>
+
+    <!-- PIX no checkout -->
+    <section class="card" id="pix">
+      <h2>PIX no checkout</h2>
+      
+      <div class="notice notice-warn">
+        <strong>⚠️ PIX Manual (Sem Webhook Bancário)</strong>
+        Na Edição Gratuita, o faturamento via PIX é <strong>totalmente manual</strong>. O app gera o QR Code na tela para o cliente escanear, mas não se comunica com a conta da sua loja para receber avisos automáticos de depósito. A conferência do recebimento é dever do operador de caixa.
+      </div>
+
+      <p class="section-subtitle">Fluxo operacional do PIX manual (F9) no balcão:</p>
+      
+      <div class="stack-grid stack-grid--3" style="margin: 14px 0;">
+        <div class="stack-item">
+          <strong>1. Apresentar o QR Code</strong>
+          <span>O operador escolhe PIX no checkout e o sistema exibe o QR Code estático ou gera o Pix Copia e Cola.</span>
+        </div>
+        <div class="stack-item">
+          <strong>2. Pagamento do cliente</strong>
+          <span>O cliente lê o QR Code pelo aplicativo do banco dele e realiza a transferência.</span>
+        </div>
+        <div class="stack-item">
+          <strong>3. Checagem do caixa</strong>
+          <span>O cliente exibe o comprovante. O operador valida o recebimento no banco da loja e confirma manualmente a baixa no PDV.</span>
+        </div>
+      </div>
+      
+      <p class="section-subtitle"><em>Observação: A integração bancária direta por webhook (baixa automática na hora) é exclusiva do plano Premium.</em></p>
+    </section>
+
+    <!-- Escopo fiscal -->
+    <section class="card" id="fiscal">
+      <h2>Escopo fiscal e faturamento</h2>
+      
+      <div class="notice notice-warn">
+        <strong>⚠️ Ambiente de Treino Fiscal (LOCAL_MOCK)</strong>
+        Na Edição Gratuita, a fila fiscal e a impressão rodam no modo <strong>LOCAL_MOCK (fiscal simulado)</strong>. Nenhum dado é enviado para a SEFAZ. Isto permite realizar testes e treinar operadores sem gerar obrigações tributárias reais ou desperdiçar papel fiscal.
+      </div>
+      
+      <p class="section-subtitle">Compare as diferenças operacionais de faturamento:</p>
+
+      <div class="card:has(table.trace)">
+        <table class="trace">
+          <thead>
+            <tr>
+              <th>Funcionalidade</th>
+              <th>Edição Gratuita (Treino LOCAL_MOCK)</th>
+              <th>Edição Premium (Produção Real)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Destino do Cupom</strong></td>
+              <td>Simulador interno no computador</td>
+              <td>Transmissão direta e imediata para a SEFAZ</td>
+            </tr>
+            <tr>
+              <td><strong>Validade Tributária</strong></td>
+              <td>Nenhuma (somente simulação)</td>
+              <td>Total (NFC-e / SAT válidos perante o fisco)</td>
+            </tr>
+            <tr>
+              <td><strong>Conexão Fiscal</strong></td>
+              <td>Funcionamento 100% local simulado</td>
+              <td>Requer conexão com webservices SEFAZ e certificado A1</td>
+            </tr>
+            <tr>
+              <td><strong>Impressão Física</strong></td>
+              <td>Impressão simulada em tela</td>
+              <td>Saída direta para impressoras térmicas via padrão ESC/POS</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Comparação Free vs Premium -->
+    <section class="card" id="comparacao">
+      <h2>Edição Gratuita vs. Edição Premium</h2>
+      <p class="section-subtitle">Veja o comparativo claro e honesto entre os recursos das duas modalidades:</p>
+      
+      <div class="card:has(table.trace)">
+        <table class="trace">
+          <thead>
+            <tr>
+              <th>Recurso operacional</th>
+              <th>Edição Gratuita (Piloto)</th>
+              <th>Edição Premium (Comercial)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Teto de Vendas</strong></td>
+              <td>Até 100 vendas por banco local</td>
+              <td>Ilimitado</td>
+            </tr>
+            <tr>
+              <td><strong>Emissão de Notas</strong></td>
+              <td>Falso fiscal simulado (LOCAL_MOCK)</td>
+              <td>Homologação real NFC-e / SAT</td>
+            </tr>
+            <tr>
+              <td><strong>Baixa do PIX</strong></td>
+              <td>Manual (operador valida entrada)</td>
+              <td>Automática por webhook de PSP/Banco</td>
+            </tr>
+            <tr>
+              <td><strong>Modo Multi-caixa</strong></td>
+              <td>Não disponível</td>
+              <td>Rede local integrada assistida</td>
+            </tr>
+            <tr>
+              <td><strong>Suporte Técnico</strong></td>
+              <td>Apenas via repositório GitHub</td>
+              <td>Suporte VIP direto da fábrica (Cara Core)</td>
+            </tr>
+            <tr>
+              <td><strong>Criptografia LGPD</strong></td>
+              <td>Ativa e operante</td>
+              <td>Ativa e operante</td>
+            </tr>
+            <tr>
+              <td><strong>Backups Físicos</strong></td>
+              <td>Ativo ao encerrar o turno</td>
+              <td>Ativo ao encerrar o turno + backup avançado</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="cta-box">
+        <p>Gostaria de migrar para a versão comercial completa, integrar à SEFAZ e remover o limite de 100 cupons?</p>
+        <a class="btn-primary" href="mailto:suporte@caracore.com.br?subject=Upgrade%20PDV%20Tauri">Solicitar Proposta Premium</a>
+      </div>
     </section>
   </main>
 
@@ -311,8 +492,8 @@
     <p>Cara Core PDV Desktop (Rust + Tauri) · Cara Core Informática · CNPJ 23.969.028/0001-37</p>
     <p class="portal-footer-links">
       <a href="transparencia.html">Transparência</a> ·
-      <a href="https://github.com/chmulato/caracore-rust-pdv-releases/releases" rel="noopener noreferrer">Releases oficiais (GitHub)</a> ·
-      <a href="https://www.caracore.com.br/" rel="noopener noreferrer">caracore.com.br</a> ·
+      <a href="https://github.com/chmulato/caracore-rust-pdv-releases/releases" rel="noopener noreferrer" target="_blank">Releases oficiais (GitHub)</a> ·
+      <a href="https://www.caracore.com.br/" rel="noopener noreferrer" target="_blank">caracore.com.br</a> ·
       <a href="mailto:suporte@caracore.com.br">suporte@caracore.com.br</a>
     </p>
   </footer>

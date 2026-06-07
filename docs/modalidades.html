@@ -212,7 +212,7 @@
         <details>
           <summary>Arquitetura e sincronização</summary>
           <div class="ti-body">
-            <p>Modo local: <code>standalone</code> + SQLite. Modo rede: papéis <code>caixa</code> e <code>servidor_loja</code>, fila de sync e PostgreSQL na loja — validado em laboratório.</p>
+            <p>Modo local: <code>standalone</code> + SQLite WAL (Write-Ahead Logging). Modo rede: papéis <code>caixa</code> e <code>servidor_loja</code>, fila de sync local assíncrona baseada em UUIDs únicos, suporte híbrido a SQLite nos caixas e PostgreSQL na central da loja — validado em laboratório.</p>
             <p>Diagrama do ecossistema (quatro camadas): <a href="rust-tauri.html#ecosistema">Bunker Digital →</a></p>
             <p>Roadmap: nuvem corporativa multi-loja é evolução planejada, não requisito da rede local.</p>
           </div>

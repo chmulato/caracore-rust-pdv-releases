@@ -181,19 +181,31 @@
         <tbody>
           <tr>
             <td><strong>Onde ficam os dados</strong></td>
-            <td>Produtos, vendas e caixa ficam no computador da loja, na pasta de dados do usuário Windows (perfil do operador).</td>
+            <td>Produtos, vendas e caixa ficam no computador da loja, na pasta de dados do usuário Windows (perfil do operador). Dados de clientes (como CPF) são tratados com soberania local estrita, sem telemetria em nuvem.</td>
           </tr>
           <tr>
             <td><strong>Envio para Cara Core</strong></td>
-            <td>O fluxo normal de operação local <strong>não envia</strong> o faturamento diário para servidores CaraCore.</td>
+            <td>O fluxo normal de operação local <strong>não envia</strong> o faturamento diário ou dados confidenciais para servidores CaraCore.</td>
           </tr>
           <tr>
             <td><strong>Fiscal eletrônico</strong></td>
-            <td>Quando configurada, comunica-se apenas com serviços exigidos pela legislação (SEFAZ, conforme credenciais da loja).</td>
+            <td>Quando configurado, comunica-se apenas com os serviços exigidos pela legislação tributária (SEFAZ), usando as credenciais diretas da loja.</td>
           </tr>
           <tr>
-            <td><strong>Backups</strong></td>
-            <td>Responsabilidade da loja; o sistema oferece ferramenta <strong>local</strong> de cópia e restauração.</td>
+            <td><strong>Custódia dos dados (EULA)</strong></td>
+            <td><strong>Responsabilidade compartilhada:</strong> o cliente/lojista detém a custódia legal e física exclusiva de todos os seus dados. O software é fornecido <em>as is</em>, conforme termo aceito digitalmente no primeiro setup.</td>
+          </tr>
+          <tr>
+            <td><strong>Backups automáticos</strong></td>
+            <td>Executados no fechamento de cada turno de caixa. O motor local detecta automaticamente mídias removíveis e pendrives conectados (letras de <code>D:\</code> a <code>Z:\</code> no Windows) para salvar cópias físicas do banco de dados e logs de forma automatizada e silenciosa.</td>
+          </tr>
+          <tr>
+            <td><strong>Logs de auditoria local</strong></td>
+            <td>Registra internamente no banco de dados local as ações críticas (exclusão de vendas, alteração de configurações de banco/sincronização, exportação de backups) vinculando o operador ativo, IP de origem e turno correspondente, blindando o lojista contra fraudes internas.</td>
+          </tr>
+          <tr>
+            <td><strong>Criptografia em repouso</strong></td>
+            <td>A proteção física do arquivo do banco SQLite local via criptografia em repouso (SQLCipher) está planejada para as próximas releases (roadmap futuro), aumentando a segurança física dos dados guardados no hardware local.</td>
           </tr>
         </tbody>
       </table>

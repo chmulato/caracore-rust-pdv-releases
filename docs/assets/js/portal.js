@@ -62,14 +62,16 @@
     var activeHref = PAGE_TO_NAV[file];
     if (!activeHref) return;
 
+    var activeAssigned = false;
     document.querySelectorAll(".portal-nav a[href]").forEach(function (link) {
       var key = navLinkKey(link.getAttribute("href") || "");
       if (!key) {
         link.removeAttribute("aria-current");
         return;
       }
-      if (key === activeHref) {
+      if (!activeAssigned && key === activeHref) {
         link.setAttribute("aria-current", "page");
+        activeAssigned = true;
       } else {
         link.removeAttribute("aria-current");
       }

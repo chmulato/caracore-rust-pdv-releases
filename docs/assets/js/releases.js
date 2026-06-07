@@ -13,7 +13,7 @@
     for (var i = 0; i < scripts.length; i++) {
       var src = scripts[i].getAttribute("src") || "";
       if (/releases\.js/i.test(src)) {
-        return src.replace(/releases\.js.*$/i, "data/release-latest.json");
+        return src.replace(/releases\.js.*$/i, "../data/release-latest.json");
       }
     }
     return "assets/data/release-latest.json";

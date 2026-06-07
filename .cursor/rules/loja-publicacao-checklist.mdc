@@ -22,7 +22,7 @@ python tools/package_pilot_zip.py
 python tools/publish_release_delivery.py --include-zip --skip-smoke
 ```
 
-Destino: https://github.com/chmulato/caracore-rust-pdv-releases/releases
+Destino: https://github.com/chmulato/caracore-pdv-releases/releases
 
 Artefatos: NSIS `*-setup.exe`, MSI `*_pt-BR.msi`, ZIP piloto, `SHA256SUMS.txt`, `RELEASE_MANIFEST.json`.
 
@@ -43,3 +43,10 @@ git push origin master
 
 - https://rust-pdv.caracore.com.br/transparencia.html#edicao-gratuita
 - https://rust-pdv.caracore.com.br/download.html
+
+## 5. Plano de atualização contínua (2026-06-07)
+
+- [x] Script local de sync: `tools/sync_release_manifest.py`
+- [x] Workflow agendado/manual: `.github/workflows/sync-release-manifest.yml`
+- [x] Download hero prioriza asset real da release (não depende de NSIS)
+- [ ] Rodar publicação e validar em produção após próximo corte de release

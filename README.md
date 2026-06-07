@@ -1,6 +1,6 @@
 # Cara Core PDV Desktop (Rust + Tauri) — Loja e Releases
 
-Canal público de apresentação e distribuição da **iniciativa Rust + Tauri 2** do CaraCore PDV (Windows na release [v0.1.2](https://github.com/chmulato/caracore-rust-pdv-releases/releases/tag/v0.1.2)). Coexiste com o PDV Desktop Java (canal v3.1.x) em [pdv.caracore.com.br](https://pdv.caracore.com.br/).
+Canal público de apresentação e distribuição da **iniciativa Rust + Tauri 2** do CaraCore PDV (loja em `rust-pdv.caracore.com.br` com entrega de binários via [releases oficiais](https://github.com/chmulato/caracore-pdv-releases/releases)). Coexiste com o PDV Desktop Java (canal v3.1.x) em [pdv.caracore.com.br](https://pdv.caracore.com.br/).
 
 A loja comunica o produto em **linguagem comercial para leigos**: PDV **local** (um PC na loja) e PDV **na rede** (vários caixas + servidor da loja). Documentação técnica, evidências e gates ficam na oficina (`caracore-rust-pdv`).
 
@@ -16,7 +16,7 @@ A loja comunica o produto em **linguagem comercial para leigos**: PDV **local** 
 | Status | Piloto Windows; saúde funcional OK em 2026-06-06; novo corte bloqueado por regressão semanal relativa de performance |
 | Idioma dos instaladores | Português do Brasil (pt-BR) |
 | Stack da oficina | Rust + Tauri 2 + React + SQLite local / PostgreSQL na rede |
-| Release | https://github.com/chmulato/caracore-rust-pdv-releases/releases/latest |
+| Release | https://github.com/chmulato/caracore-pdv-releases/releases/latest |
 | Loja | https://rust-pdv.caracore.com.br/ |
 
 ### Destaques (v0.1.2 — loja)
@@ -40,7 +40,7 @@ Lista completa: [`CHANGELOG.md`](CHANGELOG.md).
 | ----- | ----- |
 | Loja oficial | https://rust-pdv.caracore.com.br/ |
 | Modalidades (local / rede) | https://rust-pdv.caracore.com.br/modalidades.html |
-| Releases / download | https://github.com/chmulato/caracore-rust-pdv-releases/releases |
+| Releases / download | https://github.com/chmulato/caracore-pdv-releases/releases |
 | Oficina (código) | https://github.com/chmulato/caracore-rust-pdv |
 | Linha Java (alternativa) | https://pdv.caracore.com.br/ |
 
@@ -55,13 +55,22 @@ Lista completa: [`CHANGELOG.md`](CHANGELOG.md).
 | `docs/` | **Somente HTML** comercial para leigos + `assets/` (CSS, JS, imagens) — GitHub Pages |
 | `docs/transparencia.html` | Limites honestos (free 100 vendas, PIX, fiscal) |
 | `docs/modalidades.html` | PDV local vs PDV na rede |
-| `docs/download.html` | Download via API GitHub |
+| `docs/download.html` | Download via manifesto estático atualizado por automação |
 | `.cursor/rules/` | Checklists e continuidade (**não** publicados na vitrine) |
 | `.github/workflows/` | Validação da loja |
 
 Documentação técnica e matrizes de engenharia ficam na **oficina** (`caracore-rust-pdv`), não em `docs/` desta loja.
 
 GitHub Pages: branch **master**, pasta **/docs**, arquivo **docs/.nojekyll**.
+
+---
+
+## Plano de atualização de distribuição (iniciado em 2026-06-07)
+
+1. **Fonte única de versão:** release mais recente em `chmulato/caracore-pdv-releases`.
+2. **Espelhamento para a loja:** atualizar `docs/assets/data/release-latest.json` automaticamente.
+3. **Renderização na vitrine:** `download.html` e CTAs leem esse manifesto e apontam para o asset principal disponível.
+4. **Execução contínua:** workflow `sync-release-manifest.yml` (manual + agendado) mantém a loja sincronizada.
 
 ---
 
@@ -91,3 +100,4 @@ GitHub Pages: branch **master**, pasta **/docs**, arquivo **docs/.nojekyll**.
 ---
 
 **Cara Core Informática** — CNPJ 23.969.028/0001-37 · [LICENSE](LICENSE)
+

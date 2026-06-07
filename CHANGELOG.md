@@ -30,7 +30,7 @@ Formato alinhado às demais lojas `*-releases` do ecossistema CaraCore.
 
 ## v0.1.2 — 2026-06-05 (republicação binários · oficina jun/2026)
 
-**Binários Windows republicados:** [`v0.1.2`](https://github.com/chmulato/caracore-rust-pdv-releases/releases/tag/v0.1.2) — NSIS, MSI pt-BR, ZIP piloto (build 05/06/2026, gate release APROVADO).
+**Binários Windows republicados:** [`v0.1.2`](https://github.com/chmulato/caracore-pdv-releases/releases/tag/v0.1.2) — NSIS, MSI pt-BR, ZIP piloto (build 05/06/2026, gate release APROVADO).
 
 ### Novidades desta build (oficina)
 
@@ -50,7 +50,7 @@ Checksums atualizados em `sha256sums.txt` na release GitHub e manifesto vitrine 
 
 ## v0.1.2 — 2026-06-03 (produto + vitrine)
 
-**Binários Windows publicados:** [`v0.1.2`](https://github.com/chmulato/caracore-rust-pdv-releases/releases/tag/v0.1.2) — NSIS, MSI pt-BR, ZIP piloto.
+**Binários Windows publicados:** [`v0.1.2`](https://github.com/chmulato/caracore-pdv-releases/releases/tag/v0.1.2) — NSIS, MSI pt-BR, ZIP piloto.
 
 ### Vitrine técnica (jun/2026)
 
@@ -64,7 +64,7 @@ Checksums atualizados em `sha256sums.txt` na release GitHub e manifesto vitrine 
 
 ### Vitrine (PDV local e PDV na rede · UX comercial)
 
-**Versão comercial da loja:** narrativa local + rede + transparência (free 100 vendas, PIX manual). **Binários:** [`v0.1.2`](https://github.com/chmulato/caracore-rust-pdv-releases/releases/tag/v0.1.2) (2026-06-03).
+**Versão comercial da loja:** narrativa local + rede + transparência (free 100 vendas, PIX manual). **Binários:** [`v0.1.2`](https://github.com/chmulato/caracore-pdv-releases/releases/tag/v0.1.2) (2026-06-03).
 
 ### Transparência com o cliente (alinhamento produto)
 
@@ -141,3 +141,4 @@ Loja: https://rust-pdv.caracore.com.br/
 
 - Primeira release pública piloto Windows (Tauri 2 + Rust).
 - Instaladores em **Português do Brasil**: NSIS, MSI, ZIP portátil.
+

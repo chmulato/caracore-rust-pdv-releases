@@ -61,7 +61,7 @@ Conteúdo `docs/`: **apenas HTML** comercial (+ assets). Raiz: `README.md` + `CH
 
 ## Download oficial
 
-- https://github.com/chmulato/caracore-rust-pdv-releases/releases
+- https://github.com/chmulato/caracore-pdv-releases/releases
 - Nav **Download** → GitHub (nova aba) · **Formatos** → `download.html`
 
 ## Onde paramos (sessão 2026-06-03)
@@ -82,3 +82,4 @@ Conteúdo `docs/`: **apenas HTML** comercial (+ assets). Raiz: `README.md` + `CH
 - Links públicos: **rust-pdv.caracore.com.br** + **GitHub Releases** para baixar.
 - **Não commitar** salvo pedido explícito (regra alinhada à oficina).
 - Ao publicar release na oficina: atualizar copy, `CHANGELOG.md`, screenshots se mudarem telas.
+

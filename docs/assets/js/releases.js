@@ -2,7 +2,7 @@
   "use strict";
 
   var OWNER = "chmulato";
-  var REPO = "caracore-rust-pdv-releases";
+  var REPO = "caracore-pdv-releases";
   var RELEASES_PAGE = "https://github.com/" + OWNER + "/" + REPO + "/releases";
   var RELEASES_LATEST = RELEASES_PAGE + "/latest";
   var RELEASES_TAG_V012 = RELEASES_PAGE + "/tag/v0.1.2";
@@ -63,7 +63,7 @@
     return pickAsset(assets, function (a) { return /\.dmg$/i.test(a.name); });
   }
 
-  /** Manifesto estático na vitrine (sem api.github.com). Atualizar em assets/data/release-latest.json ao publicar release. */
+  /** Manifesto estático na vitrine (sem api.github.com). Atualizar via tools/sync_release_manifest.py. */
   function fetchLatestRelease() {
     return fetch(manifestUrl(), { cache: "no-cache" }).then(function (res) {
       if (!res.ok) throw new Error("no_release");

@@ -66,9 +66,10 @@
         if (grid) grid.hidden = false;
         if (fallback) fallback.hidden = true;
         if (hint) hint.textContent = "Confirme a integridade do arquivo antes de executar.";
-        if (heroBtn && nsis) {
-          heroBtn.href = nsis.browser_download_url;
-          heroBtn.textContent = "Baixar " + nsis.name;
+        var heroAsset = nsis || msi || zip || deb || appimage || dmg;
+        if (heroBtn && heroAsset) {
+          heroBtn.href = heroAsset.browser_download_url;
+          heroBtn.textContent = "Baixar " + heroAsset.name;
         } else if (heroBtn && data.html_url) {
           heroBtn.href = data.html_url;
         }

@@ -196,7 +196,7 @@
   function wireOfficialDownloads() {
     var root = typeof globalThis !== "undefined" ? globalThis : typeof window !== "undefined" ? window : {};
     var R = root.CaraCoreRustReleases;
-    var url = (R && R.RELEASES_LATEST) || "https://github.com/chmulato/caracore-rust-pdv-releases/releases/latest";
+    var url = (R && R.RELEASES_LATEST) || "https://github.com/chmulato/caracore-pdv-releases/releases/latest";
     document.querySelectorAll("[data-official-download]").forEach(function (link) {
       link.href = url;
       link.setAttribute("rel", "noopener noreferrer");

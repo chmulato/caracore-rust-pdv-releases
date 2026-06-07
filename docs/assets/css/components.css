@@ -253,11 +253,58 @@
   gap: 12px;
   margin-top: 1rem;
 }
+.download-quick-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.download-quick-item {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+  padding: 14px;
+  background: #fff;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
+}
+.download-quick-item strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: var(--brand);
+}
+.download-quick-item span {
+  display: block;
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.45;
+}
+.download-quick-item--primary {
+  border-color: #9dc6ef;
+  background: linear-gradient(135deg, #eef6ff 0%, #ffffff 100%);
+}
+.download-quick-item:hover {
+  border-color: var(--brand-2);
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-1px);
+}
 .download-option {
   border: 1px solid var(--line);
   border-radius: var(--radius-card);
   padding: 16px;
   background: #fff;
+}
+.download-option-badge {
+  display: inline-block;
+  margin-bottom: 8px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  border: 1px solid #c5daf0;
+  background: #eef4fb;
+  color: var(--brand);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 .download-option h3 { margin: 0 0 6px; font-size: 15px; }
 .download-option p { margin: 0 0 12px; font-size: 13px; color: var(--muted); }
@@ -359,6 +406,7 @@
   }
   .trust-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .download-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .download-quick-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .pillars-grid,
   .two-col { grid-template-columns: 1fr; }
 }
@@ -367,6 +415,7 @@
 @media (min-width: 1024px) {
   .trust-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
   .download-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .download-quick-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 /* Mobile ≤639 */
@@ -380,6 +429,7 @@
   .demo-grid,
   .trust-grid,
   .download-grid,
+  .download-quick-grid,
   .pillars-grid,
   .two-col { grid-template-columns: 1fr; }
 

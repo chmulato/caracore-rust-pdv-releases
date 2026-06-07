@@ -20,6 +20,10 @@
   var btnDmg = document.getElementById("btn-dmg");
   var heroBtn = document.getElementById("download-hero-btn");
   var heroHash = document.getElementById("download-hero-hash");
+  var quickRecommended = document.getElementById("quick-recommended");
+  var quickMsi = document.getElementById("quick-msi");
+  var quickPortable = document.getElementById("quick-portable");
+  var quickReleases = document.getElementById("quick-releases");
 
   function wireButton(el, asset, labelPrefix) {
     if (!el || !asset) {
@@ -30,6 +34,17 @@
     el.textContent = labelPrefix + asset.name;
     el.hidden = false;
     return true;
+  }
+
+  function wireQuickLink(el, asset, fallbackUrl) {
+    if (!el) return;
+    if (asset && asset.browser_download_url) {
+      el.href = asset.browser_download_url;
+      return;
+    }
+    if (fallbackUrl) {
+      el.href = fallbackUrl;
+    }
   }
 
   R.fetchLatestRelease()
@@ -43,6 +58,9 @@
       }
       if (releasesLink && data.html_url) {
         releasesLink.href = data.html_url;
+      }
+      if (quickReleases && data.html_url) {
+        quickReleases.href = data.html_url;
       }
 
       var assets = data.assets || [];
@@ -67,6 +85,9 @@
         if (fallback) fallback.hidden = true;
         if (hint) hint.textContent = "Confirme a integridade do arquivo antes de executar.";
         var heroAsset = nsis || msi || zip || deb || appimage || dmg;
+        wireQuickLink(quickRecommended, heroAsset, data.html_url);
+        wireQuickLink(quickMsi, msi, data.html_url);
+        wireQuickLink(quickPortable, zip || nsis, data.html_url);
         if (heroBtn && heroAsset) {
           heroBtn.href = heroAsset.browser_download_url;
           heroBtn.textContent = "Baixar " + heroAsset.name;
@@ -75,6 +96,9 @@
         }
       } else if (hint) {
         hint.textContent = "Release sem anexos reconhecidos. Abra a página do GitHub.";
+        wireQuickLink(quickRecommended, null, data.html_url);
+        wireQuickLink(quickMsi, null, data.html_url);
+        wireQuickLink(quickPortable, null, data.html_url);
       }
 
       if (heroHash && sums) {

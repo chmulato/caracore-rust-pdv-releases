@@ -146,9 +146,9 @@ body {
   border-color: var(--line);
 }
 .portal-nav a[aria-current="page"] {
-  background: var(--brand);
+  background: var(--nav-active);
   color: #fff;
-  border-color: var(--brand);
+  border-color: var(--nav-active);
 }
 /* Defesa visual: se houver atributo duplicado por cache antigo, apenas o primeiro fica ativo. */
 .portal-nav a[aria-current="page"] ~ a[aria-current="page"] {

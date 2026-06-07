@@ -12,9 +12,11 @@
 const fs = require("fs");
 const path = require("path");
 
+const TOKENS_FILE = path.join(__dirname, "..", "docs", "assets", "css", "tokens.css");
 const CSS_FILE = path.join(__dirname, "..", "docs", "assets", "css", "layout.css");
 const JS_FILE  = path.join(__dirname, "..", "docs", "assets", "js", "portal.js");
 
+const tokensSource = fs.readFileSync(TOKENS_FILE, "utf8");
 const cssSource = fs.readFileSync(CSS_FILE, "utf8");
 const jsSource  = fs.readFileSync(JS_FILE,  "utf8");
 
@@ -81,11 +83,24 @@ beforeEach(() => {
 // 1. TESTES DE CSS — regras de destaque azul
 // ────────────────────────────────────────────────────────────────────────────
 
+describe("tokens.css — token --nav-active (azul vibrante para seleção)", () => {
+  test("--nav-active é definido em tokens.css", () => {
+    expect(tokensSource).toMatch(/--nav-active\s*:/);
+  });
+
+  test("--nav-active usa #1a6bb5 (azul vibrante, não o navy escuro --brand)", () => {
+    expect(tokensSource).toMatch(/--nav-active\s*:\s*#1a6bb5/);
+  });
+
+  test("--brand permanece #0b3a66 (navy escuro, para textos e bordas)", () => {
+    expect(tokensSource).toMatch(/--brand\s*:\s*#0b3a66/);
+  });
+});
+
 describe("CSS — .portal-nav a[aria-current=\"page\"] (destaque azul)", () => {
-  test("define background como var(--brand)", () => {
-    // A cor azul vem do token --brand (#0b3a66)
+  test("usa var(--nav-active) como background (não --brand)", () => {
     expect(cssSource).toMatch(
-      /\.portal-nav\s+a\[aria-current="page"\]\s*\{[^}]*background\s*:\s*var\(--brand\)/
+      /\.portal-nav\s+a\[aria-current="page"\]\s*\{[^}]*background\s*:\s*var\(--nav-active\)/
     );
   });
 
@@ -95,10 +110,19 @@ describe("CSS — .portal-nav a[aria-current=\"page\"] (destaque azul)", () => {
     );
   });
 
-  test("define border-color como var(--brand)", () => {
+  test("usa var(--nav-active) como border-color", () => {
     expect(cssSource).toMatch(
-      /\.portal-nav\s+a\[aria-current="page"\]\s*\{[^}]*border-color\s*:\s*var\(--brand\)/
+      /\.portal-nav\s+a\[aria-current="page"\]\s*\{[^}]*border-color\s*:\s*var\(--nav-active\)/
     );
+  });
+
+  test("NÃO usa --brand como background do item ativo (evita azul escuro/preto)", () => {
+    // Garante que a regra de seleção ativa não usa o navy escuro diretamente
+    const activeRule = cssSource.match(
+      /\.portal-nav\s+a\[aria-current="page"\]\s*\{([^}]*)\}/
+    );
+    expect(activeRule).not.toBeNull();
+    expect(activeRule[1]).not.toMatch(/background\s*:\s*var\(--brand\)/);
   });
 
   test("defesa de duplicata: segundo [aria-current] tem background: transparent", () => {

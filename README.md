@@ -11,9 +11,9 @@ A loja comunica o produto em **linguagem comercial para leigos**: PDV **local** 
 | Campo | Valor |
 | ----- | ----- |
 | Versão comercial (vitrine) | `v0.1.2` — narrativa local + rede (jun/2026) |
-| Binários publicados | **`v0.1.2`** — Windows (NSIS, MSI pt-BR, ZIP piloto) · **rebuild 2026-06-05** |
+| Binários publicados | **`v0.1.2`** — Windows (NSIS, MSI pt-BR, ZIP piloto) · **último rebuild aprovado 2026-06-05** |
 | Manifesto vitrine (offline) | `docs/assets/data/release-latest.json` — sem API GitHub no browser |
-| Status | Piloto Windows; rede da loja em implantação assistida |
+| Status | Piloto Windows; saúde funcional OK em 2026-06-06; novo corte bloqueado por regressão semanal relativa de performance |
 | Idioma dos instaladores | Português do Brasil (pt-BR) |
 | Stack da oficina | Rust + Tauri 2 + React + SQLite local / PostgreSQL na rede |
 | Release | https://github.com/chmulato/caracore-rust-pdv-releases/releases/latest |
@@ -24,6 +24,7 @@ A loja comunica o produto em **linguagem comercial para leigos**: PDV **local** 
 - Página **[Local e rede](https://rust-pdv.caracore.com.br/modalidades.html)** — PDV na sua máquina vs PDV na rede da loja.
 - Planos e primeiros passos alinhados às duas modalidades.
 - Mesmo produto: comece local; evolua para vários caixas com suporte Cara Core.
+- Validação de saúde 2026-06-06: backend, frontend, build release e smokes OK; performance absoluta OK, com bloqueio apenas por comparação semanal.
 
 ### Destaques (v0.1.1 — produto)
 

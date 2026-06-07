@@ -2,18 +2,26 @@
 
 Formato alinhado às demais lojas `*-releases` do ecossistema CaraCore.
 
-## v0.1.2 — 2026-06-07 (Gestão de Backup & Criptografia · oficina jun/2026)
+## v0.1.2 — 2026-06-06 (validação de saúde · oficina jun/2026)
 
-**Binários Windows atualizados:** [`v0.1.2`](https://github.com/chmulato/caracore-rust-pdv-releases/releases/tag/v0.1.2) — NSIS, MSI pt-BR, ZIP piloto (build 07/06/2026, gate release APROVADO).
+**Sem novo binário publicado nesta validação.** Permanece como release pública o rebuild Windows de **2026-06-05**. A validação de 06/06 confirmou saúde funcional, mas bloqueou novo corte por regressão semanal relativa de performance.
 
-### Novidades desta build (oficina)
+### Resultado da validação
 
-- **Gestão de Backup Fiscal e Diagnóstico de Mídia Removível (Sprints D, E, F e G):**
+- Backend SQLite: OK.
+- Frontend: 264 testes passed, 2 skipped.
+- Build frontend, build release e smokes release/login/turno/RBAC: OK.
+- Performance absoluta: OK (IPC, SQLite e busca EAN dentro dos limites).
+- Gate completo: **REPROVADO** apenas por regressão semanal relativa (+10% em comparação histórica).
+
+### Itens em validação na oficina
+
+- **Gestão de Backup Fiscal e Diagnóstico de Mídia Removível:**
   - Cópia integrada do banco de dados e logs da aplicação para unidades removíveis externas com auditoria fiscal vinculada.
   - Teste de escrita física periódica em background no Shell para atestar a integridade e saúde do HD externo de backup.
   - Painel de suporte redesenhado com status de conectividade em tempo real, seletor de HD externo detectado e histórico de auditoria SPED/ICMS.
   - Lembrete visual diário no balcão recomendando a realização de backups diários físicos.
-- **EULA e Criptografia de Dados Pessoais (Sprint H):**
+- **EULA e Criptografia de Dados Pessoais:**
   - Integração do contrato EULA com o Modelo de Responsabilidade Compartilhada no primeiro launch/onboarding do PDV, exigindo consentimento explícito.
   - Criptografia determinística em repouso dos dados de clientes no banco de dados SQLite local, resguardando a privacidade e em total conformidade com a LGPD.
   - Suporte transparente à exportação de dados em CSV e anonimização regulatória.

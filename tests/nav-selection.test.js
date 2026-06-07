@@ -29,7 +29,6 @@ const NAV_HTML = `
     <a href="produto.html">Produto</a>
     <a href="demonstracao.html">Demonstração</a>
     <a href="mercado.html">Para sua loja</a>
-    <a href="download.html">Download</a>
     <a href="download.html">Formatos</a>
     <a href="comparacao.html">Comparar</a>
     <a href="transparencia.html">Transparência</a>
@@ -157,14 +156,12 @@ describe("JS portal.js — setActiveNav (item único em destaque)", () => {
     expect(active[0].textContent.trim()).toBe("Formatos");
   });
 
-  test("download.html: o link \"Download\" NÃO deve estar ativo", () => {
+  test("download.html: não existe mais o link \"Download\" duplicado no nav", () => {
     setPathname("/download.html");
     runPortal();
     const downloadLinks = Array.from(document.querySelectorAll(".portal-nav a"))
       .filter((a) => a.textContent.trim() === "Download");
-    downloadLinks.forEach((link) => {
-      expect(link.getAttribute("aria-current")).toBeNull();
-    });
+    expect(downloadLinks).toHaveLength(0);
   });
 
   test("index.html: somente \"Início\" fica em destaque", () => {

@@ -24,9 +24,7 @@
     "wiki/index.html": "wiki/index.html",
     "wiki/projeto-pdv.html": "wiki/index.html"
   };
-  var PAGE_TO_NAV_LABEL = {
-    "download.html": "Formatos"
-  };
+  // Não há mais duplicatas no nav — PAGE_TO_NAV_LABEL removido.
 
   function currentFile() {
     var path = window.location.pathname || "";
@@ -64,24 +62,11 @@
     var file = currentFile();
     var activeHref = PAGE_TO_NAV[file];
     if (!activeHref) return;
-    var preferredLabel = PAGE_TO_NAV_LABEL[file] || "";
 
     var navLinks = Array.prototype.slice.call(document.querySelectorAll(".portal-nav a[href]"));
     navLinks.forEach(function (link) {
       link.removeAttribute("aria-current");
     });
-
-    if (preferredLabel) {
-      var preferred = navLinks.find(function (link) {
-        var key = navLinkKey(link.getAttribute("href") || "");
-        if (key !== activeHref) return false;
-        return (link.textContent || "").trim() === preferredLabel;
-      });
-      if (preferred) {
-        preferred.setAttribute("aria-current", "page");
-        return;
-      }
-    }
 
     var activeAssigned = false;
     navLinks.forEach(function (link) {
@@ -92,8 +77,6 @@
       if (!activeAssigned && key === activeHref) {
         link.setAttribute("aria-current", "page");
         activeAssigned = true;
-      } else {
-        link.removeAttribute("aria-current");
       }
     });
   }

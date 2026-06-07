@@ -12,3 +12,7 @@ Thumbs.db
 *.local
 .env
 .env.*
+
+# Node
+node_modules/
+coverage/

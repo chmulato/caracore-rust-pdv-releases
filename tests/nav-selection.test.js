@@ -36,6 +36,21 @@ const NAV_HTML = `
   </div>
 </nav>`;
 
+const WIKI_NAV_HTML = `
+<nav class="portal-nav" aria-label="Navegação principal">
+  <div class="portal-nav-inner" id="portal-nav-links">
+    <a href="../index.html">Início</a>
+    <a href="../modalidades.html">Local e rede</a>
+    <a href="../produto.html">Produto</a>
+    <a href="../demonstracao.html">Demonstração</a>
+    <a href="../mercado.html">Para sua loja</a>
+    <a href="../download.html">Formatos</a>
+    <a href="../comparacao.html">Comparar</a>
+    <a href="../transparencia.html">Transparência</a>
+    <a href="../wiki/index.html">Wiki</a>
+  </div>
+</nav>`;
+
 // ─── helpers ────────────────────────────────────────────────────────────────
 
 function mockMatchMedia() {
@@ -205,6 +220,10 @@ describe("JS portal.js — setActiveNav (item único em destaque)", () => {
       "/comparacao.html",
       "/transparencia.html",
       "/mercado.html",
+      "/modalidades.html",
+      "/demonstracao.html",
+      "/wiki/index.html",
+      "/wiki/projeto-pdv.html",
     ];
     pages.forEach((pathname) => {
       document.body.innerHTML = NAV_HTML;
@@ -213,5 +232,41 @@ describe("JS portal.js — setActiveNav (item único em destaque)", () => {
       const count = activeLinks().length;
       expect(count).toBeLessThanOrEqual(1);
     });
+  });
+
+  test("wiki/index.html: somente \"Wiki\" fica em destaque", () => {
+    document.body.innerHTML = WIKI_NAV_HTML;
+    document.body.setAttribute("data-nav-root", "../");
+    setPathname("/wiki/index.html");
+    runPortal();
+    const active = activeLinks();
+    expect(active).toHaveLength(1);
+    expect(active[0].textContent.trim()).toBe("Wiki");
+  });
+
+  test("wiki/projeto-pdv.html: somente \"Wiki\" fica em destaque", () => {
+    document.body.innerHTML = WIKI_NAV_HTML;
+    document.body.setAttribute("data-nav-root", "../");
+    setPathname("/wiki/projeto-pdv.html");
+    runPortal();
+    const active = activeLinks();
+    expect(active).toHaveLength(1);
+    expect(active[0].textContent.trim()).toBe("Wiki");
+  });
+
+  test("demonstracao.html: somente \"Demonstração\" fica em destaque", () => {
+    setPathname("/demonstracao.html");
+    runPortal();
+    const active = activeLinks();
+    expect(active).toHaveLength(1);
+    expect(active[0].textContent.trim()).toBe("Demonstração");
+  });
+
+  test("URL raiz (/): somente \"Início\" fica em destaque", () => {
+    setPathname("/");
+    runPortal();
+    const active = activeLinks();
+    expect(active).toHaveLength(1);
+    expect(active[0].textContent.trim()).toBe("Início");
   });
 });

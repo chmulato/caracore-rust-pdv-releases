@@ -42,15 +42,19 @@
   function resolveHref(href) {
     if (!href || href.charAt(0) === "#") return href;
     if (/^https?:/i.test(href)) return href;
-    if (!navRoot || href.indexOf("..") === 0 || href.indexOf("/") !== -1) {
+    if (href.indexOf("..") === 0 || href.indexOf("/") !== -1) {
       return href;
     }
+    if (!navRoot) return href;
     return navRoot + href;
   }
 
   function navLinkKey(href) {
     if (!href || href.charAt(0) === "#" || /^https?:/i.test(href)) return null;
     var path = href.split("#")[0];
+    if (path.indexOf("./") === 0) {
+      path = path.slice(2);
+    }
     if (navRoot && path.indexOf(navRoot) === 0) {
       path = path.slice(navRoot.length);
     }

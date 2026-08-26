@@ -24,9 +24,9 @@ alwaysApply: true
 
 | Camada | Versão | Nota |
 |--------|--------|------|
-| **Vitrine / CHANGELOG** | **v0.1.2** | Copy + UX (jun/2026) — local, push pendente |
-| **Binários GitHub** | **v0.1.1** | NSIS, MSI pt-BR, ZIP, Linux, macOS |
-| Links `releases/latest` | Apontam para tag publicada no GitHub |
+| **Vitrine / CHANGELOG** | **v0.1.2** | Piloto Windows |
+| **Binários GitHub** | **v0.1.2** | Tag em `chmulato/caracore-pdv-releases` |
+| Botões Baixar | Tag **v0.1.2** | **Nunca** `/releases/latest` (latest = Java) |
 
 Não prometer features só da vitrine sem release correspondente.
 
@@ -61,7 +61,7 @@ Conteúdo `docs/`: **apenas HTML** comercial (+ assets). Raiz: `README.md` + `CH
 
 ## Download oficial
 
-- https://github.com/chmulato/caracore-pdv-releases/releases
+- https://github.com/chmulato/caracore-pdv-releases/releases/tag/v0.1.2
 - Nav **Download** → GitHub (nova aba) · **Formatos** → `download.html`
 
 ## Onde paramos (sessão 2026-06-03)

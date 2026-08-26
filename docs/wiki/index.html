@@ -1,131 +1,13 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="description" content="Wiki do Cara Core PDV Desktop (Rust + Tauri 2) — piloto Windows, stack Tauri, instaladores pt-BR e coexistência com PDV Desktop Java." />
-  <title>Wiki — Cara Core PDV Desktop (Rust + Tauri)</title>
-  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="../assets/css/tokens.css?v=20260607c" />
-  <link rel="stylesheet" href="../assets/css/layout.css?v=20260607d" />
-  <link rel="stylesheet" href="../assets/css/components.css?v=20260606" />
+  <meta charset="UTF-8">
+  <title>Wiki movida para wiki.caracore.com.br</title>
+  <meta http-equiv="refresh" content="0; url=https://wiki.caracore.com.br/projeto-pdv-rust.html">
+  <link rel="canonical" href="https://wiki.caracore.com.br/projeto-pdv-rust.html">
+  <script>window.location.replace('https://wiki.caracore.com.br/projeto-pdv-rust.html');</script>
 </head>
-<body data-portal-page="wiki" data-nav-root="../">
-  <header class="portal-header">
-    <div class="portal-header-inner">
-      <a class="portal-brand" href="../index.html">
-        <img src="../assets/img/logo-mark.svg" width="32" height="32" alt="" />
-        <span class="portal-brand-text">CaraCore PDV</span>
-      </a>
-      <div class="portal-header-content">
-        <span class="portal-header-badge">Wiki</span>
-        <h1>Documentação PDV Desktop (Rust + Tauri)</h1>
-        <p class="portal-header-lead">PDV desktop — Rust + Tauri 2. Use <strong>local</strong> (um PC) ou <strong>na rede</strong> (vários caixas). Release v0.1.2.</p>
-        <p class="portal-header-meta"><a href="../index.html">Voltar à loja</a></p>
-      </div>
-    </div>
-  </header>
-
-  <nav class="portal-nav" aria-label="Navegação principal">
-        <button type="button" class="portal-nav-toggle" aria-expanded="false" aria-controls="portal-nav-links" aria-label="Abrir menu de navegação">
-      <span class="portal-nav-toggle__bars" aria-hidden="true"><span></span><span></span><span></span></span>
-      <span class="portal-nav-toggle__label">Menu</span>
-    </button>
-    <div class="portal-nav-inner" id="portal-nav-links">
-      <a href="../index.html">Início</a>
-      <a href="../modalidades.html">Local e rede</a>
-      <a href="../produto.html">Produto</a>
-      <a href="../demonstracao.html">Demonstração</a>
-      <a href="../mercado.html">Para sua loja</a>      <a href="../download.html">Formatos</a>
-      <a href="../comparacao.html">Comparar</a>
-      <a href="../transparencia.html">Transparência</a>
-      <a href="../wiki/index.html">Wiki</a>
-    </div>
-  </nav>
-
-  <main class="portal-main">
-    <div class="notice notice-info">
-      <strong>Linha Java (PDV Desktop maduro)</strong>
-      A oferta madura multi-plataforma está em
-      <a href="https://pdv.caracore.com.br/" rel="noopener noreferrer">pdv.caracore.com.br</a>
-      (Java · JavaFX). <strong>Dois PDVs Desktop</strong> coexistem — escolha conforme plataforma e estágio da operação.
-    </div>
-
-    <section class="card">
-      <h2>Mapa da wiki</h2>
-      <div class="hub-grid">
-        <a class="hub-card" href="../modalidades.html">
-          <h3>Local e rede</h3>
-          <p>PDV na sua máquina ou na rede da loja — explicação para gestores.</p>
-        </a>
-        <a class="hub-card" href="../comparacao.html">
-          <h3>Comparação Rust vs Java</h3>
-          <p>Qual PDV Desktop escolher para sua operação.</p>
-        </a>
-        <a class="hub-card" href="../rust-tauri.html">
-          <h3>Por que Rust + Tauri?</h3>
-          <p>Startup, memória e estabilidade em linguagem simples.</p>
-        </a>
-        <a class="hub-card" href="projeto-pdv.html">
-          <h3>Documentação do produto</h3>
-          <p>O que o produto entrega hoje: operação no Windows, instaladores em português e escopo do piloto.</p>
-        </a>
-        <a class="hub-card" href="../demonstracao.html">
-          <h3>Demonstração</h3>
-          <p>Tour em 4 passos: venda, caixa e gestão.</p>
-        </a>
-        <a class="hub-card" href="../primeiros-passos.html">
-          <h3>Primeiros passos</h3>
-          <p>Instalar NSIS, MSI pt-BR ou ZIP e abrir o PDV.</p>
-        </a>
-        <a class="hub-card" href="../transparencia.html">
-          <h3>Transparência</h3>
-          <p>Status do piloto, download seguro e privacidade dos dados na loja.</p>
-        </a>
-        <a class="hub-card" href="https://wiki.caracore.com.br/projeto-pdv.html" rel="noopener noreferrer">
-          <h3>Wiki institucional</h3>
-          <p>Hub PDV (Java + Rust) em wiki.caracore.com.br.</p>
-        </a>
-      </div>
-    </section>
-
-    <section class="card">
-      <h2>Dois PDVs Desktop</h2>
-      <table class="trace">
-        <thead>
-          <tr><th>Linha</th><th>Status</th><th>Onde</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>PDV Desktop</strong> (Java · JavaFX)</td>
-            <td>Oferta madura · v3.2.2-free</td>
-            <td><a href="https://pdv.caracore.com.br/wiki/index.html" rel="noopener noreferrer">Wiki Java</a></td>
-          </tr>
-          <tr>
-            <td><strong>PDV Desktop</strong> (Rust + Tauri 2)</td>
-            <td>Piloto Windows · v0.1.2</td>
-            <td>Esta wiki</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-  </main>
-
-  <footer class="portal-footer">
-    <p>Cara Core PDV Desktop (Rust + Tauri) · Cara Core Informática · CNPJ 23.969.028/0001-37</p>
-    <p class="portal-footer-links">
-      <a href="../transparencia.html">Transparência</a> ·
-      <a href="https://www.caracore.com.br/portfolio.html#caracore-pdv-rust" rel="noopener noreferrer">Portfólio Cara Core</a> ·
-      <a href="mailto:suporte@caracore.com.br">suporte@caracore.com.br</a>
-    </p>
-  </footer>
-  <script src="../assets/js/releases.js?v=20260607c"></script>
-  <script src="../assets/js/portal.js?v=20260607d"></script>
+<body>
+  <p>A documentação deste produto vive em <a href="https://wiki.caracore.com.br/projeto-pdv-rust.html">https://wiki.caracore.com.br</a>.</p>
 </body>
 </html>
-
-
-
-
-
-

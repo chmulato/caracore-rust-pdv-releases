@@ -1,120 +1,13 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="description" content="Documentação técnica do Cara Core PDV Desktop (Rust + Tauri 2) — stack, artefatos Windows pt-BR e coexistência com PDV Desktop Java." />
-  <title>Documentação do produto — Wiki PDV Rust + Tauri</title>
-  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="../assets/css/tokens.css?v=20260607c" />
-  <link rel="stylesheet" href="../assets/css/layout.css?v=20260607d" />
-  <link rel="stylesheet" href="../assets/css/components.css?v=20260606" />
+  <meta charset="UTF-8">
+  <title>Wiki movida para wiki.caracore.com.br</title>
+  <meta http-equiv="refresh" content="0; url=https://wiki.caracore.com.br/projeto-pdv-rust.html">
+  <link rel="canonical" href="https://wiki.caracore.com.br/projeto-pdv-rust.html">
+  <script>window.location.replace('https://wiki.caracore.com.br/projeto-pdv-rust.html');</script>
 </head>
-<body data-portal-page="wiki-produto" data-nav-root="../">
-  <header class="portal-header">
-    <div class="portal-header-inner">
-      <a class="portal-brand" href="../index.html">
-        <img src="../assets/img/logo-mark.svg" width="32" height="32" alt="" />
-        <span class="portal-brand-text">CaraCore PDV</span>
-      </a>
-      <div class="portal-header-content">
-        <span class="portal-header-badge">Wiki · Produto</span>
-        <h1>Cara Core PDV Desktop (Rust + Tauri 2)</h1>
-        <p class="portal-header-lead">Rust e Tauri no caixa CaraCore — release v0.1.2 (piloto Windows).</p>
-        <p class="portal-header-meta"><a href="index.html">Wiki</a> · <a href="../index.html">Loja</a></p>
-      </div>
-    </div>
-  </header>
-
-  <nav class="portal-nav" aria-label="Navegação principal">
-        <button type="button" class="portal-nav-toggle" aria-expanded="false" aria-controls="portal-nav-links" aria-label="Abrir menu de navegação">
-      <span class="portal-nav-toggle__bars" aria-hidden="true"><span></span><span></span><span></span></span>
-      <span class="portal-nav-toggle__label">Menu</span>
-    </button>
-    <div class="portal-nav-inner" id="portal-nav-links">
-      <a href="../index.html">Início</a>
-      <a href="../modalidades.html">Local e rede</a>
-      <a href="../produto.html">Produto</a>
-      <a href="../demonstracao.html">Demonstração</a>
-      <a href="../mercado.html">Para sua loja</a>      <a href="../download.html">Formatos</a>
-      <a href="../comparacao.html">Comparar</a>
-      <a href="../transparencia.html">Transparência</a>
-      <a href="../wiki/index.html">Wiki</a>
-    </div>
-  </nav>
-
-  <main class="portal-main">
-    <section class="card">
-      <h2>Visão geral</h2>
-      <p>O <strong>Cara Core PDV Desktop (Rust + Tauri 2)</strong> é um PDV <strong>desktop</strong> do mesmo CaraCore PDV: levar ao caixa as qualidades de <strong>Rust</strong> (segurança de memória, performance) e <strong>Tauri 2</strong> (shell enxuto), com interface <strong>React</strong> e dados em <strong>SQLite</strong> local.</p>
-      <p>Release atual: <strong>v0.1.2</strong> — piloto Windows (NSIS/MSI pt-BR, ZIP). Inclui integração opcional com <strong>licença CaraCore Seed</strong>, checkout ágil, PIX, backup pós-turno e pós-venda por código. Faixa de versão distinta do PDV Desktop Java (canal v3.2.2-free).</p>
-    </section>
-
-    <section class="card">
-      <h2>Novidades da build 02/06/2026</h2>
-      <p>Resumo do que sua loja passa a usar na versão atual — alinhado ao <a href="https://github.com/chmulato/caracore-pdv-releases/blob/master/CHANGELOG.md" rel="noopener noreferrer">histórico de versões</a> e à página <a href="../produto.html">Produto</a>.</p>
-      <ul>
-        <li>Inicialização com progresso; checkout v2 (F1, foco, total fixo, venda em espera).</li>
-        <li>PIX com QR Code e confirmação cliente + operador (free); estados visuais; PSP automático = Premium/roadmap.</li>
-        <li>Edição gratuita (piloto): até 100 vendas concluídas — ver <a href="../transparencia.html#edicao-gratuita">Transparência</a>.</li>
-        <li>Backup automático ao fechar turno; alerta de limite de sangria.</li>
-        <li>Licença CaraCore Seed opcional (modo degradado).</li>
-      </ul>
-    </section>
-
-    <section class="card">
-      <h2>Stack técnica</h2>
-      <table class="trace">
-        <thead><tr><th>Camada</th><th>Tecnologia</th></tr></thead>
-        <tbody>
-          <tr><td>Core / domínio</td><td>Rust (workspace Cargo)</td></tr>
-          <tr><td>Desktop</td><td>Tauri 2 (WebView2 no Windows)</td></tr>
-          <tr><td>UI</td><td>React + TypeScript</td></tr>
-          <tr><td>Persistência</td><td>SQLite local</td></tr>
-          <tr><td>Distribuição</td><td>Instaladores Windows em português (NSIS, MSI, ZIP) e verificação de integridade em cada release</td></tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section class="card">
-      <h2>Onde baixar e saber mais</h2>
-      <ul>
-        <li><strong>Download oficial:</strong> <a href="https://github.com/chmulato/caracore-pdv-releases/releases" rel="noopener noreferrer">releases no GitHub</a> · <a href="../download.html">formatos de instalador</a></li>
-        <li><strong>Site comercial:</strong> <a href="https://rust-pdv.caracore.com.br/">rust-pdv.caracore.com.br</a></li>
-        <li><strong>Cara Core:</strong> <a href="https://www.caracore.com.br/portfolio.html#caracore-pdv-rust" rel="noopener noreferrer">portfólio do produto</a></li>
-      </ul>
-    </section>
-
-    <section class="card">
-      <h2>Coexistência com PDV Desktop (Java)</h2>
-      <p>A linha <strong>Java · JavaFX</strong> permanece a oferta madura para Windows, Linux e macOS (<a href="https://pdv.caracore.com.br/">pdv.caracore.com.br</a>, canal <strong>v3.2.2-free</strong>). Trilhas comerciais históricas, Wiki Fiscal e planos Free/Premium continuam na loja Java.</p>
-      <p>Escolha a iniciativa Rust + Tauri quando:</p>
-      <ul>
-        <li>A loja participa do piloto Windows (release v0.1.2).</li>
-        <li>A TI prefere MSI pt-BR ou quer avaliar Tauri/Rust.</li>
-        <li>O gestor aceita o escopo reduzido da fase piloto (ver <a href="../transparencia.html">Transparência</a>).</li>
-      </ul>
-      <p><strong>Nenhuma linha substitui a outra.</strong> V3 (negócio) — posicionamento PME e PIX Split 2027 — é comum às duas stacks.</p>
-    </section>
-
-    <section class="card">
-      <p class="cta-box">
-        <a class="btn-primary" href="https://github.com/chmulato/caracore-pdv-releases/releases/tag/v0.1.2" rel="noopener noreferrer" data-official-download>Download v0.1.2</a>
-        <a class="btn-secondary" href="https://pdv.caracore.com.br/wiki/projeto-pdv.html" rel="noopener noreferrer">Wiki linha Java</a>
-      </p>
-    </section>
-  </main>
-
-  <footer class="portal-footer">
-    <p>Cara Core PDV Desktop (Rust + Tauri) · Wiki da loja · <a href="index.html">Início da wiki</a></p>
-  </footer>
-  <script src="../assets/js/releases.js?v=20260607c"></script>
-  <script src="../assets/js/portal.js?v=20260607d"></script>
+<body>
+  <p>A documentação deste produto vive em <a href="https://wiki.caracore.com.br/projeto-pdv-rust.html">https://wiki.caracore.com.br</a>.</p>
 </body>
 </html>
-
-
-
-
-
-

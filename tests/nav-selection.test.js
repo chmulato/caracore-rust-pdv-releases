@@ -32,26 +32,9 @@ const NAV_HTML = `
     <a href="download.html">Formatos</a>
     <a href="comparacao.html">Comparar</a>
     <a href="transparencia.html">Transparência</a>
-    <a href="wiki/index.html">Wiki</a>
+    <a href="https://wiki.caracore.com.br/projeto-pdv-rust.html">Wiki</a>
   </div>
 </nav>`;
-
-const WIKI_NAV_HTML = `
-<nav class="portal-nav" aria-label="Navegação principal">
-  <div class="portal-nav-inner" id="portal-nav-links">
-    <a href="../index.html">Início</a>
-    <a href="../modalidades.html">Local e rede</a>
-    <a href="../produto.html">Produto</a>
-    <a href="../demonstracao.html">Demonstração</a>
-    <a href="../mercado.html">Para sua loja</a>
-    <a href="../download.html">Formatos</a>
-    <a href="../comparacao.html">Comparar</a>
-    <a href="../transparencia.html">Transparência</a>
-    <a href="../wiki/index.html">Wiki</a>
-  </div>
-</nav>`;
-
-// ─── helpers ────────────────────────────────────────────────────────────────
 
 function mockMatchMedia() {
   Object.defineProperty(window, "matchMedia", {
@@ -222,8 +205,6 @@ describe("JS portal.js — setActiveNav (item único em destaque)", () => {
       "/mercado.html",
       "/modalidades.html",
       "/demonstracao.html",
-      "/wiki/index.html",
-      "/wiki/projeto-pdv.html",
     ];
     pages.forEach((pathname) => {
       document.body.innerHTML = NAV_HTML;
@@ -234,24 +215,10 @@ describe("JS portal.js — setActiveNav (item único em destaque)", () => {
     });
   });
 
-  test("wiki/index.html: somente \"Wiki\" fica em destaque", () => {
-    document.body.innerHTML = WIKI_NAV_HTML;
-    document.body.setAttribute("data-nav-root", "../");
-    setPathname("/wiki/index.html");
-    runPortal();
-    const active = activeLinks();
-    expect(active).toHaveLength(1);
-    expect(active[0].textContent.trim()).toBe("Wiki");
-  });
-
-  test("wiki/projeto-pdv.html: somente \"Wiki\" fica em destaque", () => {
-    document.body.innerHTML = WIKI_NAV_HTML;
-    document.body.setAttribute("data-nav-root", "../");
-    setPathname("/wiki/projeto-pdv.html");
-    runPortal();
-    const active = activeLinks();
-    expect(active).toHaveLength(1);
-    expect(active[0].textContent.trim()).toBe("Wiki");
+  test("link Wiki aponta para o portal wiki.caracore.com.br", () => {
+    document.body.innerHTML = NAV_HTML;
+    const wiki = Array.from(document.querySelectorAll(".portal-nav a")).find((a) => a.textContent.trim() === "Wiki");
+    expect(wiki.getAttribute("href")).toBe("https://wiki.caracore.com.br/projeto-pdv-rust.html");
   });
 
   test("demonstracao.html: somente \"Demonstração\" fica em destaque", () => {

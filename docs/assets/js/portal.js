@@ -20,9 +20,7 @@
     "demonstracao.html": "demonstracao.html",
     "transparencia.html": "transparencia.html",
     "comparacao.html": "comparacao.html",
-    "rust-tauri.html": "wiki/index.html",
-    "wiki/index.html": "wiki/index.html",
-    "wiki/projeto-pdv.html": "wiki/index.html"
+    "rust-tauri.html": "transparencia.html",
   };
   // Não há mais duplicatas no nav — PAGE_TO_NAV_LABEL removido.
 

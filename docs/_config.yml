@@ -3,7 +3,7 @@ title: Cara Core PDV Desktop (Rust + Tauri)
 description: Loja comercial do PDV Desktop Rust + Tauri 2 — apresentação e download para lojistas no Brasil.
 lang: pt-BR
 encoding: utf-8
-url: "https://rust-pdv.caracore.com.br"
+url: "https://pdv-rust.caracore.com.br"
 baseurl: ""
 theme: null
 plugins: []

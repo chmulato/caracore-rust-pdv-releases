@@ -3,7 +3,7 @@ description: Checklist interno — build oficina, release GitHub, push loja Page
 alwaysApply: false
 ---
 
-# Checklist de publicação — loja rust-pdv
+# Checklist de publicação — loja pdv-rust
 
 Padrão ecossistema `caracore-*-releases`. **Não publicar este arquivo na vitrine.**
 
@@ -41,8 +41,8 @@ cd D:\dev\caracore-pdv-rust-releases
 git push origin master
 ```
 
-- https://rust-pdv.caracore.com.br/transparencia.html#edicao-gratuita
-- https://rust-pdv.caracore.com.br/download.html
+- https://pdv-rust.caracore.com.br/transparencia.html#edicao-gratuita
+- https://pdv-rust.caracore.com.br/download.html
 
 ## 5. Plano de atualização contínua (2026-06-07)
 

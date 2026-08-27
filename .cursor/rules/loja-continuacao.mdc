@@ -1,9 +1,9 @@
 ---
-description: Retomada rápida da loja rust-pdv — o que falta publicar e como validar
+description: Retomada rápida da loja pdv-rust — o que falta publicar e como validar
 alwaysApply: true
 ---
 
-# Loja rust-pdv — continuidade
+# Loja pdv-rust — continuidade
 
 **Atualizado:** 2026-06-03 · Repo: `D:\dev\caracore-pdv-rust-releases`
 
@@ -11,13 +11,13 @@ alwaysApply: true
 
 - Vitrine **v0.1.2** (copy + UX + **transparência free/PIX/100 vendas**) em disco local — alinhada a `consistencia_pdv.md` da oficina.
 - Binários oficiais **v0.1.2** na tag GitHub `caracore-pdv-releases` (não `/latest`).
-- **Push:** `master` alinhada com `origin` (2026-06-03) — validar https://rust-pdv.caracore.com.br/modalidades.html
+- **Push:** `master` alinhada com `origin` (2026-06-03) — validar https://pdv-rust.caracore.com.br/modalidades.html
 
 ## Validar após push
 
-1. https://rust-pdv.caracore.com.br/transparencia.html#edicao-gratuita — matriz free (100 vendas, PIX manual).
-2. https://rust-pdv.caracore.com.br/modalidades.html — cards, CTA fixo, jornada 3 passos.
-3. https://rust-pdv.caracore.com.br/ — hub “Dois modos”.
+1. https://pdv-rust.caracore.com.br/transparencia.html#edicao-gratuita — matriz free (100 vendas, PIX manual).
+2. https://pdv-rust.caracore.com.br/modalidades.html — cards, CTA fixo, jornada 3 passos.
+3. https://pdv-rust.caracore.com.br/ — hub “Dois modos”.
 4. Botões **Baixar** → tag `v0.1.2` em `caracore-pdv-releases` (**nunca** `releases/latest`).
 
 ## Arquivos tocados na última sessão

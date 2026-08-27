@@ -68,13 +68,13 @@ Checksums atualizados em `sha256sums.txt` na release GitHub e manifesto vitrine 
 
 ### Transparência com o cliente (alinhamento produto)
 
-- **[Transparência](https://rust-pdv.caracore.com.br/transparencia.html#edicao-gratuita)** — matriz honesta: bunker local, **100 vendas concluídas** na edição gratuita, PIX (QR + confirmação cliente/operador), limites fiscal/MOCK.
+- **[Transparência](https://pdv-rust.caracore.com.br/transparencia.html#edicao-gratuita)** — matriz honesta: bunker local, **100 vendas concluídas** na edição gratuita, PIX (QR + confirmação cliente/operador), limites fiscal/MOCK.
 - **Planos** — linha “Edição gratuita (piloto)” com download direto; Premium sob proposta.
 - **Local e rede**, **Início**, **Produto**, **Download** — links e copy alinhados à oficina (`consistencia_pdv`); matriz do cliente só em `transparencia.html` (sem `.md` em `docs/`).
 
 ### O que mudou na loja (linguagem para leigos)
 
-- **[Local e rede](https://rust-pdv.caracore.com.br/modalidades.html)** reescrita: benefícios em vez de jargão, comparação visual, miniaturas das telas.
+- **[Local e rede](https://pdv-rust.caracore.com.br/modalidades.html)** reescrita: benefícios em vez de jargão, comparação visual, miniaturas das telas.
 - **PDV local** — “venda quando a internet cair”; CTA **Baixar PDV Local** em destaque (barra fixa + rodapé).
 - **PDV na rede** — “preços uma vez, todos os caixas atualizam”; selo **validado em laboratório**; CTA **Falar com especialista**.
 - **Início** e **Para sua loja** alinhados à mesma narrativa comercial.
@@ -85,7 +85,7 @@ Checksums atualizados em `sha256sums.txt` na release GitHub e manifesto vitrine 
 - Ecossistema distribuído validado em laboratório (caixa → loja); modo **standalone** recomendado para demonstração e operação em um PC.
 - Wizard em **Preferências → Banco** para papel Caixa na rede; badge de sincronização no balcão.
 
-Loja: https://rust-pdv.caracore.com.br/
+Loja: https://pdv-rust.caracore.com.br/
 
 ---
 
@@ -114,7 +114,7 @@ Loja: https://rust-pdv.caracore.com.br/
 | `PDV_SEED_MODE` | `off` (piloto/demo) ou integração com licença CaraCore Seed |
 | `PDV_SEED_LICENSE_KEY` / `PDV_SEED_LICENSE_FILE` | Chave ou arquivo de licença |
 
-Loja: https://rust-pdv.caracore.com.br/
+Loja: https://pdv-rust.caracore.com.br/
 
 ---
 

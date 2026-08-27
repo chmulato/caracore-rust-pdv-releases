@@ -1,5 +1,5 @@
 ---
-description: Memória da loja PDV Desktop Rust — rust-pdv; v0.1.2 vitrine; modalidades comercial; push pendente
+description: Memória da loja PDV Desktop Rust — pdv-rust; v0.1.2 vitrine; modalidades comercial; push pendente
 alwaysApply: true
 ---
 
@@ -10,8 +10,8 @@ alwaysApply: true
 ## Repositório e papel
 
 - **Repo:** `caracore-pdv-rust-releases` · local `D:\dev\caracore-pdv-rust-releases`
-- **URL canónica:** https://rust-pdv.caracore.com.br/
-- **GitHub Pages:** branch `master`, pasta `/docs`, `docs/CNAME` → rust-pdv.caracore.com.br
+- **URL canónica:** https://pdv-rust.caracore.com.br/
+- **GitHub Pages:** branch `master`, pasta `/docs`, `docs/CNAME` → pdv-rust.caracore.com.br
 - **Papel:** Vitrine comercial — **não** hospeda binários (só links para GitHub Releases)
 
 ## Oficina pareada
@@ -73,13 +73,13 @@ Conteúdo `docs/`: **apenas HTML** comercial (+ assets). Raiz: `README.md` + `CH
 ## Próximo foco (loja)
 
 1. `git status` → commit + push `master` (ativar vitrine v0.1.2 no ar).
-2. Conferir Pages: https://rust-pdv.caracore.com.br/modalidades.html
+2. Conferir Pages: https://pdv-rust.caracore.com.br/modalidades.html
 3. Se nova release binária v0.1.2+: alinhar links de tag em `index.html` e `CHANGELOG.md`.
 4. Opcional: copiar trecho comercial para matriz / wiki institucional (oficina coordena).
 
 ## Convenções
 
-- Links públicos: **rust-pdv.caracore.com.br** + **GitHub Releases** para baixar.
+- Links públicos: **pdv-rust.caracore.com.br** + **GitHub Releases** para baixar.
 - **Não commitar** salvo pedido explícito (regra alinhada à oficina).
 - Ao publicar release na oficina: atualizar copy, `CHANGELOG.md`, screenshots se mudarem telas.
 

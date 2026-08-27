@@ -1,6 +1,6 @@
 # Cara Core PDV Desktop (Rust + Tauri) — Loja e Releases
 
-Canal público de apresentação e distribuição da **iniciativa Rust + Tauri 2** do CaraCore PDV (loja em `rust-pdv.caracore.com.br` com entrega de binários via [releases oficiais](https://github.com/chmulato/caracore-pdv-releases/releases)). Coexiste com o PDV Desktop Java (canal v3.1.x) em [pdv.caracore.com.br](https://pdv.caracore.com.br/).
+Canal público de apresentação e distribuição da **iniciativa Rust + Tauri 2** do CaraCore PDV (loja em `pdv-rust.caracore.com.br` com entrega de binários via [releases oficiais](https://github.com/chmulato/caracore-pdv-releases/releases)). Coexiste com o PDV Desktop Java (canal v3.1.x) em [pdv.caracore.com.br](https://pdv.caracore.com.br/).
 
 A loja comunica o produto em **linguagem comercial para leigos**: PDV **local** (um PC na loja) e PDV **na rede** (vários caixas + servidor da loja). Documentação técnica, evidências e gates ficam na oficina (`caracore-rust-pdv`).
 
@@ -17,11 +17,11 @@ A loja comunica o produto em **linguagem comercial para leigos**: PDV **local** 
 | Idioma dos instaladores | Português do Brasil (pt-BR) |
 | Stack da oficina | Rust + Tauri 2 + React + SQLite local / PostgreSQL na rede |
 | Release | https://github.com/chmulato/caracore-pdv-releases/releases/latest |
-| Loja | https://rust-pdv.caracore.com.br/ |
+| Loja | https://pdv-rust.caracore.com.br/ |
 
 ### Destaques (v0.1.2 — loja)
 
-- Página **[Local e rede](https://rust-pdv.caracore.com.br/modalidades.html)** — PDV na sua máquina vs PDV na rede da loja.
+- Página **[Local e rede](https://pdv-rust.caracore.com.br/modalidades.html)** — PDV na sua máquina vs PDV na rede da loja.
 - Planos e primeiros passos alinhados às duas modalidades.
 - Mesmo produto: comece local; evolua para vários caixas com suporte Cara Core.
 - Validação de saúde 2026-06-06: backend, frontend, build release e smokes OK; performance absoluta OK, com bloqueio apenas por comparação semanal.
@@ -38,8 +38,8 @@ Lista completa: [`CHANGELOG.md`](CHANGELOG.md).
 
 | Papel | Local |
 | ----- | ----- |
-| Loja oficial | https://rust-pdv.caracore.com.br/ |
-| Modalidades (local / rede) | https://rust-pdv.caracore.com.br/modalidades.html |
+| Loja oficial | https://pdv-rust.caracore.com.br/ |
+| Modalidades (local / rede) | https://pdv-rust.caracore.com.br/modalidades.html |
 | Releases / download | https://github.com/chmulato/caracore-pdv-releases/releases |
 | Oficina (código) | https://github.com/chmulato/caracore-rust-pdv |
 | Linha Java (alternativa) | https://pdv.caracore.com.br/ |

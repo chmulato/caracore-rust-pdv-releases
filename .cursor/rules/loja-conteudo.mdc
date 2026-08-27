@@ -1,9 +1,9 @@
 ---
-description: Loja rust-pdv — apenas HTML comercial em docs/ (+ README e CHANGELOG na raiz)
+description: Loja pdv-rust — apenas HTML comercial em docs/ (+ README e CHANGELOG na raiz)
 alwaysApply: true
 ---
 
-# Conteúdo da loja (rust-pdv)
+# Conteúdo da loja (pdv-rust)
 
 ## Regra
 
@@ -21,7 +21,7 @@ alwaysApply: true
 ## Fonte canônica (oficina)
 
 - Produto / gates: `D:\dev\caracore-pdv-rust\docs\consistencia_pdv.md`
-- Espelho público: https://rust-pdv.caracore.com.br/transparencia.html#edicao-gratuita
+- Espelho público: https://pdv-rust.caracore.com.br/transparencia.html#edicao-gratuita
 
 ## Assets — sem CDN nem API externa
 

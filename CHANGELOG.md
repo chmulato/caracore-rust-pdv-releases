@@ -2,9 +2,30 @@
 
 Formato alinhado às demais lojas `*-releases` do ecossistema CaraCore.
 
+## v0.1.2 — 2026-09-06 (republicação binários · oficina set/2026)
+
+**Binários Windows republicados** na tag [`v0.1.2`](https://github.com/chmulato/caracore-pdv-releases/releases/tag/v0.1.2): NSIS, MSI pt-BR e ZIP piloto.
+
+### O que mudou no corte
+
+- Loja e LEIA-ME apontam `pdv-rust.caracore.com.br` e `chmulato/caracore-pdv-releases` (tag `v0.1.2`).
+- Título do app **CaraCore PDV 0.1.2**; primeiro acesso `/setup` + logins de piloto no LEIA-ME.
+- Pasta de dados `%APPDATA%\caracore-pdv\` (não misturar com o Java em `%APPDATA%\caracore\`).
+- Correção da migração SQLite V40 e aviso na tela se o boot falhar.
+
+Checksums em `SHA256SUMS.txt` da tag e no manifesto `docs/assets/data/release-latest.json`.
+
+| Arquivo | SHA256 |
+| --- | --- |
+| `CaraCore.PDV_0.1.2_x64-setup.exe` | `54837af1d5d7f78200fd8a9c332da1e08feb279bcc513c13ec62a1f8ef1532be` |
+| `CaraCore.PDV_0.1.2_x64_pt-BR.msi` | `764ed38e1b185f24f8f2987a7e8257bfed50f8686ffeb39a0e425ba2c1595ae7` |
+| `CaraCore-PDV-v0.1.2-windows.zip` | `c3ee907981273030cfbb43b0379d897dd4324f3aa58255341348382b28c7edcd` |
+
+---
+
 ## v0.1.2 — 2026-09-06 (identidade piloto Rust vs Free Java)
 
-**Sem novo binário.** A tag permanece [`v0.1.2`](https://github.com/chmulato/caracore-pdv-releases/releases/tag/v0.1.2) (Windows x64). A vitrine deixa inequívoco: este site é o piloto Rust, não o Free Java do balcão.
+**Vitrine.** A tag permanece [`v0.1.2`](https://github.com/chmulato/caracore-pdv-releases/releases/tag/v0.1.2) (Windows x64). A vitrine deixa inequívoco: este site é o piloto Rust, não o Free Java do balcão. Os binários desta data estão na entrada **republicação binários** acima.
 
 ### Identidade e download
 

@@ -9,7 +9,7 @@
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="assets/css/tokens.css?v=20260607c" />
   <link rel="stylesheet" href="assets/css/layout.css?v=20260607d" />
-  <link rel="stylesheet" href="assets/css/components.css?v=20260906" />
+  <link rel="stylesheet" href="assets/css/components.css?v=20260906loja" />
 </head>
 <body data-portal-page="transparencia" data-nav-root="">
   <div class="identity-banner" role="note">
@@ -71,16 +71,19 @@
     <!-- 1. Visão rápida (Resumo Inicial) -->
     <section class="card exec-summary" id="visao-rapida" aria-label="Visão rápida e pontos críticos">
       <h2>Visão rápida</h2>
-      <p class="exec-lead">Resumo dos pontos mais importantes sobre o Cara Core PDV Desktop:</p>
-      <ul style="margin: 0; padding-left: 20px;">
-        <li style="margin-bottom: 8px;"><strong>Produto em fase piloto Windows (v0.1.2):</strong> Iniciativa em testes práticos e validação rápida em lojas piloto.</li>
-        <li style="margin-bottom: 8px;"><strong>Download somente via GitHub oficial:</strong> Garantia absoluta de segurança ao obter o app da fonte correta.</li>
-        <li style="margin-bottom: 8px;"><strong>Sem assinatura digital (SmartScreen):</strong> O Windows pode exibir um aviso de segurança no primeiro uso.</li>
-        <li style="margin-bottom: 8px;"><strong>Dados 100% locais + backups automáticos:</strong> Soberania total sobre as vendas e backups em pendrives externos.</li>
-        <li style="margin-bottom: 8px;"><strong>Piloto Rust (limites) — 100 vendas na vida:</strong> Teto do piloto Windows, não o Free Java de 100 vendas/mês.</li>
-        <li style="margin-bottom: 8px;"><strong>PIX manual no balcão:</strong> Sem verificação por webhook automático na versão gratuita.</li>
-        <li style="margin-bottom: 8px;"><strong>Fiscal simulado (LOCAL_MOCK):</strong> Ambiente de treino fiscal por padrão no pacote sem custo.</li>
-      </ul>
+      <div class="quick-glance">
+        <ul class="quick-glance__list">
+          <li>Piloto Windows <strong>v0.1.2</strong> — não é o Free Java do balcão.</li>
+          <li>Download só na tag oficial; o Windows pode avisar no primeiro uso (SmartScreen).</li>
+          <li>Dados no PC da loja; teto de <strong>100 vendas na vida</strong> deste piloto.</li>
+          <li>PIX com QR + confirmação do operador — sem baixa automática no piloto.</li>
+          <li>Fiscal do piloto é <strong>simulado</strong> (treino), não nota válida.</li>
+        </ul>
+        <div class="quick-glance__actions">
+          <a class="btn-primary" href="download.html">Baixar piloto Rust (Windows)</a>
+          <a class="btn-secondary" href="mailto:suporte@caracore.com.br?subject=Proposta%20PDV%20Desktop%20Rust">Solicitar proposta</a>
+        </div>
+      </div>
     </section>
 
     <!-- 5. Separar públicos -->
@@ -247,21 +250,45 @@
     <!-- SmartScreen e assinatura digital -->
     <section class="card" id="smartscreen">
       <h2>Avisos de segurança (SmartScreen)</h2>
-      <div class="notice notice-info">
-        <strong>Aviso do Windows SmartScreen</strong>
-        Como esta versão está em fase piloto inicial, <strong>o instalador ainda não conta com um certificado digital corporativo pago (assinatura de código)</strong>. Por esse motivo, ao executá-lo pela primeira vez, o Windows SmartScreen exibirá uma mensagem de alerta ("O Windows protegeu o seu computador").
+      <div class="smartscreen-banner">
+        <div>
+          <h3>Por que o aviso aparece?</h3>
+          <p>O piloto ainda <strong>não tem certificado de assinatura de código</strong>. O Windows mostra “O Windows protegeu o seu computador”. É esperado. Se o SHA-256 da <a href="download.html">página de download</a> bater, o arquivo é o oficial.</p>
+        </div>
+        <div class="journey-path" style="margin: 0;">
+          <div class="journey-step"><strong>Mais informações</strong><span>No aviso do SmartScreen.</span></div>
+          <div class="journey-step"><strong>Executar assim mesmo</strong><span>Abre o instalador desta tag.</span></div>
+          <div class="journey-step"><strong>Conferir o hash</strong><span>PowerShell: <code>Get-FileHash</code>.</span></div>
+        </div>
       </div>
-      <p>Este comportamento é normal e esperado nesta etapa do piloto. Não representa riscos ao seu computador, desde que você tenha verificado a <strong>impressão digital do arquivo (SHA-256)</strong> na etapa anterior. Para continuar a instalação:</p>
-      <ol style="padding-left: 20px;">
-        <li style="margin-bottom: 6px;">Na janela do aviso do Windows, clique no link <strong>"Mais informações"</strong>.</li>
-        <li style="margin-bottom: 6px;">Clique no botão <strong>"Executar assim mesmo"</strong> para iniciar o instalador oficial.</li>
-      </ol>
     </section>
 
     <!-- Privacidade e dados locais -->
     <section class="card" id="privacidade">
-      <h2>Privacidade e dados locais</h2>
-      <p class="section-subtitle">Privacidade real e controle de dados. Nossas regras de tratamento de dados são transparentes e respeitam a LGPD:</p>
+      <h2>Por que seus dados ficam sob o seu controle</h2>
+      <p class="section-subtitle">O caixa não precisa de nuvem para vender. Detalhe honesto do que fazemos e do que não fazemos:</p>
+      <div class="data-vault-grid data-vault-grid--4">
+        <div class="data-vault-item">
+          <span class="dv-icon" aria-hidden="true">💻</span>
+          <strong>No seu PC</strong>
+          <p>Vendas e estoque em <code>%APPDATA%\caracore-pdv\</code>.</p>
+        </div>
+        <div class="data-vault-item">
+          <span class="dv-icon" aria-hidden="true">🚫</span>
+          <strong>Sem telemetria</strong>
+          <p>Não enviamos faturamento nem hábitos da loja para a Cara Core.</p>
+        </div>
+        <div class="data-vault-item">
+          <span class="dv-icon" aria-hidden="true">🔒</span>
+          <strong>Criptografia local</strong>
+          <p>Dados de cliente protegidos no SQLite da máquina.</p>
+        </div>
+        <div class="data-vault-item">
+          <span class="dv-icon" aria-hidden="true">🧾</span>
+          <strong>Auditoria na loja</strong>
+          <p>Ações críticas ficam no banco local (hora, turno, operador).</p>
+        </div>
+      </div>
       
       <div class="card:has(table.trace)">
         <table class="trace">
@@ -348,9 +375,11 @@
       <h2>Piloto Rust (limites)</h2>
       <p class="section-subtitle">O piloto Windows permite testar o fluxo do balcão sem pagar assinatura. Não é o Free Java de <a href="https://pdv.caracore.com.br/download.html">pdv.caracore.com.br</a>.</p>
 
-      <div class="notice notice-warn">
-        <strong>Limite do piloto: 100 vendas na vida</strong>
-        O piloto Rust permite até <strong>100 vendas concluídas</strong> no banco local (teto da vida do piloto, não por mês). A partir da 101ª venda, o sistema bloqueia novas movimentações até a ativação de uma licença. O app mostra avisos de progresso sobre o teto de cupons restantes.
+      <div class="limit-callout">
+        <strong>Teto: 100 vendas na vida deste piloto</strong>
+        <div class="limit-track" aria-hidden="true"><span></span></div>
+        <div class="limit-legend"><span>0</span><span>101ª venda pede licença</span></div>
+        <p>Não é o Free Java (100 vendas <em>por mês</em>). O app avisa no caixa quantas restam. Não inventamos um contador remoto nesta página — o número mora no PC da loja.</p>
       </div>
 
       <p><strong>O que está incluído no piloto Rust:</strong></p>
@@ -372,20 +401,19 @@
         Na Edição Gratuita, o faturamento via PIX é <strong>totalmente manual</strong>. O app gera o QR Code na tela para o cliente escanear, mas não se comunica com a conta da sua loja para receber avisos automáticos de depósito. A conferência do recebimento é dever do operador de caixa.
       </div>
 
-      <p class="section-subtitle">Fluxo operacional do PIX manual (F9) no balcão:</p>
-      
-      <div class="stack-grid stack-grid--3" style="margin: 14px 0;">
-        <div class="stack-item">
-          <strong>1. Apresentar o QR Code</strong>
-          <span>O operador escolhe PIX no checkout e o sistema exibe o QR Code estático ou gera o Pix Copia e Cola.</span>
+      <p class="section-subtitle">Três passos no balcão (atalho F9):</p>
+      <div class="journey-path">
+        <div class="journey-step">
+          <strong>Gerar o QR</strong>
+          <span>O operador escolhe PIX. A tela mostra o QR ou o Pix Copia e Cola.</span>
         </div>
-        <div class="stack-item">
-          <strong>2. Pagamento do cliente</strong>
-          <span>O cliente lê o QR Code pelo aplicativo do banco dele e realiza a transferência.</span>
+        <div class="journey-step">
+          <strong>Cliente paga</strong>
+          <span>O cliente lê o QR no app do banco e conclui a transferência.</span>
         </div>
-        <div class="stack-item">
-          <strong>3. Checagem do caixa</strong>
-          <span>O cliente exibe o comprovante. O operador valida o recebimento no banco da loja e confirma manualmente a baixa no PDV.</span>
+        <div class="journey-step">
+          <strong>Operador confirma</strong>
+          <span>Confere o comprovante e dá baixa manual no PDV. Sem aviso automático do banco no piloto.</span>
         </div>
       </div>
       
@@ -441,7 +469,17 @@
     <!-- Comparação Free vs Premium -->
     <section class="card" id="comparacao">
       <h2>Edição Gratuita vs. Edição Premium</h2>
-      <p class="section-subtitle">Veja o comparativo claro e honesto entre os recursos das duas modalidades:</p>
+      <p class="section-subtitle">Comparativo da linha Rust. A edição completa é sob proposta — não há checkout nesta loja. O Free Java tem planos próprios em pdv.caracore.com.br.</p>
+      <div class="premium-panel">
+        <h3>O que a proposta comercial destrava</h3>
+        <ul>
+          <li>Sem o teto de 100 vendas do piloto.</li>
+          <li>Caminho para fiscal real (NFC-e / SAT) quando o contrato incluir.</li>
+          <li>PIX com baixa automática (webhook) quando contratado — não está no piloto.</li>
+          <li>Vários caixas na rede com implantação assistida.</li>
+        </ul>
+        <a class="btn-primary" href="mailto:suporte@caracore.com.br?subject=Upgrade%20PDV%20Tauri">Solicitar proposta</a>
+      </div>
       
       <div class="card:has(table.trace)">
         <table class="trace">

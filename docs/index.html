@@ -9,7 +9,7 @@
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="assets/css/tokens.css?v=20260607c" />
   <link rel="stylesheet" href="assets/css/layout.css?v=20260607d" />
-  <link rel="stylesheet" href="assets/css/components.css?v=20260906" />
+  <link rel="stylesheet" href="assets/css/components.css?v=20260906loja" />
 </head>
 <body data-portal-page="inicio" data-nav-root="">
   <div class="identity-banner" role="note">
@@ -60,8 +60,10 @@
 
   <main class="portal-main">
     <nav class="home-jump" aria-label="Atalhos desta página">
+      <a href="#visao-rapida">Visão rápida</a>
       <a href="#o-que-e">O que é</a>
       <a href="#para-quem">Para quem</a>
+      <a href="#perfis">Lojista · TI · Contador</a>
       <a href="#gratuito">Piloto</a>
       <a href="#funcionalidades">O que faz</a>
       <a href="#ver-em-acao">Ver telas</a>
@@ -70,6 +72,23 @@
       <a href="#comparar">Rust vs Java</a>
       <a href="rust-tauri.html">Para TI</a>
     </nav>
+
+    <section class="card exec-summary" id="visao-rapida">
+      <h2>Visão rápida</h2>
+      <div class="quick-glance">
+        <ul class="quick-glance__list">
+          <li>Caixa <strong>Windows offline</strong> no PC da loja — não depende de nuvem para vender.</li>
+          <li><strong>Não é o Free Java</strong> de pdv.caracore.com.br (esse é o balcão maduro multi-plataforma).</li>
+          <li>Piloto <strong>v0.1.2</strong>: até <strong>100 vendas na vida</strong> deste banco (não por mês).</li>
+          <li>PIX no caixa: QR na tela + confirmação do operador.</li>
+          <li>Dados em <code>%APPDATA%\caracore-pdv\</code> — pasta diferente do Java.</li>
+        </ul>
+        <div class="quick-glance__actions">
+          <a class="btn-primary" href="download.html">Baixar piloto Rust (Windows)</a>
+          <a class="btn-secondary" href="mailto:suporte@caracore.com.br?subject=Proposta%20PDV%20Desktop%20Rust">Solicitar proposta</a>
+        </div>
+      </div>
+    </section>
 
     <section class="card exec-summary" id="o-que-e">
       <h2>O que é o piloto Rust?</h2>
@@ -126,19 +145,47 @@
       </div>
     </section>
 
+    <section class="card" id="perfis">
+      <h2>Para quem é o PDV Rust?</h2>
+      <p class="section-subtitle">Três olhares sobre o mesmo piloto — sem trocar de produto.</p>
+      <div class="hub-grid">
+        <div class="pillar">
+          <h3>Lojistas</h3>
+          <p>Operação simples, offline no PC do caixa. PIX com QR + confirmação. Até 100 vendas para conhecer o fluxo.</p>
+          <a href="download.html">Baixar o piloto →</a>
+        </div>
+        <div class="pillar">
+          <h3>TI</h3>
+          <p>NSIS, MSI ou ZIP; SHA-256 na página; pasta própria; aviso SmartScreen esperado no piloto.</p>
+          <a href="download.html">Formatos e hashes →</a>
+        </div>
+        <div class="pillar">
+          <h3>Contadores</h3>
+          <p>Dados ficam na loja. Fiscal do piloto é simulado (treino). Custódia e backup no PC do cliente.</p>
+          <a href="transparencia.html#privacidade">Privacidade e fiscal →</a>
+        </div>
+      </div>
+    </section>
+
     <section class="card free-banner" id="gratuito">
       <p class="free-banner__eyebrow">Piloto Rust (limites)</p>
       <h2>Piloto Rust no seu PC Windows</h2>
-      <p class="free-banner__lead">Baixe, instale e use o piloto — <strong>sem limite de tempo</strong> para conhecer o fluxo. Até 100 vendas na vida deste piloto (não é o Free Java de 100 vendas/mês).</p>
+      <p class="free-banner__lead">Sem limite de tempo para conhecer o fluxo. O teto é de <strong>vendas concluídas</strong>, não de dias.</p>
+      <div class="limit-callout">
+        <strong>100 vendas na vida deste piloto</strong>
+        <div class="limit-track" aria-hidden="true"><span></span></div>
+        <div class="limit-legend"><span>0</span><span>Teto: 100 cupons no banco local</span></div>
+        <p>Não é o Free Java (100 vendas <em>por mês</em>). O app avisa no caixa quantas restam. Na 101ª, pede licença.</p>
+      </div>
       <ul class="free-banner__list">
         <li>Vendas, caixa e gestão no computador local</li>
-        <li>Até <strong>100 vendas concluídas</strong> no piloto Rust</li>
         <li>PIX com QR Code e confirmação no balcão</li>
         <li>Dados em <code>%APPDATA%\caracore-pdv\</code> — pasta diferente do Java</li>
       </ul>
       <div class="free-banner__actions">
-        <a class="btn-primary" href="https://github.com/chmulato/caracore-pdv-releases/releases/tag/v0.1.2" rel="noopener noreferrer" data-official-download>Baixar piloto Rust (Windows)</a>
-        <a class="btn-secondary" href="transparencia.html#edicao-gratuita">Ver limites do piloto</a>
+        <a class="btn-primary" href="download.html">Baixar piloto Rust (Windows)</a>
+        <a class="btn-secondary" href="mailto:suporte@caracore.com.br?subject=Proposta%20PDV%20Desktop%20Rust">Solicitar proposta</a>
+        <a class="btn-secondary" href="transparencia.html#edicao-gratuita">Ver limites</a>
       </div>
     </section>
 
@@ -284,6 +331,19 @@
         </tbody>
       </table>
       <p class="pricing-note"><a href="mercado.html#precos">Todos os planos</a> · <a href="transparencia.html#edicao-gratuita">Limites do piloto Rust</a></p>
+      <div class="premium-panel" id="proposta">
+        <h3>Quando pedir a edição completa</h3>
+        <ul>
+          <li>A loja já passou do teto de 100 vendas do piloto.</li>
+          <li>Precisa de operação regular, sem o modo de treino do piloto.</li>
+          <li>Quer implantação assistida (um PC ou vários caixas na rede).</li>
+        </ul>
+        <p>Não há checkout automático nesta loja. A Cara Core envia proposta. O Free Java continua em <a href="https://pdv.caracore.com.br/download.html">pdv.caracore.com.br</a> — nenhuma linha substitui a outra.</p>
+        <div class="quick-glance__actions">
+          <a class="btn-primary" href="mailto:suporte@caracore.com.br?subject=Proposta%20PDV%20Desktop%20Rust">Solicitar proposta</a>
+          <a class="btn-secondary" href="demonstracao.html">Ver como funciona</a>
+        </div>
+      </div>
     </section>
 
     <section class="card compare-teaser" id="comparar">

@@ -2,6 +2,12 @@
 
 Formato alinhado às demais lojas `*-releases` do ecossistema CaraCore.
 
+## v0.1.2 — 2026-09-06 (clareza da vitrine)
+
+**Sem novo binário nesta entrada.** Ajuste de HTML/CSS na loja: download em cards, SmartScreen em 3 passos, teto de 100 vendas visível, comparação Rust / Java / proposta. Sem roadmap inventado e sem checkout de Premium.
+
+---
+
 ## v0.1.2 — 2026-09-06 (republicação binários · oficina set/2026)
 
 **Binários Windows republicados** na tag [`v0.1.2`](https://github.com/chmulato/caracore-pdv-releases/releases/tag/v0.1.2): NSIS, MSI pt-BR e ZIP piloto.

@@ -1,36 +1,36 @@
 {
   "tag_name": "v0.1.2",
   "name": "CaraCore PDV Desktop (Rust) — piloto Windows v0.1.2",
-  "published_at": "2026-06-03T20:07:14Z",
-  "html_url": "https://github.com/chmulato/caracore-rust-pdv-releases/releases/tag/v0.1.2",
+  "published_at": "2026-06-07T13:23:18Z",
+  "html_url": "https://github.com/chmulato/caracore-pdv-releases/releases/tag/v0.1.2",
   "platforms": [
     "windows-x64"
   ],
   "assets": [
     {
       "name": "CaraCore-PDV-v0.1.2-windows.zip",
-      "browser_download_url": "https://github.com/chmulato/caracore-rust-pdv-releases/releases/download/v0.1.2/CaraCore-PDV-v0.1.2-windows.zip",
-      "sha256": "cc335cc8f45e454219390e8410103884d3ee1606acb1947288f9ad47a8ae8e9d"
+      "browser_download_url": "https://github.com/chmulato/caracore-pdv-releases/releases/download/v0.1.2/CaraCore-PDV-v0.1.2-windows.zip",
+      "sha256": "c3ee907981273030cfbb43b0379d897dd4324f3aa58255341348382b28c7edcd"
     },
     {
       "name": "CaraCore.PDV_0.1.2_x64-setup.exe",
-      "browser_download_url": "https://github.com/chmulato/caracore-rust-pdv-releases/releases/download/v0.1.2/CaraCore.PDV_0.1.2_x64-setup.exe",
+      "browser_download_url": "https://github.com/chmulato/caracore-pdv-releases/releases/download/v0.1.2/CaraCore.PDV_0.1.2_x64-setup.exe",
       "sha256": "54837af1d5d7f78200fd8a9c332da1e08feb279bcc513c13ec62a1f8ef1532be"
     },
     {
       "name": "CaraCore.PDV_0.1.2_x64_pt-BR.msi",
-      "browser_download_url": "https://github.com/chmulato/caracore-rust-pdv-releases/releases/download/v0.1.2/CaraCore.PDV_0.1.2_x64_pt-BR.msi",
+      "browser_download_url": "https://github.com/chmulato/caracore-pdv-releases/releases/download/v0.1.2/CaraCore.PDV_0.1.2_x64_pt-BR.msi",
       "sha256": "764ed38e1b185f24f8f2987a7e8257bfed50f8686ffeb39a0e425ba2c1595ae7"
     },
     {
       "name": "RELEASE_MANIFEST.json",
-      "browser_download_url": "https://github.com/chmulato/caracore-rust-pdv-releases/releases/download/v0.1.2/RELEASE_MANIFEST.json",
-      "sha256": "a674445f6d89eae511c59a22ae89b15b49347ea882305f1340b35a51c140dcba"
+      "browser_download_url": "https://github.com/chmulato/caracore-pdv-releases/releases/download/v0.1.2/RELEASE_MANIFEST.json",
+      "sha256": "505ac114e9f86274c79a8d45b2b1a1d7d103ba596e6d57a93df36ca3a41783a2"
     },
     {
       "name": "SHA256SUMS.txt",
-      "browser_download_url": "https://github.com/chmulato/caracore-rust-pdv-releases/releases/download/v0.1.2/SHA256SUMS.txt",
-      "sha256": "c26c81e1d044c6cf1bba53bcea8da80f3a931f4fd022cfc5f2b036b4e0c15f17"
+      "browser_download_url": "https://github.com/chmulato/caracore-pdv-releases/releases/download/v0.1.2/SHA256SUMS.txt",
+      "sha256": "057968ff8c45ad364d1c792af9f108c22558035aa1108aa88de4017c45d04809"
     }
   ]
 }

@@ -10,8 +10,10 @@ alwaysApply: true
 ## Estado
 
 - Vitrine **v0.1.2** com identidade inequívoca: **piloto Rust Windows**, não o Free Java do balcão.
+- Faixa de identidade em **todas** as páginas públicas (Java v3.2.3-free em `pdv.caracore.com.br`).
 - Binários oficiais **v0.1.2** na tag GitHub `caracore-pdv-releases` (**nunca** `/latest` nem a lista mista).
 - Java maduro citado como **v3.2.3-free** em https://pdv.caracore.com.br/download.html
+- LEIA-ME do ZIP **não** vive nesta loja — instalação pública = `primeiros-passos.html` + `download.html`.
 - **Push:** alterações de identidade ainda em disco local — commit + push só com autorização.
 
 ## Validar após push
@@ -24,11 +26,9 @@ alwaysApply: true
 
 ## Arquivos tocados na última sessão
 
-- `docs/index.html`, `docs/download.html`, `docs/comparacao.html`, `docs/primeiros-passos.html`
-- `docs/modalidades.html`, `docs/transparencia.html`, `docs/mercado.html`, `docs/rust-tauri.html` e CTAs irmãos
-- `docs/assets/css/components.css`, `docs/assets/js/download-page.js`, `docs/assets/data/release-latest.json`
-- `CHANGELOG.md`, `README.md`
-- Body da release GitHub `v0.1.2` (texto; tag não apagada)
+- Todas as páginas `docs/*.html` (faixa + CTAs + canonical)
+- `docs/assets/js/releases.js` (comentário: não usar `/latest` em CTA)
+- `CHANGELOG.md`, `README.md` (oficina privada sem URL pública de download)
 
 ## Próximo passo único (se só houver tempo)
 

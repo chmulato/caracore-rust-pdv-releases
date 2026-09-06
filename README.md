@@ -2,7 +2,7 @@
 
 Canal público de apresentação e distribuição da **iniciativa Rust + Tauri 2** do CaraCore PDV (loja em https://pdv-rust.caracore.com.br/ com entrega de binários na tag [v0.1.2](https://github.com/chmulato/caracore-pdv-releases/releases/tag/v0.1.2)). Coexiste com o PDV Desktop Java (canal **v3.2.3-free**) em [pdv.caracore.com.br](https://pdv.caracore.com.br/). Nenhuma linha substitui a outra.
 
-A loja comunica o produto em **linguagem comercial para leigos**: PDV **local** (um PC na loja) e PDV **na rede** (vários caixas + servidor da loja). Documentação técnica, evidências e gates ficam na oficina (`caracore-rust-pdv`).
+A loja comunica o produto em **linguagem comercial para leigos**: PDV **local** (um PC na loja) e PDV **na rede** (vários caixas + servidor da loja). Documentação técnica, evidências e gates ficam na oficina local (`D:\dev\caracore-pdv-rust`). A loja **não** publica o LEIA-ME do ZIP — instalação pública = `primeiros-passos.html` + `download.html`.
 
 ---
 
@@ -41,8 +41,8 @@ Lista completa: [`CHANGELOG.md`](CHANGELOG.md).
 | Loja oficial | https://pdv-rust.caracore.com.br/ |
 | Modalidades (local / rede) | https://pdv-rust.caracore.com.br/modalidades.html |
 | Releases / download | https://github.com/chmulato/caracore-pdv-releases/releases/tag/v0.1.2 |
-| Oficina (código) | https://github.com/chmulato/caracore-rust-pdv |
-| Linha Java (alternativa) | https://pdv.caracore.com.br/ |
+| Oficina (código) | Pasta local `D:\dev\caracore-pdv-rust` (repo privado; não é fonte de download) |
+| Linha Java (alternativa) | https://pdv.caracore.com.br/download.html (v3.2.3-free) |
 
 ---
 
@@ -59,7 +59,7 @@ Lista completa: [`CHANGELOG.md`](CHANGELOG.md).
 | `.cursor/rules/` | Checklists e continuidade (**não** publicados na vitrine) |
 | `.github/workflows/` | Validação da loja |
 
-Documentação técnica e matrizes de engenharia ficam na **oficina** (`caracore-rust-pdv`), não em `docs/` desta loja.
+Documentação técnica e matrizes de engenharia ficam na **oficina** (pasta local `D:\dev\caracore-pdv-rust`), não em `docs/` desta loja.
 
 GitHub Pages: branch **master**, pasta **/docs**, arquivo **docs/.nojekyll**.
 
@@ -94,8 +94,8 @@ GitHub Pages: branch **master**, pasta **/docs**, arquivo **docs/.nojekyll**.
 | ----- | ----------- |
 | Oficina Java | `caracore-pdv` |
 | Loja Java | `caracore-pdv-releases` |
-| Oficina Rust | `caracore-rust-pdv` |
-| Loja Rust | `caracore-rust-pdv-releases` (este repositório) |
+| Oficina Rust | pasta local `caracore-pdv-rust` (GitHub privado `caracore-rust-pdv` — sem link público de download) |
+| Loja Rust | `caracore-rust-pdv-releases` (este repositório; clone local `caracore-pdv-rust-releases`) |
 
 ---
 

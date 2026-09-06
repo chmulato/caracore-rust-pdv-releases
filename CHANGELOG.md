@@ -23,6 +23,15 @@ Formato alinhado às demais lojas `*-releases` do ecossistema CaraCore.
 
 - Diagrama Bunker / Zod / DDD / SymmetricDS saiu do funil da home; permanece em `rust-tauri.html`.
 
+### Ruído residual (mesma data)
+
+- Faixa de identidade (piloto Rust ≠ Free Java v3.2.3-free) em todas as páginas públicas.
+- CTAs genéricos restantes (“Instalar agora”, “Baixar ou escolher formato”, “Download oficial”) substituídos por **Baixar piloto Rust (Windows)** / **Ir ao Free Java (balcão)** / **Primeiros passos do piloto Rust**.
+- Link âncora morto `#ecosistema` na home apontado para `rust-tauri.html#ecosistema`.
+- Comparativo deixa de repetir a matriz de pastas; uma tabela canônica + aviso.
+- `primeiros-passos.html` é a fonte pública de instalação (`admin` / `admin123`, tag v0.1.2, AppData `caracore-pdv`). LEIA-ME do ZIP não vive nesta loja.
+- README não aponta o GitHub privado da oficina como URL pública de download.
+
 ---
 
 ## v0.1.2 — 2026-06-06 (validação de saúde · oficina jun/2026)

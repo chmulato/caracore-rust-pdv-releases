@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="description" content="Comparação honesta: piloto Rust Windows v0.1.2 vs Free Java v3.2.3-free. Nenhuma linha substitui a outra." />
+  <link rel="canonical" href="https://pdv-rust.caracore.com.br/comparacao.html" />
   <title>Comparação — piloto Rust vs Free Java v3.2.3-free</title>
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="assets/css/tokens.css?v=20260607c" />
@@ -11,6 +12,9 @@
   <link rel="stylesheet" href="assets/css/components.css?v=20260906" />
 </head>
 <body data-portal-page="comparacao" data-nav-root="">
+  <div class="identity-banner" role="note">
+    <p>O download do balcão multi-plataforma é em <a href="https://pdv.caracore.com.br/download.html">pdv.caracore.com.br</a> (Java <strong>v3.2.3-free</strong>). Este site é o <strong>piloto Rust</strong>.</p>
+  </div>
   <header class="portal-header">
     <div class="portal-header-inner">
       <a class="portal-brand" href="index.html">
@@ -111,39 +115,9 @@
 
     <section class="card">
       <h2>Duas linhas, duas pastas</h2>
-      <table class="trace line-matrix">
-        <thead>
-          <tr>
-            <th>Linha</th>
-            <th>Site</th>
-            <th>Tag</th>
-            <th>OS</th>
-            <th>Dados</th>
-            <th>Status</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Rust</strong></td>
-            <td><a href="https://pdv-rust.caracore.com.br/">pdv-rust.caracore.com.br</a></td>
-            <td>v0.1.2</td>
-            <td>Windows</td>
-            <td><code>%APPDATA%\caracore-pdv\</code></td>
-            <td>Piloto</td>
-          </tr>
-          <tr>
-            <td><strong>Java</strong></td>
-            <td><a href="https://pdv.caracore.com.br/">pdv.caracore.com.br</a></td>
-            <td>v3.2.3-free</td>
-            <td>Win / Linux / macOS</td>
-            <td><code>%APPDATA%\caracore\</code></td>
-            <td>Maduro balcão</td>
-          </tr>
-        </tbody>
-      </table>
-      <p class="notice notice-warn" style="margin-top: 14px;">
+      <p class="notice notice-warn">
         <strong>Não apague uma pasta achando que limpa a outra</strong>
-        Rust e Java não compartilham o banco. Apagar <code>%APPDATA%\caracore-pdv\</code> não afeta o Java Free, e vice-versa.
+        A tabela acima já traz site, tag e pasta. Rust grava em <code>%APPDATA%\caracore-pdv\</code>; o Free Java em <code>%APPDATA%\caracore\</code>. A matriz completa também está em <a href="download.html">download.html</a> e em <a href="primeiros-passos.html">primeiros-passos.html</a>.
       </p>
     </section>
 

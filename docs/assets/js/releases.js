@@ -4,6 +4,7 @@
   var OWNER = "chmulato";
   var REPO = "caracore-pdv-releases";
   var RELEASES_PAGE = "https://github.com/" + OWNER + "/" + REPO + "/releases";
+  /** Não usar em CTAs: a lista /releases e /latest misturam Java e Rust. */
   var RELEASES_LATEST = RELEASES_PAGE + "/latest";
   var RELEASES_TAG_V012 = RELEASES_PAGE + "/tag/v0.1.2";
   var DEFAULT_MSI_LOCALE = "pt-BR";

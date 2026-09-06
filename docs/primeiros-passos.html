@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="description" content="Primeiros passos do piloto Rust Windows — assistente /setup, login admin e pasta %APPDATA%\caracore-pdv\." />
+  <link rel="canonical" href="https://pdv-rust.caracore.com.br/primeiros-passos.html" />
   <title>Primeiros passos — CaraCore PDV Desktop (Rust) — piloto Windows</title>
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="assets/css/tokens.css?v=20260607c" />
@@ -11,6 +12,9 @@
   <link rel="stylesheet" href="assets/css/components.css?v=20260906" />
 </head>
 <body data-portal-page="primeiros-passos" data-nav-root="">
+  <div class="identity-banner" role="note">
+    <p>O download do balcão multi-plataforma é em <a href="https://pdv.caracore.com.br/download.html">pdv.caracore.com.br</a> (Java <strong>v3.2.3-free</strong>). Este site é o <strong>piloto Rust</strong>.</p>
+  </div>
   <header class="portal-header">
     <div class="portal-header-inner">
       <a class="portal-brand" href="index.html">
@@ -58,7 +62,7 @@
 
     <section class="card">
       <h2>1. Baixar</h2>
-      <p>Na página <a href="download.html">Formatos</a>, escolha NSIS, MSI ou ZIP da tag <strong>v0.1.2</strong>. Confira o SHA-256 antes de executar.</p>
+      <p>Na página <a href="download.html">Baixar piloto Rust (Windows)</a>, escolha NSIS, MSI ou ZIP da tag <strong>v0.1.2</strong>. Confira o SHA-256 antes de executar. Esta página é a fonte pública de instalação — se o ZIP trouxer um LEIA-ME antigo, siga este guia.</p>
     </section>
 
     <section class="card">
@@ -89,26 +93,39 @@
         <li>Se a tela pedir preparação do banco, avance o assistente até finalizar.</li>
         <li>Depois você cai na tela de login.</li>
       </ol>
-      <h3>Login de primeiro acesso (piloto)</h3>
+      <h3>Logins de demonstração (piloto local)</h3>
       <table class="trace">
         <thead>
           <tr>
-            <th>Campo</th>
-            <th>Valor</th>
+            <th>Usuário</th>
+            <th>Senha</th>
+            <th>Papel</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Usuário</td>
             <td><code>admin</code></td>
+            <td><code>admin123</code></td>
+            <td>admin</td>
           </tr>
           <tr>
-            <td>Senha</td>
-            <td><code>admin123</code></td>
+            <td><code>operador</code></td>
+            <td><code>Operador@1234</code></td>
+            <td>operador</td>
+          </tr>
+          <tr>
+            <td><code>gestor</code></td>
+            <td><code>Gestor@1234</code></td>
+            <td>financeiro</td>
+          </tr>
+          <tr>
+            <td><code>auditoria</code></td>
+            <td><code>Auditoria@1234</code></td>
+            <td>auditoria</td>
           </tr>
         </tbody>
       </table>
-      <p class="section-subtitle">Essa senha é a do bootstrap do piloto. Troque depois no cadastro de usuários se a loja for usar o programa no dia a dia. Não é a senha <code>admin</code>/<code>admin</code> do Free Java.</p>
+      <p class="section-subtitle">Terminal sugerido: <code>PDV-DESKTOP-01</code>. Senhas do bootstrap do piloto — não são <code>admin</code>/<code>admin</code> do Free Java. Troque a senha do admin se for usar no dia a dia da loja.</p>
     </section>
 
     <section class="card">

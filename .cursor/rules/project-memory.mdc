@@ -5,7 +5,7 @@ alwaysApply: true
 
 # Memória da Loja — caracore-pdv-rust-releases
 
-**Atualizado:** 2026-09-06 (identidade piloto Rust vs Free Java)
+**Atualizado:** 2026-09-06 (faixa de identidade em todas as páginas + CTAs residual)
 
 ## Repositório e papel
 
@@ -65,10 +65,11 @@ Conteúdo `docs/`: **apenas HTML** comercial (+ assets). Raiz: `README.md` + `CH
 - https://github.com/chmulato/caracore-pdv-releases/releases/tag/v0.1.2
 - Nav **Download** → GitHub (nova aba) · **Formatos** → `download.html`
 
-## Onde paramos (sessão 2026-06-03)
+## Onde paramos (sessão 2026-09-06)
 
-- Reescrita **`modalidades.html`** + CSS comercial + ajustes `index.html`, `mercado.html`, `CHANGELOG.md`, `README.md`.
-- Nav **Local e rede** em todas as páginas HTML do portal.
+- Identidade inequívoca: faixa em todas as páginas; CTAs só **Baixar piloto Rust (Windows)** / **Ir ao Free Java (balcão)**.
+- Zero `rust-pdv.caracore.com.br`; Java canal atual = **v3.2.3-free**.
+- Instalação pública = `download.html` + `primeiros-passos.html` (não duplicar LEIA-ME do ZIP).
 - **Não commitado / não publicado** no GitHub remoto (salvo o usuário pedir).
 
 ## Próximo foco (loja)

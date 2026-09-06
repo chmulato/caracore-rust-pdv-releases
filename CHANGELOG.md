@@ -2,6 +2,16 @@
 
 Formato alinhado às demais lojas `*-releases` do ecossistema CaraCore.
 
+## v0.1.2 — 2026-09-06 (ZIP: canal Rust no LEIA-ME)
+
+Republicado só o ZIP portátil. `LEIA-ME-INSTALACAO.txt` e `SHA256SUMS.txt` apontam exclusivamente para [`caracore-rust-pdv-releases/releases/tag/v0.1.2`](https://github.com/chmulato/caracore-rust-pdv-releases/releases/tag/v0.1.2) e https://pdv-rust.caracore.com.br/download.html. NSIS e MSI inalterados.
+
+| Arquivo | SHA256 |
+|---------|--------|
+| `CaraCore-PDV-v0.1.2-windows.zip` | `cc335cc8f45e454219390e8410103884d3ee1606acb1947288f9ad47a8ae8e9d` |
+
+---
+
 ## v0.1.2 — 2026-09-06 (menos ruído Java × Rust)
 
 **Sem novo binário.** Cada loja vende a sua linha. Hero da Rust com um CTA. Comparar fora do menu. A outra linha aparece só no rodapé da home. A escolha entre as linhas fica no portfólio (`#pdv-coexistencia`).
@@ -37,7 +47,7 @@ Checksums em `SHA256SUMS.txt` da tag e no manifesto `docs/assets/data/release-la
 | --- | --- |
 | `CaraCore.PDV_0.1.2_x64-setup.exe` | `54837af1d5d7f78200fd8a9c332da1e08feb279bcc513c13ec62a1f8ef1532be` |
 | `CaraCore.PDV_0.1.2_x64_pt-BR.msi` | `764ed38e1b185f24f8f2987a7e8257bfed50f8686ffeb39a0e425ba2c1595ae7` |
-| `CaraCore-PDV-v0.1.2-windows.zip` | `c3ee907981273030cfbb43b0379d897dd4324f3aa58255341348382b28c7edcd` |
+| `CaraCore-PDV-v0.1.2-windows.zip` | `cc335cc8f45e454219390e8410103884d3ee1606acb1947288f9ad47a8ae8e9d` |
 
 ---
 

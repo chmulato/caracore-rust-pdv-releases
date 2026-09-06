@@ -9,20 +9,20 @@
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="assets/css/tokens.css?v=20260607c" />
   <link rel="stylesheet" href="assets/css/layout.css?v=20260607d" />
-  <link rel="stylesheet" href="assets/css/components.css?v=20260606" />
+  <link rel="stylesheet" href="assets/css/components.css?v=20260906" />
 </head>
 <body data-portal-page="transparencia" data-nav-root="">
   <header class="portal-header">
     <div class="portal-header-inner">
       <a class="portal-brand" href="index.html">
         <img src="assets/img/logo-mark.svg" width="32" height="32" alt="" />
-        <span class="portal-brand-text">CaraCore PDV</span>
+        <span class="portal-brand-text">CaraCore PDV (Rust)</span>
       </a>
       <div class="portal-header-content">
         <span class="portal-header-badge">Transparência</span>
         <h1>Informações claras sobre o produto</h1>
         <p class="portal-header-lead">Quem publica o software, onde baixar com segurança, o que esperar na fase piloto e quais limites ainda existem de forma honesta e direta.</p>
-        <p class="portal-header-meta"><a href="index.html">Início</a> · <a href="#edicao-gratuita">Edição gratuita</a></p>
+        <p class="portal-header-meta"><a href="index.html">Início</a> · <a href="#edicao-gratuita">Piloto Rust (limites)</a></p>
       </div>
     </div>
   </header>
@@ -58,7 +58,7 @@
         <a class="hub-card" href="#smartscreen"><h3>Windows SmartScreen</h3><p>Aviso de assinatura</p></a>
         <a class="hub-card" href="#privacidade"><h3>Privacidade</h3><p>O que fazemos e não fazemos</p></a>
         <a class="hub-card" href="#backups"><h3>Backups</h3><p>Cópia física automática</p></a>
-        <a class="hub-card" href="#edicao-gratuita"><h3>Edição gratuita</h3><p>Limites e degustação</p></a>
+        <a class="hub-card" href="#edicao-gratuita"><h3>Piloto Rust (limites)</h3><p>100 vendas na vida do piloto</p></a>
         <a class="hub-card" href="#pix"><h3>PIX no checkout</h3><p>Fluxo manual no balcão</p></a>
         <a class="hub-card" href="#fiscal"><h3>Escopo fiscal</h3><p>Treino vs Produção real</p></a>
         <a class="hub-card" href="#comparacao"><h3>Comparação</h3><p>Grátis vs Premium</p></a>
@@ -74,7 +74,7 @@
         <li style="margin-bottom: 8px;"><strong>Download somente via GitHub oficial:</strong> Garantia absoluta de segurança ao obter o app da fonte correta.</li>
         <li style="margin-bottom: 8px;"><strong>Sem assinatura digital (SmartScreen):</strong> O Windows pode exibir um aviso de segurança no primeiro uso.</li>
         <li style="margin-bottom: 8px;"><strong>Dados 100% locais + backups automáticos:</strong> Soberania total sobre as vendas e backups em pendrives externos.</li>
-        <li style="margin-bottom: 8px;"><strong>Edição gratuita limitada a 100 vendas:</strong> Licença de testes locais com teto máximo de cupons emitidos.</li>
+        <li style="margin-bottom: 8px;"><strong>Piloto Rust (limites) — 100 vendas na vida:</strong> Teto do piloto Windows, não o Free Java de 100 vendas/mês.</li>
         <li style="margin-bottom: 8px;"><strong>PIX manual no balcão:</strong> Sem verificação por webhook automático na versão gratuita.</li>
         <li style="margin-bottom: 8px;"><strong>Fiscal simulado (LOCAL_MOCK):</strong> Ambiente de treino fiscal por padrão no pacote sem custo.</li>
       </ul>
@@ -180,21 +180,21 @@
             <h3>Instalador NSIS (.exe)</h3>
             <p>Formato padrão com assistente visual passo a passo. Recomendado para o lojista comum.</p>
           </div>
-          <a class="btn-primary" href="https://github.com/chmulato/caracore-pdv-releases/releases" rel="noopener noreferrer" target="_blank">Acompanhar releases</a>
+          <a class="btn-primary" href="https://github.com/chmulato/caracore-pdv-releases/releases/download/v0.1.2/CaraCore.PDV_0.1.2_x64-setup.exe" rel="noopener noreferrer" target="_blank">Baixar NSIS v0.1.2</a>
         </div>
         <div class="download-option" style="display: flex; flex-direction: column; justify-content: space-between;">
           <div>
             <h3>Pacote MSI pt-BR (.msi)</h3>
             <p>Ideal para profissionais e técnicos de TI. Permite implantação padronizada em redes corporativas.</p>
           </div>
-          <a class="btn-secondary" href="https://github.com/chmulato/caracore-pdv-releases/releases" rel="noopener noreferrer" target="_blank">Acompanhar releases</a>
+          <a class="btn-secondary" href="https://github.com/chmulato/caracore-pdv-releases/releases/download/v0.1.2/CaraCore.PDV_0.1.2_x64_pt-BR.msi" rel="noopener noreferrer" target="_blank">Baixar MSI v0.1.2</a>
         </div>
         <div class="download-option" style="display: flex; flex-direction: column; justify-content: space-between;">
           <div>
             <h3>Portátil ZIP (.zip)</h3>
             <p>Sem necessidade de instalação. Basta extrair a pasta em qualquer diretório local para rodar.</p>
           </div>
-          <a class="btn-secondary" href="https://github.com/chmulato/caracore-pdv-releases/releases" rel="noopener noreferrer" target="_blank">Acompanhar releases</a>
+          <a class="btn-secondary" href="https://github.com/chmulato/caracore-pdv-releases/releases/download/v0.1.2/CaraCore-PDV-v0.1.2-windows.zip" rel="noopener noreferrer" target="_blank">Baixar ZIP v0.1.2</a>
         </div>
       </div>
       
@@ -338,15 +338,15 @@
 
     <!-- Edição gratuita (limites e recursos) -->
     <section class="card" id="edicao-gratuita">
-      <h2>Edição gratuita (Degustação)</h2>
-      <p class="section-subtitle">O pacote básico permite que o lojista teste a agilidade e os fluxos do balcão sem pagar assinaturas.</p>
+      <h2>Piloto Rust (limites)</h2>
+      <p class="section-subtitle">O piloto Windows permite testar o fluxo do balcão sem pagar assinatura. Não é o Free Java de <a href="https://pdv.caracore.com.br/download.html">pdv.caracore.com.br</a>.</p>
 
       <div class="notice notice-warn">
-        <strong>⚠️ Limite Honestificado: Degustação de 100 Vendas</strong>
-        A Edição Gratuita permite realizar até <strong>100 vendas concluídas</strong> no banco local. A partir da 101ª venda, o sistema bloqueia novas movimentações até a ativação de uma licença Premium ou Seed. O app mostra avisos de progresso sobre o teto de cupons restantes.
+        <strong>Limite do piloto: 100 vendas na vida</strong>
+        O piloto Rust permite até <strong>100 vendas concluídas</strong> no banco local (teto da vida do piloto, não por mês). A partir da 101ª venda, o sistema bloqueia novas movimentações até a ativação de uma licença. O app mostra avisos de progresso sobre o teto de cupons restantes.
       </div>
 
-      <p><strong>O que está incluído na Edição Gratuita:</strong></p>
+      <p><strong>O que está incluído no piloto Rust:</strong></p>
       <ul>
         <li>Bunker offline completo para cadastros de produtos, operadores e vendas locais.</li>
         <li>Relatórios financeiros resumidos no app para fechamento de caixa.</li>
@@ -496,7 +496,7 @@
     <p>Cara Core PDV Desktop (Rust + Tauri) · Cara Core Informática · CNPJ 23.969.028/0001-37</p>
     <p class="portal-footer-links">
       <a href="transparencia.html">Transparência</a> ·
-      <a href="https://github.com/chmulato/caracore-pdv-releases/releases" rel="noopener noreferrer" target="_blank">Releases oficiais (GitHub)</a> ·
+      <a href="https://github.com/chmulato/caracore-pdv-releases/releases/tag/v0.1.2" rel="noopener noreferrer" target="_blank">Tag v0.1.2 (GitHub)</a> ·
       <a href="https://www.caracore.com.br/" rel="noopener noreferrer" target="_blank">caracore.com.br</a> ·
       <a href="mailto:suporte@caracore.com.br">suporte@caracore.com.br</a>
     </p>

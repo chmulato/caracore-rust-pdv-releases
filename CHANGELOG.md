@@ -2,6 +2,29 @@
 
 Formato alinhado às demais lojas `*-releases` do ecossistema CaraCore.
 
+## v0.1.2 — 2026-09-06 (identidade piloto Rust vs Free Java)
+
+**Sem novo binário.** A tag permanece [`v0.1.2`](https://github.com/chmulato/caracore-pdv-releases/releases/tag/v0.1.2) (Windows x64). A vitrine deixa inequívoco: este site é o piloto Rust, não o Free Java do balcão.
+
+### Identidade e download
+
+- Hero e título: **CaraCore PDV Desktop (Rust) — piloto Windows**.
+- Faixa fixa na home e em Download apontando o Free Java **v3.2.3-free** em `pdv.caracore.com.br`.
+- CTAs: **Baixar piloto Rust (Windows)** e **Ir ao Free Java (balcão)** — sem “Baixar grátis” genérico.
+- `download.html` lista os 3 assets reais + SHA256, sem Linux/macOS nesta tag; link só para `/releases/tag/v0.1.2`.
+- Comparativo e README alinhados a Java **v3.2.3-free** (não mais v3.2.2-free / v3.1.x).
+
+### Instalação e dados
+
+- Primeiro acesso: assistente `/setup` + login `admin` / `admin123`.
+- Pasta Rust `%APPDATA%\caracore-pdv\` destacada frente à pasta Java `%APPDATA%\caracore\`.
+
+### Para TI
+
+- Diagrama Bunker / Zod / DDD / SymmetricDS saiu do funil da home; permanece em `rust-tauri.html`.
+
+---
+
 ## v0.1.2 — 2026-06-06 (validação de saúde · oficina jun/2026)
 
 **Sem novo binário publicado nesta validação.** Permanece como release pública o rebuild Windows de **2026-06-05**. A validação de 06/06 confirmou saúde funcional, mas bloqueou novo corte por regressão semanal relativa de performance.

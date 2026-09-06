@@ -1,20 +1,24 @@
 {
   "tag_name": "v0.1.2",
-  "name": "CaraCore PDV v0.1.2",
+  "name": "CaraCore PDV Desktop (Rust) — piloto Windows v0.1.2",
   "published_at": "2026-06-07T13:23:18Z",
   "html_url": "https://github.com/chmulato/caracore-pdv-releases/releases/tag/v0.1.2",
+  "platforms": ["windows-x64"],
   "assets": [
     {
-      "name": "CaraCore-PDV-v0.1.2-windows.zip",
-      "browser_download_url": "https://github.com/chmulato/caracore-pdv-releases/releases/download/v0.1.2/CaraCore-PDV-v0.1.2-windows.zip"
-    },
-    {
       "name": "CaraCore.PDV_0.1.2_x64-setup.exe",
-      "browser_download_url": "https://github.com/chmulato/caracore-pdv-releases/releases/download/v0.1.2/CaraCore.PDV_0.1.2_x64-setup.exe"
+      "browser_download_url": "https://github.com/chmulato/caracore-pdv-releases/releases/download/v0.1.2/CaraCore.PDV_0.1.2_x64-setup.exe",
+      "sha256": "ac87da95d9951726926d6e56439ab5f36b1279343f1c7635fc1775ec416ce168"
     },
     {
       "name": "CaraCore.PDV_0.1.2_x64_pt-BR.msi",
-      "browser_download_url": "https://github.com/chmulato/caracore-pdv-releases/releases/download/v0.1.2/CaraCore.PDV_0.1.2_x64_pt-BR.msi"
+      "browser_download_url": "https://github.com/chmulato/caracore-pdv-releases/releases/download/v0.1.2/CaraCore.PDV_0.1.2_x64_pt-BR.msi",
+      "sha256": "a0c0058449c506b74653a354120182217f741863b9decea112900c2f23a318f7"
+    },
+    {
+      "name": "CaraCore-PDV-v0.1.2-windows.zip",
+      "browser_download_url": "https://github.com/chmulato/caracore-pdv-releases/releases/download/v0.1.2/CaraCore-PDV-v0.1.2-windows.zip",
+      "sha256": "1fbf2b17de7ae6b3a4ca8fab079b5401ce8c3c0e7c4245d2a4d6291f83812aa4"
     },
     {
       "name": "RELEASE_MANIFEST.json",

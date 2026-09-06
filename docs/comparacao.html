@@ -3,24 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="description" content="Comparação entre PDV Desktop Rust + Tauri e PDV Desktop Java — qual escolher para sua loja." />
-  <title>Comparação Rust vs Java — Cara Core PDV Desktop</title>
+  <meta name="description" content="Comparação honesta: piloto Rust Windows v0.1.2 vs Free Java v3.2.3-free. Nenhuma linha substitui a outra." />
+  <title>Comparação — piloto Rust vs Free Java v3.2.3-free</title>
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="assets/css/tokens.css?v=20260607c" />
   <link rel="stylesheet" href="assets/css/layout.css?v=20260607d" />
-  <link rel="stylesheet" href="assets/css/components.css?v=20260606" />
+  <link rel="stylesheet" href="assets/css/components.css?v=20260906" />
 </head>
 <body data-portal-page="comparacao" data-nav-root="">
   <header class="portal-header">
     <div class="portal-header-inner">
       <a class="portal-brand" href="index.html">
         <img src="assets/img/logo-mark.svg" width="32" height="32" alt="" />
-        <span class="portal-brand-text">CaraCore PDV</span>
+        <span class="portal-brand-text">CaraCore PDV (Rust)</span>
       </a>
       <div class="portal-header-content">
         <span class="portal-header-badge">Comparação</span>
-        <h1>PDV Desktop Rust vs PDV Desktop Java</h1>
-        <p class="portal-header-lead">Dois produtos CaraCore PDV, stacks distintas — escolha conforme plataforma, maturidade e perfil da operação.</p>
+        <h1>Piloto Rust Windows vs Free Java do balcão</h1>
+        <p class="portal-header-lead">Duas linhas desktop independentes. Esta vitrine é o <strong>piloto Rust</strong>. O canal maduro é Java <strong>v3.2.3-free</strong> em pdv.caracore.com.br. Nenhuma substitui a outra.</p>
         <p class="portal-header-meta"><a href="index.html">Início</a></p>
       </div>
     </div>
@@ -46,7 +46,7 @@
   <main class="portal-main">
     <section class="card exec-summary">
       <h2>Resumo rápido</h2>
-      <p class="exec-lead">Ambos são o <strong>mesmo produto CaraCore PDV</strong>, com faixas de versão independentes. Não há substituição — coexistem para atender perfis diferentes de loja e TI.</p>
+      <p class="exec-lead">Não é o mesmo download. O <strong>piloto Rust</strong> (este site) e o <strong>Free Java</strong> (pdv.caracore.com.br) convivem — faixas de versão, pastas de dados e sistemas operacionais diferentes. Não há substituição.</p>
     </section>
 
     <section class="card">
@@ -62,8 +62,8 @@
         <tbody>
           <tr>
             <td><strong>Status</strong></td>
-            <td>Piloto Windows · v0.1.x</td>
-            <td>Oferta madura · v3.2.2-free</td>
+            <td>Piloto Windows · v0.1.2</td>
+            <td>Oferta madura · v3.2.3-free</td>
           </tr>
           <tr>
             <td><strong>Plataforma</strong></td>
@@ -86,6 +86,11 @@
             <td>Maior — runtime Java</td>
           </tr>
           <tr>
+            <td><strong>Pasta de dados</strong></td>
+            <td><code>%APPDATA%\caracore-pdv\</code></td>
+            <td><code>%APPDATA%\caracore\</code></td>
+          </tr>
+          <tr>
             <td><strong>Operação offline</strong></td>
             <td>Vendas e caixa locais</td>
             <td>Vendas e caixa locais</td>
@@ -97,11 +102,49 @@
           </tr>
           <tr>
             <td><strong>Onde baixar</strong></td>
-            <td><a href="https://github.com/chmulato/caracore-pdv-releases/releases" rel="noopener noreferrer">Releases GitHub</a> · <a href="index.html">pdv-rust.caracore.com.br</a></td>
-            <td><a href="https://pdv.caracore.com.br/download.html" rel="noopener noreferrer">pdv.caracore.com.br</a></td>
+            <td><a href="https://github.com/chmulato/caracore-pdv-releases/releases/tag/v0.1.2" rel="noopener noreferrer">Tag v0.1.2</a> · <a href="https://pdv-rust.caracore.com.br/">pdv-rust.caracore.com.br</a></td>
+            <td><a href="https://pdv.caracore.com.br/download.html" rel="noopener noreferrer">pdv.caracore.com.br/download.html</a></td>
           </tr>
         </tbody>
       </table>
+    </section>
+
+    <section class="card">
+      <h2>Duas linhas, duas pastas</h2>
+      <table class="trace line-matrix">
+        <thead>
+          <tr>
+            <th>Linha</th>
+            <th>Site</th>
+            <th>Tag</th>
+            <th>OS</th>
+            <th>Dados</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Rust</strong></td>
+            <td><a href="https://pdv-rust.caracore.com.br/">pdv-rust.caracore.com.br</a></td>
+            <td>v0.1.2</td>
+            <td>Windows</td>
+            <td><code>%APPDATA%\caracore-pdv\</code></td>
+            <td>Piloto</td>
+          </tr>
+          <tr>
+            <td><strong>Java</strong></td>
+            <td><a href="https://pdv.caracore.com.br/">pdv.caracore.com.br</a></td>
+            <td>v3.2.3-free</td>
+            <td>Win / Linux / macOS</td>
+            <td><code>%APPDATA%\caracore\</code></td>
+            <td>Maduro balcão</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="notice notice-warn" style="margin-top: 14px;">
+        <strong>Não apague uma pasta achando que limpa a outra</strong>
+        Rust e Java não compartilham o banco. Apagar <code>%APPDATA%\caracore-pdv\</code> não afeta o Java Free, e vice-versa.
+      </p>
     </section>
 
     <section class="card">
@@ -120,7 +163,7 @@
           <h3>Escolha Java se…</h3>
           <ul>
             <li>Precisa de Linux ou macOS além do Windows.</li>
-            <li>Quer a oferta madura, canal v3.2.2-free, já consolidada.</li>
+            <li>Quer a oferta madura, canal v3.2.3-free, já consolidada.</li>
             <li>Operação exige maturidade máxima antes de migrar stack.</li>
             <li>Já usa o PDV Java e quer continuidade sem mudança.</li>
           </ul>
@@ -130,8 +173,8 @@
 
     <section class="card">
       <p class="cta-box">
-        <a class="btn-primary" href="https://github.com/chmulato/caracore-pdv-releases/releases/tag/v0.1.2" rel="noopener noreferrer" data-official-download>Baixar PDV Rust</a>
-        <a class="btn-secondary" href="https://pdv.caracore.com.br/download.html" rel="noopener noreferrer">Baixar PDV Java</a>
+        <a class="btn-primary" href="https://github.com/chmulato/caracore-pdv-releases/releases/tag/v0.1.2" rel="noopener noreferrer" data-official-download>Baixar piloto Rust (Windows)</a>
+        <a class="btn-secondary" href="https://pdv.caracore.com.br/download.html" rel="noopener noreferrer">Ir ao Free Java (balcão)</a>
       </p>
       <p class="section-subtitle">Matriz institucional: <a href="https://www.caracore.com.br/portfolio.html#pdv-coexistencia" rel="noopener noreferrer">portfólio Cara Core</a></p>
     </section>
@@ -146,8 +189,8 @@
       <a href="mailto:suporte@caracore.com.br">suporte@caracore.com.br</a>
     </p>
   </footer>
-  <script src="assets/js/releases.js?v=20260607c"></script>
-  <script src="assets/js/portal.js?v=20260607d"></script>
+  <script src="assets/js/releases.js?v=20260906"></script>
+  <script src="assets/js/portal.js?v=20260906"></script>
 </body>
 </html>
 

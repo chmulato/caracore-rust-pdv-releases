@@ -3,25 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="description" content="Primeiros passos com o Cara Core PDV Desktop (Rust + Tauri) no Windows — instaladores em português do Brasil." />
-  <title>Primeiros passos — Cara Core PDV Desktop (Rust + Tauri)</title>
+  <meta name="description" content="Primeiros passos do piloto Rust Windows — assistente /setup, login admin e pasta %APPDATA%\caracore-pdv\." />
+  <title>Primeiros passos — CaraCore PDV Desktop (Rust) — piloto Windows</title>
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="assets/css/tokens.css?v=20260607c" />
   <link rel="stylesheet" href="assets/css/layout.css?v=20260607d" />
-  <link rel="stylesheet" href="assets/css/components.css?v=20260606" />
+  <link rel="stylesheet" href="assets/css/components.css?v=20260906" />
 </head>
 <body data-portal-page="primeiros-passos" data-nav-root="">
   <header class="portal-header">
     <div class="portal-header-inner">
       <a class="portal-brand" href="index.html">
         <img src="assets/img/logo-mark.svg" width="32" height="32" alt="" />
-        <span class="portal-brand-text">CaraCore PDV</span>
+        <span class="portal-brand-text">CaraCore PDV (Rust)</span>
       </a>
       <div class="portal-header-content">
-        <span class="portal-header-badge">Primeiros passos</span>
-        <h1>Instalar e abrir o PDV</h1>
-        <p class="portal-header-lead">Passo a passo para a primeira execução no Windows — instaladores em português do Brasil.</p>
-        <p class="portal-header-meta"><a href="https://github.com/chmulato/caracore-pdv-releases/releases/tag/v0.1.2" rel="noopener noreferrer">Baixar no GitHub</a> · <a href="download.html">Formatos</a></p>
+        <span class="portal-header-badge">Primeiros passos · piloto Rust</span>
+        <h1>Instalar e abrir o piloto Windows</h1>
+        <p class="portal-header-lead">Assistente <strong>/setup</strong>, login <strong>admin / admin123</strong> e pasta de dados diferente do Java Free.</p>
+        <p class="portal-header-meta"><a href="download.html">Baixar piloto Rust (Windows)</a> · <a href="https://pdv.caracore.com.br/download.html">Ir ao Free Java (balcão)</a></p>
       </div>
     </div>
   </header>
@@ -45,39 +45,70 @@
 
   <main class="portal-main">
     <section class="card">
+      <div class="notice notice-info">
+        <strong>Este guia é do piloto Rust</strong>
+        O Free Java do balcão (v3.2.3-free, Windows/Linux/macOS) instala e guarda dados em outro caminho. Se você quer o caixa maduro multi-plataforma, vá para <a href="https://pdv.caracore.com.br/download.html">pdv.caracore.com.br/download.html</a>.
+      </div>
+    </section>
+
+    <section class="card">
       <h2>0. Escolher modalidade</h2>
       <p>Local (um PC) ou rede (vários caixas): <a href="modalidades.html">Local e rede →</a></p>
     </section>
 
     <section class="card">
       <h2>1. Baixar</h2>
-      <p><a href="download.html">Escolha NSIS, MSI ou ZIP</a> nos releases oficiais. Confira <a href="transparencia.html#verificar-integridade">integridade SHA-256</a> antes de executar.</p>
+      <p>Na página <a href="download.html">Formatos</a>, escolha NSIS, MSI ou ZIP da tag <strong>v0.1.2</strong>. Confira o SHA-256 antes de executar.</p>
     </section>
 
     <section class="card">
       <h2>2. Instalar</h2>
       <h3>Opção A — Instalador NSIS (lojista)</h3>
       <ol>
-        <li>Execute o instalador baixado (assistente em português).</li>
+        <li>Execute <code>CaraCore.PDV_0.1.2_x64-setup.exe</code> (assistente em português).</li>
         <li>Siga as telas até concluir.</li>
         <li>Abra <strong>CaraCore PDV</strong> pelo menu Iniciar ou atalho criado.</li>
       </ol>
       <h3>Opção B — MSI (TI / empresa)</h3>
       <ol>
-        <li>Instale o pacote MSI pt-BR (duplo clique ou ferramenta de deploy da sua TI).</li>
+        <li>Instale <code>CaraCore.PDV_0.1.2_x64_pt-BR.msi</code> (duplo clique ou ferramenta de deploy da sua TI).</li>
         <li>Para instalação silenciosa em rede, use o procedimento padrão de MSI da sua equipe de TI.</li>
       </ol>
       <h3>Opção C — ZIP portátil</h3>
       <ol>
-        <li>Extraia todo o conteúdo em uma pasta fixa no computador da loja.</li>
-        <li>Use o atalho ou script de instalação incluído no pacote, se disponível.</li>
+        <li>Extraia <code>CaraCore-PDV-v0.1.2-windows.zip</code> em uma pasta fixa no computador da loja.</li>
+        <li>Use o atalho ou <code>instalar-atalho.bat</code> incluído no pacote, se disponível.</li>
         <li>Abra <strong>CaraCore PDV</strong> pelo atalho.</li>
       </ol>
     </section>
 
     <section class="card">
-      <h2>3. Configurar</h2>
-      <p>Na primeira abertura, o assistente orienta a preparação do banco de dados local. Depois, entre com usuário e senha fornecidos na implantação ou criados no setup.</p>
+      <h2>3. Primeira abertura — assistente /setup</h2>
+      <p>Na primeira execução o programa abre a tela <strong>/setup</strong> (assistente de banco). Conclua o assistente escolhendo SQLite local. Isso grava <code>setupConcluido</code> na configuração.</p>
+      <ol>
+        <li>Se a tela pedir preparação do banco, avance o assistente até finalizar.</li>
+        <li>Depois você cai na tela de login.</li>
+      </ol>
+      <h3>Login de primeiro acesso (piloto)</h3>
+      <table class="trace">
+        <thead>
+          <tr>
+            <th>Campo</th>
+            <th>Valor</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Usuário</td>
+            <td><code>admin</code></td>
+          </tr>
+          <tr>
+            <td>Senha</td>
+            <td><code>admin123</code></td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="section-subtitle">Essa senha é a do bootstrap do piloto. Troque depois no cadastro de usuários se a loja for usar o programa no dia a dia. Não é a senha <code>admin</code>/<code>admin</code> do Free Java.</p>
     </section>
 
     <section class="card">
@@ -86,31 +117,68 @@
     </section>
 
     <section class="card">
-      <h2>Onde ficam os arquivos</h2>
-      <p>Dados locais no perfil Windows do operador — <a href="transparencia.html#dados-e-privacidade">Transparência</a>.</p>
+      <h2>Onde ficam os arquivos — pasta diferente do Java</h2>
+      <div class="notice notice-warn">
+        <strong>Rust ≠ Java no disco</strong>
+        O piloto Rust usa <code>%APPDATA%\caracore-pdv\</code>. O Free Java usa <code>%APPDATA%\caracore\</code>. Apagar uma pasta <strong>não</strong> limpa a outra. Não misture backups.
+      </div>
+      <table class="trace line-matrix">
+        <thead>
+          <tr>
+            <th>Linha</th>
+            <th>Site</th>
+            <th>Tag</th>
+            <th>OS</th>
+            <th>Dados</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Rust</strong></td>
+            <td><a href="https://pdv-rust.caracore.com.br/">pdv-rust.caracore.com.br</a></td>
+            <td>v0.1.2</td>
+            <td>Windows</td>
+            <td><code>%APPDATA%\caracore-pdv\</code></td>
+            <td>Piloto</td>
+          </tr>
+          <tr>
+            <td><strong>Java</strong></td>
+            <td><a href="https://pdv.caracore.com.br/">pdv.caracore.com.br</a></td>
+            <td>v3.2.3-free</td>
+            <td>Win / Linux / macOS</td>
+            <td><code>%APPDATA%\caracore\</code></td>
+            <td>Maduro balcão</td>
+          </tr>
+        </tbody>
+      </table>
+      <ul>
+        <li>Banco SQLite: <code>%APPDATA%\caracore-pdv\data\pdv.db</code></li>
+        <li>Configuração: <code>%APPDATA%\caracore-pdv\config.json</code></li>
+        <li>Logs: <code>%APPDATA%\caracore-pdv\logs\</code></li>
+        <li>Atalho: Win+R, digite <code>%APPDATA%\caracore-pdv</code> e Enter.</li>
+      </ul>
+      <p>Detalhes de privacidade: <a href="transparencia.html#dados-e-privacidade">Transparência</a>.</p>
     </section>
 
     <section class="card">
-      <p class="cta-box"><a class="btn-primary" href="produto.html">Ver funções do produto</a></p>
+      <p class="cta-box">
+        <a class="btn-primary" href="download.html">Baixar piloto Rust (Windows)</a>
+        <a class="btn-secondary" href="produto.html">Ver funções do produto</a>
+      </p>
     </section>
   </main>
 
   <footer class="portal-footer">
-    <p>Cara Core PDV Desktop (Rust + Tauri) · Cara Core Informática · CNPJ 23.969.028/0001-37</p>
+    <p>CaraCore PDV Desktop (Rust) — piloto Windows · Cara Core Informática · CNPJ 23.969.028/0001-37</p>
     <p class="portal-footer-links">
       <a href="transparencia.html">Transparência</a> ·
-      <a href="https://github.com/chmulato/caracore-pdv-releases/releases" rel="noopener noreferrer">Releases oficiais (GitHub)</a> ·
+      <a href="https://github.com/chmulato/caracore-pdv-releases/releases/tag/v0.1.2" rel="noopener noreferrer">Tag v0.1.2</a> ·
       <a href="https://www.caracore.com.br/" rel="noopener noreferrer">caracore.com.br</a> ·
       <a href="mailto:suporte@caracore.com.br">suporte@caracore.com.br</a>
     </p>
   </footer>
-  <script src="assets/js/releases.js?v=20260607c"></script>
-  <script src="assets/js/portal.js?v=20260607d"></script>
+  <script src="assets/js/releases.js?v=20260906"></script>
+  <script src="assets/js/portal.js?v=20260906"></script>
 </body>
 </html>
-
-
-
-
-
-

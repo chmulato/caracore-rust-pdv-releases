@@ -11,8 +11,11 @@ import urllib.error
 import urllib.request
 
 
-def fetch_latest_release(owner: str, repo: str) -> dict:
-    url = f"https://api.github.com/repos/{owner}/{repo}/releases/latest"
+def fetch_release(owner: str, repo: str, tag: str) -> dict:
+    if tag:
+        url = f"https://api.github.com/repos/{owner}/{repo}/releases/tags/{tag}"
+    else:
+        url = f"https://api.github.com/repos/{owner}/{repo}/releases/latest"
     req = urllib.request.Request(
         url,
         headers={
@@ -33,19 +36,23 @@ def fetch_latest_release(owner: str, repo: str) -> dict:
 
 def normalize_release(payload: dict) -> dict:
     assets = payload.get("assets") or []
-    normalized_assets = [
-        {
-            "name": asset.get("name"),
-            "browser_download_url": asset.get("browser_download_url"),
-        }
-        for asset in assets
-        if asset.get("name") and asset.get("browser_download_url")
-    ]
+    normalized_assets = []
+    for asset in assets:
+        name = asset.get("name")
+        url = asset.get("browser_download_url")
+        if not name or not url:
+            continue
+        item = {"name": name, "browser_download_url": url}
+        digest = asset.get("digest") or ""
+        if digest.startswith("sha256:"):
+            item["sha256"] = digest.split(":", 1)[1]
+        normalized_assets.append(item)
     return {
         "tag_name": payload.get("tag_name"),
         "name": payload.get("name"),
         "published_at": payload.get("published_at"),
         "html_url": payload.get("html_url"),
+        "platforms": ["windows-x64"],
         "assets": normalized_assets,
     }
 
@@ -73,13 +80,18 @@ def parse_args() -> argparse.Namespace:
         default="docs/assets/data/release-latest.json",
         help="Caminho de saída do manifesto.",
     )
+    parser.add_argument(
+        "--tag",
+        default="v0.1.2",
+        help="Tag Rust a espelhar. Nunca use /latest neste repo misto.",
+    )
     return parser.parse_args()
 
 
 def main() -> int:
     args = parse_args()
     output = pathlib.Path(args.output)
-    latest = fetch_latest_release(args.owner, args.repo)
+    latest = fetch_release(args.owner, args.repo, args.tag)
     manifest = normalize_release(latest)
     write_manifest(output, manifest)
     print(

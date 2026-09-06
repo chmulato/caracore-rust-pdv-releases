@@ -5,33 +5,35 @@ alwaysApply: true
 
 # Loja pdv-rust — continuidade
 
-**Atualizado:** 2026-06-03 · Repo: `D:\dev\caracore-pdv-rust-releases`
+**Atualizado:** 2026-09-06 · Repo: `D:\onedrive\dev\caracore-pdv-rust-releases`
 
 ## Estado
 
-- Vitrine **v0.1.2** (copy + UX + **transparência free/PIX/100 vendas**) em disco local — alinhada a `consistencia_pdv.md` da oficina.
-- Binários oficiais **v0.1.2** na tag GitHub `caracore-pdv-releases` (não `/latest`).
-- **Push:** `master` alinhada com `origin` (2026-06-03) — validar https://pdv-rust.caracore.com.br/modalidades.html
+- Vitrine **v0.1.2** com identidade inequívoca: **piloto Rust Windows**, não o Free Java do balcão.
+- Binários oficiais **v0.1.2** na tag GitHub `caracore-pdv-releases` (**nunca** `/latest` nem a lista mista).
+- Java maduro citado como **v3.2.3-free** em https://pdv.caracore.com.br/download.html
+- **Push:** alterações de identidade ainda em disco local — commit + push só com autorização.
 
 ## Validar após push
 
-1. https://pdv-rust.caracore.com.br/transparencia.html#edicao-gratuita — matriz free (100 vendas, PIX manual).
-2. https://pdv-rust.caracore.com.br/modalidades.html — cards, CTA fixo, jornada 3 passos.
-3. https://pdv-rust.caracore.com.br/ — hub “Dois modos”.
-4. Botões **Baixar** → tag `v0.1.2` em `caracore-pdv-releases` (**nunca** `releases/latest`).
+1. https://pdv-rust.caracore.com.br/ — hero “CaraCore PDV Desktop (Rust) — piloto Windows” + faixa Java 3.2.3-free.
+2. https://pdv-rust.caracore.com.br/download.html — 3 assets + SHA256 + link `/releases/tag/v0.1.2`.
+3. https://pdv-rust.caracore.com.br/comparacao.html — Java v3.2.3-free; pastas AppData distintas.
+4. https://pdv-rust.caracore.com.br/primeiros-passos.html — `/setup` + `admin` / `admin123`.
+5. Botões **Baixar piloto Rust (Windows)** → tag `v0.1.2` (**nunca** `releases/latest`).
 
 ## Arquivos tocados na última sessão
 
-- `docs/transparencia.html`, `docs/modalidades.html`, `docs/index.html`, `docs/mercado.html`, `docs/produto.html`, `docs/download.html` (somente HTML em `docs/`)
-- `docs/assets/css/components.css`
+- `docs/index.html`, `docs/download.html`, `docs/comparacao.html`, `docs/primeiros-passos.html`
+- `docs/modalidades.html`, `docs/transparencia.html`, `docs/mercado.html`, `docs/rust-tauri.html` e CTAs irmãos
+- `docs/assets/css/components.css`, `docs/assets/js/download-page.js`, `docs/assets/data/release-latest.json`
 - `CHANGELOG.md`, `README.md`
-- Nav: `docs/*.html`, `docs/wiki/*.html`
-- Regra de conteúdo: `.cursor/rules/loja-conteudo.mdc` — sem `.md` em `docs/`
+- Body da release GitHub `v0.1.2` (texto; tag não apagada)
 
 ## Próximo passo único (se só houver tempo)
 
 ```powershell
-cd D:\dev\caracore-pdv-rust-releases
+cd D:\onedrive\dev\caracore-pdv-rust-releases
 git status
 # commit + push master quando o usuário autorizar
 ```

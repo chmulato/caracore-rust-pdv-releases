@@ -3,26 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="description" content="Baixe o Cara Core PDV Desktop — Windows, Linux e macOS. Instaladores em português, licença Seed opcional e download verificado." />
+  <meta name="description" content="Baixe o piloto Rust Windows do CaraCore PDV Desktop — MSI, NSIS e ZIP da tag v0.1.2. Não é o Free Java do balcão." />
   <link rel="canonical" href="https://pdv-rust.caracore.com.br/download.html" />
-  <title>Download — Cara Core PDV Desktop (Rust + Tauri)</title>
+  <title>Download — CaraCore PDV Desktop (Rust) — piloto Windows v0.1.2</title>
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="assets/css/tokens.css?v=20260607c" />
   <link rel="stylesheet" href="assets/css/layout.css?v=20260607d" />
-  <link rel="stylesheet" href="assets/css/components.css?v=20260607" />
+  <link rel="stylesheet" href="assets/css/components.css?v=20260906" />
 </head>
 <body data-portal-page="download" data-nav-root="">
+  <div class="identity-banner" role="note">
+    <p>O download do balcão multi-plataforma é em <a href="https://pdv.caracore.com.br/download.html">pdv.caracore.com.br</a> (Java <strong>v3.2.3-free</strong>). Este site é o <strong>piloto Rust</strong>.</p>
+  </div>
   <header class="portal-header">
     <div class="portal-header-inner">
       <a class="portal-brand" href="index.html">
         <img src="assets/img/logo-mark.svg" width="32" height="32" alt="" />
-        <span class="portal-brand-text">CaraCore PDV</span>
+        <span class="portal-brand-text">CaraCore PDV (Rust)</span>
       </a>
       <div class="portal-header-content">
-        <span class="portal-header-badge">Download</span>
-        <h1>Escolha seu menu de download</h1>
-        <p class="portal-header-lead">Um caminho simples para cada perfil: <strong>instalação recomendada</strong>, <strong>pacote para TI</strong> ou <strong>versão portátil</strong>.</p>
-        <p class="portal-header-meta"><a href="primeiros-passos.html">Primeiros passos</a> · <a href="transparencia.html">Transparência</a></p>
+        <span class="portal-header-badge">Piloto Windows · tag v0.1.2</span>
+        <h1>Baixar piloto Rust (Windows)</h1>
+        <p class="portal-header-lead">Três arquivos oficiais da tag <strong>v0.1.2</strong> — NSIS, MSI pt-BR e ZIP. Linux e macOS <strong>não estão nesta tag</strong>.</p>
+        <p class="portal-header-meta"><a href="primeiros-passos.html">Primeiros passos</a> · <a href="https://pdv.caracore.com.br/download.html">Ir ao Free Java (balcão)</a></p>
       </div>
     </div>
   </header>
@@ -46,100 +49,140 @@
 
   <main class="portal-main">
     <section class="card">
-      <h2>Menu rápido de download</h2>
-      <p class="section-subtitle">Escolha a opção abaixo conforme o seu cenário. Você pode trocar depois na mesma versão.</p>
-      <div class="download-quick-grid">
-        <a id="quick-recommended" class="download-quick-item download-quick-item--primary" href="https://github.com/chmulato/caracore-pdv-releases/releases/tag/v0.1.2" rel="noopener noreferrer">
-          <strong>✅ Recomendado para a loja</strong>
-          <span>Instalador guiado para começar rápido (Windows)</span>
-        </a>
-        <a id="quick-msi" class="download-quick-item" href="https://github.com/chmulato/caracore-pdv-releases/releases/tag/v0.1.2" rel="noopener noreferrer">
-          <strong>🧰 TI / implantação em rede</strong>
-          <span>Pacote MSI para instalação corporativa</span>
-        </a>
-        <a id="quick-portable" class="download-quick-item" href="https://github.com/chmulato/caracore-pdv-releases/releases/tag/v0.1.2" rel="noopener noreferrer">
-          <strong>⚡ Portátil (sem instalar)</strong>
-          <span>ZIP para teste rápido ou ambiente piloto</span>
-        </a>
-        <a id="quick-releases" class="download-quick-item" href="https://github.com/chmulato/caracore-pdv-releases/releases" rel="noopener noreferrer">
-          <strong>📦 Ver todos os arquivos</strong>
-          <span>Abra a página completa de releases oficiais</span>
-        </a>
+      <div class="notice notice-warn">
+        <strong>Não é o Free Java do balcão</strong>
+        Este download é o <strong>piloto Rust Windows</strong>. O canal maduro multi-plataforma (Windows, Linux e macOS) está em <a href="https://pdv.caracore.com.br/download.html">pdv.caracore.com.br/download.html</a> — tag <strong>v3.2.3-free</strong>.
+      </div>
+      <div class="download-hero-cta">
+        <h2>Baixar piloto Rust (Windows)</h2>
+        <p>Instalador recomendado para a loja: NSIS em português. Conferência SHA-256 abaixo — sem depender de JavaScript.</p>
+        <a id="download-hero-btn" class="btn-primary" href="https://github.com/chmulato/caracore-pdv-releases/releases/download/v0.1.2/CaraCore.PDV_0.1.2_x64-setup.exe" rel="noopener noreferrer" data-official-download>Baixar piloto Rust (Windows)</a>
+        <p id="download-hero-hash" class="hash-line">SHA256 do NSIS: <span class="hash-inline">ac87da95d9951726926d6e56439ab5f36b1279343f1c7635fc1775ec416ce168</span></p>
       </div>
     </section>
 
     <section class="card">
-      <div class="download-hero-cta">
-        <h2>Baixar PDV Desktop (Windows)</h2>
-        <p>Instaladores oficiais em português — NSIS, MSI pt-BR ou pacote portátil.</p>
-        <a id="download-hero-btn" class="btn-primary" href="https://github.com/chmulato/caracore-pdv-releases/releases/tag/v0.1.2" rel="noopener noreferrer" data-official-download>Baixar PDV Desktop</a>
-        <p id="download-hero-hash" class="hash-line">A verificação de integridade aparece abaixo após carregar a release.</p>
+      <h2>Arquivos da tag v0.1.2</h2>
+      <p class="section-subtitle">Somente Windows x64. Nomes reais dos arquivos (com ponto em <code>CaraCore.PDV_…</code>). Link direto da tag — não da lista mista do repositório.</p>
+      <table class="trace">
+        <thead>
+          <tr>
+            <th>Arquivo</th>
+            <th>Para quem</th>
+            <th>SHA256</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code class="asset-file">CaraCore.PDV_0.1.2_x64-setup.exe</code></td>
+            <td>Lojista — instalador NSIS (recomendado)</td>
+            <td class="hash-cell">ac87da95d9951726926d6e56439ab5f36b1279343f1c7635fc1775ec416ce168</td>
+            <td><a id="btn-nsis" class="btn-primary" href="https://github.com/chmulato/caracore-pdv-releases/releases/download/v0.1.2/CaraCore.PDV_0.1.2_x64-setup.exe" rel="noopener noreferrer">Baixar NSIS</a></td>
+          </tr>
+          <tr>
+            <td><code class="asset-file">CaraCore.PDV_0.1.2_x64_pt-BR.msi</code></td>
+            <td>TI — MSI pt-BR para rede</td>
+            <td class="hash-cell">a0c0058449c506b74653a354120182217f741863b9decea112900c2f23a318f7</td>
+            <td><a id="btn-msi" class="btn-secondary" href="https://github.com/chmulato/caracore-pdv-releases/releases/download/v0.1.2/CaraCore.PDV_0.1.2_x64_pt-BR.msi" rel="noopener noreferrer">Baixar MSI</a></td>
+          </tr>
+          <tr>
+            <td><code class="asset-file">CaraCore-PDV-v0.1.2-windows.zip</code></td>
+            <td>Portátil — sem instalar</td>
+            <td class="hash-cell">1fbf2b17de7ae6b3a4ca8fab079b5401ce8c3c0e7c4245d2a4d6291f83812aa4</td>
+            <td><a id="btn-zip" class="btn-secondary" href="https://github.com/chmulato/caracore-pdv-releases/releases/download/v0.1.2/CaraCore-PDV-v0.1.2-windows.zip" rel="noopener noreferrer">Baixar ZIP</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="section-subtitle" style="margin-top: 14px;">Linux e macOS: <strong>não publicados nesta tag</strong> (não há <code>.deb</code> nem <code>.dmg</code> aqui). Para balcão multi-plataforma, use o <a href="https://pdv.caracore.com.br/download.html">Free Java v3.2.3-free</a>.</p>
+      <p class="section-subtitle"><a class="ext-link" id="releases-page-link" href="https://github.com/chmulato/caracore-pdv-releases/releases/tag/v0.1.2" rel="noopener noreferrer">Abrir a tag v0.1.2 no GitHub</a> · <a class="ext-link" href="https://github.com/chmulato/caracore-pdv-releases/releases/download/v0.1.2/SHA256SUMS.txt" rel="noopener noreferrer">SHA256SUMS.txt</a> · <a href="transparencia.html#edicao-gratuita">Limites do piloto Rust</a></p>
+    </section>
+
+    <section class="card">
+      <h2>Qual linha você quer?</h2>
+      <table class="trace line-matrix">
+        <thead>
+          <tr>
+            <th>Linha</th>
+            <th>Site</th>
+            <th>Tag</th>
+            <th>OS</th>
+            <th>Dados</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Rust</strong></td>
+            <td><a href="https://pdv-rust.caracore.com.br/">pdv-rust.caracore.com.br</a></td>
+            <td>v0.1.2</td>
+            <td>Windows</td>
+            <td><code>%APPDATA%\caracore-pdv\</code></td>
+            <td>Piloto</td>
+          </tr>
+          <tr>
+            <td><strong>Java</strong></td>
+            <td><a href="https://pdv.caracore.com.br/">pdv.caracore.com.br</a></td>
+            <td>v3.2.3-free</td>
+            <td>Win / Linux / macOS</td>
+            <td><code>%APPDATA%\caracore\</code></td>
+            <td>Maduro balcão</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="notice notice-warn" style="margin-top: 14px;">
+        <strong>Pastas diferentes — não apague a outra linha</strong>
+        Rust grava em <code>%APPDATA%\caracore-pdv\</code>. Java Free grava em <code>%APPDATA%\caracore\</code>. Apagar uma pasta <strong>não</strong> limpa a outra.
+      </p>
+      <p class="cta-box">
+        <a class="btn-primary" href="https://github.com/chmulato/caracore-pdv-releases/releases/download/v0.1.2/CaraCore.PDV_0.1.2_x64-setup.exe" rel="noopener noreferrer" data-official-download>Baixar piloto Rust (Windows)</a>
+        <a class="btn-secondary" href="https://pdv.caracore.com.br/download.html">Ir ao Free Java (balcão)</a>
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Menu rápido</h2>
+      <div class="download-quick-grid">
+        <a id="quick-recommended" class="download-quick-item download-quick-item--primary" href="https://github.com/chmulato/caracore-pdv-releases/releases/download/v0.1.2/CaraCore.PDV_0.1.2_x64-setup.exe" rel="noopener noreferrer">
+          <strong>Recomendado para a loja</strong>
+          <span>NSIS — CaraCore.PDV_0.1.2_x64-setup.exe</span>
+        </a>
+        <a id="quick-msi" class="download-quick-item" href="https://github.com/chmulato/caracore-pdv-releases/releases/download/v0.1.2/CaraCore.PDV_0.1.2_x64_pt-BR.msi" rel="noopener noreferrer">
+          <strong>TI / implantação em rede</strong>
+          <span>MSI — CaraCore.PDV_0.1.2_x64_pt-BR.msi</span>
+        </a>
+        <a id="quick-portable" class="download-quick-item" href="https://github.com/chmulato/caracore-pdv-releases/releases/download/v0.1.2/CaraCore-PDV-v0.1.2-windows.zip" rel="noopener noreferrer">
+          <strong>Portátil (sem instalar)</strong>
+          <span>ZIP — CaraCore-PDV-v0.1.2-windows.zip</span>
+        </a>
+        <a id="quick-releases" class="download-quick-item" href="https://github.com/chmulato/caracore-pdv-releases/releases/tag/v0.1.2" rel="noopener noreferrer">
+          <strong>Abrir a tag v0.1.2</strong>
+          <span>Página desta release Rust — não a lista mista do repositório</span>
+        </a>
       </div>
     </section>
 
     <section class="card">
       <h2>Instalação em 4 passos</h2>
       <ol>
-        <li><strong>Baixar</strong> — escolha o formato abaixo (NSIS, MSI ou ZIP).</li>
-        <li><strong>Verificar</strong> — <a href="transparencia.html#verificar-integridade">SHA-256</a> antes de executar.</li>
-        <li><strong>Instalar</strong> — <a href="primeiros-passos.html">guia completo</a>.</li>
-        <li><strong>Operar</strong> — login, caixa e vendas.</li>
+        <li><strong>Baixar</strong> — escolha NSIS, MSI ou ZIP na tabela acima.</li>
+        <li><strong>Verificar</strong> — conferir o SHA-256 (PowerShell: <code>Get-FileHash .\arquivo -Algorithm SHA256</code>).</li>
+        <li><strong>Instalar</strong> — <a href="primeiros-passos.html">guia com login e pasta de dados</a>.</li>
+        <li><strong>Operar</strong> — assistente <code>/setup</code>, depois <code>admin</code> / <code>admin123</code>.</li>
       </ol>
     </section>
 
     <section class="card">
       <div class="notice notice-info">
-        <strong>Fonte oficial</strong>
-        Binários somente em
-        <a class="ext-link" href="https://github.com/chmulato/caracore-pdv-releases/releases" rel="noopener noreferrer">github.com/chmulato/caracore-pdv-releases/releases</a>.
-        Esta página lista a versão atual — sem espelhos alternativos.
+        <strong>Fonte oficial desta tag</strong>
+        Binários Rust somente em
+        <a class="ext-link" href="https://github.com/chmulato/caracore-pdv-releases/releases/tag/v0.1.2" rel="noopener noreferrer">github.com/chmulato/caracore-pdv-releases/releases/tag/v0.1.2</a>.
+        A lista geral do repositório mistura Java Free, RC2 e Rust — não use essa lista sem contexto.
       </div>
-
-      <h2>Última versão</h2>
-      <noscript>
-        <p>JavaScript desativado: abra a <a href="https://github.com/chmulato/caracore-pdv-releases/releases" rel="noopener noreferrer">página de releases</a>.</p>
-      </noscript>
-      <p id="release-summary">Consultando versão publicada…</p>
-      <p id="release-date" class="section-subtitle"></p>
-      <p class="section-subtitle"><a class="ext-link" id="releases-page-link" href="https://github.com/chmulato/caracore-pdv-releases/releases" rel="noopener noreferrer">Página de releases</a> · <a href="transparencia.html#edicao-gratuita">Limites da edição gratuita</a> · <a href="https://github.com/chmulato/caracore-pdv-releases/blob/master/CHANGELOG.md" rel="noopener noreferrer">CHANGELOG</a></p>
-
-      <div class="download-grid" id="download-grid" hidden>
-        <div class="download-option">
-          <span class="download-option-badge">Recomendado</span>
-          <h3>Lojista / piloto</h3>
-          <p>Instalador com assistente em português (NSIS).</p>
-          <a id="btn-nsis" class="btn-primary" href="#" rel="noopener noreferrer">Baixar instalador</a>
-        </div>
-        <div class="download-option">
-          <span class="download-option-badge">TI</span>
-          <h3>TI / empresa</h3>
-          <p>MSI pt-BR para instalação em rede ou silenciosa (orientação de TI).</p>
-          <a id="btn-msi" class="btn-secondary" href="#" rel="noopener noreferrer">Baixar MSI</a>
-        </div>
-        <div class="download-option">
-          <span class="download-option-badge">Portátil</span>
-          <h3>Portátil (Windows)</h3>
-          <p>ZIP com atalho e instruções.</p>
-          <a id="btn-zip" class="btn-secondary" href="#" rel="noopener noreferrer">Baixar ZIP</a>
-        </div>
-        <div class="download-option">
-          <h3>Linux</h3>
-          <p>Pacote .deb ou AppImage, conforme publicado na release.</p>
-          <a id="btn-deb" class="btn-secondary" href="#" rel="noopener noreferrer" hidden>Baixar .deb</a>
-          <a id="btn-appimage" class="btn-secondary" href="#" rel="noopener noreferrer" hidden style="margin-top:8px;display:inline-block;">Baixar AppImage</a>
-        </div>
-        <div class="download-option">
-          <h3>macOS</h3>
-          <p>Imagem .dmg para instalar no Mac da loja.</p>
-          <a id="btn-dmg" class="btn-secondary" href="#" rel="noopener noreferrer" hidden>Baixar .dmg</a>
-        </div>
-      </div>
-
-      <p id="download-fallback" class="cta-box" style="margin-top: 1rem;">
-        <a id="download-btn" class="btn-primary" href="https://github.com/chmulato/caracore-pdv-releases/releases" rel="noopener noreferrer">Ver releases oficiais</a>
-      </p>
-      <p id="download-hint" class="section-subtitle"></p>
-      <p id="integrity-links" class="footnote" hidden></p>
+      <p id="release-summary">Piloto Rust Windows · <strong>v0.1.2</strong> · publicado em 2026-06-07</p>
+      <p id="release-date" class="section-subtitle">Plataformas nesta tag: Windows x64. Linux e macOS não publicados.</p>
+      <p id="download-hint" class="section-subtitle">Confirme a integridade do arquivo antes de executar.</p>
+      <p id="integrity-links" class="footnote">Arquivos de conferência: <a class="ext-link" href="https://github.com/chmulato/caracore-pdv-releases/releases/download/v0.1.2/SHA256SUMS.txt" rel="noopener noreferrer">SHA256SUMS.txt</a> · <a class="ext-link" href="https://github.com/chmulato/caracore-pdv-releases/releases/download/v0.1.2/RELEASE_MANIFEST.json" rel="noopener noreferrer">RELEASE_MANIFEST.json</a></p>
     </section>
 
     <section class="card">
@@ -153,21 +196,15 @@
   </main>
 
   <footer class="portal-footer">
-    <p>Cara Core PDV Desktop (Rust + Tauri) · Cara Core Informática · CNPJ 23.969.028/0001-37</p>
+    <p>CaraCore PDV Desktop (Rust) — piloto Windows · Cara Core Informática · CNPJ 23.969.028/0001-37</p>
     <p class="portal-footer-links">
       <a href="transparencia.html">Transparência</a> ·
-      <a href="https://github.com/chmulato/caracore-pdv-releases/releases" rel="noopener noreferrer">Releases oficiais</a> ·
+      <a href="https://github.com/chmulato/caracore-pdv-releases/releases/tag/v0.1.2" rel="noopener noreferrer">Tag v0.1.2</a> ·
       <a href="https://www.caracore.com.br/" rel="noopener noreferrer">caracore.com.br</a>
     </p>
   </footer>
-  <script src="assets/js/releases.js?v=20260607c"></script>
-  <script src="assets/js/portal.js?v=20260607d"></script>
-  <script src="assets/js/download-page.js?v=20260607"></script>
+  <script src="assets/js/releases.js?v=20260906"></script>
+  <script src="assets/js/portal.js?v=20260906"></script>
+  <script src="assets/js/download-page.js?v=20260906"></script>
 </body>
 </html>
-
-
-
-
-
-

@@ -3,15 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="description" content="Cara Core PDV Desktop — caixa no seu PC para MEI e pequeno varejo. Vende offline, é rápido e tem edição gratuita para testar." />
+  <meta name="description" content="CaraCore PDV Desktop (Rust) — piloto Windows. Não é o Free Java do balcão. Caixa offline no PC da loja, tag v0.1.2." />
   <link rel="canonical" href="https://pdv-rust.caracore.com.br/" />
-  <title>Cara Core PDV Desktop — Caixa para MEI e Pequeno Varejo</title>
+  <title>CaraCore PDV Desktop (Rust) — piloto Windows</title>
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="assets/css/tokens.css?v=20260607c" />
   <link rel="stylesheet" href="assets/css/layout.css?v=20260607d" />
-  <link rel="stylesheet" href="assets/css/components.css?v=20260611" />
+  <link rel="stylesheet" href="assets/css/components.css?v=20260906" />
 </head>
 <body data-portal-page="inicio" data-nav-root="">
+  <div class="identity-banner" role="note">
+    <p>O download do balcão multi-plataforma é em <a href="https://pdv.caracore.com.br/download.html">pdv.caracore.com.br</a> (Java <strong>v3.2.3-free</strong>). Este site é o <strong>piloto Rust</strong>.</p>
+  </div>
   <nav class="breadcrumb" aria-label="Navegação" style="padding: 0.75rem 1.25rem; font-size: 0.875rem;">
     <a href="https://www.caracore.com.br/">Cara Core Informática</a>
     <span> · </span>
@@ -23,16 +26,16 @@
     <div class="portal-header-inner">
       <a class="portal-brand" href="index.html">
         <img src="assets/img/logo-mark.svg" width="32" height="32" alt="" />
-        <span class="portal-brand-text">CaraCore PDV</span>
+        <span class="portal-brand-text">CaraCore PDV (Rust)</span>
       </a>
       <div class="portal-header-content">
-        <span class="portal-header-badge">PDV no seu PC · Windows</span>
-        <h1>Caixa profissional que vende mesmo sem internet</h1>
-        <p class="portal-header-lead">Programa instalado na loja para <strong>vender, controlar caixa e ver relatórios</strong> — no seu computador hoje; na rede com vários balcões quando a loja crescer.</p>
+        <span class="portal-header-badge">Piloto Windows · Rust + Tauri · v0.1.2</span>
+        <h1>CaraCore PDV Desktop (Rust) — piloto Windows</h1>
+        <p class="portal-header-lead">Não é o Free Java do balcão. Este é o <strong>piloto Windows</strong> da linha Rust — caixa no PC da loja, offline. O download multi-plataforma está em <a href="https://pdv.caracore.com.br/download.html" style="color:#fff;text-decoration:underline;">pdv.caracore.com.br</a> (Java v3.2.3-free).</p>
         <div class="hero-actions">
-          <a class="btn-primary btn-hero" href="https://github.com/chmulato/caracore-pdv-releases/releases/tag/v0.1.2" rel="noopener noreferrer" data-official-download>Baixar agora — grátis</a>
+          <a class="btn-primary btn-hero" href="https://github.com/chmulato/caracore-pdv-releases/releases/tag/v0.1.2" rel="noopener noreferrer" data-official-download>Baixar piloto Rust (Windows)</a>
+          <a class="btn-secondary btn-hero" href="https://pdv.caracore.com.br/download.html">Ir ao Free Java (balcão)</a>
           <a class="btn-secondary btn-hero" href="demonstracao.html">Ver como funciona</a>
-          <a class="btn-secondary btn-hero" href="primeiros-passos.html">Começar em 2 minutos</a>
         </div>
       </div>
     </div>
@@ -59,18 +62,18 @@
     <nav class="home-jump" aria-label="Atalhos desta página">
       <a href="#o-que-e">O que é</a>
       <a href="#para-quem">Para quem</a>
-      <a href="#gratuito">Grátis</a>
+      <a href="#gratuito">Piloto</a>
       <a href="#funcionalidades">O que faz</a>
       <a href="#ver-em-acao">Ver telas</a>
       <a href="#comecar">Como começar</a>
       <a href="#precos">Preço</a>
       <a href="#comparar">Rust vs Java</a>
-      <a href="#ecosistema">Arquitetura</a>
+      <a href="rust-tauri.html">Para TI</a>
     </nav>
 
     <section class="card exec-summary" id="o-que-e">
-      <h2>O que é o CaraCore PDV?</h2>
-      <p class="exec-lead">É um <strong>programa de caixa</strong> que fica no computador da sua loja — não depende de nuvem para vender no balcão. Você registra vendas, controla o turno, acompanha estoque e exporta relatórios.</p>
+      <h2>O que é o piloto Rust?</h2>
+      <p class="exec-lead">É um <strong>programa de caixa Windows</strong> da linha Rust + Tauri — não é o Free Java de <a href="https://pdv.caracore.com.br/">pdv.caracore.com.br</a>. Fica no computador da loja e não depende de nuvem para vender no balcão.</p>
       <p class="home-solves"><strong>O que ele resolve:</strong> fila por internet instável, sistema pesado que trava o PC e a dor de trocar de PDV quando abre o segundo caixa. Comece em um PC; evolua para rede com o <em>mesmo</em> produto.</p>
       <div class="exec-kpi-grid">
         <div class="exec-kpi"><strong>Offline</strong><span>Vende com ou sem internet</span></div>
@@ -124,18 +127,18 @@
     </section>
 
     <section class="card free-banner" id="gratuito">
-      <p class="free-banner__eyebrow">Sem custo para testar</p>
-      <h2>Edição gratuita no seu PC</h2>
-      <p class="free-banner__lead">Baixe, instale e use no piloto — <strong>sem limite de tempo</strong> para conhecer o fluxo. Ideal para testar antes de contratar edição completa.</p>
+      <p class="free-banner__eyebrow">Piloto Rust (limites)</p>
+      <h2>Piloto Rust no seu PC Windows</h2>
+      <p class="free-banner__lead">Baixe, instale e use o piloto — <strong>sem limite de tempo</strong> para conhecer o fluxo. Até 100 vendas na vida deste piloto (não é o Free Java de 100 vendas/mês).</p>
       <ul class="free-banner__list">
         <li>Vendas, caixa e gestão no computador local</li>
-        <li>Até <strong>100 vendas concluídas</strong> na edição gratuita</li>
+        <li>Até <strong>100 vendas concluídas</strong> no piloto Rust</li>
         <li>PIX com QR Code e confirmação no balcão</li>
-        <li>Sem nuvem obrigatória — seus dados ficam na loja</li>
+        <li>Dados em <code>%APPDATA%\caracore-pdv\</code> — pasta diferente do Java</li>
       </ul>
       <div class="free-banner__actions">
-        <a class="btn-primary" href="https://github.com/chmulato/caracore-pdv-releases/releases/tag/v0.1.2" rel="noopener noreferrer" data-official-download>Baixar grátis agora</a>
-        <a class="btn-secondary" href="transparencia.html#edicao-gratuita">Ver limites completos</a>
+        <a class="btn-primary" href="https://github.com/chmulato/caracore-pdv-releases/releases/tag/v0.1.2" rel="noopener noreferrer" data-official-download>Baixar piloto Rust (Windows)</a>
+        <a class="btn-secondary" href="transparencia.html#edicao-gratuita">Ver limites do piloto</a>
       </div>
     </section>
 
@@ -246,7 +249,7 @@
         </div>
       </div>
       <p class="cta-box">
-        <a class="btn-primary" href="https://github.com/chmulato/caracore-pdv-releases/releases/tag/v0.1.2" rel="noopener noreferrer" data-official-download>Instalar agora</a>
+        <a class="btn-primary" href="https://github.com/chmulato/caracore-pdv-releases/releases/tag/v0.1.2" rel="noopener noreferrer" data-official-download>Baixar piloto Rust (Windows)</a>
         <a class="btn-secondary" href="primeiros-passos.html">Guia passo a passo</a>
         <a class="btn-secondary" href="download.html">Formatos de instalador</a>
       </p>
@@ -264,9 +267,9 @@
         </thead>
         <tbody>
           <tr class="plan-highlight">
-            <td class="plan-name">Edição gratuita</td>
-            <td>Testar no seu PC — vendas, caixa e gestão (até 100 vendas)</td>
-            <td><strong>Grátis</strong> · <a href="https://github.com/chmulato/caracore-pdv-releases/releases/tag/v0.1.2" rel="noopener noreferrer" data-official-download>Baixar</a></td>
+            <td class="plan-name">Piloto Rust (limites)</td>
+            <td>Testar no Windows — vendas, caixa e gestão (até 100 vendas na vida do piloto)</td>
+            <td><strong>Grátis</strong> · <a href="https://github.com/chmulato/caracore-pdv-releases/releases/tag/v0.1.2" rel="noopener noreferrer" data-official-download>Baixar piloto Rust (Windows)</a></td>
           </tr>
           <tr>
             <td class="plan-name">Edição completa</td>
@@ -280,7 +283,7 @@
           </tr>
         </tbody>
       </table>
-      <p class="pricing-note"><a href="mercado.html#precos">Todos os planos</a> · <a href="transparencia.html#edicao-gratuita">Limites da edição gratuita</a></p>
+      <p class="pricing-note"><a href="mercado.html#precos">Todos os planos</a> · <a href="transparencia.html#edicao-gratuita">Limites do piloto Rust</a></p>
     </section>
 
     <section class="card compare-teaser" id="comparar">
@@ -299,83 +302,23 @@
           <h3>PDV Java — escolha se…</h3>
           <ul>
             <li>Precisa de Linux ou macOS.</li>
-            <li>Quer a linha v3.2.2-free já consolidada.</li>
+            <li>Quer a linha v3.2.3-free já consolidada.</li>
             <li>Já usa o PDV Java e quer continuidade.</li>
           </ul>
         </div>
       </div>
       <p class="cta-box">
         <a class="btn-primary" href="comparacao.html">Comparar Rust vs Java</a>
-        <a class="btn-secondary" href="https://pdv.caracore.com.br/download.html" rel="noopener noreferrer">Baixar PDV Java</a>
+        <a class="btn-secondary" href="https://pdv.caracore.com.br/download.html" rel="noopener noreferrer">Ir ao Free Java (balcão)</a>
       </p>
     </section>
 
-    <section class="card" id="ecosistema">
-      <h2>Ecossistema em 4 camadas</h2>
-      <p class="diagram-caption"><strong>Do clique no balcão à escala na rede</strong> — funciona offline, é rápido no PC e sincroniza os caixas quando a loja cresce.</p>
-
-      <figure class="eco-diagram" aria-labelledby="eco-diagram-heading-home">
-        <p id="eco-diagram-heading-home" class="eco-diagram__title">Fluxo arquitetural · Bunker Digital</p>
-        <div class="eco-diagram__stack">
-          <div class="eco-layer eco-layer--frontend">
-            <div class="eco-layer__box">
-              <strong>FRONT-END</strong>
-              <span>(TypeScript / Tauri)</span>
-            </div>
-            <div class="eco-layer__arrow-h" aria-hidden="true"><span>→</span></div>
-            <div class="eco-layer__benefit">
-              Garante interface moderna e validação rígida na tela <em>(Zod)</em>
-            </div>
-          </div>
-          <div class="eco-connector" aria-hidden="true">
-            <span class="eco-connector__line"></span>
-            <span class="eco-connector__chev">▼</span>
-          </div>
-          <div class="eco-layer eco-layer--backend">
-            <div class="eco-layer__box">
-              <strong>BACK-END</strong>
-              <span>(Rust / DDD)</span>
-            </div>
-            <div class="eco-layer__arrow-h" aria-hidden="true"><span>→</span></div>
-            <div class="eco-layer__benefit">
-              Executa as regras de negócio em alta velocidade <em>(sem Garbage Collector)</em>
-            </div>
-          </div>
-          <div class="eco-connector" aria-hidden="true">
-            <span class="eco-connector__line"></span>
-            <span class="eco-connector__chev">▼</span>
-          </div>
-          <div class="eco-layer eco-layer--persist">
-            <div class="eco-layer__box">
-              <strong>PERSISTÊNCIA</strong>
-              <span>(SQLx / SQLite)</span>
-            </div>
-            <div class="eco-layer__arrow-h" aria-hidden="true"><span>→</span></div>
-            <div class="eco-layer__benefit">
-              Grava os dados localmente com segurança de tipo e concorrência <em>(modo WAL)</em>
-            </div>
-          </div>
-          <div class="eco-connector" aria-hidden="true">
-            <span class="eco-connector__line"></span>
-            <span class="eco-connector__chev">▼</span>
-          </div>
-          <div class="eco-layer eco-layer--replica">
-            <div class="eco-layer__box">
-              <strong>REPLICAÇÃO</strong>
-              <span>(SymmetricDS)</span>
-            </div>
-            <div class="eco-layer__arrow-h" aria-hidden="true"><span>→</span></div>
-            <div class="eco-layer__benefit">
-              Garante a escala do pequeno negócio para redes distribuídas <em>(PDV na Rede)</em>
-            </div>
-          </div>
-        </div>
-        <p class="eco-diagram__legend">Modo <strong>local</strong>: camadas 1–3 em operação no piloto. Modo <strong>rede</strong>: acrescenta a camada 4 — <a href="modalidades.html#rede">como funciona na prática →</a></p>
-      </figure>
-
+    <section class="card" id="para-ti">
+      <h2>Para TI</h2>
+      <p>Arquitetura (Bunker Digital, camadas, sync na rede) e o diagrama técnico ficam em <a href="rust-tauri.html">Por que Rust + Tauri</a> — fora do funil de download do lojista.</p>
       <p class="cta-box">
-        <a class="btn-secondary" href="rust-tauri.html">Bunker Digital — narrativa completa</a>
-        <a class="btn-secondary" href="assets/img/ecosistema-arquitetura.svg" target="_blank" rel="noopener">Abrir diagrama SVG</a>
+        <a class="btn-secondary" href="rust-tauri.html">Abrir página Para TI</a>
+        <a class="btn-secondary" href="comparacao.html">Comparar Rust vs Java</a>
       </p>
     </section>
 
@@ -404,10 +347,10 @@
 
     <section class="card">
       <div class="download-hero-cta">
-        <h2>Pronto para testar na sua loja?</h2>
-        <p>Edição gratuita no PC — instale em minutos e veja o fluxo real de venda.</p>
-        <a class="btn-primary" href="https://github.com/chmulato/caracore-pdv-releases/releases/tag/v0.1.2" rel="noopener noreferrer" data-official-download>Baixar PDV Desktop</a>
-        <a class="btn-secondary" href="demonstracao.html" style="margin-left: 8px;">Ver demonstração</a>
+        <h2>Pronto para testar o piloto Rust?</h2>
+        <p>Piloto Windows no PC — instale em minutos. Se precisa de Linux/macOS, vá ao Free Java.</p>
+        <a class="btn-primary" href="https://github.com/chmulato/caracore-pdv-releases/releases/tag/v0.1.2" rel="noopener noreferrer" data-official-download>Baixar piloto Rust (Windows)</a>
+        <a class="btn-secondary" href="https://pdv.caracore.com.br/download.html" style="margin-left: 8px;">Ir ao Free Java (balcão)</a>
       </div>
     </section>
   </main>
@@ -426,10 +369,10 @@
       <div class="footer-col">
         <strong>Baixar e começar</strong>
         <ul>
-          <li><a href="https://github.com/chmulato/caracore-pdv-releases/releases/tag/v0.1.2" rel="noopener noreferrer" data-official-download>Download oficial</a></li>
+          <li><a href="https://github.com/chmulato/caracore-pdv-releases/releases/tag/v0.1.2" rel="noopener noreferrer" data-official-download>Baixar piloto Rust (Windows)</a></li>
           <li><a href="primeiros-passos.html">Primeiros passos</a></li>
           <li><a href="download.html">Formatos de instalador</a></li>
-          <li><a href="transparencia.html#edicao-gratuita">Edição gratuita</a></li>
+          <li><a href="https://pdv.caracore.com.br/download.html">Ir ao Free Java (balcão)</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -444,8 +387,8 @@
     </div>
     <p class="footer-legal">Cara Core Informática · CNPJ 23.969.028/0001-37 · <a href="https://www.caracore.com.br/">www.caracore.com.br</a> · <a href="mailto:suporte@caracore.com.br">suporte@caracore.com.br</a></p>
   </footer>
-  <script src="assets/js/releases.js?v=20260607c"></script>
-  <script src="assets/js/portal.js?v=20260607d"></script>
+  <script src="assets/js/releases.js?v=20260906"></script>
+  <script src="assets/js/portal.js?v=20260906"></script>
 </body>
 </html>
 

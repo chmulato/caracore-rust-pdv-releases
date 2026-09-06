@@ -5,7 +5,7 @@ alwaysApply: true
 
 # Memória da Loja — caracore-pdv-rust-releases
 
-**Atualizado:** 2026-06-03 (sessão UX comercial + alinhamento oficina)
+**Atualizado:** 2026-09-06 (identidade piloto Rust vs Free Java)
 
 ## Repositório e papel
 
@@ -35,8 +35,9 @@ Não prometer features só da vitrine sem release correspondente.
 - **Um produto, duas fases:** PDV **Local** (1 PC, offline) → PDV **na Rede** (vários caixas + central na loja).
 - **Diferencial:** evoluir **sem trocar de sistema** / sem migração forçada.
 - **Rede:** selo **validado em laboratório**; implantação com Cara Core — sem depoimentos ou métricas inventadas.
-- **CTAs:** barra fixa + hero — **Baixar PDV Local** · **Falar com especialista (rede)**.
-- Evitar: "PDV v3" sozinho, "migração obrigatória", números de clientes não homologados.
+- **CTAs:** **Baixar piloto Rust (Windows)** · **Ir ao Free Java (balcão)** — nunca “Baixar grátis” sem qualificador.
+- Java maduro na loja irmã: **v3.2.3-free** em https://pdv.caracore.com.br/download.html
+- Evitar: "PDV v3" sozinho, "migração obrigatória", números de clientes não homologados, confundir com o Free Java.
 
 ## Páginas principais (`docs/`)
 

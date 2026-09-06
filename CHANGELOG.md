@@ -2,6 +2,12 @@
 
 Formato alinhado às demais lojas `*-releases` do ecossistema CaraCore.
 
+## v0.1.2 — 2026-09-06 (menos ruído Java × Rust)
+
+**Sem novo binário.** Cada loja vende a sua linha. Hero da Rust com um CTA. Comparar fora do menu. A outra linha aparece só no rodapé da home. A escolha entre as linhas fica no portfólio (`#pdv-coexistencia`).
+
+---
+
 ## v0.1.2 — 2026-09-06 (fonte oficial de binários)
 
 Download Rust aponta para [`caracore-rust-pdv-releases/releases`](https://github.com/chmulato/caracore-rust-pdv-releases/releases). O repo `caracore-pdv-releases` fica com o canal Java.

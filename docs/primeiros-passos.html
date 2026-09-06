@@ -12,20 +12,18 @@
   <link rel="stylesheet" href="assets/css/components.css?v=20260906" />
 </head>
 <body data-portal-page="primeiros-passos" data-nav-root="">
-  <div class="identity-banner" role="note">
-    <p>O download do balcão multi-plataforma é em <a href="https://pdv.caracore.com.br/download.html">pdv.caracore.com.br</a> (Java <strong>v3.2.3-free</strong>). Este site é o <strong>piloto Rust</strong>.</p>
-  </div>
-  <header class="portal-header">
+<header class="portal-header">
     <div class="portal-header-inner">
       <a class="portal-brand" href="index.html">
         <img src="assets/img/logo-mark.svg" width="32" height="32" alt="" />
-        <span class="portal-brand-text">CaraCore PDV (Rust)</span>
+        <span class="portal-brand-text">CaraCore PDV</span>
       </a>
       <div class="portal-header-content">
         <span class="portal-header-badge">Primeiros passos · piloto Rust</span>
         <h1>Instalar e abrir o piloto Windows</h1>
         <p class="portal-header-lead">Assistente <strong>/setup</strong>, login <strong>admin / admin123</strong> e pasta de dados diferente do Java Free.</p>
-        <p class="portal-header-meta"><a href="download.html">Baixar piloto Rust (Windows)</a> · <a href="https://pdv.caracore.com.br/download.html">Ir ao Free Java (balcão)</a></p>
+        <p class="portal-header-meta"><a href="download.html">Baixar piloto Rust (Windows)</a>
+</p>
       </div>
     </div>
   </header>
@@ -41,7 +39,6 @@
       <a href="produto.html">Produto</a>
       <a href="demonstracao.html">Demonstração</a>
       <a href="mercado.html">Para sua loja</a>      <a href="download.html">Formatos</a>
-      <a href="comparacao.html">Comparar</a>
       <a href="transparencia.html">Transparência</a>
       <a href="https://wiki.caracore.com.br/projeto-pdv-rust.html">Wiki</a>
     </div>
@@ -50,8 +47,8 @@
   <main class="portal-main">
     <section class="card">
       <div class="notice notice-info">
-        <strong>Este guia é do piloto Rust</strong>
-        O Free Java do balcão (v3.2.3-free, Windows/Linux/macOS) instala e guarda dados em outro caminho. Se você quer o caixa maduro multi-plataforma, vá para <a href="https://pdv.caracore.com.br/download.html">pdv.caracore.com.br/download.html</a>.
+        <strong>Pasta deste piloto</strong>
+        Os dados ficam em <code>%APPDATA%\caracore-pdv\</code>. Login de demonstração: <code>admin</code> / <code>admin123</code>.
       </div>
     </section>
 
@@ -125,7 +122,7 @@
           </tr>
         </tbody>
       </table>
-      <p class="section-subtitle">Terminal sugerido: <code>PDV-DESKTOP-01</code>. Senhas do bootstrap do piloto — não são <code>admin</code>/<code>admin</code> do Free Java. Troque a senha do admin se for usar no dia a dia da loja.</p>
+      <p class="section-subtitle">Terminal sugerido: <code>PDV-DESKTOP-01</code>. Troque a senha do admin se for usar no dia a dia da loja.</p>
     </section>
 
     <section class="card">
@@ -134,41 +131,7 @@
     </section>
 
     <section class="card">
-      <h2>Onde ficam os arquivos — pasta diferente do Java</h2>
-      <div class="notice notice-warn">
-        <strong>Rust ≠ Java no disco</strong>
-        O piloto Rust usa <code>%APPDATA%\caracore-pdv\</code>. O Free Java usa <code>%APPDATA%\caracore\</code>. Apagar uma pasta <strong>não</strong> limpa a outra. Não misture backups.
-      </div>
-      <table class="trace line-matrix">
-        <thead>
-          <tr>
-            <th>Linha</th>
-            <th>Site</th>
-            <th>Tag</th>
-            <th>OS</th>
-            <th>Dados</th>
-            <th>Status</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Rust</strong></td>
-            <td><a href="https://pdv-rust.caracore.com.br/">pdv-rust.caracore.com.br</a></td>
-            <td>v0.1.2</td>
-            <td>Windows</td>
-            <td><code>%APPDATA%\caracore-pdv\</code></td>
-            <td>Piloto</td>
-          </tr>
-          <tr>
-            <td><strong>Java</strong></td>
-            <td><a href="https://pdv.caracore.com.br/">pdv.caracore.com.br</a></td>
-            <td>v3.2.3-free</td>
-            <td>Win / Linux / macOS</td>
-            <td><code>%APPDATA%\caracore\</code></td>
-            <td>Maduro balcão</td>
-          </tr>
-        </tbody>
-      </table>
+      <h2>Onde ficam os arquivos</h2>
       <ul>
         <li>Banco SQLite: <code>%APPDATA%\caracore-pdv\data\pdv.db</code></li>
         <li>Configuração: <code>%APPDATA%\caracore-pdv\config.json</code></li>

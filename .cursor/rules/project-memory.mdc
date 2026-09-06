@@ -3,16 +3,17 @@ description: Memória da loja PDV Desktop Rust — pdv-rust; v0.1.2 vitrine; mod
 alwaysApply: true
 ---
 
-# Memória da Loja — caracore-pdv-rust-releases
+# Memória da Loja — caracore-rust-pdv-releases
 
-**Atualizado:** 2026-09-06 (faixa de identidade em todas as páginas + CTAs residual)
+**Atualizado:** 2026-09-06 (loja + artefatos no mesmo repo GitHub)
 
 ## Repositório e papel
 
-- **Repo:** `caracore-pdv-rust-releases` · local `D:\dev\caracore-pdv-rust-releases`
-- **URL canónica:** https://pdv-rust.caracore.com.br/
-- **GitHub Pages:** branch `master`, pasta `/docs`, `docs/CNAME` → pdv-rust.caracore.com.br
-- **Papel:** Vitrine comercial — **não** hospeda binários (só links para GitHub Releases)
+- **GitHub (canónico):** `chmulato/caracore-rust-pdv-releases` — **loja e entrega de artefatos no mesmo repositório**
+- **Clone local:** `D:\onedrive\dev\caracore-pdv-rust-releases` (nome da pasta ≠ nome no GitHub)
+- **Vitrine:** https://pdv-rust.caracore.com.br/ (GitHub Pages, pasta `/docs`, `docs/CNAME`)
+- **Artefatos:** https://github.com/chmulato/caracore-rust-pdv-releases/releases (NSIS/MSI/ZIP, tag v0.1.2)
+- **Papel:** vitrine comercial em `docs/` + binários nas GitHub Releases do **mesmo** repo (a pasta `docs/` não contém EXE)
 
 ## Oficina pareada
 
@@ -35,9 +36,9 @@ Não prometer features só da vitrine sem release correspondente.
 - **Um produto, duas fases:** PDV **Local** (1 PC, offline) → PDV **na Rede** (vários caixas + central na loja).
 - **Diferencial:** evoluir **sem trocar de sistema** / sem migração forçada.
 - **Rede:** selo **validado em laboratório**; implantação com Cara Core — sem depoimentos ou métricas inventadas.
-- **CTAs:** **Baixar piloto Rust (Windows)** · **Ir ao Free Java (balcão)** — nunca “Baixar grátis” sem qualificador.
-- Java maduro na loja irmã: **v3.2.3-free** em https://pdv.caracore.com.br/download.html
-- Evitar: "PDV v3" sozinho, "migração obrigatória", números de clientes não homologados, confundir com o Free Java.
+- **CTA primário:** **Baixar piloto Rust (Windows)** — nunca “Baixar grátis” sem qualificador.
+- A outra linha (caixa maduro) aparece **só no rodapé**, não no hero. Comparar não entra no menu.
+- Evitar: "PDV v3" sozinho, "migração obrigatória", "Não é o Free Java" no primeiro ecrã.
 
 ## Páginas principais (`docs/`)
 
@@ -67,7 +68,7 @@ Conteúdo `docs/`: **apenas HTML** comercial (+ assets). Raiz: `README.md` + `CH
 
 ## Onde paramos (sessão 2026-09-06)
 
-- Identidade inequívoca: faixa em todas as páginas; CTAs só **Baixar piloto Rust (Windows)** / **Ir ao Free Java (balcão)**.
+- Hero com um CTA: **Baixar piloto Rust (Windows)**. Java só no rodapé. Comparar fora do menu.
 - Zero `rust-pdv.caracore.com.br`; Java canal atual = **v3.2.3-free**.
 - Instalação pública = `download.html` + `primeiros-passos.html` (não duplicar LEIA-ME do ZIP).
 - **Não commitado / não publicado** no GitHub remoto (salvo o usuário pedir).

@@ -11,7 +11,7 @@ alwaysApply: true
 
 - Vitrine **v0.1.2** com identidade inequívoca: **piloto Rust Windows**, não o Free Java do balcão.
 - Faixa de identidade em **todas** as páginas públicas (Java v3.2.3-free em `pdv.caracore.com.br`).
-- Binários oficiais **v0.1.2** na tag GitHub `caracore-pdv-releases` (**nunca** `/latest` nem a lista mista).
+- Binários oficiais **v0.1.2** em https://github.com/chmulato/caracore-rust-pdv-releases/releases (lista só Rust; `/latest` deste repo é o piloto).
 - Java maduro citado como **v3.2.3-free** em https://pdv.caracore.com.br/download.html
 - LEIA-ME do ZIP **não** vive nesta loja — instalação pública = `primeiros-passos.html` + `download.html`.
 - **Push:** alterações de identidade ainda em disco local — commit + push só com autorização.
@@ -22,7 +22,7 @@ alwaysApply: true
 2. https://pdv-rust.caracore.com.br/download.html — 3 assets + SHA256 + link `/releases/tag/v0.1.2`.
 3. https://pdv-rust.caracore.com.br/comparacao.html — Java v3.2.3-free; pastas AppData distintas.
 4. https://pdv-rust.caracore.com.br/primeiros-passos.html — `/setup` + `admin` / `admin123`.
-5. Botões **Baixar piloto Rust (Windows)** → tag `v0.1.2` (**nunca** `releases/latest`).
+5. Botões **Baixar piloto Rust (Windows)** → `caracore-rust-pdv-releases` (tag `v0.1.2` ou lista `/releases`). Nunca `/releases/latest` de `caracore-pdv-releases` (Java).
 
 ## Arquivos tocados na última sessão
 

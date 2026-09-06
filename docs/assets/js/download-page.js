@@ -1,7 +1,7 @@
 (function () {
   "use strict";
 
-  var TAG_URL = "https://github.com/chmulato/caracore-pdv-releases/releases/tag/v0.1.2";
+  var TAG_URL = "https://github.com/chmulato/caracore-rust-pdv-releases/releases/tag/v0.1.2";
   var root = typeof globalThis !== "undefined" ? globalThis : window;
   var R = root.CaraCoreRustReleases;
 

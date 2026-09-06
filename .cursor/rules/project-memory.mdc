@@ -25,8 +25,8 @@ alwaysApply: true
 | Camada | Versão | Nota |
 |--------|--------|------|
 | **Vitrine / CHANGELOG** | **v0.1.2** | Piloto Windows |
-| **Binários GitHub** | **v0.1.2** | Tag em `chmulato/caracore-pdv-releases` |
-| Botões Baixar | Tag **v0.1.2** | **Nunca** `/releases/latest` (latest = Java) |
+| **Binários GitHub** | **v0.1.2** | https://github.com/chmulato/caracore-rust-pdv-releases/releases |
+| Botões Baixar | Tag **v0.1.2** ou lista `/releases` | **Nunca** `/releases/latest` de `caracore-pdv-releases` (Java) |
 
 Não prometer features só da vitrine sem release correspondente.
 
@@ -62,7 +62,7 @@ Conteúdo `docs/`: **apenas HTML** comercial (+ assets). Raiz: `README.md` + `CH
 
 ## Download oficial
 
-- https://github.com/chmulato/caracore-pdv-releases/releases/tag/v0.1.2
+- https://github.com/chmulato/caracore-rust-pdv-releases/releases/tag/v0.1.2
 - Nav **Download** → GitHub (nova aba) · **Formatos** → `download.html`
 
 ## Onde paramos (sessão 2026-09-06)

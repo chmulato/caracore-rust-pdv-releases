@@ -72,8 +72,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--owner", default="chmulato", help="Owner do repositório no GitHub.")
     parser.add_argument(
         "--repo",
-        default="caracore-pdv-releases",
-        help="Repositório de releases no GitHub.",
+        default="caracore-rust-pdv-releases",
+        help="Repositório oficial de binários Rust.",
     )
     parser.add_argument(
         "--output",
@@ -83,7 +83,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--tag",
         default="v0.1.2",
-        help="Tag Rust a espelhar. Nunca use /latest neste repo misto.",
+        help="Tag Rust a espelhar. Não use /latest de caracore-pdv-releases (Java).",
     )
     return parser.parse_args()
 

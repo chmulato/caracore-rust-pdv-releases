@@ -22,7 +22,7 @@ python tools/package_pilot_zip.py
 python tools/publish_release_delivery.py --include-zip --skip-smoke
 ```
 
-Destino: https://github.com/chmulato/caracore-pdv-releases/releases
+Destino: https://github.com/chmulato/caracore-rust-pdv-releases/releases
 
 Artefatos: NSIS `*-setup.exe`, MSI `*_pt-BR.msi`, ZIP piloto, `SHA256SUMS.txt`, `RELEASE_MANIFEST.json`.
 

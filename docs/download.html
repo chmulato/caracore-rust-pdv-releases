@@ -9,7 +9,7 @@
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="assets/css/tokens.css?v=20260607c" />
   <link rel="stylesheet" href="assets/css/layout.css?v=20260607d" />
-  <link rel="stylesheet" href="assets/css/components.css?v=20260906loja" />
+  <link rel="stylesheet" href="assets/css/components.css?v=20260907funil" />
 </head>
 <body data-portal-page="download" data-nav-root="">
 <header class="portal-header">
@@ -38,7 +38,8 @@
       <a href="modalidades.html">Local e rede</a>
       <a href="produto.html">Produto</a>
       <a href="demonstracao.html">Demonstração</a>
-      <a href="mercado.html">Para sua loja</a>      <a href="download.html">Formatos</a>
+      <a href="mercado.html">Para sua loja</a>
+      <a href="download.html">Formatos</a>
       <a href="transparencia.html">Transparência</a>
       <a href="https://wiki.caracore.com.br/projeto-pdv-rust.html">Wiki</a>
     </div>
@@ -113,9 +114,31 @@
       <p class="section-subtitle" style="margin-top: 12px;"><a href="transparencia.html#smartscreen">Detalhe do SmartScreen</a> · <a id="releases-page-link" class="ext-link" href="https://github.com/chmulato/caracore-rust-pdv-releases/releases/tag/v0.1.2" rel="noopener noreferrer">Tag v0.1.2</a> · <a class="ext-link" href="https://github.com/chmulato/caracore-rust-pdv-releases/releases/download/v0.1.2/SHA256SUMS.txt" rel="noopener noreferrer">SHA256SUMS.txt</a></p>
     </section>
 
+    <section class="card" id="primeira-venda">
+      <h2>Primeira venda</h2>
+      <p class="section-subtitle">Depois de instalar, o fluxo do balcão — no espírito de testar no próprio PC.</p>
+      <ol>
+        <li><strong>Assistente <code>/setup</code></strong> — na primeira abertura, conclua a preparação do banco (SQLite local).</li>
+        <li><strong>Login</strong> — entre com <code>admin</code> / <code>admin123</code> (troque a senha se for usar no dia a dia).</li>
+        <li><strong>Abrir o turno</strong> — o caixa só vende com o turno aberto.</li>
+        <li><strong>Vender</strong> — registre a primeira venda. PIX do piloto: QR na tela + confirmação do operador (não é gateway automático). Fiscal deste corte: simulado / treino.</li>
+      </ol>
+      <p>Teto: <strong>100 vendas na vida deste banco</strong> (não por mês). Guia completo: <a href="primeiros-passos.html">primeiros passos</a>.</p>
+    </section>
+
+    <section class="card">
+      <h2>Instalação em 4 passos</h2>
+      <ol>
+        <li><strong>Baixar</strong> — escolha NSIS, MSI ou ZIP nos cards acima.</li>
+        <li><strong>Verificar</strong> — conferir o SHA-256 (PowerShell: <code>Get-FileHash .\arquivo -Algorithm SHA256</code>).</li>
+        <li><strong>Instalar</strong> — <a href="primeiros-passos.html">guia com login e pasta de dados</a>.</li>
+        <li><strong>Primeira venda</strong> — <code>/setup</code> → <code>admin</code> / <code>admin123</code> → abrir turno → vender.</li>
+      </ol>
+    </section>
+
     <section class="card">
       <h2>Depois do teto do piloto</h2>
-      <p>Sem o limite de 100 vendas, a Cara Core envia proposta da edição completa — no mesmo produto deste site.</p>
+      <p>Sem o limite de 100 vendas na vida deste banco, a Cara Core envia proposta da edição completa — no mesmo produto deste site.</p>
       <p class="cta-box">
         <a class="btn-secondary" href="mailto:suporte@caracore.com.br?subject=Proposta%20PDV%20Desktop%20Rust">Solicitar proposta</a>
       </p>
@@ -160,22 +183,12 @@
     </section>
 
     <section class="card">
-      <h2>Instalação em 4 passos</h2>
-      <ol>
-        <li><strong>Baixar</strong> — escolha NSIS, MSI ou ZIP nos cards acima.</li>
-        <li><strong>Verificar</strong> — conferir o SHA-256 (PowerShell: <code>Get-FileHash .\arquivo -Algorithm SHA256</code>).</li>
-        <li><strong>Instalar</strong> — <a href="primeiros-passos.html">guia com login e pasta de dados</a>.</li>
-        <li><strong>Operar</strong> — assistente <code>/setup</code>, depois <code>admin</code> / <code>admin123</code>.</li>
-      </ol>
-    </section>
-
-    <section class="card">
       <div class="notice notice-info">
         <strong>Fonte oficial desta tag</strong>
         Binários Rust somente em
         <a class="ext-link" href="https://github.com/chmulato/caracore-rust-pdv-releases/releases" rel="noopener noreferrer">github.com/chmulato/caracore-rust-pdv-releases/releases</a>
         (tag <a class="ext-link" href="https://github.com/chmulato/caracore-rust-pdv-releases/releases/tag/v0.1.2" rel="noopener noreferrer">v0.1.2</a>).
-        O repositório <code>caracore-pdv-releases</code> é o canal Java — não use a lista <code>/latest</code> dele para o piloto Rust.
+        Use só este repositório e a tag <strong>v0.1.2</strong> — não busque o piloto em outro canal de release.
       </div>
       <p id="release-summary">Piloto Rust Windows · <strong>v0.1.2</strong> · binários republicados em 2026-09-06</p>
       <p id="release-date" class="section-subtitle">Plataformas nesta tag: Windows x64. Linux e macOS não publicados.</p>

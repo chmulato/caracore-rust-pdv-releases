@@ -772,8 +772,95 @@
   border: 1px solid var(--line);
   background: #fff;
 }
+.plan-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 14px 0;
+}
+.plan-card {
+  border: 2px solid var(--line);
+  border-radius: var(--radius-card);
+  padding: 16px 14px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 100%;
+}
+.plan-card--piloto {
+  border-color: #9cd2a8;
+  background: linear-gradient(180deg, #f6fcf8 0%, #fff 48%);
+}
+.plan-card__eyebrow {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: var(--brand-2);
+}
+.plan-card h3 {
+  margin: 0;
+  font-size: 1.15rem;
+  color: var(--brand);
+}
+.plan-card__price {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--brand);
+}
+.plan-card__pitch {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.45;
+}
+.plan-card ul {
+  margin: 4px 0 8px;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.plan-card ul li {
+  padding-left: 22px;
+  position: relative;
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--muted);
+}
+.plan-card ul li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  font-weight: 800;
+  color: #1c6b31;
+}
+.plan-card .cta-box {
+  margin-top: auto;
+  padding-top: 8px;
+}
+.funil-more {
+  margin: 8px 0 0;
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+.portal-header h1.hero-promise {
+  font-size: clamp(1.5rem, 4.4vw, 2rem);
+  line-height: 1.2;
+}
+.identity-banner code {
+  color: #cfe8ff;
+  font-size: 12px;
+  word-break: break-all;
+}
+
 @media (max-width: 767px) {
   .home-steps,
+  .plan-grid,
   .compare-teaser__grid,
   .portal-footer--columns .footer-columns {
     grid-template-columns: 1fr;
@@ -933,6 +1020,17 @@
 }
 .download-hero-cta .btn-primary:hover {
   background: #eef4fb;
+}
+.download-hero-cta .hero-actions {
+  justify-content: center;
+}
+.download-hero-cta .btn-secondary {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+.download-hero-cta .btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.22);
 }
 .download-hero-cta .hash-line {
   margin-top: 14px;
@@ -1689,10 +1787,9 @@
   }
 }
 
-/* Identidade piloto Rust vs Free Java do balcão */
+/* Faixa de identidade (não usada no funil do piloto) */
 .identity-banner {
-  position: sticky;
-  top: 0;
+  position: relative;
   z-index: 60;
   background: #14233d;
   color: #f4f7fb;

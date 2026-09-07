@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="description" content="CaraCore PDV — piloto Windows. Caixa offline no PC da loja, tag v0.1.2." />
+  <meta name="description" content="CaraCore PDV — piloto Windows. Caixa offline e leve no PC da loja, tag v0.1.2." />
   <link rel="canonical" href="https://pdv-rust.caracore.com.br/" />
-  <title>CaraCore PDV — piloto Windows</title>
+  <title>CaraCore PDV — caixa offline no Windows</title>
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="assets/css/tokens.css?v=20260607c" />
   <link rel="stylesheet" href="assets/css/layout.css?v=20260607d" />
-  <link rel="stylesheet" href="assets/css/components.css?v=20260906loja" />
+  <link rel="stylesheet" href="assets/css/components.css?v=20260907funil" />
 </head>
 <body data-portal-page="inicio" data-nav-root="">
-<nav class="breadcrumb" aria-label="Navegação" style="padding: 0.75rem 1.25rem; font-size: 0.875rem;">
+  <nav class="breadcrumb" aria-label="Navegação" style="padding: 0.75rem 1.25rem; font-size: 0.875rem;">
     <a href="https://www.caracore.com.br/">Cara Core Informática</a>
     <span> · </span>
     <a href="https://www.caracore.com.br/portfolio.html#caracore-pdv-rust" rel="noopener">Portfólio</a>
@@ -27,11 +27,11 @@
       </a>
       <div class="portal-header-content">
         <span class="portal-header-badge">Piloto Windows · v0.1.2</span>
-        <h1>CaraCore PDV — piloto Windows</h1>
-        <p class="portal-header-lead">Caixa no PC da loja, offline. Venda, PIX no balcão e fechamento do dia — sem depender de nuvem.</p>
+        <h1 class="hero-promise">Caixa offline, leve, no Windows da loja.</h1>
+        <p class="portal-header-lead">Venda no balcão sem depender de nuvem. Programa nativo no PC — Rust + Tauri é o meio, não o produto.</p>
         <div class="hero-actions">
           <a class="btn-primary btn-hero" href="https://github.com/chmulato/caracore-rust-pdv-releases/releases/tag/v0.1.2" rel="noopener noreferrer" data-official-download>Baixar piloto Rust (Windows)</a>
-          <a class="btn-secondary btn-hero" href="demonstracao.html">Ver como funciona</a>
+          <a class="btn-secondary btn-hero" href="mailto:suporte@caracore.com.br?subject=Proposta%20PDV%20Desktop%20Rust">Solicitar proposta</a>
         </div>
       </div>
     </div>
@@ -47,7 +47,8 @@
       <a href="modalidades.html">Local e rede</a>
       <a href="produto.html">Produto</a>
       <a href="demonstracao.html">Demonstração</a>
-      <a href="mercado.html">Para sua loja</a>      <a href="download.html">Formatos</a>
+      <a href="mercado.html">Para sua loja</a>
+      <a href="download.html">Formatos</a>
       <a href="transparencia.html">Transparência</a>
       <a href="https://wiki.caracore.com.br/projeto-pdv-rust.html">Wiki</a>
     </div>
@@ -55,326 +56,88 @@
 
   <main class="portal-main">
     <nav class="home-jump" aria-label="Atalhos desta página">
-      <a href="#visao-rapida">Visão rápida</a>
-      <a href="#o-que-e">O que é</a>
-      <a href="#para-quem">Para quem</a>
-      <a href="#perfis">Lojista · TI · Contador</a>
-      <a href="#gratuito">Piloto</a>
-      <a href="#funcionalidades">O que faz</a>
-      <a href="#ver-em-acao">Ver telas</a>
-      <a href="#comecar">Como começar</a>
-      <a href="#precos">Preço</a>
-      <a href="rust-tauri.html">Para TI</a>
+      <a href="#no-balcao">No balcão</a>
+      <a href="#planos">Planos</a>
     </nav>
 
-    <section class="card exec-summary" id="visao-rapida">
-      <h2>Visão rápida</h2>
-      <div class="quick-glance">
-        <ul class="quick-glance__list">
-          <li>Caixa <strong>Windows offline</strong> no PC da loja — não depende de nuvem para vender.</li>
-          <li>Piloto <strong>v0.1.2</strong>: até <strong>100 vendas na vida</strong> deste banco (não por mês).</li>
-          <li>PIX no caixa: QR na tela + confirmação do operador.</li>
-          <li>Dados em <code>%APPDATA%\caracore-pdv\</code> — no computador da loja.</li>
-        </ul>
-        <div class="quick-glance__actions">
-          <a class="btn-primary" href="download.html">Baixar piloto Rust (Windows)</a>
-          <a class="btn-secondary" href="mailto:suporte@caracore.com.br?subject=Proposta%20PDV%20Desktop%20Rust">Solicitar proposta</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="card exec-summary" id="o-que-e">
-      <h2>O que é o piloto Rust?</h2>
-      <p class="exec-lead">É um <strong>programa de caixa Windows</strong> no computador da loja. Não depende de nuvem para vender no balcão.</p>
-      <p class="home-solves"><strong>O que ele resolve:</strong> fila por internet instável, sistema pesado que trava o PC e a dor de trocar de PDV quando abre o segundo caixa. Comece em um PC; evolua para rede com o <em>mesmo</em> produto.</p>
-      <div class="exec-kpi-grid">
-        <div class="exec-kpi"><strong>Offline</strong><span>Vende com ou sem internet</span></div>
-        <div class="exec-kpi"><strong>Rápido</strong><span>Abre em segundos no Windows</span></div>
-        <div class="exec-kpi"><strong>No seu PC</strong><span>Dados ficam na loja</span></div>
-        <div class="exec-kpi"><strong>Escala</strong><span>1 PC hoje · vários caixas depois</span></div>
-      </div>
-      <p class="section-subtitle">Piloto <strong>v0.1.2</strong> · <a href="modalidades.html">PDV Local ou na Rede</a></p>
-    </section>
-
-    <section class="card" id="para-quem">
-      <h2>Para quem é</h2>
-      <div class="benefit-grid">
-        <div class="benefit-card benefit-card--icon">
-          <span class="benefit-card__icon" aria-label="Loja de bairro" role="img">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand-2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-store"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7"/><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4"/><path d="M2 7h20"/><path d="M22 7v3a2 2 0 0 1-2 2v0a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12v0a2 2 0 0 1-2-2V7"/></svg>
-          </span>
-          <div>
-            <strong>MEI e loja de bairro</strong>
-            <p>Um balcão, primeiro PDV, operação simples no dia a dia.</p>
-          </div>
-        </div>
-        <div class="benefit-card benefit-card--icon">
-          <span class="benefit-card__icon" aria-label="Quiosque e conveniência" role="img">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand-2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-coffee"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" x2="6" y1="2" y2="4"/><line x1="10" x2="10" y1="2" y2="4"/><line x1="14" x2="14" y1="2" y2="4"/></svg>
-          </span>
-          <div>
-            <strong>Quiosque e conveniência</strong>
-            <p>Checkout ágil, PIX no caixa e controle de turno.</p>
-          </div>
-        </div>
-        <div class="benefit-card benefit-card--icon">
-          <span class="benefit-card__icon" aria-label="Crescimento" role="img">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand-2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trending-up"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
-          </span>
-          <div>
-            <strong>Loja em crescimento</strong>
-            <p>Segundo caixa sem migrar dados — ative o modo rede com suporte.</p>
-          </div>
-        </div>
-        <div class="benefit-card benefit-card--icon">
-          <span class="benefit-card__icon" aria-label="PC modesto" role="img">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand-2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-monitor"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
-          </span>
-          <div>
-            <strong>PC modesto</strong>
-            <p>Projetado para rodar leve — sem exigir máquina nova.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="card" id="perfis">
-      <h2>Para quem é o PDV Rust?</h2>
-      <p class="section-subtitle">Três olhares sobre o mesmo piloto — sem trocar de produto.</p>
-      <div class="hub-grid">
-        <div class="pillar">
-          <h3>Lojistas</h3>
-          <p>Operação simples, offline no PC do caixa. PIX com QR + confirmação. Até 100 vendas para conhecer o fluxo.</p>
-          <a href="download.html">Baixar o piloto →</a>
-        </div>
-        <div class="pillar">
-          <h3>TI</h3>
-          <p>NSIS, MSI ou ZIP; SHA-256 na página; pasta própria; aviso SmartScreen esperado no piloto.</p>
-          <a href="download.html">Formatos e hashes →</a>
-        </div>
-        <div class="pillar">
-          <h3>Contadores</h3>
-          <p>Dados ficam na loja. Fiscal do piloto é simulado (treino). Custódia e backup no PC do cliente.</p>
-          <a href="transparencia.html#privacidade">Privacidade e fiscal →</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="card free-banner" id="gratuito">
-      <p class="free-banner__eyebrow">Piloto Rust (limites)</p>
-      <h2>Piloto Rust no seu PC Windows</h2>
-      <p class="free-banner__lead">Sem limite de tempo para conhecer o fluxo. O teto é de <strong>vendas concluídas</strong>, não de dias.</p>
-      <div class="limit-callout">
-        <strong>100 vendas na vida deste piloto</strong>
-        <div class="limit-track" aria-hidden="true"><span></span></div>
-        <div class="limit-legend"><span>0</span><span>Teto: 100 cupons no banco local</span></div>
-        <p>O teto é de 100 vendas neste banco, não por mês. O app avisa no caixa quantas restam. Na 101ª, pede licença.</p>
-      </div>
-      <ul class="free-banner__list">
-        <li>Vendas, caixa e gestão no computador local</li>
-        <li>PIX com QR Code e confirmação no balcão</li>
-        <li>Dados em <code>%APPDATA%\caracore-pdv\</code> — no computador da loja</li>
-      </ul>
-      <div class="free-banner__actions">
-        <a class="btn-primary" href="download.html">Baixar piloto Rust (Windows)</a>
-        <a class="btn-secondary" href="mailto:suporte@caracore.com.br?subject=Proposta%20PDV%20Desktop%20Rust">Solicitar proposta</a>
-        <a class="btn-secondary" href="transparencia.html#edicao-gratuita">Ver limites</a>
-      </div>
-    </section>
-
-    <section class="card" id="funcionalidades">
-      <h2>O que o PDV faz no dia a dia</h2>
-      <p class="section-subtitle">Recursos pensados para o balcão — detalhes em <a href="produto.html">Produto</a>.</p>
-      <div class="benefit-grid">
-        <div class="benefit-card benefit-card--icon">
-          <span class="benefit-card__icon" aria-label="Vendas" role="img">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand-2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-cart"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
-          </span>
-          <div>
-            <strong>Vendas no balcão</strong>
-            <p>Busca rápida, carrinho, descontos, PIX e finalização por atalho.</p>
-          </div>
-        </div>
-        <div class="benefit-card benefit-card--icon">
-          <span class="benefit-card__icon" aria-label="Caixa" role="img">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand-2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-banknote"><rect width="20" height="12" x="2" y="6" rx="2"/><circle cx="12" cy="12" r="2"/><path d="M6 12h.01M18 12h.01"/></svg>
-          </span>
-          <div>
-            <strong>Caixa e turno</strong>
-            <p>Abertura, sangria, suprimento e backup ao fechar o turno.</p>
-          </div>
-        </div>
-        <div class="benefit-card benefit-card--icon">
-          <span class="benefit-card__icon" aria-label="Estoque" role="img">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand-2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-package"><path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>
-          </span>
-          <div>
-            <strong>Estoque</strong>
-            <p>Reserva ao vender; aviso ou bloqueio quando acabar.</p>
-          </div>
-        </div>
-        <div class="benefit-card benefit-card--icon">
-          <span class="benefit-card__icon" aria-label="Gestão" role="img">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand-2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bar-chart-3"><path d="M3 3v18h18"/><path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/></svg>
-          </span>
-          <div>
-            <strong>Gestão</strong>
-            <p>Indicadores do período e relatório em PDF.</p>
-          </div>
-        </div>
-        <div class="benefit-card benefit-card--icon">
-          <span class="benefit-card__icon" aria-label="Equipe" role="img">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand-2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lock"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-          </span>
-          <div>
-            <strong>Equipe</strong>
-            <p>Perfis de acesso e senha do supervisor para descontos.</p>
-          </div>
-        </div>
-        <div class="benefit-card benefit-card--icon">
-          <span class="benefit-card__icon" aria-label="Fiscal" role="img">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand-2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-receipt"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M16 8H8"/><path d="M16 12H8"/><path d="M13 16H8"/></svg>
-          </span>
-          <div>
-            <strong>Fiscal</strong>
-            <p>Fila visível e contingência — fiscal real conforme contrato.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="card" id="ver-em-acao">
-      <h2>Veja o produto em ação</h2>
-      <p class="section-subtitle">Telas reais do PDV — tour interativo em <a href="demonstracao.html">Demonstração</a> (venda → caixa → relatório).</p>
-      <div class="demo-grid">
-        <figure class="demo-item">
-          <div class="portal-shot">
-            <img src="assets/img/screenshot-vendas.png" width="1280" height="800" alt="Tela de vendas com carrinho e busca de produtos" loading="lazy" decoding="async" sizes="(max-width: 639px) 92vw, 33vw" />
-          </div>
-          <figcaption><strong>Vender</strong>Busca, carrinho e PIX no balcão.</figcaption>
-        </figure>
-        <figure class="demo-item">
-          <div class="portal-shot">
-            <img src="assets/img/screenshot-caixa.png" width="1280" height="800" alt="Tela de caixa com controle de turno" loading="lazy" decoding="async" sizes="(max-width: 639px) 92vw, 33vw" />
-          </div>
-          <figcaption><strong>Caixa</strong>Turno, sangria e fechamento.</figcaption>
-        </figure>
-        <figure class="demo-item">
-          <div class="portal-shot">
-            <img src="assets/img/screenshot-gestao.png" width="1280" height="800" alt="Painel de gestão comercial" loading="lazy" decoding="async" sizes="(max-width: 639px) 92vw, 33vw" />
-          </div>
-          <figcaption><strong>Gestão</strong>Indicadores e PDF do período.</figcaption>
-        </figure>
-      </div>
-      <p class="cta-box">
-        <a class="btn-primary" href="demonstracao.html">Ver demonstração completa</a>
-        <a class="btn-secondary" href="primeiros-passos.html">Primeiros passos do piloto Rust</a>
-      </p>
-    </section>
-
-    <section class="card" id="comecar">
-      <h2>Como começar</h2>
+    <section class="card" id="no-balcao">
+      <h2>No balcão</h2>
+      <p class="section-subtitle">Três passos. Um fluxo. Sem aula de sistema.</p>
       <div class="home-steps">
         <div class="home-step">
-          <strong>Baixar</strong>
-          <p>Instalador oficial no GitHub — NSIS ou MSI em português.</p>
-        </div>
-        <div class="home-step">
-          <strong>Instalar</strong>
-          <p>Assistente guiado; dados em <code>%APPDATA%\caracore-pdv\</code>.</p>
+          <strong>Baixar e instalar</strong>
+          <p>NSIS em português no Windows x64. Dados em <code>%APPDATA%\caracore-pdv\</code>.</p>
         </div>
         <div class="home-step">
           <strong>Vender</strong>
-          <p>Login, abertura de turno e primeira venda em minutos.</p>
+          <p>Assistente <code>/setup</code>, login <code>admin</code> / <code>admin123</code>, abre o turno e registra a venda. PIX do piloto: QR na tela + confirmação do operador.</p>
+        </div>
+        <div class="home-step">
+          <strong>Fechar turno</strong>
+          <p>Conferência do dia e backup no PC da loja — sem depender de nuvem.</p>
         </div>
       </div>
-      <p class="cta-box">
-        <a class="btn-primary" href="https://github.com/chmulato/caracore-rust-pdv-releases/releases/tag/v0.1.2" rel="noopener noreferrer" data-official-download>Baixar piloto Rust (Windows)</a>
-        <a class="btn-secondary" href="primeiros-passos.html">Guia passo a passo</a>
-        <a class="btn-secondary" href="download.html">Formatos de instalador</a>
-      </p>
+      <p class="funil-more">Comece em um PC; evolua para a rede sem trocar de produto. <a href="demonstracao.html">Ver telas</a> · <a href="produto.html">Funções</a> · <a href="modalidades.html">Local e rede</a></p>
     </section>
 
-    <section class="card" id="precos">
-      <h2>Quanto custa</h2>
-      <table class="trace pricing-table">
-        <thead>
-          <tr>
-            <th>Opção</th>
-            <th>Para você</th>
-            <th>Investimento</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="plan-highlight">
-            <td class="plan-name">Piloto Rust (limites)</td>
-            <td>Testar no Windows — vendas, caixa e gestão (até 100 vendas na vida do piloto)</td>
-            <td><strong>Grátis</strong> · <a href="https://github.com/chmulato/caracore-rust-pdv-releases/releases/tag/v0.1.2" rel="noopener noreferrer" data-official-download>Baixar piloto Rust (Windows)</a></td>
-          </tr>
-          <tr>
-            <td class="plan-name">Edição completa</td>
-            <td>Loja em operação regular, sem limites do piloto</td>
-            <td>Sob proposta</td>
-          </tr>
-          <tr>
-            <td class="plan-name">PDV na rede</td>
-            <td>Vários caixas + central na loja</td>
-            <td>Projeto com implantação · <a href="mailto:suporte@caracore.com.br">Falar com a Cara Core</a></td>
-          </tr>
-        </tbody>
-      </table>
-      <p class="pricing-note"><a href="mercado.html#precos">Todos os planos</a> · <a href="transparencia.html#edicao-gratuita">Limites do piloto Rust</a></p>
-      <div class="premium-panel" id="proposta">
-        <h3>Quando pedir a edição completa</h3>
-        <ul>
-          <li>A loja já passou do teto de 100 vendas do piloto.</li>
-          <li>Precisa de operação regular, sem o modo de treino do piloto.</li>
-          <li>Quer implantação assistida (um PC ou vários caixas na rede).</li>
-        </ul>
-        <p>Não há checkout automático nesta loja. A Cara Core envia a proposta.</p>
-        <div class="quick-glance__actions">
-          <a class="btn-primary" href="mailto:suporte@caracore.com.br?subject=Proposta%20PDV%20Desktop%20Rust">Solicitar proposta</a>
-          <a class="btn-secondary" href="demonstracao.html">Ver como funciona</a>
-        </div>
+    <section class="card" id="planos">
+      <h2>Planos</h2>
+      <p class="section-subtitle">Piloto self-serve. Edição completa e rede sob proposta — sem checkout de assinatura.</p>
+      <div class="plan-grid">
+        <article class="plan-card plan-card--piloto">
+          <p class="plan-card__eyebrow">Para testar hoje</p>
+          <h3>Piloto grátis</h3>
+          <p class="plan-card__price">R$ 0</p>
+          <p class="plan-card__pitch">Windows x64 · até <strong>100 vendas na vida deste banco</strong> (não por mês).</p>
+          <ul>
+            <li>Caixa offline no PC da loja</li>
+            <li>PIX: QR na tela + confirmação do operador (não é gateway)</li>
+            <li>Fiscal do piloto: simulado / treino</li>
+          </ul>
+          <p class="cta-box">
+            <a class="btn-primary" href="https://github.com/chmulato/caracore-rust-pdv-releases/releases/tag/v0.1.2" rel="noopener noreferrer" data-official-download>Baixar piloto Rust (Windows)</a>
+          </p>
+        </article>
+        <article class="plan-card">
+          <p class="plan-card__eyebrow">Operação regular</p>
+          <h3>Edição completa</h3>
+          <p class="plan-card__price">Sob proposta</p>
+          <p class="plan-card__pitch">Mesmo produto, sem o teto do piloto.</p>
+          <ul>
+            <li>Loja em operação contínua</li>
+            <li>Fiscal real somente com contrato</li>
+            <li>Sem mensalidade publicada nesta loja</li>
+          </ul>
+          <p class="cta-box">
+            <a class="btn-secondary" href="mailto:suporte@caracore.com.br?subject=Proposta%20PDV%20Desktop%20Rust">Solicitar proposta</a>
+          </p>
+        </article>
+        <article class="plan-card">
+          <p class="plan-card__eyebrow">Vários caixas</p>
+          <h3>PDV na rede</h3>
+          <p class="plan-card__price">Projeto</p>
+          <p class="plan-card__pitch">Implantação com a Cara Core — central + caixas na loja.</p>
+          <ul>
+            <li>Cresce sem trocar de sistema</li>
+            <li>Validado em laboratório</li>
+            <li><a href="mailto:suporte@caracore.com.br">suporte@caracore.com.br</a></li>
+          </ul>
+          <p class="cta-box">
+            <a class="btn-secondary" href="mailto:suporte@caracore.com.br?subject=PDV%20na%20rede%20Rust">Falar com a Cara Core</a>
+          </p>
+        </article>
       </div>
-    </section>
-
-    <section class="card" id="para-ti">
-      <h2>Para TI</h2>
-      <p>Arquitetura (Bunker Digital, camadas, sync na rede) e o diagrama técnico ficam em <a href="rust-tauri.html">Por que Rust + Tauri</a> — fora do funil de download do lojista.</p>
-      <p class="cta-box">
-        <a class="btn-secondary" href="rust-tauri.html">Abrir página Para TI</a>
-      </p>
-    </section>
-
-    <section class="card home-tech" id="tecnico">
-      <h2>Detalhes técnicos (opcional)</h2>
-      <p class="section-subtitle">Para gestores, a frase que importa: <em>funciona offline, é rápido e sincroniza com outros caixas quando estiver na rede.</em></p>
-      <details>
-        <summary>Como a tecnologia ajuda a loja</summary>
-        <div class="ti-body">
-          <p>Programa nativo leve, dados no SQLite local e sincronização na rede quando você crescer — sem trocar de sistema. Leia <a href="rust-tauri.html">Por que Rust + Tauri</a> ou o <a href="rust-tauri.html#ecosistema">diagrama do ecossistema</a>.</p>
-        </div>
-      </details>
-      <details>
-        <summary>Confiança, privacidade e piloto</summary>
-        <div class="ti-body">
-          <p>Download verificado (SHA-256), dados locais e limites honestos do piloto em <a href="transparencia.html">Transparência</a>.</p>
-        </div>
-      </details>
-      <details>
-        <summary>Documentação para TI</summary>
-        <div class="ti-body">
-          <p><a href="https://wiki.caracore.com.br/projeto-pdv-rust.html">Wiki</a> · <a href="https://wiki.caracore.com.br/projeto-pdv-rust.html">Projeto PDV</a> · <a href="modalidades.html">Arquitetura local e rede</a></p>
-        </div>
-      </details>
+      <p class="pricing-note"><a href="mercado.html#precos">Tabela completa</a> · <a href="transparencia.html#edicao-gratuita">Limites do piloto</a> · <a href="transparencia.html#pix">PIX com honestidade</a></p>
     </section>
 
     <section class="card">
       <div class="download-hero-cta">
         <h2>Pronto para testar o piloto?</h2>
-        <p>Piloto Windows no PC da loja — instale em minutos.</p>
-        <a class="btn-primary" href="https://github.com/chmulato/caracore-rust-pdv-releases/releases/tag/v0.1.2" rel="noopener noreferrer" data-official-download>Baixar piloto Rust (Windows)</a>
+        <p>Windows no PC da loja — instale, abra o turno e faça a primeira venda.</p>
+        <div class="hero-actions">
+          <a class="btn-primary" href="https://github.com/chmulato/caracore-rust-pdv-releases/releases/tag/v0.1.2" rel="noopener noreferrer" data-official-download>Baixar piloto Rust (Windows)</a>
+          <a class="btn-secondary" href="mailto:suporte@caracore.com.br?subject=Proposta%20PDV%20Desktop%20Rust">Solicitar proposta</a>
+        </div>
       </div>
     </section>
   </main>
@@ -387,6 +150,7 @@
           <li><a href="produto.html">Funcionalidades</a></li>
           <li><a href="demonstracao.html">Demonstração</a></li>
           <li><a href="modalidades.html">Local e rede</a></li>
+          <li><a href="rust-tauri.html">Para TI</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -407,16 +171,9 @@
         </ul>
       </div>
     </div>
-    <p class="footer-legal">Há também um caixa maduro em <a href="https://pdv.caracore.com.br/">pdv.caracore.com.br</a>.</p>
     <p class="footer-legal">Cara Core Informática · CNPJ 23.969.028/0001-37 · <a href="https://www.caracore.com.br/">www.caracore.com.br</a> · <a href="mailto:suporte@caracore.com.br">suporte@caracore.com.br</a></p>
   </footer>
   <script src="assets/js/releases.js?v=20260906"></script>
   <script src="assets/js/portal.js?v=20260906"></script>
 </body>
 </html>
-
-
-
-
-
-

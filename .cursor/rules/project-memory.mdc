@@ -5,7 +5,7 @@ alwaysApply: true
 
 # Memória da Loja — caracore-rust-pdv-releases
 
-**Atualizado:** 2026-09-06 (loja + artefatos no mesmo repo GitHub)
+**Atualizado:** 2026-09-07 (piloto sem ruído de outra linha de PDV)
 
 ## Repositório e papel
 
@@ -37,14 +37,15 @@ Não prometer features só da vitrine sem release correspondente.
 - **Diferencial:** evoluir **sem trocar de sistema** / sem migração forçada.
 - **Rede:** selo **validado em laboratório**; implantação com Cara Core — sem depoimentos ou métricas inventadas.
 - **CTA primário:** **Baixar piloto Rust (Windows)** — nunca “Baixar grátis” sem qualificador.
-- A outra linha (caixa maduro) aparece **só no rodapé**, não no hero. Comparar não entra no menu.
-- Evitar: "PDV v3" sozinho, "migração obrigatória", "Não é o Free Java" no primeiro ecrã.
+- **CTA secundário:** **Solicitar proposta** (edição completa / rede — sem checkout de assinatura).
+- **Sem ruído de outra linha:** a vitrine do piloto não compara, não convive e não aponta outro PDV no funil. `comparacao.html` redireciona ao início.
+- Evitar: "PDV v3" sozinho, "migração obrigatória", teto “/mês”, PIX como gateway Premium.
 
 ## Páginas principais (`docs/`)
 
 | Página | Função |
 |--------|--------|
-| `index.html` | Hub local/rede, benefícios comerciais, screenshots |
+| `index.html` | Funil: hero + 3 passos no balcão + planos em cards (só este piloto) |
 | **`modalidades.html`** | Página canónica local vs rede (cards, jornada, comparação, TI accordion) |
 | `produto.html` | Funções + bloco rede |
 | `mercado.html` | Planos + tabela modalidades |
@@ -66,11 +67,10 @@ Conteúdo `docs/`: **apenas HTML** comercial (+ assets). Raiz: `README.md` + `CH
 - https://github.com/chmulato/caracore-rust-pdv-releases/releases/tag/v0.1.2
 - Nav **Download** → GitHub (nova aba) · **Formatos** → `download.html`
 
-## Onde paramos (sessão 2026-09-06)
+## Onde paramos (sessão 2026-09-07)
 
-- Hero com um CTA: **Baixar piloto Rust (Windows)**. Java só no rodapé. Comparar fora do menu.
-- Zero `rust-pdv.caracore.com.br`; Java canal atual = **v3.2.3-free**.
-- Instalação pública = `download.html` + `primeiros-passos.html` (não duplicar LEIA-ME do ZIP).
+- Home enxuta: 1 promessa de balcão + 2 CTAs; 3 passos; planos curtos. Sem discurso de outra linha de PDV.
+- Download: SHA/cards intactos + passo da primeira venda. Teto = vida deste banco. PIX = QR + confirmação.
 - **Não commitado / não publicado** no GitHub remoto (salvo o usuário pedir).
 
 ## Próximo foco (loja)

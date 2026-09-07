@@ -5,30 +5,30 @@ alwaysApply: true
 
 # Loja pdv-rust — continuidade
 
-**Atualizado:** 2026-09-06 · Repo: `D:\onedrive\dev\caracore-pdv-rust-releases`
+**Atualizado:** 2026-09-07 · Repo: `D:\onedrive\dev\caracore-pdv-rust-releases`
 
 ## Estado
 
-- Vitrine **v0.1.2** com identidade inequívoca: **piloto Rust Windows**, não o Free Java do balcão.
-- Faixa de identidade em **todas** as páginas públicas (Java v3.2.3-free em `pdv.caracore.com.br`).
+- Vitrine **v0.1.2** com funil enxuto na home: hero (offline / leve / Windows) + **Baixar piloto** e **Solicitar proposta**.
+- Vitrine do piloto **não compara nem aponta outra linha de PDV**. `comparacao.html` redireciona ao início.
 - Binários oficiais **v0.1.2** em https://github.com/chmulato/caracore-rust-pdv-releases/releases (lista só Rust; `/latest` deste repo é o piloto).
-- Java maduro citado como **v3.2.3-free** em https://pdv.caracore.com.br/download.html
+- Teto: **100 vendas na vida deste banco**. PIX do piloto: QR + confirmação (não gateway).
 - LEIA-ME do ZIP **não** vive nesta loja — instalação pública = `primeiros-passos.html` + `download.html`.
-- **Push:** alterações de identidade ainda em disco local — commit + push só com autorização.
+- **Push:** alterações ainda em disco local — commit + push só com autorização.
 
 ## Validar após push
 
-1. https://pdv-rust.caracore.com.br/ — hero “CaraCore PDV Desktop (Rust) — piloto Windows” + faixa Java 3.2.3-free.
-2. https://pdv-rust.caracore.com.br/download.html — 3 assets + SHA256 + link `/releases/tag/v0.1.2`.
-3. https://pdv-rust.caracore.com.br/comparacao.html — Java v3.2.3-free; pastas AppData distintas.
-4. https://pdv-rust.caracore.com.br/primeiros-passos.html — `/setup` + `admin` / `admin123`.
+1. https://pdv-rust.caracore.com.br/ — hero com 2 CTAs + 3 passos + planos em cards + faixa de convivência.
+2. https://pdv-rust.caracore.com.br/download.html — 3 assets + SHA256 + primeira venda + link `/releases/tag/v0.1.2`.
+3. https://pdv-rust.caracore.com.br/comparacao.html — redireciona ao início (fora do funil).
+4. https://pdv-rust.caracore.com.br/primeiros-passos.html — `/setup` + `admin` / `admin123` + turno.
 5. Botões **Baixar piloto Rust (Windows)** → `caracore-rust-pdv-releases` (tag `v0.1.2` ou lista `/releases`). Nunca `/releases/latest` de `caracore-pdv-releases` (Java).
 
 ## Arquivos tocados na última sessão
 
-- Todas as páginas `docs/*.html` (faixa + CTAs + canonical)
-- `docs/assets/js/releases.js` (comentário: não usar `/latest` em CTA)
-- `CHANGELOG.md`, `README.md` (oficina privada sem URL pública de download)
+- `docs/index.html`, `docs/download.html`, `docs/primeiros-passos.html`, `docs/transparencia.html`
+- `docs/assets/css/components.css` (plan-card / funil)
+- `CHANGELOG.md`, `README.md`
 
 ## Próximo passo único (se só houver tempo)
 

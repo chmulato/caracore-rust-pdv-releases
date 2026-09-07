@@ -1,6 +1,6 @@
 # Cara Core PDV Desktop (Rust + Tauri) — Loja e Releases
 
-Canal público de apresentação e distribuição da **iniciativa Rust + Tauri 2** do CaraCore PDV (loja em https://pdv-rust.caracore.com.br/ com entrega de binários na tag [v0.1.2](https://github.com/chmulato/caracore-rust-pdv-releases/releases/tag/v0.1.2)). Coexiste com o PDV Desktop Java (canal **v3.2.3-free**) em [pdv.caracore.com.br](https://pdv.caracore.com.br/). Nenhuma linha substitui a outra.
+Canal público de apresentação e distribuição do **piloto Windows** CaraCore PDV (loja em https://pdv-rust.caracore.com.br/ com entrega de binários na tag [v0.1.2](https://github.com/chmulato/caracore-rust-pdv-releases/releases/tag/v0.1.2)). Esta vitrine fala só deste piloto — sem comparar outras linhas de caixa.
 
 A loja comunica o produto em **linguagem comercial para leigos**: PDV **local** (um PC na loja) e PDV **na rede** (vários caixas + servidor da loja). Documentação técnica, evidências e gates ficam na oficina local (`D:\dev\caracore-pdv-rust`). A loja **não** publica o LEIA-ME do ZIP — instalação pública = `primeiros-passos.html` + `download.html`.
 
@@ -21,9 +21,9 @@ A loja comunica o produto em **linguagem comercial para leigos**: PDV **local** 
 
 ### Destaques (v0.1.2 — loja)
 
-- Página **[Local e rede](https://pdv-rust.caracore.com.br/modalidades.html)** — PDV na sua máquina vs PDV na rede da loja.
-- Planos e primeiros passos alinhados às duas modalidades.
-- Mesmo produto: comece local; evolua para vários caixas com suporte Cara Core.
+- Home em funil enxuto: hero (offline / leve / Windows) + Baixar piloto e Solicitar proposta; 3 passos no balcão; planos em cards. Sem discurso de outra linha de PDV.
+- Teto do piloto: **100 vendas na vida deste banco** (não por mês). PIX = QR + confirmação do operador.
+- Página **[Local e rede](https://pdv-rust.caracore.com.br/modalidades.html)** — comece em um PC; evolua para vários caixas sem trocar de produto.
 - Validação de saúde 2026-06-06: backend, frontend, build release e smokes OK; performance absoluta OK, com bloqueio apenas por comparação semanal.
 
 ### Destaques (v0.1.1 — produto)
@@ -42,7 +42,6 @@ Lista completa: [`CHANGELOG.md`](CHANGELOG.md).
 | Modalidades (local / rede) | https://pdv-rust.caracore.com.br/modalidades.html |
 | Releases / download | https://github.com/chmulato/caracore-rust-pdv-releases/releases/tag/v0.1.2 |
 | Oficina (código) | Pasta local `D:\dev\caracore-pdv-rust` (repo privado; não é fonte de download) |
-| Linha Java (alternativa) | https://pdv.caracore.com.br/download.html (v3.2.3-free) |
 
 ---
 

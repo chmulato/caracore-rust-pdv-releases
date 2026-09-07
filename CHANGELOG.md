@@ -2,6 +2,18 @@
 
 Formato alinhado às demais lojas `*-releases` do ecossistema CaraCore.
 
+## v0.1.2 — 2026-09-07 (piloto sem ruído de outra linha)
+
+**Sem novo binário.** A vitrine do piloto Windows deixa de apontar, comparar ou conviver em público com outra linha de PDV. Faixa de identidade, rodapé “caixa maduro”, links “Comparação Rust/Java” e a página `comparacao.html` saem do funil (`comparacao.html` redireciona ao início). Download e primeiros passos falam só deste piloto.
+
+---
+
+## v0.1.2 — 2026-09-07 (funil comercial da home)
+
+**Sem novo binário.** A home passa a espelhar a arquitetura de persuasão da loja Java (`pdv.caracore.com.br`) sem copiar Free/Premium: hero com uma promessa de balcão (offline / leve / Windows) + dois CTAs (Baixar piloto e Solicitar proposta); três passos no balcão; planos em cards honestos; faixa de convivência com o Java Free e AppData distintos. Download ganha o passo da primeira venda (`/setup` → `admin` / `admin123` → turno → vender). Teto escrito como **vida deste banco**. PIX do piloto permanece QR + confirmação. SHA-256 e URLs da tag `v0.1.2` intactos.
+
+---
+
 ## v0.1.2 — 2026-09-06 (ZIP: canal Rust no LEIA-ME)
 
 Republicado só o ZIP portátil. `LEIA-ME-INSTALACAO.txt` e `SHA256SUMS.txt` apontam exclusivamente para [`caracore-rust-pdv-releases/releases/tag/v0.1.2`](https://github.com/chmulato/caracore-rust-pdv-releases/releases/tag/v0.1.2) e https://pdv-rust.caracore.com.br/download.html. NSIS e MSI inalterados.

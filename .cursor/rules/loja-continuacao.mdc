@@ -14,7 +14,7 @@ alwaysApply: true
 - Binários oficiais **v0.1.2** em https://github.com/chmulato/caracore-rust-pdv-releases/releases (lista só Rust; `/latest` deste repo é o piloto).
 - Teto: **100 vendas na vida deste banco**. PIX do piloto: QR + confirmação (não gateway).
 - LEIA-ME do ZIP **não** vive nesta loja — instalação pública = `primeiros-passos.html` + `download.html`.
-- **Push:** alterações ainda em disco local — commit + push só com autorização.
+- **Push:** `master` em `625b86d` (2026-09-07) — vitrine do funil no ar.
 
 ## Validar após push
 

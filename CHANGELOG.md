@@ -2,6 +2,20 @@
 
 Formato alinhado às demais lojas `*-releases` do ecossistema CaraCore.
 
+## v0.1.3 — 2026-09-07 (busca/scanner do balcão)
+
+**Binários Windows novos** na tag [`v0.1.3`](https://github.com/chmulato/caracore-rust-pdv-releases/releases/tag/v0.1.3): NSIS, MSI pt-BR e ZIP piloto.
+
+Correção do checkout: o comando `buscar_produtos` passa a receber `{ input }` (string vazia lista o catálogo). Enter e F2 filtram; código de barras/SKU resolve o produto ou mostra “não encontrado”, sem erro cru de invoke. PIX QR + confirmação e teto de 100 vendas na vida deste banco **não mudam**. Não substitui o PDV Java Free.
+
+| Arquivo | SHA256 |
+|---------|--------|
+| `CaraCore.PDV_0.1.3_x64-setup.exe` | `1456d0df8788cc1ebde8936e62d2ef3e9a5ba11629b57aaafafe545d9489761c` |
+| `CaraCore.PDV_0.1.3_x64_pt-BR.msi` | `f5ef4fa966c792de3fc7a6927267578ff53bc72d0b083f52a6ee955816362557` |
+| `CaraCore-PDV-v0.1.3-windows.zip` | `f20284074a69e1e680c520e50d93f37ba37a058b91035f61f200687370857002` |
+
+---
+
 ## v0.1.2 — 2026-09-07 (piloto sem ruído de outra linha)
 
 **Sem novo binário.** A vitrine do piloto Windows deixa de apontar, comparar ou conviver em público com outra linha de PDV. Faixa de identidade, rodapé “caixa maduro”, links “Comparação Rust/Java” e a página `comparacao.html` saem do funil (`comparacao.html` redireciona ao início). Download e primeiros passos falam só deste piloto.

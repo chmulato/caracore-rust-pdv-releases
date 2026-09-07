@@ -203,7 +203,7 @@
   function wireOfficialDownloads() {
     var root = typeof globalThis !== "undefined" ? globalThis : typeof window !== "undefined" ? window : {};
     var R = root.CaraCoreRustReleases;
-    var url = (R && R.RELEASES_TAG_V012) || "https://github.com/chmulato/caracore-rust-pdv-releases/releases/tag/v0.1.2";
+    var url = (R && R.RELEASES_TAG_V012) || "https://github.com/chmulato/caracore-rust-pdv-releases/releases/tag/v0.1.3";
     document.querySelectorAll("[data-official-download]").forEach(function (link) {
       link.href = url;
       link.setAttribute("rel", "noopener noreferrer");

@@ -1,18 +1,18 @@
 ---
-description: Memória da loja PDV Desktop Rust — pdv-rust; v0.1.2 vitrine; modalidades comercial; push pendente
+description: Memória da loja PDV Desktop Rust — pdv-rust; v0.1.3 vitrine; busca/scanner; binários 2026-09-07
 alwaysApply: true
 ---
 
 # Memória da Loja — caracore-rust-pdv-releases
 
-**Atualizado:** 2026-09-07 (piloto sem ruído de outra linha de PDV)
+**Atualizado:** 2026-09-07 (piloto v0.1.3 — busca/scanner)
 
 ## Repositório e papel
 
 - **GitHub (canónico):** `chmulato/caracore-rust-pdv-releases` — **loja e entrega de artefatos no mesmo repositório**
 - **Clone local:** `D:\onedrive\dev\caracore-pdv-rust-releases` (nome da pasta ≠ nome no GitHub)
 - **Vitrine:** https://pdv-rust.caracore.com.br/ (GitHub Pages, pasta `/docs`, `docs/CNAME`)
-- **Artefatos:** https://github.com/chmulato/caracore-rust-pdv-releases/releases (NSIS/MSI/ZIP, tag v0.1.2)
+- **Artefatos:** https://github.com/chmulato/caracore-rust-pdv-releases/releases (NSIS/MSI/ZIP, tag v0.1.3)
 - **Papel:** vitrine comercial em `docs/` + binários nas GitHub Releases do **mesmo** repo (a pasta `docs/` não contém EXE)
 
 ## Oficina pareada
@@ -25,9 +25,9 @@ alwaysApply: true
 
 | Camada | Versão | Nota |
 |--------|--------|------|
-| **Vitrine / CHANGELOG** | **v0.1.2** | Piloto Windows |
-| **Binários GitHub** | **v0.1.2** | https://github.com/chmulato/caracore-rust-pdv-releases/releases |
-| Botões Baixar | Tag **v0.1.2** ou lista `/releases` | **Nunca** `/releases/latest` de `caracore-pdv-releases` (Java) |
+| **Vitrine / CHANGELOG** | **v0.1.3** | Piloto Windows |
+| **Binários GitHub** | **v0.1.3** | https://github.com/chmulato/caracore-rust-pdv-releases/releases |
+| Botões Baixar | Tag **v0.1.3** ou lista `/releases` | **Nunca** `/releases/latest` de `caracore-pdv-releases` (Java) |
 
 Não prometer features só da vitrine sem release correspondente.
 
@@ -64,21 +64,19 @@ Conteúdo `docs/`: **apenas HTML** comercial (+ assets). Raiz: `README.md` + `CH
 
 ## Download oficial
 
-- https://github.com/chmulato/caracore-rust-pdv-releases/releases/tag/v0.1.2
+- https://github.com/chmulato/caracore-rust-pdv-releases/releases/tag/v0.1.3
 - Nav **Download** → GitHub (nova aba) · **Formatos** → `download.html`
 
 ## Onde paramos (sessão 2026-09-07)
 
-- Home enxuta: 1 promessa de balcão + 2 CTAs; 3 passos; planos curtos. Sem discurso de outra linha de PDV.
-- Download: SHA/cards intactos + passo da primeira venda. Teto = vida deste banco. PIX = QR + confirmação.
-- **Não commitado / não publicado** no GitHub remoto (salvo o usuário pedir).
+- Tag **v0.1.3** publicada: correção busca/scanner no balcão.
+- SHA-256 e URLs de download apontam para `v0.1.3`.
+- Teto = vida deste banco. PIX = QR + confirmação.
 
 ## Próximo foco (loja)
 
-1. `git status` → commit + push `master` (ativar vitrine v0.1.2 no ar).
-2. Conferir Pages: https://pdv-rust.caracore.com.br/modalidades.html
-3. Se nova release binária v0.1.2+: alinhar links de tag em `index.html` e `CHANGELOG.md`.
-4. Opcional: copiar trecho comercial para matriz / wiki institucional (oficina coordena).
+1. Conferir Pages: https://pdv-rust.caracore.com.br/download.html
+2. Conferir tag: https://github.com/chmulato/caracore-rust-pdv-releases/releases/tag/v0.1.3
 
 ## Convenções
 

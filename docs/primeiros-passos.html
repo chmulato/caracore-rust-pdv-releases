@@ -90,39 +90,45 @@
         <li>Se a tela pedir preparação do banco, avance o assistente até finalizar.</li>
         <li>Depois você cai na tela de login.</li>
       </ol>
-      <h3>Logins de demonstração (piloto local)</h3>
+      <h3 id="perfis">Quem entra neste piloto</h3>
+      <p>São logins de <strong>demonstração deste programa</strong> (Rust). Não são os do PDV Java Free (<code>admin</code> / <code>admin</code>).</p>
       <table class="trace">
         <thead>
           <tr>
             <th>Usuário</th>
             <th>Senha</th>
-            <th>Papel</th>
+            <th>Na tela</th>
+            <th>O que faz</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td><code>admin</code></td>
             <td><code>admin123</code></td>
-            <td>admin</td>
+            <td>Administrador</td>
+            <td>Balcão, caixa, gestão e auditoria. Use este na primeira venda.</td>
           </tr>
           <tr>
             <td><code>operador</code></td>
             <td><code>Operador@1234</code></td>
-            <td>operador</td>
+            <td>Operador</td>
+            <td>Vendas e caixa. Gestão e auditoria ficam com “Acesso restrito” — é o esperado.</td>
           </tr>
           <tr>
             <td><code>gestor</code></td>
             <td><code>Gestor@1234</code></td>
-            <td>financeiro</td>
+            <td>Financeiro</td>
+            <td>Caixa, pagamentos e conferência. O login é gestor; o papel na tela é Financeiro.</td>
           </tr>
           <tr>
             <td><code>auditoria</code></td>
             <td><code>Auditoria@1234</code></td>
-            <td>auditoria</td>
+            <td>Auditoria</td>
+            <td>Consulta de auditoria e fiscal. Não opera o caixa.</td>
           </tr>
         </tbody>
       </table>
-      <p class="section-subtitle">Terminal sugerido: <code>PDV-DESKTOP-01</code>. Troque a senha do admin se for usar no dia a dia da loja.</p>
+      <p class="section-subtitle">Terminal sugerido: <code>PDV-DESKTOP-01</code>. Se a tela pedir acesso que o papel não tem, volte ao balcão ou entre como <code>admin</code>. Troque a senha do admin se for usar o piloto no dia a dia da loja.</p>
     </section>
 
     <section class="card">

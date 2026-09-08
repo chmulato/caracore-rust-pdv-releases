@@ -8,6 +8,8 @@ Formato alinhado às demais lojas `*-releases` do ecossistema CaraCore.
 
 Correções do smoke local sem redesenhar o produto: uma fonte de verdade da versão (título da janela / About / LEIA-ME); login e sidebar sem repetir `0.1.x`; status de turno do shell alinhado ao SQLite (inclui “Turno aberto por outro operador”); tabela Gestão → Vendas sem overlap Status/Data; Auditoria sem cards brancos ocos; busca `{ input }` e RBAC `/gestao` `/auditoria` mantidos. Compatível com o banco piloto existente. Não substitui o PDV Java Free.
 
+A loja explica os **quatro logins de demonstração** deste piloto e o que cada um pode abrir (`primeiros-passos.html#perfis`), sem misturar com o Java Free.
+
 | Arquivo | SHA256 |
 |---------|--------|
 | `CaraCore.PDV_0.1.4_x64-setup.exe` | `802ac637c4a9a40ceead3acc05328fd1f01c296a010342b5e389d1977896fef1` |

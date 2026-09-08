@@ -1,7 +1,7 @@
 (function () {
   "use strict";
 
-  var TAG_URL = "https://github.com/chmulato/caracore-rust-pdv-releases/releases/tag/v0.1.3";
+  var TAG_URL = "https://github.com/chmulato/caracore-rust-pdv-releases/releases/tag/v0.1.4";
   var root = typeof globalThis !== "undefined" ? globalThis : window;
   var R = root.CaraCoreRustReleases;
 
@@ -20,6 +20,6 @@
       }
     })
     .catch(function () {
-      /* Tabela e SHA256 já estão no HTML estático da tag v0.1.3. */
+      /* Tabela e SHA256 já estão no HTML estático da tag v0.1.4. */
     });
 })();

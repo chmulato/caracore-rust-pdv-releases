@@ -1,6 +1,6 @@
 # Cara Core PDV Desktop (Rust + Tauri) — Loja e Releases
 
-Canal público de apresentação e distribuição do **piloto Windows** CaraCore PDV (loja em https://pdv-rust.caracore.com.br/ com entrega de binários na tag [v0.1.3](https://github.com/chmulato/caracore-rust-pdv-releases/releases/tag/v0.1.3)). Esta vitrine fala só deste piloto — sem comparar outras linhas de caixa.
+Canal público de apresentação e distribuição do **piloto Windows** CaraCore PDV (loja em https://pdv-rust.caracore.com.br/ com entrega de binários na tag [v0.1.4](https://github.com/chmulato/caracore-rust-pdv-releases/releases/tag/v0.1.4)). Esta vitrine fala só deste piloto — sem comparar outras linhas de caixa.
 
 A loja comunica o produto em **linguagem comercial para leigos**: PDV **local** (um PC na loja) e PDV **na rede** (vários caixas + servidor da loja). Documentação técnica, evidências e gates ficam na oficina local (`D:\dev\caracore-pdv-rust`). A loja **não** publica o LEIA-ME do ZIP — instalação pública = `primeiros-passos.html` + `download.html`.
 
@@ -10,25 +10,25 @@ A loja comunica o produto em **linguagem comercial para leigos**: PDV **local** 
 
 | Campo | Valor |
 | ----- | ----- |
-| Versão comercial (vitrine) | `v0.1.3` — busca/scanner do balcão (set/2026) |
-| Binários publicados | **`v0.1.3`** — Windows (NSIS, MSI pt-BR, ZIP piloto) · **corte 2026-09-07** |
+| Versão comercial (vitrine) | `v0.1.4` — versão discreta e coerência do QA local (set/2026) |
+| Binários publicados | **`v0.1.4`** — Windows (NSIS, MSI pt-BR, ZIP piloto) · **corte 2026-09-08** |
 | Manifesto vitrine (offline) | `docs/assets/data/release-latest.json` — sem API GitHub no browser |
 | Status | Piloto Windows; saúde funcional OK em 2026-06-06; novo corte bloqueado por regressão semanal relativa de performance |
 | Idioma dos instaladores | Português do Brasil (pt-BR) |
 | Stack da oficina | Rust + Tauri 2 + React + SQLite local / PostgreSQL na rede |
-| Release | https://github.com/chmulato/caracore-rust-pdv-releases/releases/tag/v0.1.3 |
+| Release | https://github.com/chmulato/caracore-rust-pdv-releases/releases/tag/v0.1.4 |
 | Loja | https://pdv-rust.caracore.com.br/ |
 
-### Destaques (v0.1.3 — loja)
+### Destaques (v0.1.4 — loja)
 
+- Corte de QA: versão discreta na UI (sem misturar `0.1.2` com o binário); status de turno coerente com o SQLite; tabela Gestão → Vendas legível; Auditoria sem cards ocos.
 - Home em funil enxuto: hero (offline / leve / Windows) + Baixar piloto e Solicitar proposta; 3 passos no balcão; planos em cards. Sem discurso de outra linha de PDV.
 - Teto do piloto: **100 vendas na vida deste banco** (não por mês). PIX = QR + confirmação do operador.
 - Página **[Local e rede](https://pdv-rust.caracore.com.br/modalidades.html)** — comece em um PC; evolua para vários caixas sem trocar de produto.
-- Validação de saúde 2026-06-06: backend, frontend, build release e smokes OK; performance absoluta OK, com bloqueio apenas por comparação semanal.
 
 ### Destaques (v0.1.1 — produto)
 
-- Licença CaraCore Seed opcional; checkout, caixa, gestão PDF, fila fiscal visível. A tag pública **v0.1.3 publica só Windows** (Linux/macOS não saíram nesta tag).
+- Licença CaraCore Seed opcional; checkout, caixa, gestão PDF, fila fiscal visível. A tag pública **v0.1.4 publica só Windows** (Linux/macOS não saíram nesta tag).
 
 Lista completa: [`CHANGELOG.md`](CHANGELOG.md).
 
@@ -40,7 +40,7 @@ Lista completa: [`CHANGELOG.md`](CHANGELOG.md).
 | ----- | ----- |
 | Loja oficial | https://pdv-rust.caracore.com.br/ |
 | Modalidades (local / rede) | https://pdv-rust.caracore.com.br/modalidades.html |
-| Releases / download | https://github.com/chmulato/caracore-rust-pdv-releases/releases/tag/v0.1.3 |
+| Releases / download | https://github.com/chmulato/caracore-rust-pdv-releases/releases/tag/v0.1.4 |
 | Oficina (código) | Pasta local `D:\dev\caracore-pdv-rust` (repo privado; não é fonte de download) |
 
 ---
@@ -81,7 +81,7 @@ GitHub Pages: branch **master**, pasta **/docs**, arquivo **docs/.nojekyll**.
 | `docs/modalidades.html` | Como usar: máquina única ou rede da loja |
 | `docs/produto.html` | Funções do sistema |
 | `docs/mercado.html` | Licenciamento, modalidades e planos |
-| `docs/download.html` | Download Windows da tag v0.1.3 (NSIS, MSI, ZIP + SHA256) |
+| `docs/download.html` | Download Windows da tag v0.1.4 (NSIS, MSI, ZIP + SHA256) |
 | `docs/transparencia.html` | Piloto, SHA256, privacidade |
 | `docs/primeiros-passos.html` | Instalação inicial |
 

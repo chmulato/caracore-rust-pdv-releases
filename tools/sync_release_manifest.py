@@ -82,14 +82,18 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--tag",
-        default="v0.1.2",
-        help="Tag Rust a espelhar. Não use /latest de caracore-pdv-releases (Java).",
+        default="v0.1.4",
+        help="Tag Rust a espelhar. Nunca use caracore-pdv-releases (Java).",
     )
     return parser.parse_args()
 
 
 def main() -> int:
     args = parse_args()
+    if args.repo.strip().lower() == "caracore-pdv-releases":
+        raise RuntimeError(
+            "repo Java recusado: use caracore-rust-pdv-releases"
+        )
     output = pathlib.Path(args.output)
     latest = fetch_release(args.owner, args.repo, args.tag)
     manifest = normalize_release(latest)

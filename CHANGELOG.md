@@ -2,6 +2,20 @@
 
 Formato alinhado às demais lojas `*-releases` do ecossistema CaraCore.
 
+## v0.1.4 — 2026-09-08 (versão discreta + coerência do QA)
+
+**Binários Windows novos** na tag [`v0.1.4`](https://github.com/chmulato/caracore-rust-pdv-releases/releases/tag/v0.1.4): NSIS, MSI pt-BR e ZIP piloto.
+
+Correções do smoke local sem redesenhar o produto: uma fonte de verdade da versão (título da janela / About / LEIA-ME); login e sidebar sem repetir `0.1.x`; status de turno do shell alinhado ao SQLite (inclui “Turno aberto por outro operador”); tabela Gestão → Vendas sem overlap Status/Data; Auditoria sem cards brancos ocos; busca `{ input }` e RBAC `/gestao` `/auditoria` mantidos. Compatível com o banco piloto existente. Não substitui o PDV Java Free.
+
+| Arquivo | SHA256 |
+|---------|--------|
+| `CaraCore.PDV_0.1.4_x64-setup.exe` | `802ac637c4a9a40ceead3acc05328fd1f01c296a010342b5e389d1977896fef1` |
+| `CaraCore.PDV_0.1.4_x64_pt-BR.msi` | `3ca603f0739f5870335a83144dda17fedf43282137bef8b81849248e62a97d1c` |
+| `CaraCore-PDV-v0.1.4-windows.zip` | `7d9cf69879eef8e12fd4972fcc3aaa5dc494df8630fa8554797bf47a98233a37` |
+
+---
+
 ## v0.1.3 — 2026-09-07 (busca/scanner do balcão)
 
 **Binários Windows novos** na tag [`v0.1.3`](https://github.com/chmulato/caracore-rust-pdv-releases/releases/tag/v0.1.3): NSIS, MSI pt-BR e ZIP piloto.

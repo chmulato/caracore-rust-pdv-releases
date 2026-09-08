@@ -6,7 +6,7 @@
   var RELEASES_PAGE = "https://github.com/" + OWNER + "/" + REPO + "/releases";
   /** Lista oficial Rust. /latest neste repo é o piloto Rust (não misturar com caracore-pdv-releases). */
   var RELEASES_LATEST = RELEASES_PAGE + "/latest";
-  var RELEASES_TAG_V012 = RELEASES_PAGE + "/tag/v0.1.3";
+  var RELEASES_TAG_V012 = RELEASES_PAGE + "/tag/v0.1.4";
   var DEFAULT_MSI_LOCALE = "pt-BR";
 
   function manifestUrl() {

@@ -21,7 +21,7 @@ alwaysApply: true
 1. https://pdv-rust.caracore.com.br/ — hero com 2 CTAs + 3 passos + planos em cards + faixa de convivência.
 2. https://pdv-rust.caracore.com.br/download.html — 3 assets + SHA256 + primeira venda + link `/releases/tag/v0.1.4`.
 3. https://pdv-rust.caracore.com.br/comparacao.html — redireciona ao início (fora do funil).
-4. https://pdv-rust.caracore.com.br/primeiros-passos.html — `/setup` + `admin` / `admin123` + turno.
+4. https://pdv-rust.caracore.com.br/primeiros-passos.html#perfis — quatro logins + o que cada um pode abrir (não Java Free).
 5. Botões **Baixar piloto Rust (Windows)** → `caracore-rust-pdv-releases` (tag `v0.1.4` ou lista `/releases`). Nunca `/releases/latest` de `caracore-pdv-releases` (Java).
 
 ## Arquivos tocados nesta sessão

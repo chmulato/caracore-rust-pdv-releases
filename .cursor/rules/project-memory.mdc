@@ -49,7 +49,7 @@ Não prometer features só da vitrine sem release correspondente.
 | **`modalidades.html`** | Página canónica local vs rede (cards, jornada, comparação, TI accordion) |
 | `produto.html` | Funções + bloco rede |
 | `mercado.html` | Planos + tabela modalidades |
-| `primeiros-passos.html` | Passo 0 escolher modalidade |
+| `primeiros-passos.html` | Passo 0 modalidade · **`#perfis`** = quem entra neste piloto |
 | `demonstracao.html` | Tour 4 passos |
 | `download.html` | Formatos + `releases.js` |
 | `wiki/` | TI / projeto |
@@ -71,6 +71,7 @@ Conteúdo `docs/`: **apenas HTML** comercial (+ assets). Raiz: `README.md` + `CH
 
 - Tag **v0.1.4** publicada: versão discreta + coerência do QA local.
 - SHA-256 e URLs de download apontam para `v0.1.4`.
+- Logins de demonstração (admin, operador, gestor→Financeiro, auditoria) em `primeiros-passos.html#perfis`. Wiki só aponta.
 - Teto = vida deste banco. PIX = QR + confirmação. Sem wipe de AppData.
 
 ## Próximo foco (loja)

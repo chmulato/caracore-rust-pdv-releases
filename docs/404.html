@@ -1,70 +1,69 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <link rel="canonical" href="https://pdv-rust.caracore.com.br/404.html" />
-  <title>Página não encontrada — piloto Rust Windows</title>
-  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="assets/css/tokens.css?v=20260607c" />
-  <link rel="stylesheet" href="assets/css/layout.css?v=20260607d" />
-  <link rel="stylesheet" href="assets/css/components.css?v=20260906" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página não encontrada — CaraCore PDV Rust (piloto)</title>
+    <meta name="robots" content="noindex">
+    <meta name="theme-color" content="#0b1f3a">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/portal-style.css">
+    <link rel="stylesheet" href="assets/css/pdv-rust-theme.css">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/svg+xml" href="assets/brand/favicon.svg">
+    <link rel="stylesheet" href="assets/css/tailwind.css">
 </head>
-<body data-portal-page="404" data-nav-root="">
-<header class="portal-header">
-    <div class="portal-header-inner">
-      <a class="portal-brand" href="index.html">
-        <img src="assets/img/logo-mark.svg" width="32" height="32" alt="" />
-        <span class="portal-brand-text">CaraCore PDV</span>
-      </a>
-      <div class="portal-header-content">
-        <span class="portal-header-badge">CaraCore PDV — piloto Windows</span>
-        <h1>Página não encontrada</h1>
-        <p class="portal-header-lead">O endereço acessado não existe nesta vitrine do piloto Rust. Volte ao início ou escolha o download certo.</p>
-      </div>
+<body class="smooth-scroll bg-gray-50">
+    <header class="portal-header bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8" aria-label="Menu da loja">
+            <div class="flex justify-between items-center gap-3 py-3">
+                <a href="index.html" class="flex items-center space-x-3 min-w-0">
+                    <img src="assets/brand/caracore-logo.svg" alt="" width="48" height="48" class="w-12 h-12 rounded-lg shrink-0" aria-hidden="true">
+                    <div class="min-w-0">
+                        <p class="text-base sm:text-xl font-bold text-gray-900 leading-tight xl:whitespace-nowrap">CaraCore PDV Rust (piloto)</p>
+                        <div class="flex flex-wrap items-center gap-2 mt-1">
+                            <span class="pilot-badge">PILOTO v0.1.4</span>
+                            <span class="text-xs text-gray-600">Caixa offline no Windows · piloto</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="download.html" class="cta-btn hidden min-[360px]:inline-block text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg transition text-center shrink-0">
+                    Baixar piloto
+                </a>
+            </div>
+        </nav>
+    </header>
+    <div class="pilot-strip" role="note">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-2 text-center">
+            Piloto de avaliação: até 100 vendas por banco · Windows x64 · offline · sem assinatura digital · sem SLA · fiscal simulado
+        </div>
     </div>
-  </header>
 
-  <nav class="portal-nav" aria-label="Navegação principal">
-        <button type="button" class="portal-nav-toggle" aria-expanded="false" aria-controls="portal-nav-links" aria-label="Abrir menu de navegação">
-      <span class="portal-nav-toggle__bars" aria-hidden="true"><span></span><span></span><span></span></span>
-      <span class="portal-nav-toggle__label">Menu</span>
-    </button>
-    <div class="portal-nav-inner" id="portal-nav-links">
-      <a href="index.html">Início</a>
-      <a href="modalidades.html">Local e rede</a>
-      <a href="produto.html">Produto</a>
-      <a href="demonstracao.html">Demonstração</a>
-      <a href="mercado.html">Para sua loja</a>      <a href="download.html">Formatos</a>
-      <a href="transparencia.html">Transparência</a>
-      <a href="https://wiki.caracore.com.br/projeto-pdv-rust.html">Wiki</a>
-    </div>
-  </nav>
+    <main class="page-shell">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">
+            <section class="card p-6 md:p-10 text-center">
+                <p class="text-sm uppercase tracking-wide text-amber-700 mb-2">Erro 404</p>
+                <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Página não encontrada</h1>
+                <p class="text-gray-600 mb-6">O endereço acessado não existe nesta vitrine do piloto Rust. Volte ao início ou vá direto ao download.</p>
+                <div class="flex flex-col sm:flex-row gap-3 justify-center">
+                    <a href="index.html" class="inline-flex items-center justify-center cta-btn text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition">Ir para o início</a>
+                    <a href="download.html" class="inline-flex items-center justify-center border-2 border-amber-600 text-amber-700 px-6 py-3 rounded-lg font-semibold hover:bg-amber-50 transition">Baixar piloto</a>
+                </div>
+            </section>
+        </div>
+    </main>
 
-  <main class="portal-main">
-    <section class="card">
-      <p class="cta-box">
-        <a class="btn-primary" href="index.html">Ir para o início</a>
-        <a class="btn-secondary" href="download.html">Baixar piloto Rust (Windows)</a>
-</p>
-    </section>
-  </main>
-
-  <footer class="portal-footer">
-    <p>Cara Core PDV Desktop (Rust + Tauri) · Cara Core Informática · CNPJ 23.969.028/0001-37</p>
-    <p class="portal-footer-links">
-      <a href="transparencia.html">Transparência</a> ·
-      <a href="https://github.com/chmulato/caracore-rust-pdv-releases/releases/tag/v0.1.4" rel="noopener noreferrer">Tag v0.1.4 (GitHub)</a> ·
-      <a href="https://www.caracore.com.br/" rel="noopener noreferrer">caracore.com.br</a> ·
-      <a href="mailto:suporte@caracore.com.br">suporte@caracore.com.br</a>
-    </p>
-  </footer>
-  <script src="assets/js/releases.js?v=20260906"></script>
-  <script src="assets/js/portal.js?v=20260906"></script>
+    <footer class="bg-gray-900 text-gray-300 py-10">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-sm text-gray-400 mb-3">CaraCore PDV Rust (piloto) · Caixa offline no Windows · piloto.</p>
+            <p class="text-sm text-gray-400">Links: <a href="transparencia.html" class="hover:text-white">Transparência</a> · <a href="https://wiki.caracore.com.br/projeto-pdv-rust.html" rel="noopener" class="hover:text-white">Wiki</a> · <a href="https://download.caracore.com.br/" rel="noopener" class="hover:text-white">Central de downloads</a> · <a href="https://pdv.caracore.com.br/" rel="noopener" class="hover:text-white">Loja PDV (Java)</a></p>
+            <div class="border-t border-gray-800 mt-5 pt-5 text-sm text-gray-400">
+                <p>&copy; 2024–2026 Cara Core Informática · CNPJ 23.969.028/0001-37 · <a href="https://www.caracore.com.br/" class="hover:text-white">www.caracore.com.br</a></p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
-
-
-
-
-

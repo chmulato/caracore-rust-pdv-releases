@@ -1,0 +1,174 @@
+/* CaraCore PDV Rust (piloto) — tema da loja sobre portal-style.css.
+   Mesma base das lojas PDV, Hub e CSO: o layout vem de portal-style.css e
+   aqui vivem só as cores desta linha. Azul-marinho do PDV (#0b1f3a) no herói
+   e âmbar (#d97706) no lugar do verde, marcando a fase piloto. */
+
+:root {
+  --brand-a: #0b1f3a;
+  --brand-b: #111827;
+  --brand-c: #1e3a5f;
+
+  /* O portal usa --green/--green2 nos CTAs e destaques; nesta loja o papel
+     do verde é do âmbar do piloto. */
+  --green: #d97706;
+  --green2: #f59e0b;
+
+  --grad-a: #d97706;
+  --grad-b: #f59e0b;
+
+  --pilot: #d97706;
+  --pilot-dark: #92400e;
+  --pilot-soft: #fffbeb;
+  --pilot-line: #fcd34d;
+
+  /* Usados pelo tour de telas (demo-tour). */
+  --ink: #1a2a3a;
+  --muted: #4f647a;
+  --line: #e5e7eb;
+  --brand: #0b1f3a;
+  --brand-2: #1e3a5f;
+  --radius-card: 14px;
+}
+
+.rust-bg { background: linear-gradient(135deg, var(--brand-a) 0%, #14304f 60%, var(--brand-c) 100%); }
+.rust-accent { color: var(--pilot); }
+
+/* Sombra do herói na cor da marca, no lugar do cinza padrão do portal. */
+.portal-hero.rust-hero { box-shadow: 0 24px 60px rgba(11, 31, 58, 0.28); }
+
+/* Selo de piloto — âmbar, no cabeçalho e no herói. */
+.pilot-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: var(--pilot-soft);
+  color: var(--pilot-dark);
+  border: 1px solid var(--pilot-line);
+  padding: 0.15rem 0.55rem;
+  border-radius: 9999px;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+/* Faixa fixa de aviso, logo abaixo do cabeçalho. */
+.pilot-strip {
+  background: var(--pilot-soft);
+  border-bottom: 1px solid var(--pilot-line);
+  color: var(--pilot-dark);
+  font-size: 0.75rem;
+  line-height: 1.45;
+}
+
+@media (min-width: 640px) {
+  .pilot-strip { font-size: 0.8125rem; }
+}
+
+/* CTA do cabeçalho — estrutura e classes iguais nas lojas (PDV, Hub, CSO). */
+.cta-link { color: #374151; }
+.cta-link:hover { color: var(--pilot); }
+.cta-btn { background: linear-gradient(135deg, var(--pilot) 0%, var(--green2) 100%); }
+
+/* Selo do portal no tom do piloto. */
+.selo-badge {
+  background: var(--pilot-soft);
+  color: var(--pilot-dark);
+  border: 1px solid var(--pilot-line);
+}
+
+.focus-ring:focus { outline: none; box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.35); }
+
+/* Tour de telas da demonstração. */
+.portal-shot {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  aspect-ratio: 16 / 10;
+  background: linear-gradient(180deg, #f8fafc 0%, #eef2f7 100%);
+  overflow: hidden;
+}
+.portal-shot img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: top center;
+}
+
+.demo-tour__steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.demo-tour__step {
+  flex: 1 1 120px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 12px 14px;
+  background: #fff;
+  cursor: pointer;
+  font: inherit;
+  text-align: left;
+  color: var(--ink);
+  transition: border-color 0.15s, background 0.15s;
+}
+.demo-tour__step--active,
+.demo-tour__step[aria-selected="true"] {
+  border-color: var(--pilot);
+  background: var(--pilot-soft);
+}
+.demo-tour__num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  background: var(--brand);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.demo-tour__label { font-size: 14px; font-weight: 600; color: var(--brand); }
+.demo-tour__stage {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  max-width: 100%;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  background: #f8fafc;
+}
+.demo-tour__stage .portal-shot {
+  flex: 0 0 auto;
+  border-bottom: 1px solid var(--line);
+}
+.demo-tour__caption {
+  flex: 1 1 auto;
+  padding: clamp(14px, 3vw, 20px);
+  font-size: clamp(13px, 2vw, 14px);
+  line-height: 1.5;
+  color: var(--muted);
+  background: #fff;
+}
+.demo-tour__caption strong {
+  display: block;
+  color: var(--brand);
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+.demo-tour__caption p { margin: 0; }
+
+@media (max-width: 639px) {
+  .demo-tour__step { flex: 1 1 100%; }
+}

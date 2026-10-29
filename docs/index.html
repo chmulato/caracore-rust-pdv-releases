@@ -1,179 +1,247 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="description" content="CaraCore PDV — piloto Windows. Caixa offline e leve no PC da loja, tag v0.1.4." />
-  <link rel="canonical" href="https://pdv-rust.caracore.com.br/" />
-  <title>CaraCore PDV — caixa offline no Windows</title>
-  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="assets/css/tokens.css?v=20260607c" />
-  <link rel="stylesheet" href="assets/css/layout.css?v=20260607d" />
-  <link rel="stylesheet" href="assets/css/components.css?v=20260907funil" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CaraCore PDV Rust (piloto) — caixa offline no Windows</title>
+    <meta name="description" content="Piloto de avaliação do CaraCore PDV Rust: caixa offline no Windows x64, até 100 vendas por banco, fiscal simulado, sem assinatura digital e sem SLA.">
+    <meta name="author" content="Cara Core Informática">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="CaraCore PDV Rust (piloto) — caixa offline no Windows">
+    <meta property="og:description" content="Caixa offline no PC da loja. Piloto de avaliação com até 100 vendas por banco, fiscal simulado e sem SLA.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pdv-rust.caracore.com.br/">
+    <meta property="og:locale" content="pt_BR">
+    <link rel="canonical" href="https://pdv-rust.caracore.com.br/">
+    <meta name="theme-color" content="#0b1f3a">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/portal-style.css">
+    <link rel="stylesheet" href="assets/css/pdv-rust-theme.css">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/svg+xml" href="assets/brand/favicon.svg">
 </head>
-<body data-portal-page="inicio" data-nav-root="">
-  <nav class="breadcrumb" aria-label="Navegação" style="padding: 0.75rem 1.25rem; font-size: 0.875rem;">
-    <a href="https://www.caracore.com.br/">Cara Core Informática</a>
-    <span> · </span>
-    <a href="https://www.caracore.com.br/portfolio.html#caracore-pdv-rust" rel="noopener">Portfólio</a>
-    <span> · </span>
-    <span>CaraCore PDV — piloto Windows</span>
-  </nav>
-  <header class="portal-header">
-    <div class="portal-header-inner">
-      <a class="portal-brand" href="index.html">
-        <img src="assets/img/logo-mark.svg" width="32" height="32" alt="" />
-        <span class="portal-brand-text">CaraCore PDV</span>
-      </a>
-      <div class="portal-header-content">
-        <span class="portal-header-badge">Piloto Windows · v0.1.4</span>
-        <h1 class="hero-promise">Caixa offline, leve, no Windows da loja.</h1>
-        <p class="portal-header-lead">Venda no balcão sem depender de nuvem. Programa nativo no PC — Rust + Tauri é o meio, não o produto.</p>
-        <div class="hero-actions">
-          <a class="btn-primary btn-hero" href="https://github.com/chmulato/caracore-rust-pdv-releases/releases/tag/v0.1.4" rel="noopener noreferrer" data-official-download>Baixar piloto Rust (Windows)</a>
-          <a class="btn-secondary btn-hero" href="mailto:suporte@caracore.com.br?subject=Proposta%20PDV%20Desktop%20Rust">Solicitar proposta</a>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <nav class="portal-nav" aria-label="Navegação principal">
-    <button type="button" class="portal-nav-toggle" aria-expanded="false" aria-controls="portal-nav-links" aria-label="Abrir menu de navegação">
-      <span class="portal-nav-toggle__bars" aria-hidden="true"><span></span><span></span><span></span></span>
-      <span class="portal-nav-toggle__label">Menu</span>
-    </button>
-    <div class="portal-nav-inner" id="portal-nav-links">
-      <a href="index.html">Início</a>
-      <a href="modalidades.html">Local e rede</a>
-      <a href="produto.html">Produto</a>
-      <a href="demonstracao.html">Demonstração</a>
-      <a href="mercado.html">Para sua loja</a>
-      <a href="download.html">Formatos</a>
-      <a href="transparencia.html">Transparência</a>
-      <a href="https://wiki.caracore.com.br/projeto-pdv-rust.html">Wiki</a>
-    </div>
-  </nav>
-
-  <main class="portal-main">
-    <nav class="home-jump" aria-label="Atalhos desta página">
-      <a href="#no-balcao">No balcão</a>
-      <a href="#planos">Planos</a>
+<body class="smooth-scroll bg-gray-50">
+    <nav class="breadcrumb container mx-auto px-4 sm:px-6 lg:px-8 pt-3 text-sm text-gray-600" aria-label="Navegação institucional">
+        <a href="https://www.caracore.com.br/" class="hover:text-amber-700">Cara Core Informática</a>
+        <span> · </span>
+        <a href="https://www.caracore.com.br/portfolio.html#caracore-pdv-rust" class="hover:text-amber-700" rel="noopener">Portfólio</a>
+        <span> · </span>
+        <span class="text-gray-900">CaraCore PDV Rust (piloto)</span>
     </nav>
 
-    <section class="card" id="no-balcao">
-      <h2>No balcão</h2>
-      <p class="section-subtitle">Três passos. Um fluxo. Sem aula de sistema.</p>
-      <div class="home-steps">
-        <div class="home-step">
-          <strong>Baixar e instalar</strong>
-          <p>NSIS em português no Windows x64. Dados em <code>%APPDATA%\caracore-pdv\</code>.</p>
+    <header class="portal-header bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8" aria-label="Menu da loja">
+            <div class="flex justify-between items-center gap-3 py-3 lg:h-20">
+                <a href="index.html" class="flex items-center space-x-3 min-w-0">
+                    <img src="assets/brand/caracore-logo.svg" alt="" width="48" height="48" class="w-12 h-12 rounded-lg shrink-0" aria-hidden="true">
+                    <div class="min-w-0">
+                        <p class="text-base sm:text-xl font-bold text-gray-900 leading-tight">CaraCore PDV Rust (piloto)</p>
+                        <div class="flex flex-wrap items-center gap-2 mt-1">
+                            <span class="pilot-badge">PILOTO v0.1.4</span>
+                            <span class="text-xs text-gray-600">Caixa offline no Windows · piloto</span>
+                        </div>
+                    </div>
+                </a>
+                <div id="mobile-menu" class="hidden lg:flex absolute lg:static top-full left-0 w-full lg:w-auto bg-white p-4 lg:p-0 flex-col lg:flex-row gap-3 lg:gap-5 lg:items-center">
+                    <a href="index.html" class="text-sm text-gray-700 hover:text-amber-700 font-medium transition">Início</a>
+                    <a href="produto.html" class="text-sm text-gray-700 hover:text-amber-700 font-medium transition">Produto</a>
+                    <a href="demonstracao.html" class="text-sm text-gray-700 hover:text-amber-700 font-medium transition">Demonstração</a>
+                    <a href="modalidades.html" class="text-sm text-gray-700 hover:text-amber-700 font-medium transition">Local e rede</a>
+                    <a href="mercado.html" class="text-sm text-gray-700 hover:text-amber-700 font-medium transition">Para sua loja</a>
+                    <a href="rust-t&#97;uri.html" class="text-sm text-gray-700 hover:text-amber-700 font-medium transition">Tecnologia</a>
+                    <a href="transparencia.html" class="text-sm text-gray-700 hover:text-amber-700 font-medium transition">Transparência</a>
+                    <a href="download.html" class="text-sm text-gray-700 hover:text-amber-700 font-medium transition">Formatos</a>
+                    <a href="mailto:suporte@caracore.com.br?subject=Feedback%20piloto%20PDV%20Rust" class="cta-link text-sm font-medium transition">Quero participar / dar feedback</a>
+                    <a href="download.html" class="cta-btn text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg transition text-center">
+                        Baixar piloto
+                    </a>
+                </div>
+                <button id="mobile-menu-button" class="lg:hidden text-gray-700 p-2" aria-label="Abrir menu" aria-expanded="false"><i class="fas fa-bars text-2xl"></i></button>
+            </div>
+        </nav>
+    </header>
+    <div class="pilot-strip" role="note">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-2 text-center">
+            Piloto de avaliação: até 100 vendas por banco · Windows x64 · offline · sem assinatura digital · sem SLA · fiscal simulado
         </div>
-        <div class="home-step">
-          <strong>Vender</strong>
-          <p>Assistente <code>/setup</code>, login <code>admin</code> / <code>admin123</code>, abre o turno e registra a venda. PIX do piloto: QR na tela + confirmação do operador.</p>
-        </div>
-        <div class="home-step">
-          <strong>Fechar turno</strong>
-          <p>Conferência do dia e backup no PC da loja — sem depender de nuvem.</p>
-        </div>
-      </div>
-      <p class="funil-more">Comece em um PC; evolua para a rede sem trocar de produto. <a href="demonstracao.html">Ver telas</a> · <a href="produto.html">Funções</a> · <a href="modalidades.html">Local e rede</a></p>
-    </section>
-
-    <section class="card" id="planos">
-      <h2>Planos</h2>
-      <p class="section-subtitle">Piloto self-serve. Edição completa e rede sob proposta — sem checkout de assinatura.</p>
-      <div class="plan-grid">
-        <article class="plan-card plan-card--piloto">
-          <p class="plan-card__eyebrow">Para testar hoje</p>
-          <h3>Piloto grátis</h3>
-          <p class="plan-card__price">R$ 0</p>
-          <p class="plan-card__pitch">Windows x64 · até <strong>100 vendas na vida deste banco</strong> (não por mês).</p>
-          <ul>
-            <li>Caixa offline no PC da loja</li>
-            <li>PIX: QR na tela + confirmação do operador (não é gateway)</li>
-            <li>Fiscal do piloto: simulado / treino</li>
-          </ul>
-          <p class="cta-box">
-            <a class="btn-primary" href="https://github.com/chmulato/caracore-rust-pdv-releases/releases/tag/v0.1.4" rel="noopener noreferrer" data-official-download>Baixar piloto Rust (Windows)</a>
-          </p>
-        </article>
-        <article class="plan-card">
-          <p class="plan-card__eyebrow">Operação regular</p>
-          <h3>Edição completa</h3>
-          <p class="plan-card__price">Sob proposta</p>
-          <p class="plan-card__pitch">Mesmo produto, sem o teto do piloto.</p>
-          <ul>
-            <li>Loja em operação contínua</li>
-            <li>Fiscal real somente com contrato</li>
-            <li>Sem mensalidade publicada nesta loja</li>
-          </ul>
-          <p class="cta-box">
-            <a class="btn-secondary" href="mailto:suporte@caracore.com.br?subject=Proposta%20PDV%20Desktop%20Rust">Solicitar proposta</a>
-          </p>
-        </article>
-        <article class="plan-card">
-          <p class="plan-card__eyebrow">Vários caixas</p>
-          <h3>PDV na rede</h3>
-          <p class="plan-card__price">Projeto</p>
-          <p class="plan-card__pitch">Implantação com a Cara Core — central + caixas na loja.</p>
-          <ul>
-            <li>Cresce sem trocar de sistema</li>
-            <li>Validado em laboratório</li>
-            <li><a href="mailto:suporte@caracore.com.br">suporte@caracore.com.br</a></li>
-          </ul>
-          <p class="cta-box">
-            <a class="btn-secondary" href="mailto:suporte@caracore.com.br?subject=PDV%20na%20rede%20Rust">Falar com a Cara Core</a>
-          </p>
-        </article>
-      </div>
-      <p class="pricing-note"><a href="mercado.html#precos">Tabela completa</a> · <a href="transparencia.html#edicao-gratuita">Limites do piloto</a> · <a href="transparencia.html#pix">PIX com honestidade</a></p>
-    </section>
-
-    <section class="card">
-      <div class="download-hero-cta">
-        <h2>Pronto para testar o piloto?</h2>
-        <p>Windows no PC da loja — instale, abra o turno e faça a primeira venda.</p>
-        <div class="hero-actions">
-          <a class="btn-primary" href="https://github.com/chmulato/caracore-rust-pdv-releases/releases/tag/v0.1.4" rel="noopener noreferrer" data-official-download>Baixar piloto Rust (Windows)</a>
-          <a class="btn-secondary" href="mailto:suporte@caracore.com.br?subject=Proposta%20PDV%20Desktop%20Rust">Solicitar proposta</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="portal-footer portal-footer--columns">
-    <div class="footer-columns">
-      <div class="footer-col">
-        <strong>Produto</strong>
-        <ul>
-          <li><a href="produto.html">Funcionalidades</a></li>
-          <li><a href="demonstracao.html">Demonstração</a></li>
-          <li><a href="modalidades.html">Local e rede</a></li>
-          <li><a href="rust-tauri.html">Para TI</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <strong>Baixar e começar</strong>
-        <ul>
-          <li><a href="https://github.com/chmulato/caracore-rust-pdv-releases/releases/tag/v0.1.4" rel="noopener noreferrer" data-official-download>Baixar piloto Rust (Windows)</a></li>
-          <li><a href="primeiros-passos.html">Primeiros passos</a></li>
-          <li><a href="download.html">Formatos de instalador</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <strong>Cara Core</strong>
-        <ul>
-          <li><a href="mercado.html#precos">Preços</a></li>
-          <li><a href="transparencia.html">Transparência</a></li>
-          <li><a href="https://www.caracore.com.br/" rel="noopener noreferrer">caracore.com.br</a></li>
-          <li><a href="mailto:suporte@caracore.com.br">suporte@caracore.com.br</a></li>
-        </ul>
-      </div>
     </div>
-    <p class="footer-legal">Cara Core Informática · CNPJ 23.969.028/0001-37 · <a href="https://www.caracore.com.br/">www.caracore.com.br</a> · <a href="mailto:suporte@caracore.com.br">suporte@caracore.com.br</a></p>
-  </footer>
-  <script src="assets/js/releases.js?v=20260906"></script>
-  <script src="assets/js/portal.js?v=20260906"></script>
+
+    <section class="portal-hero rust-hero rust-bg text-white py-12 md:py-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center">
+                <div class="flex justify-center mb-4"><span class="pilot-badge">PILOTO v0.1.4</span></div>
+                <p class="text-sm uppercase tracking-wide text-amber-100 mb-3">Windows x64 · caixa offline · avaliação</p>
+                <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-5 leading-tight">
+                    Venda no balcão sem depender de nuvem.
+                </h1>
+                <p class="text-lg md:text-xl text-amber-50 mb-8">
+                    O caixa roda no PC da loja, offline, em um programa nativo do Windows. Este é um piloto de avaliação: os limites estão escritos abaixo, sem letra miúda.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-3 justify-center">
+                    <a href="download.html" class="inline-flex items-center justify-center bg-white text-amber-700 px-8 py-4 rounded-lg font-bold text-lg hover:bg-amber-50 transition shadow-lg">
+                        Baixar piloto
+                    </a>
+                    <a href="mailto:suporte@caracore.com.br?subject=Feedback%20piloto%20PDV%20Rust" class="inline-flex items-center justify-center border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition">
+                        Quero participar / dar feedback
+                    </a>
+                </div>
+                <p class="mt-6 text-sm text-amber-100">
+                    Sem assinatura digital nesta tag: o Windows pode avisar no primeiro uso. <a href="transparencia.html#smartscreen" class="underline hover:text-white">Ver por quê</a>.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <main class="page-shell">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl space-y-6">
+            <nav class="flex flex-wrap gap-2 justify-center" aria-label="Atalhos desta página">
+                <a href="#no-balcao" class="selo-badge text-sm">No balcão</a>
+                <a href="#planos" class="selo-badge text-sm">Planos</a>
+            </nav>
+
+            <section class="card p-6 md:p-8" id="no-balcao">
+                <h2 class="text-2xl font-bold text-gray-900 mb-2">No balcão</h2>
+                <p class="text-gray-600 mb-6">Três passos. Um fluxo. Sem aula de sistema.</p>
+                <div class="grid md:grid-cols-3 gap-4">
+                    <div class="rounded-xl border border-gray-200 bg-gray-50 p-5">
+                        <strong class="block text-gray-900 mb-2">Baixar e instalar</strong>
+                        <p class="text-sm text-gray-600">NSIS em português no Windows x64. Dados em <code>%APPDATA%\caracore-pdv\</code>.</p>
+                    </div>
+                    <div class="rounded-xl border border-gray-200 bg-gray-50 p-5">
+                        <strong class="block text-gray-900 mb-2">Vender</strong>
+                        <p class="text-sm text-gray-600">Assistente <code>/setup</code>; use a credencial inicial do manual e troque a senha no primeiro acesso. Abra o turno e registre a venda. PIX do piloto: QR na tela + confirmação do operador.</p>
+                    </div>
+                    <div class="rounded-xl border border-gray-200 bg-gray-50 p-5">
+                        <strong class="block text-gray-900 mb-2">Fechar turno</strong>
+                        <p class="text-sm text-gray-600">Conferência do dia e backup no PC da loja — sem depender de nuvem.</p>
+                    </div>
+                </div>
+                <p class="mt-6 text-sm text-gray-600">Comece em um PC; evolua para a rede sem trocar de produto. <a class="text-amber-700 font-medium hover:underline" href="demonstracao.html">Ver telas</a> · <a class="text-amber-700 font-medium hover:underline" href="produto.html">Funções</a> · <a class="text-amber-700 font-medium hover:underline" href="modalidades.html">Local e rede</a></p>
+            </section>
+
+            <section class="card p-6 md:p-8" aria-label="Relação com as outras linhas do PDV">
+                <h2 class="text-2xl font-bold text-gray-900 mb-3">Este piloto não substitui as outras linhas</h2>
+                <p class="text-gray-600 mb-4">O PDV Rust é uma linha paralela, em avaliação. As linhas Java seguem no ar e são a escolha para operação hoje.</p>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="rounded-xl border border-amber-200 bg-amber-50 p-5">
+                        <p class="font-semibold text-gray-900 mb-1">Precisa de produção hoje? Use o CaraCore PDV (Java) 3.2.12 Free</p>
+                        <p class="text-sm text-gray-700 mb-3">Linha estável, com limites próprios publicados na loja do PDV.</p>
+                        <a href="https://pdv.caracore.com.br/" rel="noopener" class="inline-flex items-center gap-2 text-amber-800 font-semibold hover:underline"><i class="fas fa-store" aria-hidden="true"></i> pdv.caracore.com.br</a>
+                    </div>
+                    <div class="rounded-xl border border-gray-200 bg-gray-50 p-5">
+                        <p class="font-semibold text-gray-900 mb-1">A v4 é a prévia da próxima edição Java</p>
+                        <p class="text-sm text-gray-700 mb-3">Prévia da evolução da linha Java, publicada pela Cara Core. Não é o mesmo corte deste piloto.</p>
+                        <a href="https://pdv.caracore.com.br/" rel="noopener" class="inline-flex items-center gap-2 text-amber-800 font-semibold hover:underline"><i class="fas fa-code-branch" aria-hidden="true"></i> Ver a linha Java</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card p-6 md:p-8" id="planos">
+                <h2 class="text-2xl font-bold text-gray-900 mb-2">Planos</h2>
+                <p class="text-gray-600 mb-6">Piloto self-serve. Edição completa em avaliação, sob proposta — sem checkout de assinatura.</p>
+                <div class="grid md:grid-cols-3 gap-4">
+                    <article class="rounded-xl border-2 border-amber-300 bg-white p-6 flex flex-col">
+                        <p class="text-xs uppercase tracking-wide text-amber-700 font-semibold mb-1">Para testar hoje</p>
+                        <h3 class="text-xl font-bold text-gray-900">Piloto grátis</h3>
+                        <p class="text-3xl font-extrabold text-gray-900 my-2">R$ 0</p>
+                        <p class="text-sm text-gray-700 mb-4">Windows x64 · até <strong>100 vendas na vida deste banco</strong> (não por mês).</p>
+                        <ul class="space-y-2 text-sm text-gray-700 list-none mb-5">
+                            <li><i class="fas fa-check text-amber-600 mr-2" aria-hidden="true"></i>Caixa offline no PC da loja</li>
+                            <li><i class="fas fa-check text-amber-600 mr-2" aria-hidden="true"></i>PIX: QR na tela + confirmação do operador (não é gateway)</li>
+                            <li><i class="fas fa-check text-amber-600 mr-2" aria-hidden="true"></i>Fiscal do piloto: simulado / treino</li>
+                            <li><i class="fas fa-circle-info text-amber-600 mr-2" aria-hidden="true"></i>Sem assinatura digital e sem SLA</li>
+                        </ul>
+                        <a href="download.html" class="mt-auto inline-flex items-center justify-center cta-btn text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition">Baixar piloto</a>
+                    </article>
+                    <article class="rounded-xl border border-gray-200 bg-white p-6 flex flex-col">
+                        <p class="text-xs uppercase tracking-wide text-gray-500 font-semibold mb-1">Operação regular</p>
+                        <h3 class="text-xl font-bold text-gray-900">Edição completa</h3>
+                        <p class="text-lg font-bold text-gray-700 my-2">Em avaliação, sob proposta</p>
+                        <p class="text-sm text-gray-700 mb-4">Mesmo produto, sem o teto do piloto. Escopo e condições ainda em avaliação.</p>
+                        <ul class="space-y-2 text-sm text-gray-700 list-none mb-5">
+                            <li><i class="fas fa-check text-amber-600 mr-2" aria-hidden="true"></i>Loja em operação contínua</li>
+                            <li><i class="fas fa-check text-amber-600 mr-2" aria-hidden="true"></i>Fiscal real: em avaliação, sem data</li>
+                            <li><i class="fas fa-check text-amber-600 mr-2" aria-hidden="true"></i>Sem mensalidade publicada nesta loja</li>
+                        </ul>
+                        <a href="mailto:suporte@caracore.com.br?subject=Proposta%20PDV%20Rust" class="mt-auto inline-flex items-center justify-center border-2 border-amber-600 text-amber-700 px-6 py-3 rounded-lg font-semibold hover:bg-amber-50 transition">Solicitar proposta</a>
+                    </article>
+                    <article class="rounded-xl border border-gray-200 bg-white p-6 flex flex-col">
+                        <p class="text-xs uppercase tracking-wide text-gray-500 font-semibold mb-1">Vários caixas</p>
+                        <h3 class="text-xl font-bold text-gray-900">PDV na rede</h3>
+                        <p class="text-lg font-bold text-gray-700 my-2">Projeto</p>
+                        <p class="text-sm text-gray-700 mb-4">Implantação com a Cara Core — central + caixas na loja.</p>
+                        <ul class="space-y-2 text-sm text-gray-700 list-none mb-5">
+                            <li><i class="fas fa-check text-amber-600 mr-2" aria-hidden="true"></i>Cresce sem trocar de sistema</li>
+                            <li><i class="fas fa-check text-amber-600 mr-2" aria-hidden="true"></i>Validado em laboratório</li>
+                            <li><a href="mailto:suporte@caracore.com.br" class="text-amber-700 hover:underline">suporte@caracore.com.br</a></li>
+                        </ul>
+                        <a href="mailto:suporte@caracore.com.br?subject=PDV%20na%20rede%20Rust" class="mt-auto inline-flex items-center justify-center border-2 border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition">Falar com a Cara Core</a>
+                    </article>
+                </div>
+                <p class="mt-6 text-sm text-gray-600"><a class="text-amber-700 font-medium hover:underline" href="mercado.html#precos">Tabela completa</a> · <a class="text-amber-700 font-medium hover:underline" href="transparencia.html#edicao-gratuita">Limites do piloto</a> · <a class="text-amber-700 font-medium hover:underline" href="transparencia.html#pix">PIX com honestidade</a></p>
+            </section>
+
+            <section class="card p-6 md:p-8">
+                <div class="text-center max-w-2xl mx-auto">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-2">Pronto para testar o piloto?</h2>
+                    <p class="text-gray-600 mb-6">Windows no PC da loja — instale, abra o turno e faça a primeira venda.</p>
+                    <div class="flex flex-col sm:flex-row gap-3 justify-center">
+                        <a href="download.html" class="inline-flex items-center justify-center cta-btn text-white px-8 py-4 rounded-lg font-bold text-lg hover:shadow-lg transition">Baixar piloto</a>
+                        <a href="mailto:suporte@caracore.com.br?subject=Feedback%20piloto%20PDV%20Rust" class="inline-flex items-center justify-center border-2 border-amber-600 text-amber-700 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-amber-50 transition">Quero participar / dar feedback</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <p class="text-white font-bold mb-2">CaraCore PDV Rust (piloto)</p>
+                    <p class="text-sm text-gray-400 mb-3">Caixa offline no Windows · piloto. Avaliação com até 100 vendas por banco, fiscal simulado e sem SLA.</p>
+                    <p class="text-sm text-gray-400">Piloto v0.1.4 · Windows x64 · sem assinatura digital.</p>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold mb-3">O produto</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="produto.html" class="hover:text-white">Funcionalidades</a></li>
+                        <li><a href="demonstracao.html" class="hover:text-white">Demonstração</a></li>
+                        <li><a href="modalidades.html" class="hover:text-white">Local e rede</a></li>
+                        <li><a href="rust-t&#97;uri.html" class="hover:text-white">Tecnologia</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold mb-3">Documentação</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="https://wiki.caracore.com.br/projeto-pdv-rust.html" rel="noopener" class="hover:text-white">Wiki do PDV Rust</a></li>
+                        <li><a href="primeiros-passos.html" class="hover:text-white">Primeiros passos</a></li>
+                        <li><a href="transparencia.html" class="hover:text-white">Transparência</a></li>
+                        <li><a href="https://download.caracore.com.br/" rel="noopener" class="hover:text-white">Central de downloads</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold mb-3">Contato</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="mailto:suporte@caracore.com.br?subject=Feedback%20piloto%20PDV%20Rust" class="hover:text-white">Quero participar / dar feedback</a></li>
+                        <li><a href="https://pdv.caracore.com.br/" rel="noopener" class="hover:text-white">Loja PDV (Java) 3.2.12</a></li>
+                        <li><a href="mailto:suporte@caracore.com.br" class="hover:text-white">suporte@caracore.com.br</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-6 text-sm text-gray-400">
+                <p>&copy; 2024–2026 Cara Core Informática · CNPJ 23.969.028/0001-37 · <a href="https://www.caracore.com.br/" class="hover:text-white">www.caracore.com.br</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        var m=document.getElementById('mobile-menu-button'),n=document.getElementById('mobile-menu');
+        if(m&&n){m.addEventListener('click',function(){n.classList.toggle('hidden');n.classList.toggle('flex');m.setAttribute('aria-expanded',String(!n.classList.contains('hidden')));});}
+    </script>
 </body>
 </html>
